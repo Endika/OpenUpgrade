@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    OpenERP, Open Source Management Solution
-#    This module copyright (C) 2014 Therp BV (<http://therp.nl>).
+#    OpenUpgrade module for Odoo
+#    Copyright (C) 2014 Onestein B.V. <http://www.onestein.nl>
+#    Copyright (C) 2015 Therp BV <http://therp.nl>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -23,13 +24,4 @@ from openerp.openupgrade import openupgrade
 
 @openupgrade.migrate()
 def migrate(cr, version):
-    cr.execute(
-        "ALTER TABLE hr_holidays DROP CONSTRAINT hr_holidays_meeting_id_fkey"
-    )
-    cr.execute(
-        '''update hr_holidays
-        set meeting_id=calendar_event.id
-        from calendar_event where meeting_id=%s''' % (
-            openupgrade.get_legacy_name('crm_meeting_id'),
-        )
-    )
+    openupgrade.load_data(cr, 'portal', 'portal_data.xml')
