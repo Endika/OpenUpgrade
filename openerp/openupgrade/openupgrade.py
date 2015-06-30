@@ -23,10 +23,13 @@ import os
 import inspect
 import logging
 from openerp import release, tools, SUPERUSER_ID
+from openerp.tools.yaml_import import yaml_import
 from openerp.osv import orm
 from openerp.tools.mail import plaintext2html
 from openerp.modules.registry import RegistryManager
 import openupgrade_tools
+import openerp.osv.fields
+import openerp.fields
 
 # The server log level has not been set at this point
 # so to log at loglevel debug we need to set it
@@ -38,6 +41,7 @@ logger.setLevel(logging.DEBUG)
 __all__ = [
     'migrate',
     'load_data',
+    'copy_columns',
     'rename_columns',
     'rename_tables',
     'rename_models',
@@ -45,6 +49,7 @@ __all__ = [
     'add_xmlid',
     'drop_columns',
     'delete_model_workflow',
+    'update_workflow_workitems',
     'warn_possible_dataloss',
     'set_defaults',
     'logged_query',
@@ -62,6 +67,7 @@ __all__ = [
     'map_values',
     'deactivate_workflow_transitions',
     'reactivate_workflow_transitions',
+    'date_to_datetime_tz',
 ]
 
 
@@ -89,7 +95,7 @@ def check_values_selection_field(cr, table_name, field_name, allowed_values):
 
 def load_data(cr, module_name, filename, idref=None, mode='init'):
     """
-    Load an xml or csv data file from your post script. The usual case for
+    Load an xml, csv or yml data file from your post script. The usual case for
     this is the
     occurrence of newly added essential or useful data in the module that is
     marked with "noupdate='1'" and without "forcecreate='1'" so that it will
@@ -125,6 +131,8 @@ def load_data(cr, module_name, filename, idref=None, mode='init'):
             noupdate = True
             tools.convert_csv_import(
                 cr, module_name, pathname, fp.read(), idref, mode, noupdate)
+        elif ext == '.yml':
+            yaml_import(cr, module_name, fp, None, idref=idref, mode=mode)
         else:
             tools.convert_xml_import(cr, module_name, fp, idref, mode=mode)
     finally:
@@ -133,6 +141,41 @@ def load_data(cr, module_name, filename, idref=None, mode='init'):
 # for backwards compatibility
 load_xml = load_data
 table_exists = openupgrade_tools.table_exists
+
+
+def copy_columns(cr, column_spec):
+    """
+    Copy table columns. Typically called in the pre script.
+
+    :param column_spec: a hash with table keys, with lists of tuples as \
+    values. Tuples consist of (old_name, new_name, type). Use None for \
+    new_name to trigger a conversion of old_name using get_legacy_name() \
+    Use None for type to use type of old field
+
+    .. versionadded:: 8.0
+    """
+    for table_name in column_spec.keys():
+        for (old, new, field_type) in column_spec[table_name]:
+            if new is None:
+                new = get_legacy_name(old)
+            if field_type is None:
+                cr.execute("""
+                    SELECT data_type
+                    FROM information_schema.columns
+                    WHERE table_name=%s
+                        AND column_name = %s;
+                    """, (table_name, old))
+                field_type = cr.fetchone()[0]
+            logged_query(cr, """
+                ALTER TABLE %(table_name)s
+                ADD COLUMN %(new)s %(field_type)s;
+                UPDATE %(table_name)s SET %(new)s=%(old)s;
+                """ % {
+                'table_name': table_name,
+                'old': old,
+                'field_type': field_type,
+                'new': new,
+            })
 
 
 def rename_columns(cr, column_spec):
@@ -160,16 +203,21 @@ def rename_tables(cr, table_spec):
     This function also renames the id sequence if it exists and if it is
     not modified in the same run.
 
-    :param table_spec: a list of tuples (old table name, new table name).
-
+    :param table_spec: a list of tuples (old table name, new table name). Use \
+    None for new_name to trigger a conversion of old_name to the result of \
+    get_legacy_name()
     """
     # Append id sequences
     to_rename = [x[0] for x in table_spec]
     for old, new in list(table_spec):
+        if new is None:
+            new = get_legacy_name(old)
         if (table_exists(cr, old + '_id_seq') and
                 old + '_id_seq' not in to_rename):
             table_spec.append((old + '_id_seq', new + '_id_seq'))
     for (old, new) in table_spec:
+        if new is None:
+            new = get_legacy_name(old)
         logger.info("table %s: renaming to %s",
                     old, new)
         cr.execute('ALTER TABLE "%s" RENAME TO "%s"' % (old, new,))
@@ -268,6 +316,50 @@ def drop_columns(cr, column_spec):
         else:
             logger.warn("table %s: column %s did not exist",
                         table, column)
+
+
+def update_workflow_workitems(cr, pool, ref_spec_actions):
+    """Find all the workflow items from the target state to set them to
+    the wanted state.
+
+    When a workflow action is removed, from model, the objects whose states
+    are in these actions need to be set to another to be able to continue the
+    workflow properly.
+
+    Run in pre-migration
+
+    :param ref_spec_actions: list of tuples with couple of workflow.action's
+        external ids. The first id is replaced with the second.
+    :return: None
+
+    .. versionadded:: 7.0
+    """
+    workflow_workitems = pool['workflow.workitem']
+    ir_model_data_model = pool['ir.model.data']
+
+    for (target_external_id, fallback_external_id) in ref_spec_actions:
+        target_activity = ir_model_data_model.get_object(
+            cr, SUPERUSER_ID,
+            target_external_id.split(".")[0],
+            target_external_id.split(".")[1],
+        )
+        fallback_activity = ir_model_data_model.get_object(
+            cr, SUPERUSER_ID,
+            fallback_external_id.split(".")[0],
+            fallback_external_id.split(".")[1],
+        )
+        ids = workflow_workitems.search(
+            cr, SUPERUSER_ID, [('act_id', '=', target_activity.id)]
+        )
+        if ids:
+            logger.info(
+                "Moving %d items in the removed workflow action (%s) to a "
+                "fallback action (%s): %s",
+                len(ids), target_activity.name, fallback_activity.name, ids
+            )
+            workflow_workitems.write(
+                cr, SUPERUSER_ID, ids, {'act_id': fallback_activity.id}
+            )
 
 
 def delete_model_workflow(cr, model):
@@ -451,6 +543,11 @@ def update_module_names(cr, namespec):
         query = ("UPDATE ir_model_data SET module = %s "
                  "WHERE module = %s ")
         logged_query(cr, query, (new_name, old_name))
+        query = ("UPDATE ir_model_data SET name = %s "
+                 "WHERE name = %s AND module = 'base' AND "
+                 "model='ir.module.module' ")
+        logged_query(cr, query,
+                     ("module_%s" % new_name, "module_%s" % old_name))
         query = ("UPDATE ir_module_module_dependency SET name = %s "
                  "WHERE name = %s")
         logged_query(cr, query, (new_name, old_name))
@@ -489,28 +586,82 @@ def get_legacy_name(original_name):
 def m2o_to_x2m(cr, model, table, field, source_field):
     """
     Transform many2one relations into one2many or many2many.
-    Use rename_columns in your pre-migrate
-    script to retain the column's old value, then call m2o_to_x2m
-    in your post-migrate script.
+    Use rename_columns in your pre-migrate script to retain the column's old
+    value, then call m2o_to_x2m in your post-migrate script.
+
+    WARNING: If converting to one2many, there can be data loss, because only
+    one inverse record can be mapped in a one2many, but you can have multiple
+    many2one pointing to the same target. Use it when the use case allows this
+    conversion.
 
     :param model: The target model registry object
     :param table: The source table
     :param field: The new field name on the target model
     :param source_field: the (renamed) many2one column on the source table.
 
-    .. versionadded:: 7.0
+    .. versionadded:: 8.0
     """
-    cr.execute('SELECT id, %(field)s '
-               'FROM %(table)s '
-               'WHERE %(field)s is not null' % {
-                   'table': table,
-                   'field': source_field,
-                   })
-    for row in cr.fetchall():
-        model.write(cr, SUPERUSER_ID, row[0], {field: [(4, row[1])]})
+    if not model._columns.get(field):
+        raise orm.except_orm(
+            "Error", "m2o_to_x2m: field %s doesn't exist in model %s" % (
+                field, model._name))
+    if isinstance(model._columns[field], (openerp.osv.fields.many2many,
+                                          openerp.fields.Many2many)):
+        rel, id1, id2 = openerp.osv.fields.many2many._sql_names(
+            model._columns[field], model)
+        logged_query(
+            cr,
+            """
+            INSERT INTO %s (%s, %s)
+            SELECT id, %s
+            FROM %s
+            WHERE %s is not null
+            """ %
+            (rel, id1, id2, source_field, table, source_field))
+    elif isinstance(model._columns[field], (openerp.fields.One2many,
+                                            openerp.osv.fields.one2many)):
+        if isinstance(model._columns[field], openerp.fields.One2many):
+            target_table = (
+                model.pool[model._columns[field].comodel_name]._table)
+            target_field = model._columns[field].inverse_name
+        else:
+            target_table = model.pool[model._columns[field]._obj]._table
+            target_field = model._columns[field]._fields_id
+        logged_query(
+            cr,
+            """
+            UPDATE %(target_table)s AS target
+            SET %(target_field)s=source.id
+            FROM %(source_table)s AS source
+            WHERE source.%(source_field)s=target.id
+            """ % {'target_table': target_table,
+                   'target_field': target_field,
+                   'source_field': source_field,
+                   'source_table': table})
+    else:
+        raise orm.except_orm(
+            "Error", "m2o_to_x2m: field %s of model %s is not a "
+                     "many2many/one2many one" % (field, model._name))
+
 
 # Backwards compatibility
-m2o_to_m2m = m2o_to_x2m
+def m2o_to_m2m(cr, model, table, field, source_field):
+    """
+    Recreate relations in many2many fields that were formerly
+    many2one fields. Use rename_columns in your pre-migrate
+    script to retain the column's old value, then call m2o_to_m2m
+    in your post-migrate script.
+
+    :param model: The target model registry object
+    :param table: The source table
+    :param field: The field name of the target model
+    :param source_field: the many2one column on the source table.
+
+    .. versionadded:: 7.0
+    .. deprecated:: 8.0
+       Use :func:`m2o_to_x2m` instead.
+    """
+    return m2o_to_x2m(cr, model, table, field, source_field)
 
 
 def float_to_integer(cr, table, field):
@@ -624,13 +775,12 @@ def deactivate_workflow_transitions(cr, model, transitions=None):
     Disable workflow transitions for workflows on a given model.
     This can be necessary for automatic workflow transitions when writing
     to an object via the ORM in the post migration step.
-
     Returns a dictionary to be used on reactivate_workflow_transitions
 
-    :param model: the model for which workflow transitions should be
+    :param model: the model for which workflow transitions should be \
     deactivated
-    :param transitions: a list of ('module', 'name') xmlid tuples of
-    transitions to be deactivated. Don't pass this if there's no specific
+    :param transitions: a list of ('module', 'name') xmlid tuples of \
+    transitions to be deactivated. Don't pass this if there's no specific \
     reason to do so, the default is to deactivate all transitions
 
     .. versionadded:: 7.0
@@ -669,7 +819,7 @@ def reactivate_workflow_transitions(cr, transition_conditions):
     Reactivate workflow transition previously deactivated by
     deactivate_workflow_transitions.
 
-    :param transition_conditions: a dictionary returned by
+    :param transition_conditions: a dictionary returned by \
     deactivate_workflow_transitions
 
     .. versionadded:: 7.0
@@ -737,21 +887,22 @@ def move_field_m2o(
     available on post script migration.
     :param registry_old_model: registry of the model A;
     :param field_old_model: name of the field to move in model A;
-    :param m2o_field_old_model: name of the field of the table of the model A;
-        that link model A to model B;
+    :param m2o_field_old_model: name of the field of the table of the model A \
+    that link model A to model B;
     :param registry_new_model: registry of the model B;
     :param field_new_model: name of the field to move in model B;
-    :param quick_request: Set to False, if you want to use write function to
-        update value; Otherwise, the function will use UPDATE SQL request;
-    :param compute_func: This a function that receives 4 parameters:
-        cr, pool: common args;
-        id: id of the instance of Model B
-        vals:  list of different values.
-        This function must return a unique value that will be set to the
-        instance of Model B which id is 'id' param;
-        If compute_func is not set, the algorithm will take the value that
-        is the most present in vals.
+    :param quick_request: Set to False, if you want to use write function to \
+    update value; Otherwise, the function will use UPDATE SQL request;
+    :param compute_func: This a function that receives 4 parameters: \
+    cr, pool: common args;\
+    id: id of the instance of Model B\
+    vals:  list of different values.\
+    This function must return a unique value that will be set to the\
+    instance of Model B which id is 'id' param;\
+    If compute_func is not set, the algorithm will take the value that\
+    is the most present in vals.\
     :binary_field: Set to True if the migrated field is a binary field
+
     .. versionadded:: 8.0
     """
     def default_func(cr, pool, id, vals):
@@ -764,6 +915,10 @@ def move_field_m2o(
             if quantity[res] < quantity[val]:
                 res = val
         return res
+
+    logger.info("Moving data from '%s'.'%s' to '%s'.'%s'" % (
+        registry_old_model, field_old_model,
+        registry_new_model, field_new_model))
 
     table_old_model = pool[registry_old_model]._table
     table_new_model = pool[registry_new_model]._table
@@ -824,7 +979,7 @@ def move_field_m2o(
                 field_old_model, table_old_model, m2o_field_old_model, ko_id))
         cr.execute(query)
         if binary_field:
-            vals = [str(x[0][:]) for x in cr.fetchall()]
+            vals = [str(x[0][:]) if x[0] else False for x in cr.fetchall()]
         else:
             vals = [x[0] for x in cr.fetchall()]
         value = func(cr, pool, ko_id, vals)
@@ -858,3 +1013,48 @@ def convert_field_to_html(cr, table, field_name, html_field_name):
                 'table': table,
             }, (plaintext2html(row[1]), row[0])
         )
+
+
+def date_to_datetime_tz(
+        cr, table_name, user_field_name, date_field_name, datetime_field_name):
+    """ Take the related user's timezone into account when converting
+    date field to datetime in a given table.
+    This function must be call in post migration script.
+
+    :param table_name : Name of the table where the field is;
+    :param user_field_name : The name of the user field (res.users);
+    :param date_field_name : The name of the old date field; \
+    (Typically a legacy name, set in pre-migration script)
+    :param datetime_field_name : The name of the new date field;
+
+    .. versionadded:: 8.0
+    """
+    cr.execute(
+        """
+        SELECT distinct(rp.tz)
+        FROM %s my_table, res_users ru, res_partner rp
+        WHERE rp.tz IS NOT NULL
+            AND my_table.%s=ru.id
+            AND ru.partner_id=rp.id
+        """ % (table_name, user_field_name,))
+    for timezone, in cr.fetchall():
+        cr.execute("SET TIMEZONE=%s", (timezone,))
+        values = {
+            'table_name': table_name,
+            'date_field_name': date_field_name,
+            'datetime_field_name': datetime_field_name,
+            'timezone': timezone,
+        }
+        logged_query(
+            cr,
+            """
+            UPDATE %(table_name)s my_table
+            SET %(datetime_field_name)s =
+                my_table.%(date_field_name)s::TIMESTAMP AT TIME ZONE 'UTC'
+            FROM res_partner rp, res_users ru
+            WHERE my_table.%(date_field_name)s IS NOT NULL
+                AND my_table.user_id=ru.id
+                AND ru.partner_id=rp.id
+                AND rp.tz='%(timezone)s';
+            """ % values)
+    cr.execute("RESET TIMEZONE")

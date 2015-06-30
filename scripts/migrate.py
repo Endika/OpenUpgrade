@@ -11,8 +11,7 @@ try:
     import bzrlib.plugin
     import bzrlib.builtins
 except ImportError:
-    print ('couldn\'t import bzrlib. You won\'t be able to run migrations '
-           '<= 7.0!')
+    pass
 
 
 def copy_database(conn_parms):
@@ -79,11 +78,15 @@ migrations = {
     },
     '7.0': {
         'addons': {
-            'addons': 'lp:openupgrade-addons/7.0',
-            'web': {'url': 'lp:openerp-web/7.0', 'addons_dir': 'addons'},
+            'addons': {
+                'type': 'link',
+                'url': os.path.join('server', 'addons'),
+            },
         },
         'server': {
-            'url': 'lp:openupgrade-server/7.0',
+            'type': 'git',
+            'url': 'git://github.com/OpenUpgrade/OpenUpgrade.git',
+            'branch': '7.0',
             'addons_dir': os.path.join('openerp', 'addons'),
             'root_dir': os.path.join(''),
             'cmd': 'openerp-server --update=all --database=%(db)s '
@@ -93,11 +96,15 @@ migrations = {
     },
     '6.1': {
         'addons': {
-            'addons': 'lp:openupgrade-addons/6.1',
-            'web': {'url': 'lp:openerp-web/6.1', 'addons_dir': 'addons'},
+            'addons': {
+                'type': 'link',
+                'url': os.path.join('server', 'addons'),
+            },
         },
         'server': {
-            'url': 'lp:openupgrade-server/6.1',
+            'type': 'git',
+            'url': 'git://github.com/OpenUpgrade/OpenUpgrade.git',
+            'branch': '6.1',
             'addons_dir': os.path.join('openerp', 'addons'),
             'root_dir': os.path.join(''),
             'cmd': 'openerp-server --update=all --database=%(db)s '
@@ -107,10 +114,15 @@ migrations = {
     },
     '6.0': {
         'addons': {
-            'addons': 'lp:openupgrade-addons/6.0',
+            'addons': {
+                'type': 'link',
+                'url': os.path.join('server', 'addons'),
+            },
         },
         'server': {
-            'url': 'lp:openupgrade-server/6.0',
+            'type': 'git',
+            'url': 'git://github.com/OpenUpgrade/OpenUpgrade.git',
+            'branch': '6.0',
             'addons_dir': os.path.join('bin', 'addons'),
             'root_dir': os.path.join('bin'),
             'cmd': 'bin/openerp-server.py --update=all --database=%(db)s '
@@ -155,6 +167,10 @@ parser.add_option(
 parser.add_option("-I", "--inplace", action="store_true", dest="inplace",
                   help="don't copy database before attempting upgrade "
                   "(dangerous)")
+parser.add_option(
+    "-F", "--force-deps", action="store", dest="force_deps",
+    help="force dependencies from a dict of the form \"{'module_name': "
+    "['new_dependency1', 'new_dependency2']}\"")
 (options, args) = parser.parse_args()
 
 if not options.config or not options.migrations\
@@ -185,6 +201,13 @@ if not db_name or db_name == '' or db_name.isspace()\
 
 conn_parms['database'] = db_name
 
+if options.force_deps:
+    try:
+        eval(options.force_deps)
+    except:
+        parser.print_help()
+        sys.exit()
+
 if options.add:
     merge_migrations = {}
     if os.path.isfile(options.add):
@@ -193,7 +216,11 @@ if options.add:
                                                options.add)
         merge_migrations = merge_migrations_mod.migrations
     else:
-        merge_migrations = eval(options.add)
+        try:
+            merge_migrations = eval(options.add)
+        except:
+            parser.print_help()
+            sys.exit()
 
     def deep_update(dict1, dict2):
         result = {}
@@ -330,6 +357,10 @@ for version in options.migrations.split(','):
             version,
             'server',
             migrations[version]['server']['root_dir']))
+    if options.force_deps:
+        if not config.has_section('openupgrade'):
+            config.add_section('openupgrade')
+        config.set('openupgrade', 'force_deps', options.force_deps)
     config.write(
         open(
             os.path.join(options.branch_dir, version, 'server.cfg'), 'w+'))

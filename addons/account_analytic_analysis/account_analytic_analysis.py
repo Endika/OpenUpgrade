@@ -45,7 +45,7 @@ class account_analytic_invoice_line(osv.osv):
 
     _columns = {
         'product_id': fields.many2one('product.product','Product',required=True),
-        'analytic_account_id': fields.many2one('account.analytic.account', 'Analytic Account'),
+        'analytic_account_id': fields.many2one('account.analytic.account', 'Analytic Account', ondelete='cascade'),
         'name': fields.text('Description', required=True),
         'quantity': fields.float('Quantity', required=True),
         'uom_id': fields.many2one('product.uom', 'Unit of Measure',required=True),
@@ -270,9 +270,13 @@ class account_analytic_account(osv.osv):
         if child_ids:
             #Search all invoice lines not in cancelled state that refer to this analytic account
             inv_line_obj = self.pool.get("account.invoice.line")
-            inv_lines = inv_line_obj.search(cr, uid, ['&', ('account_analytic_id', 'in', child_ids), ('invoice_id.state', '!=', 'cancel')], context=context)
+            inv_lines = inv_line_obj.search(cr, uid, ['&', ('account_analytic_id', 'in', child_ids), ('invoice_id.state', 'not in', ['draft', 'cancel']), ('invoice_id.type', 'in', ['out_invoice', 'out_refund'])], context=context)
             for line in inv_line_obj.browse(cr, uid, inv_lines, context=context):
-                res[line.account_analytic_id.id] += line.price_subtotal
+                if line.invoice_id.type == 'out_refund':
+                    res[line.account_analytic_id.id] -= line.price_subtotal
+                else:
+                    res[line.account_analytic_id.id] += line.price_subtotal
+
         for acc in self.browse(cr, uid, res.keys(), context=context):
             res[acc.id] = res[acc.id] - (acc.timesheet_ca_invoiced or 0.0)
 
@@ -370,11 +374,14 @@ class account_analytic_account(osv.osv):
         inv_ids = []
         for account in self.browse(cr, uid, ids, context=context):
             res[account.id] = 0.0
-            line_ids = lines_obj.search(cr, uid, [('account_id','=', account.id), ('invoice_id','!=',False), ('to_invoice','!=', False), ('journal_id.type', '=', 'general')], context=context)
+            line_ids = lines_obj.search(cr, uid, [('account_id','=', account.id), ('invoice_id','!=',False), ('to_invoice','!=', False), ('journal_id.type', '=', 'general'), ('invoice_id.type', 'in', ['out_invoice', 'out_refund'])], context=context)
             for line in lines_obj.browse(cr, uid, line_ids, context=context):
                 if line.invoice_id not in inv_ids:
                     inv_ids.append(line.invoice_id)
-                    res[account.id] += line.invoice_id.amount_untaxed
+                    if line.invoice_id.type == 'out_refund':
+                        res[account.id] -= line.invoice_id.amount_untaxed
+                    else:
+                        res[account.id] += line.invoice_id.amount_untaxed
         return res
 
     def _remaining_ca_calc(self, cr, uid, ids, name, arg, context=None):
@@ -664,35 +671,37 @@ class account_analytic_account(osv.osv):
         context = context or {}
 
         journal_obj = self.pool.get('account.journal')
+        fpos_obj = self.pool['account.fiscal.position']
+        partner = contract.partner_id
 
-        if not contract.partner_id:
+        if not partner:
             raise osv.except_osv(_('No Customer Defined!'),_("You must first select a Customer for Contract %s!") % contract.name )
 
-        fpos = contract.partner_id.property_account_position or False
+        fpos_id = fpos_obj.get_fiscal_position(cr, uid, partner.company_id.id, partner.id, context=context)
         journal_ids = journal_obj.search(cr, uid, [('type', '=','sale'),('company_id', '=', contract.company_id.id or False)], limit=1)
         if not journal_ids:
             raise osv.except_osv(_('Error!'),
             _('Please define a sale journal for the company "%s".') % (contract.company_id.name or '', ))
 
-        partner_payment_term = contract.partner_id.property_payment_term and contract.partner_id.property_payment_term.id or False
+        partner_payment_term = partner.property_payment_term and partner.property_payment_term.id or False
 
         currency_id = False
         if contract.pricelist_id:
             currency_id = contract.pricelist_id.currency_id.id
-        elif contract.partner_id.property_product_pricelist:
-            currency_id = contract.partner_id.property_product_pricelist.currency_id.id
+        elif partner.property_product_pricelist:
+            currency_id = partner.property_product_pricelist.currency_id.id
         elif contract.company_id:
             currency_id = contract.company_id.currency_id.id
 
         invoice = {
-           'account_id': contract.partner_id.property_account_receivable.id,
+           'account_id': partner.property_account_receivable.id,
            'type': 'out_invoice',
-           'partner_id': contract.partner_id.id,
+           'partner_id': partner.id,
            'currency_id': currency_id,
            'journal_id': len(journal_ids) and journal_ids[0] or False,
            'date_invoice': contract.recurring_next_date,
            'origin': contract.code,
-           'fiscal_position': fpos and fpos.id,
+           'fiscal_position': fpos_id,
            'payment_term': partner_payment_term,
            'company_id': contract.company_id.id or False,
         }

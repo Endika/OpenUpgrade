@@ -1,6 +1,18 @@
 (function() {
     "use strict";
 
+    /* --- Set the browser into the dom for css selectors --- */
+    var browser;
+    if ($.browser.webkit) browser = "webkit";
+    else if ($.browser.safari) browser = "safari";
+    else if ($.browser.opera) browser = "opera";
+    else if ($.browser.msie || ($.browser.mozilla && +$.browser.version.replace(/^([0-9]+\.[0-9]+).*/, '\$1') < 20)) browser = "msie";
+    else if ($.browser.mozilla) browser = "mozilla";
+    browser += ","+$.browser.version;
+    if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase())) browser += ",mobile";
+    document.documentElement.setAttribute('data-browser', browser);
+    /* ---------------------------------------------------- */
+
     var website = {};
     openerp.website = website;
 
@@ -93,7 +105,7 @@
         options = _.extend({
             window_title: '',
             field_name: '',
-            default: '',
+            'default': '', // dict notation for IE<9
             init: function() {}
         }, options || {});
 
@@ -106,7 +118,7 @@
         var dialog = $(openerp.qweb.render('website.prompt', options)).appendTo("body");
         options.$dialog = dialog;
         var field = dialog.find(options.field_type).first();
-        field.val(options.default);
+        field.val(options['default']); // dict notation for IE<9
         field.fillWith = function (data) {
             if (field.is('select')) {
                 var select = field[0];
@@ -282,18 +294,42 @@
                 return templates_def;
             }).then(function () {
                 // display button if they are at least one editable zone in the page (check the branding)
-                var editable = $('html').data('website-id') && !!$('[data-oe-model]').size();
-                $("#oe_editzone").toggle(editable);
+                if (!!$('[data-oe-model]').size()) {
+                    $("#oe_editzone").show();
+
+                    //backwards compatibility with 8.0RC1 templates - Drop next line in master!
+                    $("#oe_editzone button").show();
+                }
 
                 if ($('html').data('website-id')) {
                     website.id = $('html').data('website-id');
                     website.session = new openerp.Session();
-                    var modules = ['website'];
-                    return openerp._t.database.load_translations(website.session, modules, website.get_context().lang);
+                    return openerp.jsonRpc('/website/translations', 'call', {'lang': website.get_context().lang})
+                    .then(function(trans) {
+                        openerp._t.database.set_bundle(trans);});
+                }
+            }).then(function () {
+                var templates = openerp.qweb.templates;
+                var keys = _.keys(templates);
+                for (var i = 0; i < keys.length; i++){
+                    treat_node(templates[keys[i]]);
                 }
             }).promise();
         }
         return all_ready;
+    };
+
+    function treat_node(node){
+        if(node.nodeType === 3) {
+            if(node.nodeValue.match(/\S/)){
+                var text_value = $.trim(node.nodeValue);
+                var spaces = node.nodeValue.split(text_value);
+                node.nodeValue = spaces[0] + openerp._t(text_value) + spaces[1];
+            }
+        }
+        else if(node.nodeType === 1 && node.hasChildNodes()) {
+            _.each(node.childNodes, function(subnode) {treat_node(subnode);});
+        }
     };
 
     website.inject_tour = function() {
@@ -314,6 +350,30 @@
                 });
         });
 
+        if (!$('.js_change_lang').length) {
+            // in case template is not up to date...
+            var links = $('ul.js_language_selector li a:not([data-oe-id])');
+            var m = $(_.min(links, function(l) { return $(l).attr('href').length; })).attr('href');
+            links.each(function() {
+                var t = $(this).attr('href');
+                var l = (t === m) ? "default" : t.split('/')[1];
+                $(this).data('lang', l).addClass('js_change_lang');
+            });
+        }
+
+        $(document).on('click', '.js_change_lang', function(e) {
+            e.preventDefault();
+
+            var self = $(this);
+            // retrieve the hash before the redirect
+            var redirect = {
+                lang: self.data('lang'),
+                url: self.attr('href'),
+                hash: location.hash
+            };
+            location.href = _.str.sprintf("/website/lang/%(lang)s?r=%(url)s%(hash)s", redirect);
+        });
+
         /* ----- KANBAN WEBSITE ---- */
         $('.js_kanban').each(function () {
             website.init_kanban(this);
@@ -332,6 +392,11 @@
         $('#oe_applications').before($collapse);
         $collapse.wrap('<div class="visible-xs"/>');
         $('[data-target="#oe_applications"]').attr("data-target", "#oe_applications_collapse");
+    });
+
+    openerp.Tour.autoRunning = false;
+    website.ready().then(function () {
+        setTimeout(openerp.Tour.running,0);
     });
 
     return website;

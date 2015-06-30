@@ -37,15 +37,25 @@ class account_fiscal_position(osv.osv):
         'account_ids': fields.one2many('account.fiscal.position.account', 'position_id', 'Account Mapping', copy=True),
         'tax_ids': fields.one2many('account.fiscal.position.tax', 'position_id', 'Tax Mapping', copy=True),
         'note': fields.text('Notes'),
-        'auto_apply': fields.boolean('Automatic', help="Apply automatically this fiscal position."),
+        'auto_apply': fields.boolean('Automatic', help="Apply automatically this fiscal position if the conditions match."),
         'vat_required': fields.boolean('VAT required', help="Apply only if partner has a VAT number."),
-        'country_id': fields.many2one('res.country', 'Countries', help="Apply only if delivery or invoicing country match."),
-        'country_group_id': fields.many2one('res.country.group', 'Country Group', help="Apply only if delivery or invocing country match the group."),
+        'country_id': fields.many2one('res.country', 'Country', help="Apply when the shipping or invoicing country matches. Takes precedence over positions matching on a country group."),
+        'country_group_id': fields.many2one('res.country.group', 'Country Group', help="Apply when the shipping or invoicing country is in this country group, and no position matches the country directly."),
     }
 
     _defaults = {
         'active': True,
     }
+
+    def _check_country(self, cr, uid, ids, context=None):
+        obj = self.browse(cr, uid, ids[0], context=context)
+        if obj.country_id and obj.country_group_id:
+            return False
+        return True
+
+    _constraints = [
+        (_check_country, 'You can not select a country and a group of countries', ['country_id', 'country_group_id']),
+    ]
 
     @api.v7
     def map_tax(self, cr, uid, fposition_id, taxes, context=None):
@@ -69,12 +79,13 @@ class account_fiscal_position(osv.osv):
     def map_tax(self, taxes):
         result = self.env['account.tax'].browse()
         for tax in taxes:
+            tax_count = 0
             for t in self.tax_ids:
                 if t.tax_src_id == tax:
+                    tax_count += 1
                     if t.tax_dest_id:
                         result |= t.tax_dest_id
-                    break
-            else:
+            if not tax_count:
                 result |= tax
         return result
 
@@ -112,15 +123,24 @@ class account_fiscal_position(osv.osv):
         else:
             delivery = partner
 
-        domain = [
-            ('auto_apply', '=', True),
-            '|', ('vat_required', '=', False), ('vat_required', '=', partner.vat_subjected),
-            '|', ('country_id', '=', None), ('country_id', '=', delivery.country_id.id),
-            '|', ('country_group_id', '=', None), ('country_group_id.country_ids', '=', delivery.country_id.id)
-        ]
-        fiscal_position_ids = self.search(cr, uid, domain, context=context)
-        if fiscal_position_ids:
-            return fiscal_position_ids[0]
+        domains = [[('auto_apply', '=', True), ('vat_required', '=', partner.vat_subjected)]]
+        if partner.vat_subjected:
+            # Possibly allow fallback to non-VAT positions, if no VAT-required position matches
+            domains += [[('auto_apply', '=', True), ('vat_required', '=', False)]]
+
+        for domain in domains:
+            if delivery.country_id.id:
+                fiscal_position_ids = self.search(cr, uid, domain + [('country_id', '=', delivery.country_id.id)], context=context, limit=1)
+                if fiscal_position_ids:
+                    return fiscal_position_ids[0]
+
+                fiscal_position_ids = self.search(cr, uid, domain + [('country_group_id.country_ids', '=', delivery.country_id.id)], context=context, limit=1)
+                if fiscal_position_ids:
+                    return fiscal_position_ids[0]
+
+            fiscal_position_ids = self.search(cr, uid, domain + [('country_id', '=', None), ('country_group_id', '=', None)], context=context, limit=1)
+            if fiscal_position_ids:
+                return fiscal_position_ids[0]
         return False
 
 class account_fiscal_position_tax(osv.osv):
@@ -222,7 +242,7 @@ class res_partner(osv.osv):
         result = {}
         account_invoice_report = self.pool.get('account.invoice.report')
         for partner in self.browse(cr, uid, ids, context=context):
-            domain = [('partner_id', 'child_of', partner.id)]
+            domain = [('partner_id', 'child_of', partner.id), ('state', 'not in', ['draft', 'cancel'])]
             invoice_ids = account_invoice_report.search(cr, uid, domain, context=context)
             invoices = account_invoice_report.browse(cr, uid, invoice_ids, context=context)
             result[partner.id] = sum(inv.user_currency_price_total for inv in invoices)
@@ -231,13 +251,14 @@ class res_partner(osv.osv):
     def _journal_item_count(self, cr, uid, ids, field_name, arg, context=None):
         MoveLine = self.pool('account.move.line')
         AnalyticAccount = self.pool('account.analytic.account')
-        return {
-            partner_id: {
-                'journal_item_count': MoveLine.search_count(cr, uid, [('partner_id', '=', partner_id)], context=context),
-                'contracts_count': AnalyticAccount.search_count(cr,uid, [('partner_id', '=', partner_id)], context=context)
-            }
-            for partner_id in ids
-        }
+        results = {}
+        for partner_id in ids:
+            results[partner_id] = {}
+            if 'contracts_count' in field_name:
+                results[partner_id]['contracts_count'] = AnalyticAccount.search_count(cr, uid, [('partner_id', '=', partner_id)], context=context)
+            if 'journal_item_count' in field_name:
+                results[partner_id]['journal_item_count'] = MoveLine.search_count(cr, uid, [('partner_id', '=', partner_id)], context=context)
+        return results
 
     def has_something_to_reconcile(self, cr, uid, partner_id, context=None):
         '''

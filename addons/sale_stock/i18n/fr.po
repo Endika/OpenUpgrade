@@ -7,18 +7,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-08-14 13:09+0000\n"
-"PO-Revision-Date: 2014-08-14 16:10+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2015-01-21 14:08+0000\n"
+"PO-Revision-Date: 2015-04-09 09:32+0000\n"
+"Last-Translator: Frederic Clementi - Camptocamp "
+"<frederic.clementi@camptocamp.com>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-15 07:50+0000\n"
-"X-Generator: Launchpad (build 17156)\n"
+"X-Launchpad-Export-Date: 2015-04-10 05:30+0000\n"
+"X-Generator: Launchpad (build 17413)\n"
 
 #. module: sale_stock
-#: code:addons/sale_stock/sale_stock.py:261
+#: code:addons/sale_stock/sale_stock.py:266
 #, python-format
 msgid "(n/a)"
 msgstr "(n/a)"
@@ -35,11 +36,15 @@ msgid ""
 "You can define your own carrier and delivery grids for prices.\n"
 "-This installs the module delivery."
 msgstr ""
+"Permet d'ajoouter les méthodes de transport aux commandes et bons de "
+"livraisons.\n"
+"Vous pouvez définir vos propres transporteurs et tarifs.\n"
+"-Ceci installe le module delivery"
 
 #. module: sale_stock
 #: help:sale.config.settings,group_route_so_lines:0
 msgid "Allows you to choose a delivery route on sales order lines"
-msgstr ""
+msgstr "Permet de choisir le mode de livraison par ligne de commande"
 
 #. module: sale_stock
 #: help:sale.config.settings,group_mrp_properties:0
@@ -62,6 +67,8 @@ msgstr "Impossible d'annuler le bon de commande !"
 #: field:sale.config.settings,group_route_so_lines:0
 msgid "Choose MTO, drop shipping,... on sales order lines"
 msgstr ""
+"Choisissez : à la Commande, drop shipping ....(méthode d'approvisionnement) "
+"par ligne de commande"
 
 #. module: sale_stock
 #: model:ir.model,name:sale_stock.model_res_company
@@ -69,8 +76,8 @@ msgid "Companies"
 msgstr "Sociétés"
 
 #. module: sale_stock
-#: code:addons/sale_stock/sale_stock.py:272
-#: code:addons/sale_stock/sale_stock.py:345
+#: code:addons/sale_stock/sale_stock.py:277
+#: code:addons/sale_stock/sale_stock.py:352
 #, python-format
 msgid "Configuration Error!"
 msgstr "Erreur de paramétrage !"
@@ -120,7 +127,7 @@ msgstr "Active la facturation basée sur les bons de livraison"
 #. module: sale_stock
 #: model:res.groups,name:sale_stock.group_route_so_lines
 msgid "Enable Route on Sales Order Line"
-msgstr ""
+msgstr "Permettre les routes par ligne de commande"
 
 #. module: sale_stock
 #: field:sale.config.settings,group_invoice_deli_orders:0
@@ -149,7 +156,7 @@ msgstr ""
 #. module: sale_stock
 #: model:ir.model,name:sale_stock.model_stock_location_route
 msgid "Inventory Routes"
-msgstr ""
+msgstr "Routes logistiques"
 
 #. module: sale_stock
 #: selection:sale.config.settings,default_order_policy:0
@@ -180,7 +187,7 @@ msgid ""
 msgstr ""
 
 #. module: sale_stock
-#: code:addons/sale_stock/sale_stock.py:340
+#: code:addons/sale_stock/sale_stock.py:347
 #, python-format
 msgid "Not enough stock ! : "
 msgstr "Pas assez de stock ! "
@@ -210,12 +217,7 @@ msgstr ""
 "livraisons partielles."
 
 #. module: sale_stock
-#: view:sale.report:sale_stock.view_order_product_search_sale_stock_inherit
-msgid "Picked"
-msgstr "Réceptionné"
-
-#. module: sale_stock
-#: code:addons/sale_stock/sale_stock.py:270
+#: code:addons/sale_stock/sale_stock.py:275
 #, python-format
 msgid "Picking Information ! : "
 msgstr "Information sur l'opération ! : "
@@ -228,12 +230,22 @@ msgstr "Bon de livraison"
 #. module: sale_stock
 #: field:sale.order,picking_ids:0
 msgid "Picking associated to this sale"
-msgstr ""
+msgstr "Livraison associée à cette commande"
 
 #. module: sale_stock
 #: field:sale.config.settings,task_work:0
 msgid "Prepare invoices based on task's activities"
 msgstr "Générer des factures basées sur des tâches"
+
+#. module: sale_stock
+#: model:ir.model,name:sale_stock.model_product_product
+msgid "Product"
+msgstr ""
+
+#. module: sale_stock
+#: field:sale.order.line,product_tmpl_id:0
+msgid "Product Template"
+msgstr ""
 
 #. module: sale_stock
 #: field:sale.config.settings,group_mrp_properties:0
@@ -268,7 +280,7 @@ msgstr ""
 #. module: sale_stock
 #: field:sale.config.settings,module_sale_service:0
 msgid "Sale Service"
-msgstr ""
+msgstr "Service des ventes"
 
 #. module: sale_stock
 #: model:ir.model,name:sale_stock.model_sale_order
@@ -304,7 +316,7 @@ msgstr "Jours de sécurité"
 #. module: sale_stock
 #: field:stock.location.route,sale_selectable:0
 msgid "Selectable on Sales Order Line"
-msgstr ""
+msgstr "Sélectionnable dans les lignes de ventes"
 
 #. module: sale_stock
 #: field:sale.report,shipped:0
@@ -348,7 +360,6 @@ msgstr "Voir le bon de livraison"
 
 #. module: sale_stock
 #: field:sale.order,warehouse_id:0
-#: view:sale.report:sale_stock.view_order_product_search_sale_stock_inherit
 #: field:sale.report,warehouse_id:0
 msgid "Warehouse"
 msgstr "Entrepôt"
@@ -371,7 +382,7 @@ msgstr ""
 "commande."
 
 #. module: sale_stock
-#: code:addons/sale_stock/sale_stock.py:336
+#: code:addons/sale_stock/sale_stock.py:343
 #, python-format
 msgid ""
 "You plan to sell %.2f %s but you only have %.2f %s available !\n"
@@ -382,7 +393,7 @@ msgstr ""
 "Le stock réel est %.2f %s. (sans les réservations)"
 
 #. module: sale_stock
-#: code:addons/sale_stock/sale_stock.py:265
+#: code:addons/sale_stock/sale_stock.py:270
 #, python-format
 msgid ""
 "You selected a quantity of %d Units.\n"
@@ -406,3 +417,6 @@ msgid ""
 "{\"shipping_except\":\"red\",\"invoice_except\":\"red\",\"waiting_date\":\"bl"
 "ue\"}"
 msgstr ""
+
+#~ msgid "Picked"
+#~ msgstr "Réceptionné"

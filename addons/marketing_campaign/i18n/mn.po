@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-08-14 13:09+0000\n"
-"PO-Revision-Date: 2014-08-14 16:10+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2015-01-21 14:08+0000\n"
+"PO-Revision-Date: 2015-05-08 12:46+0000\n"
+"Last-Translator: gobi <Unknown>\n"
 "Language-Team: Mongolian <mn@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-15 07:26+0000\n"
-"X-Generator: Launchpad (build 17156)\n"
+"X-Launchpad-Export-Date: 2015-05-09 05:51+0000\n"
+"X-Generator: Launchpad (build 17474)\n"
 
 #. module: marketing_campaign
 #: field:campaign.analysis,count:0
@@ -42,25 +42,23 @@ msgid ""
 "          </p>\n"
 "        "
 msgstr ""
-
-#. module: marketing_campaign
-#: model:email.template,body_html:marketing_campaign.email_template_1
-msgid "<p>Hello, you will receive your welcome pack via email shortly.</p>"
-msgstr ""
-
-#. module: marketing_campaign
-#: model:email.template,body_html:marketing_campaign.email_template_3
-msgid ""
-"<p>Hi, we are delighted to let you know that you have entered the select "
-"circle of our Gold Partners</p>"
-msgstr ""
-
-#. module: marketing_campaign
-#: model:email.template,body_html:marketing_campaign.email_template_2
-msgid ""
-"<p>Hi, we are delighted to welcome you among our Silver Partners as of "
-"today!</p>"
-msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"            Маркетингийн аян үүсгэхдээ дарна уу.\n"
+"          </p><p>\n"
+"            Odoo-н аян нь ирээдүйтэй харилцагчидтай үүсэх харилцааг\n"
+"            автоматжуулахад тусладаг. Сэжим болон харилцагч дээрээ\n"
+"            сегментчилэлийг тодорхой нөхцлүүдээр аян дээрээ тодорхойлж "
+"болно.\n"
+"          </p><p>\n"
+"            Аян нь эмэйл илгээх, захиа хэвлэх, багийг оноох гэх мэт үйл "
+"ажиллагааг\n"
+"            агуулж байдаг. Эдгээр үйл ажиллагаа нь тусгай нөхцөл байдал, "
+"холбогдох маягт,\n"
+"            анх холбогдсоноос хойш 10 хоносон, сэжим хаагдаагүй удсан гэх "
+"мэт байдлаас\n"
+"            автоматаар үүсч байдаг.\n"
+"          </p>\n"
+"        "
 
 #. module: marketing_campaign
 #: field:marketing.campaign.activity,server_action_id:0
@@ -278,7 +276,7 @@ msgstr "Улс"
 #: field:marketing.campaign.transition,create_uid:0
 #: field:marketing.campaign.workitem,create_uid:0
 msgid "Created by"
-msgstr ""
+msgstr "Үүсгэгч"
 
 #. module: marketing_campaign
 #: field:marketing.campaign,create_date:0
@@ -287,7 +285,7 @@ msgstr ""
 #: field:marketing.campaign.transition,create_date:0
 #: field:marketing.campaign.workitem,create_date:0
 msgid "Created on"
-msgstr ""
+msgstr "Үүсгэсэн огноо"
 
 #. module: marketing_campaign
 #: selection:marketing.campaign.activity,type:0
@@ -313,7 +311,6 @@ msgid "Date this segment was last closed or cancelled."
 msgstr "Энэ сегмент хамгийн сүүлд хаагдсан эсвэл цуцлагдсан огноо."
 
 #. module: marketing_campaign
-#: view:campaign.analysis:marketing_campaign.view_campaign_analysis_search
 #: field:campaign.analysis,day:0
 msgid "Day"
 msgstr "Өдөр"
@@ -430,7 +427,7 @@ msgstr "Гүйцэтгэх огноо"
 #. module: marketing_campaign
 #: view:marketing.campaign.workitem:marketing_campaign.view_marketing_campaign_workitem_search
 msgid "Execution Month"
-msgstr ""
+msgstr "Ажиллуулах Сар"
 
 #. module: marketing_campaign
 #: selection:campaign.analysis,month:0
@@ -482,7 +479,29 @@ msgstr "Мөшгөлт"
 #: view:marketing.campaign.segment:marketing_campaign.view_marketing_campaign_segment_search
 #: view:marketing.campaign.workitem:marketing_campaign.view_marketing_campaign_workitem_search
 msgid "Group By"
+msgstr "Бүлэглэх"
+
+#. module: marketing_campaign
+#: model:email.template,body_html:marketing_campaign.email_template_1
+msgid "Hello, you will receive your welcome pack via email shortly."
 msgstr ""
+"Сайн байна уу? Таныг урьсан багцыг товчхоноор эмэйлээр та хүлээн авах болно."
+
+#. module: marketing_campaign
+#: model:email.template,body_html:marketing_campaign.email_template_3
+msgid ""
+"Hi, we are delighted to let you know that you have entered the select circle "
+"of our Gold Partners"
+msgstr ""
+"Сайн байна уу, Танд манай Алтан түнш болсныг дуулгахдаа бид таатай байна."
+
+#. module: marketing_campaign
+#: model:email.template,body_html:marketing_campaign.email_template_2
+msgid ""
+"Hi, we are delighted to welcome you among our Silver Partners as of today!"
+msgstr ""
+"Сайн байна уу? Өнөөдөр таныг манай Мөнгөн харилцагч болсныг мэдэгдэхэд "
+"таатай байна!"
 
 #. module: marketing_campaign
 #: selection:marketing.campaign.transition,interval_type:0
@@ -502,7 +521,7 @@ msgstr "Зорилтот ажил яаж өдөөгдөх"
 #: field:marketing.campaign.transition,id:0
 #: field:marketing.campaign.workitem,id:0
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: marketing_campaign
 #: help:marketing.campaign.workitem,date:0
@@ -577,7 +596,7 @@ msgstr "Сүүлийн Ижилтгэл"
 #: field:marketing.campaign.transition,write_uid:0
 #: field:marketing.campaign.workitem,write_uid:0
 msgid "Last Updated by"
-msgstr ""
+msgstr "Сүүлийн засвар хийсэн"
 
 #. module: marketing_campaign
 #: field:marketing.campaign,write_date:0
@@ -586,7 +605,7 @@ msgstr ""
 #: field:marketing.campaign.transition,write_date:0
 #: field:marketing.campaign.workitem,write_date:0
 msgid "Last Updated on"
-msgstr ""
+msgstr "Сүүлийн засвар хийсэн огноо"
 
 #. module: marketing_campaign
 #: field:marketing.campaign.segment,date_run:0
@@ -596,7 +615,7 @@ msgstr "Эхлэх огноо"
 #. module: marketing_campaign
 #: view:marketing.campaign.segment:marketing_campaign.view_marketing_campaign_segment_search
 msgid "Launch Month"
-msgstr ""
+msgstr "Эхлүүлсэн сар"
 
 #. module: marketing_campaign
 #: view:marketing.campaign:marketing_campaign.view_marketing_campaign_search
@@ -634,10 +653,11 @@ msgstr "Маркетингийн аяны сегмент"
 #. module: marketing_campaign
 #: view:marketing.campaign:marketing_campaign.view_marketing_campaign_form
 msgid "Marketing Campaign Statistics"
-msgstr ""
+msgstr "Маркетингийн аяны статистик"
 
 #. module: marketing_campaign
 #: view:campaign.analysis:marketing_campaign.view_campaign_analysis_tree
+#: view:campaign.analysis:marketing_campaign.view_report_campaign_analysis_graph
 msgid "Marketing Reports"
 msgstr "Маркетингийн тайлан"
 
@@ -767,7 +787,6 @@ msgid "Outgoing Transitions"
 msgstr "Гарах шилжилтүүд"
 
 #. module: marketing_campaign
-#: view:campaign.analysis:marketing_campaign.view_campaign_analysis_search
 #: field:campaign.analysis,partner_id:0
 #: field:marketing.campaign.workitem,partner_id:0
 msgid "Partner"
@@ -839,7 +858,6 @@ msgid "Reset"
 msgstr "Шинэчлэх"
 
 #. module: marketing_campaign
-#: view:campaign.analysis:marketing_campaign.view_campaign_analysis_search
 #: field:campaign.analysis,res_id:0
 #: view:marketing.campaign:marketing_campaign.view_marketing_campaign_search
 #: field:marketing.campaign,object_id:0
@@ -948,7 +966,7 @@ msgstr "Эхлэх"
 #. module: marketing_campaign
 #: view:marketing.campaign:marketing_campaign.view_marketing_campaign_form
 msgid "Statistics"
-msgstr ""
+msgstr "Статистик"
 
 #. module: marketing_campaign
 #: view:campaign.analysis:marketing_campaign.view_campaign_analysis_search
@@ -1159,7 +1177,7 @@ msgstr "Хувьсах өртөг"
 #. module: marketing_campaign
 #: model:email.template,subject:marketing_campaign.email_template_1
 msgid "Welcome to the Odoo Partner Channel!"
-msgstr ""
+msgstr "Odoo-н түнш нарын сувагт тавтай морилно уу!"
 
 #. module: marketing_campaign
 #: selection:marketing.campaign,mode:0
@@ -1172,7 +1190,6 @@ msgid "Workitems"
 msgstr "Ажлууд"
 
 #. module: marketing_campaign
-#: view:campaign.analysis:marketing_campaign.view_campaign_analysis_search
 #: field:campaign.analysis,year:0
 msgid "Year"
 msgstr "Жил"
