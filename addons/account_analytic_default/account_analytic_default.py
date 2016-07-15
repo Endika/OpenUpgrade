@@ -1,27 +1,10 @@
 # -*- coding: utf-8 -*-
-###############################################################################
-#
-#    OpenERP, Open Source Management Solution
-#    Copyright (C) 2004-2010 Tiny SPRL (<http://tiny.be>).
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as
-#    published by the Free Software Foundation, either version 3 of the
-#    License, or (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
-##############################################################################
+# Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import time
 
 from openerp.osv import fields, osv
+from openerp import api
 
 class account_analytic_default(osv.osv):
     _name = "account.analytic.default"
@@ -76,15 +59,16 @@ class account_invoice_line(osv.osv):
     _inherit = "account.invoice.line"
     _description = "Invoice Line"
 
-    def product_id_change(self, cr, uid, ids, product, uom_id, qty=0, name='', type='out_invoice', partner_id=False, fposition_id=False, price_unit=False, currency_id=False, company_id=None, context=None):
-        res_prod = super(account_invoice_line, self).product_id_change(cr, uid, ids, product, uom_id, qty, name, type, partner_id, fposition_id, price_unit, currency_id=currency_id, company_id=company_id, context=context)
-        rec = self.pool.get('account.analytic.default').account_get(cr, uid, product, partner_id, uid, time.strftime('%Y-%m-%d'), company_id=company_id, context=context)
+    @api.onchange('product_id')
+    def _onchange_product_id(self):
+        res = super(account_invoice_line, self)._onchange_product_id()
+        rec = self.env['account.analytic.default'].account_get(self.product_id.id, self.invoice_id.partner_id.id, self._uid,
+                                                               time.strftime('%Y-%m-%d'), company_id=self.company_id.id, context=self._context)
         if rec:
-            res_prod['value'].update({'account_analytic_id': rec.analytic_id.id})
+            self.account_analytic_id = rec.analytic_id.id
         else:
-            res_prod['value'].update({'account_analytic_id': False})
-        return res_prod
-
+            self.account_analytic_id = False
+        return res
 
 
 class stock_picking(osv.osv):
@@ -103,21 +87,15 @@ class stock_picking(osv.osv):
 class sale_order_line(osv.osv):
     _inherit = "sale.order.line"
 
-    # Method overridden to set the analytic account by default on criterion match
-    def invoice_line_create(self, cr, uid, ids, context=None):
-        create_ids = super(sale_order_line, self).invoice_line_create(cr, uid, ids, context=context)
-        if not ids:
-            return create_ids
-        sale_line = self.browse(cr, uid, ids[0], context=context)
-        inv_line_obj = self.pool.get('account.invoice.line')
-        anal_def_obj = self.pool.get('account.analytic.default')
+    @api.multi
+    def _prepare_invoice_line(self, qty):
+        res = super(sale_order_line, self)._prepare_invoice_line(qty)
+        default_analytic_account = self.env['account.analytic.default'].account_get(self.product_id.id, self.order_id.partner_id.id, self.order_id.user_id.id, time.strftime('%Y-%m-%d'))
+        if default_analytic_account:
+            res.update({'account_analytic_id': default_analytic_account.analytic_id.id})
+        return res
 
-        for line in inv_line_obj.browse(cr, uid, create_ids, context=context):
-            rec = anal_def_obj.account_get(cr, uid, line.product_id.id, sale_line.order_id.partner_id.id, sale_line.order_id.user_id.id, time.strftime('%Y-%m-%d'), context=context)
 
-            if rec:
-                inv_line_obj.write(cr, uid, [line.id], {'account_analytic_id': rec.analytic_id.id}, context=context)
-        return create_ids
 class product_product(osv.Model):
     _inherit = 'product.product'
     def _rules_count(self, cr, uid, ids, field_name, arg, context=None):
@@ -129,6 +107,7 @@ class product_product(osv.Model):
     _columns = {
         'rules_count': fields.function(_rules_count, string='# Analytic Rules', type='integer'),
     }
+
 
 class product_template(osv.Model):
     _inherit = 'product.template'
@@ -152,6 +131,7 @@ class product_template(osv.Model):
         # Remove context so it is not going to filter on product_id with active_id of template
         result['context'] = "{}"
         return result
+<<<<<<< HEAD
 
 
 class stock_move(osv.Model):
@@ -168,3 +148,5 @@ class stock_move(osv.Model):
         return res
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
+=======
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0

@@ -61,7 +61,7 @@ class Scale(Thread):
             if status == 'error' and message:
                 _logger.error('Scale Error: '+message)
             elif status == 'disconnected' and message:
-                _logger.warning('Disconnected Scale: '+message)
+                _logger.info('Disconnected Scale: %s', message)
 
     def _get_raw_response(self, connection):
         response = ""

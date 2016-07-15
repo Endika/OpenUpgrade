@@ -59,6 +59,26 @@ def copy_database(conn_parms):
     return db_new
 
 migrations = {
+<<<<<<< HEAD
+=======
+    '9.0': {
+        'addons': {
+            'addons': {
+                'type': 'link',
+                'url': os.path.join('server', 'addons'),
+            },
+        },
+        'server': {
+            'type': 'git',
+            'url': 'git://github.com/OpenUpgrade/OpenUpgrade.git',
+            'branch': '9.0',
+            'addons_dir': os.path.join('openerp', 'addons'),
+            'root_dir': os.path.join(''),
+            'cmd': 'openerp-server --update=all --database=%(db)s '
+                   '--config=%(config)s --stop-after-init --no-xmlrpc',
+            },
+    },
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
     '8.0': {
         'addons': {
             'addons': {
@@ -246,8 +266,11 @@ for version in options.migrations.split(','):
             version,
             ','.join(sorted([a for a in migrations])))
 
+<<<<<<< HEAD
 bzrlib.plugin.load_plugins()
 bzrlib.trace.enable_default_logging()
+=======
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 logfile = os.path.join(options.branch_dir, 'migration.log')
 
 if not os.path.exists(options.branch_dir):
@@ -267,6 +290,11 @@ for version in options.migrations.split(','):
             if addon_config_type == 'link':
                 continue
             elif addon_config_type == 'bzr':
+<<<<<<< HEAD
+=======
+                bzrlib.plugin.load_plugins()
+                bzrlib.trace.enable_default_logging()
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
                 cmd_revno = bzrlib.builtins.cmd_revno()
                 cmd_revno.outf = StringIO.StringIO()
                 cmd_revno.run(location=os.path.join(options.branch_dir,
@@ -301,6 +329,11 @@ for version in options.migrations.split(','):
                 os.symlink(addon_config['url'],
                            os.path.join(options.branch_dir, version, name))
             elif addon_config_type == 'bzr':
+<<<<<<< HEAD
+=======
+                bzrlib.plugin.load_plugins()
+                bzrlib.trace.enable_default_logging()
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
                 print 'getting ' + addon_config['url']
                 cmd_checkout = bzrlib.builtins.cmd_checkout()
                 cmd_checkout.outf = StringIO.StringIO()
@@ -322,6 +355,7 @@ for version in options.migrations.split(','):
             else:
                 raise Exception('Unknown type %s' % addon_config_type)
 
+<<<<<<< HEAD
 openupgradelib = os.path.join(options.branch_dir, 'openupgradelib')
 if os.path.exists(openupgradelib):
     os.system('cd %(location)s; git pull origin master' % {
@@ -336,6 +370,8 @@ else:
 os.environ['PYTHONPATH'] = ':'.join(filter(None, [
     openupgradelib, os.environ.get('PYTHONPATH')]))
 
+=======
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 db_name = conn_parms['database']
 if not options.inplace:
     db_name = copy_database(conn_parms)

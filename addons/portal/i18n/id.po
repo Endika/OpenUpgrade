@@ -5,12 +5,19 @@
 # Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 8.0\n"
+"Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2015-01-21 14:08+0000\n"
 "PO-Revision-Date: 2015-12-01 23:42+0000\n"
 "Last-Translator: Wahyu Setiawan <wahyusetiaaa@gmail.com>\n"
 "Language-Team: Indonesian (http://www.transifex.com/odoo/odoo-8/language/id/)\n"
+=======
+"POT-Creation-Date: 2015-09-07 14:41+0000\n"
+"PO-Revision-Date: 2015-10-21 09:46+0000\n"
+"Last-Translator: Martin Trigaux\n"
+"Language-Team: Indonesian (http://www.transifex.com/odoo/odoo-9/language/id/)\n"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -18,15 +25,13 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. module: portal
-#: model:ir.actions.client,help:portal.action_mail_inbox_feeds_portal
+#: model:mail.template,body_html:portal.mail_template_data_portal_welcome
 msgid ""
-"<p>\n"
-"                    <b>Good Job!</b> Your inbox is empty.\n"
-"                </p><p>\n"
-"                    Your inbox contains private messages or emails sent to you\n"
-"                    as well as information related to documents or people you\n"
-"                    follow.\n"
+"\n"
+"            \t<p>\n"
+"                    Dear ${object.user_id.name or ''},\n"
 "                </p>\n"
+<<<<<<< HEAD
 "            "
 msgstr "<p>\n                    <b>Pekerjaan baik!</b> Kotak masuk Anda masih kosong.</p><p>Kotak masuk menampilkan pesan pribadi atau email yang dikirim kepada Anda serta informasi yang berkaitan dengan dokumen atau orang yang Anda ikuti.</p>"
 
@@ -50,15 +55,39 @@ msgid ""
 "                </p><p>\n"
 "                    Click on the top-right icon to compose a message. This\n"
 "                    message will be sent by email if it's an internal contact.\n"
+=======
+"                <p>\n"
+"                    You have been given access to ${user.company_id.name}'s ${object.wizard_id.portal_id.name}.\n"
 "                </p>\n"
+"                <p>\n"
+"                    Your login account data is:\n"
+"                </p>\n"
+"                <ul>\n"
+"                    <li>Username: ${object.user_id.login or ''}</li>\n"
+"                </ul>\n"
+"                <ul>\n"
+"                    <li>Portal: <a href=\"${'portal_url' in ctx and ctx['portal_url'] or ''}\">${'portal_url' in ctx and ctx['portal_url'] or ''}</a></li>\n"
+"                </ul>\n"
+"                <ul>\n"
+"                \t<li>Database: ${'dbname' in ctx and ctx['dbname'] or ''}</li>\n"
+"                </ul>\n"
+"                <p>\n"
+"                \tYou can set or change your password via the following url:\n"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
+"                </p>\n"
+"                <ul>\n"
+"                    <li><a href=\"${object.user_id.signup_url}\">${object.user_id.signup_url}</a></li>\n"
+"                </ul>\n"
+"                <p>\n"
+"                \t${object.wizard_id.welcome_message or ''}\n"
+"                </p>\n"
+"                <p>---<br />\n"
+"                    Odoo - Open Source Business Applications<br />\n"
+"                    http://www.odoo.com<br />\n"
+"                </p>\n"
+"            \n"
 "            "
 msgstr "<p>Tidak ada pesan yang ditemukan dan tidak ada pesan yang dikirim belum.</p><p>Klik kanan ikon untuk menulis pesan. Pesan ini akan dikirim melalui email jika kontak internal.</p>"
-
-#. module: portal
-#: code:addons/portal/mail_message.py:59
-#, python-format
-msgid "Access Denied"
-msgstr "Akses Ditolak"
 
 #. module: portal
 #: model:ir.model,name:portal.model_res_groups
@@ -71,15 +100,9 @@ msgid "After Sale Services"
 msgstr "Layanan Purna Jual"
 
 #. module: portal
-#: view:portal.wizard:portal.wizard_view
+#: model:ir.ui.view,arch_db:portal.wizard_view
 msgid "Apply"
 msgstr "Terapkan"
-
-#. module: portal
-#: model:ir.actions.client,name:portal.action_mail_archives_feeds_portal
-#: model:ir.ui.menu,name:portal.portal_mail_archivesfeeds
-msgid "Archives"
-msgstr "Arsip"
 
 #. module: portal
 #: model:ir.ui.menu,name:portal.portal_orders
@@ -87,21 +110,22 @@ msgid "Billing"
 msgstr "Pembayaran"
 
 #. module: portal
-#: view:portal.wizard:portal.wizard_view
+#: model:ir.ui.view,arch_db:portal.wizard_view
 msgid "Cancel"
 msgstr "Batalkan"
 
 #. module: portal
-#: field:portal.wizard.user,partner_id:0
+#: model:ir.model.fields,field_description:portal.field_portal_wizard_user_partner_id
 msgid "Contact"
 msgstr "Kontrak"
 
 #. module: portal
-#: view:portal.wizard.user:portal.wizard_user_tree_view
+#: model:ir.ui.view,arch_db:portal.wizard_user_tree_view
 msgid "Contacts"
 msgstr "Daftar kontak"
 
 #. module: portal
+<<<<<<< HEAD
 #: code:addons/portal/wizard/portal_wizard.py:163
 #, python-format
 msgid "Contacts Error"
@@ -109,15 +133,21 @@ msgstr "Kontak kesalahan"
 
 #. module: portal
 #: field:portal.wizard,create_uid:0 field:portal.wizard.user,create_uid:0
+=======
+#: model:ir.model.fields,field_description:portal.field_portal_wizard_create_uid
+#: model:ir.model.fields,field_description:portal.field_portal_wizard_user_create_uid
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Created by"
 msgstr "Dibuat oleh"
 
 #. module: portal
-#: field:portal.wizard,create_date:0 field:portal.wizard.user,create_date:0
+#: model:ir.model.fields,field_description:portal.field_portal_wizard_create_date
+#: model:ir.model.fields,field_description:portal.field_portal_wizard_user_create_date
 msgid "Created on"
 msgstr "Dibuat pada"
 
 #. module: portal
+<<<<<<< HEAD
 #: code:addons/portal/wizard/portal_wizard.py:34
 #, python-format
 msgid ""
@@ -144,13 +174,20 @@ msgstr "Dear %(name)s,\n\nYou have been given access to %(company)s's %(portal)s
 #: view:share.wizard:portal.share_step2_form_portal
 msgid "Details"
 msgstr "Rincian"
+=======
+#: model:ir.model.fields,field_description:portal.field_portal_wizard_display_name
+#: model:ir.model.fields,field_description:portal.field_portal_wizard_user_display_name
+msgid "Display Name"
+msgstr "Nama Tampilan"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: portal
-#: field:portal.wizard.user,email:0
+#: model:ir.model.fields,field_description:portal.field_portal_wizard_user_email
 msgid "Email"
 msgstr "e-mail"
 
 #. module: portal
+<<<<<<< HEAD
 #: code:addons/portal/wizard/portal_wizard.py:225
 #, python-format
 msgid "Email Required"
@@ -181,41 +218,48 @@ msgstr "Pengguna yang ada"
 
 #. module: portal
 #: field:portal.wizard,id:0 field:portal.wizard.user,id:0
+=======
+#: model:ir.model.fields,field_description:portal.field_portal_wizard_id
+#: model:ir.model.fields,field_description:portal.field_portal_wizard_user_id
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "ID"
 msgstr "ID"
 
 #. module: portal
-#: help:res.groups,is_portal:0
+#: model:ir.model.fields,help:portal.field_res_groups_is_portal
 msgid "If checked, this group is usable as a portal."
 msgstr "Jika dicentang, kelompok ini berguna sebagai portal."
 
 #. module: portal
-#: field:portal.wizard.user,in_portal:0
+#: model:ir.model.fields,field_description:portal.field_portal_wizard_user_in_portal
 msgid "In Portal"
 msgstr "Di Portal"
 
 #. module: portal
-#: model:ir.actions.client,name:portal.action_mail_inbox_feeds_portal
-#: model:ir.ui.menu,name:portal.portal_inbox
-msgid "Inbox"
-msgstr "Kotak Pesan"
-
-#. module: portal
-#: field:portal.wizard,welcome_message:0
+#: model:ir.model.fields,field_description:portal.field_portal_wizard_welcome_message
 msgid "Invitation Message"
 msgstr "PESAN UNDANGAN"
 
 #. module: portal
-#: field:portal.wizard,write_uid:0 field:portal.wizard.user,write_uid:0
+#: model:ir.model.fields,field_description:portal.field_portal_wizard___last_update
+#: model:ir.model.fields,field_description:portal.field_portal_wizard_user___last_update
+msgid "Last Modified on"
+msgstr "Terakhir Dimodifikasi pada"
+
+#. module: portal
+#: model:ir.model.fields,field_description:portal.field_portal_wizard_user_write_uid
+#: model:ir.model.fields,field_description:portal.field_portal_wizard_write_uid
 msgid "Last Updated by"
 msgstr "Diperbaharui oleh"
 
 #. module: portal
-#: field:portal.wizard,write_date:0 field:portal.wizard.user,write_date:0
+#: model:ir.model.fields,field_description:portal.field_portal_wizard_user_write_date
+#: model:ir.model.fields,field_description:portal.field_portal_wizard_write_date
 msgid "Last Updated on"
 msgstr "Diperbaharui pada"
 
 #. module: portal
+<<<<<<< HEAD
 #: model:ir.model,name:portal.model_mail_message
 msgid "Message"
 msgstr "Pesan"
@@ -224,13 +268,19 @@ msgstr "Pesan"
 #: model:ir.ui.menu,name:portal.portal_messages
 msgid "Messaging"
 msgstr "Pesan"
+=======
+#: model:ir.model.fields,field_description:portal.field_portal_wizard_user_user_id
+msgid "Login User"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: portal
-#: view:res.groups:portal.group_search_view
+#: model:ir.ui.view,arch_db:portal.group_search_view
 msgid "Non-Portal Groups"
 msgstr "Kelompok-kelompok non-Portal"
 
 #. module: portal
+<<<<<<< HEAD
 #: model:ir.model,name:portal.model_mail_mail
 msgid "Outgoing Mails"
 msgstr "Outgoing Mail"
@@ -250,18 +300,23 @@ msgstr "Silakan pilih setidaknya satu pengguna untuk berbagi dengan"
 #. module: portal
 #: model:ir.ui.menu,name:portal.portal_menu field:portal.wizard,portal_id:0
 #: field:res.groups,is_portal:0
+=======
+#: model:ir.model.fields,field_description:portal.field_portal_wizard_portal_id
+#: model:ir.model.fields,field_description:portal.field_res_groups_is_portal
+#: model:ir.ui.menu,name:portal.portal_menu
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Portal"
 msgstr "Pintu gerbang"
 
 #. module: portal
 #: model:ir.actions.act_window,name:portal.partner_wizard_action
 #: model:ir.model,name:portal.model_portal_wizard
-#: view:portal.wizard:portal.wizard_view
+#: model:ir.ui.view,arch_db:portal.wizard_view
 msgid "Portal Access Management"
 msgstr "Portal akses manajemen"
 
 #. module: portal
-#: view:res.groups:portal.group_search_view
+#: model:ir.ui.view,arch_db:portal.group_search_view
 msgid "Portal Groups"
 msgstr "Kelompok-kelompok portal"
 
@@ -276,7 +331,7 @@ msgid "Projects"
 msgstr "Proyek"
 
 #. module: portal
-#: view:portal.wizard:portal.wizard_view
+#: model:ir.ui.view,arch_db:portal.wizard_view
 msgid ""
 "Select which contacts should belong to the portal in the list below.\n"
 "                        The email address of each selected contact must be valid and unique.\n"
@@ -284,34 +339,39 @@ msgid ""
 msgstr "Pilih kontak yang harus milik portal dalam daftar di bawah ini.\n                        Alamat email dari setiap kontak yang dipilih harus valid dan unik.\n                        Jika perlu, Anda dapat memperbaiki alamat email kontak apapun secara langsung dalam daftar."
 
 #. module: portal
-#: code:addons/portal/wizard/portal_wizard.py:149
+#: code:addons/portal/wizard/portal_wizard.py:114
 #, python-format
 msgid "Several contacts have the same email: "
 msgstr "Beberapa kontak memiliki email yang sama:"
 
 #. module: portal
+<<<<<<< HEAD
 #: model:ir.model,name:portal.model_share_wizard
 msgid "Share Wizard"
 msgstr "Share Wisaya"
 
 #. module: portal
 #: code:addons/portal/wizard/portal_wizard.py:146
+=======
+#: code:addons/portal/wizard/portal_wizard.py:111
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 #, python-format
 msgid "Some contacts don't have a valid email: "
 msgstr "Beberapa kontak tidak memiliki imel:"
 
 #. module: portal
-#: code:addons/portal/wizard/portal_wizard.py:152
+#: code:addons/portal/wizard/portal_wizard.py:117
 #, python-format
 msgid "Some contacts have the same email as an existing portal user:"
 msgstr "Beberapa kontak memiliki email yang sama sebagai pengguna portal yang ada:"
 
 #. module: portal
-#: help:portal.wizard,portal_id:0
+#: model:ir.model.fields,help:portal.field_portal_wizard_portal_id
 msgid "The portal that users can be added in or removed from."
 msgstr "Portal bahwa pengguna dapat ditambahkan atau dihapus dari."
 
 #. module: portal
+<<<<<<< HEAD
 #: code:addons/portal/mail_message.py:60
 #, python-format
 msgid ""
@@ -322,16 +382,19 @@ msgstr "Operasi yang diminta tidak dapat diselesaikan karena batasan keamanan. H
 
 #. module: portal
 #: view:portal.wizard:portal.wizard_view
+=======
+#: model:ir.ui.view,arch_db:portal.wizard_view
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "This text is included in the email sent to new portal users."
 msgstr "Teks ini terdapat di email yang dikirim ke pengguna portal baru."
 
 #. module: portal
-#: help:portal.wizard,welcome_message:0
+#: model:ir.model.fields,help:portal.field_portal_wizard_welcome_message
 msgid "This text is included in the email sent to new users of the portal."
 msgstr "Teks ini terdapat di email yang dikirim kepada pengguna baru portal."
 
 #. module: portal
-#: code:addons/portal/wizard/portal_wizard.py:155
+#: code:addons/portal/wizard/portal_wizard.py:120
 #, python-format
 msgid ""
 "To resolve this error, you can: \n"
@@ -340,6 +403,7 @@ msgid ""
 msgstr "Untuk mengatasi kesalahan ini, Anda dapat: - benar email kontak yang relevan - memberikan akses hanya untuk kontak dengan email yang unik"
 
 #. module: portal
+<<<<<<< HEAD
 #: model:ir.actions.client,name:portal.action_mail_star_feeds_portal
 #: model:ir.ui.menu,name:portal.portal_mail_starfeeds
 msgid "To-do"
@@ -347,10 +411,14 @@ msgstr "Rencana"
 
 #. module: portal
 #: field:portal.wizard,user_ids:0
+=======
+#: model:ir.model.fields,field_description:portal.field_portal_wizard_user_ids
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Users"
 msgstr "Pengguna"
 
 #. module: portal
+<<<<<<< HEAD
 #: code:addons/portal/wizard/share_wizard.py:38
 #, python-format
 msgid "Users you already shared with"
@@ -358,17 +426,21 @@ msgstr "Pengguna yang Anda sudah berbagi dengan"
 
 #. module: portal
 #: field:portal.wizard.user,wizard_id:0
+=======
+#: model:ir.model.fields,field_description:portal.field_portal_wizard_user_wizard_id
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Wizard"
 msgstr "Wizard"
 
 #. module: portal
-#: code:addons/portal/wizard/portal_wizard.py:226
+#: code:addons/portal/wizard/portal_wizard.py:179
 #, python-format
 msgid ""
 "You must have an email address in your User Preferences to send emails."
 msgstr "Anda harus memiliki alamat email dalam preferensi pengguna untuk mengirim email."
 
 #. module: portal
+<<<<<<< HEAD
 #: code:addons/portal/wizard/portal_wizard.py:33
 #, python-format
 msgid "Your Odoo account at %(company)s"
@@ -390,3 +462,8 @@ msgstr "atau"
 #, python-format
 msgid "your messages "
 msgstr "pesan Anda"
+=======
+#: model:mail.template,subject:portal.mail_template_data_portal_welcome
+msgid "Your Odoo account at ${user.company_id.name|safe}"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0

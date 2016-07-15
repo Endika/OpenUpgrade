@@ -81,6 +81,7 @@ def py2exe_options():
                         'mako',
                         'markupsafe',
                         'mock',
+                        'ofxparse',
                         'openerp',
                         'openid',
                         'passlib',
@@ -95,12 +96,13 @@ def py2exe_options():
                         'reportlab',
                         'requests',
                         'select',
-                        'simplejson',
                         'smtplib',
+                        'suds',
                         'uuid',
                         'vatnumber',
                         'vobject',
                         'win32service', 'win32serviceutil',
+                        'xlrd',
                         'xlwt',
                         'xml', 'xml.dom',
                         'yaml',
@@ -124,7 +126,7 @@ setup(
     author_email=author_email,
     classifiers=filter(None, classifiers.split('\n')),
     license=license,
-    scripts=['openerp-server', 'openerp-gevent', 'odoo.py'],
+    scripts=['openerp-server', 'odoo.py'],
     packages=find_packages(),
     package_dir={'%s' % lib_name: 'openerp'},
     include_package_data=True,
@@ -138,6 +140,7 @@ setup(
         'lxml',  # windows binary http://www.lfd.uci.edu/~gohlke/pythonlibs/
         'mako',
         'mock',
+        'ofxparse',
         'passlib',
         'pillow',  # windows binary http://www.lfd.uci.edu/~gohlke/pythonlibs/
         'psutil',  # windows binary code.google.com/p/psutil/downloads/list
@@ -145,7 +148,7 @@ setup(
         'psycopg2 >= 2.2',
         'python-chart',
         'pydot',
-        'pyparsing < 2',
+        'pyparsing',
         'pypdf',
         'pyserial',
         'python-dateutil',
@@ -157,8 +160,7 @@ setup(
         'qrcode',
         'reportlab',  # windows binary pypi.python.org/pypi/reportlab
         'requests',
-        'simplejson',
-        'unittest2',
+        'suds-jurko',
         'vatnumber',
         'vobject',
         'werkzeug',
@@ -168,7 +170,6 @@ setup(
         'SSL': ['pyopenssl'],
     },
     tests_require=[
-        'unittest2',
         'mock',
     ],
     **py2exe_options()

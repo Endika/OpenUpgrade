@@ -3,15 +3,21 @@
 # * payment_transfer
 # 
 # Translators:
-# Florian Hatat, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 8.0\n"
+"Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2015-09-05 12:00+0000\n"
 "PO-Revision-Date: 2015-11-10 13:45+0000\n"
 "Last-Translator: Florian Hatat\n"
 "Language-Team: French (http://www.transifex.com/odoo/odoo-8/language/fr/)\n"
+=======
+"POT-Creation-Date: 2015-09-18 08:11+0000\n"
+"PO-Revision-Date: 2015-11-03 12:50+0000\n"
+"Last-Translator: Martin Trigaux\n"
+"Language-Team: French (http://www.transifex.com/odoo/odoo-9/language/fr/)\n"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -19,11 +25,49 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. module: payment_transfer
-#: model:payment.acquirer,pre_msg:payment_transfer.payment_acquirer_transfer
+#: code:addons/payment_transfer/models/payment_acquirer.py:68
+#, python-format
+msgid "; multiple order found"
+msgstr "; plusieurs commandes trouvées"
+
+#. module: payment_transfer
+#: code:addons/payment_transfer/models/payment_acquirer.py:66
+#, python-format
+msgid "; no order found"
+msgstr "; aucune commande trouvée"
+
+#. module: payment_transfer
+#: model:payment.acquirer,cancel_msg:payment_transfer.payment_acquirer_transfer
+msgid "<span><i>Cancel,</i> Your payment has been cancelled.</span>"
+msgstr "<span><i>Annulez,</i> Votre paiement a été annulé.</span>"
+
+#. module: payment_transfer
+#: model:payment.acquirer,done_msg:payment_transfer.payment_acquirer_transfer
 msgid ""
+<<<<<<< HEAD
 "<p>Transfer information will be provided after choosing the payment mode.</p>\n"
 "            "
 msgstr "<p>Les informations pour effectuer le virement seront données lorsque vous aurez choisi ce mode de paiement.</p>"
+=======
+"<span><i>Done,</i> Your online payment has been successfully processed. "
+"Thank you for your order.</span>"
+msgstr "<span><i>Terminé,</i> Votre paiement en-ligne a été enregistré. Merci de votre commande.</span>"
+
+#. module: payment_transfer
+#: model:payment.acquirer,error_msg:payment_transfer.payment_acquirer_transfer
+msgid ""
+"<span><i>Error,</i> Please be aware that an error occurred during the "
+"transaction. The order has been confirmed but won't be paid. Don't hesitate "
+"to contact us if you have any questions on the status of your order.</span>"
+msgstr "<span><i>Erreur,</i> une erreur est survenue pendant la transaction. La commande a été confirmée mais ne sera pas payée. N'hésitez pas à nous contacter si vous avez une question sur le statut de votre commande.</span>"
+
+#. module: payment_transfer
+#: model:payment.acquirer,pending_msg:payment_transfer.payment_acquirer_transfer
+msgid ""
+"<span><i>Pending,</i> Your online payment has been successfully processed. "
+"But your order is not validated yet.</span>"
+msgstr "<span><i>En cours,</i> Votre paiement en-ligne a été enregistré. Mais votre commande n'est pas encore validée.</span>"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: payment_transfer
 #: code:addons/payment_transfer/models/payment_acquirer.py:30
@@ -48,7 +92,21 @@ msgid "Payment Transaction"
 msgstr "Transaction"
 
 #. module: payment_transfer
-#: code:addons/payment_transfer/models/payment_acquirer.py:19
-#, python-format
+#: model:payment.acquirer,pre_msg:payment_transfer.payment_acquirer_transfer
+msgid "Transfer information will be provided after choosing the payment mode."
+msgstr ""
+
+#. module: payment_transfer
+#: model:payment.acquirer,name:payment_transfer.payment_acquirer_transfer
 msgid "Wire Transfer"
+<<<<<<< HEAD
 msgstr "Virement bancaire"
+=======
+msgstr "Virement banquaire"
+
+#. module: payment_transfer
+#: code:addons/payment_transfer/models/payment_acquirer.py:64
+#, python-format
+msgid "received data for reference %s"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0

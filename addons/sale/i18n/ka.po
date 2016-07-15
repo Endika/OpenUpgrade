@@ -5,12 +5,21 @@
 # Translators:
 msgid ""
 msgstr ""
+<<<<<<< HEAD
 "Project-Id-Version: Odoo 8.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-21 14:07+0000\n"
 "PO-Revision-Date: 2015-11-18 13:50+0000\n"
 "Last-Translator: Martin Trigaux\n"
 "Language-Team: Georgian (http://www.transifex.com/odoo/odoo-8/language/ka/)\n"
+=======
+"Project-Id-Version: Odoo 9.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-09 09:17+0000\n"
+"PO-Revision-Date: 2015-11-04 12:01+0000\n"
+"Last-Translator: Martin Trigaux\n"
+"Language-Team: Georgian (http://www.transifex.com/odoo/odoo-9/language/ka/)\n"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -18,7 +27,11 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. module: sale
+<<<<<<< HEAD
 #: model:email.template,body_html:sale.email_template_edi_sale
+=======
+#: model:mail.template,body_html:sale.email_template_edi_sale
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid ""
 "\n"
 "<div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
@@ -52,7 +65,11 @@ msgid ""
 "    <br/>\n"
 "    <p>It is also possible to directly pay with Paypal:</p>\n"
 "        <a style=\"margin-left: 120px;\" href=\"${object.paypal_url}\">\n"
+<<<<<<< HEAD
 "            <img class=\"oe_edi_paypal_button\" src=\"https://www.paypal.com/en_US/i/btn/btn_paynowCC_LG.gif\"/>\n"
+=======
+"            <img class=\"oe_edi_paypal_button\" src=\"/sale/static/img/btn_paynowcc_lg.gif\"/>\n"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 "        </a>\n"
 "    % endif\n"
 "\n"
@@ -67,6 +84,7 @@ msgid ""
 "    </div>\n"
 "    <div style=\"width: 347px; margin: 0px; padding: 5px 14px; line-height: 16px; background-color: #F2F2F2;\">\n"
 "        <span style=\"color: #222; margin-bottom: 5px; display: block; \">\n"
+<<<<<<< HEAD
 "        % if object.company_id.street:\n"
 "            ${object.company_id.street}<br/>\n"
 "        % endif\n"
@@ -79,6 +97,9 @@ msgid ""
 "        % if object.company_id.country_id:\n"
 "            ${object.company_id.state_id and ('%s, ' % object.company_id.state_id.name) or ''} ${object.company_id.country_id.name or ''}<br/>\n"
 "        % endif\n"
+=======
+"            ${object.company_id.partner_id.sudo().with_context(show_address=True, html_format=True).name_get()[0][1] | safe}\n"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 "        </span>\n"
 "        % if object.company_id.phone:\n"
 "            <div style=\"margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; \">\n"
@@ -97,45 +118,85 @@ msgid ""
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: field:product.product,sales_count:0 field:product.template,sales_count:0
+=======
+#: model:ir.model.fields,field_description:sale.field_product_product_sales_count
+#: model:ir.model.fields,field_description:sale.field_product_template_sales_count
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "# Sales"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: field:sale.report,nbr:0
+=======
+#: model:ir.model.fields,field_description:sale.field_sale_order_invoice_count
+msgid "# of Invoices"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_report_nbr
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "# of Lines"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: field:sale.report,product_uom_qty:0
+=======
+#: model:ir.model.fields,field_description:sale.field_sale_advance_payment_inv_count
+msgid "# of Orders"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_report_product_uom_qty
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "# of Qty"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: field:res.partner,sale_order_count:0
+=======
+#: model:ir.model.fields,field_description:sale.field_res_partner_sale_order_count
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "# of Sales Order"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: model:email.template,report_name:sale.email_template_edi_sale
+=======
+#: model:mail.template,report_name:sale.email_template_edi_sale
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid ""
 "${(object.name or '').replace('/','_')}_${object.state == 'draft' and "
 "'draft' or ''}"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: model:email.template,subject:sale.email_template_edi_sale
+=======
+#: model:mail.template,subject:sale.email_template_edi_sale
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid ""
 "${object.company_id.name|safe} ${object.state in ('draft', 'sent') and "
 "'Quotation' or 'Order'} (Ref ${object.name or 'n/a' })"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: view:sale.order:sale.view_order_form
+=======
+#: model:ir.ui.view,arch_db:sale.view_order_form
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "(update)"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: help:sale.order.line,state:0
 msgid ""
 "* The 'Draft' status is set when the related sales order in draft status.                     \n"
@@ -362,16 +423,119 @@ msgstr ""
 
 #. module: sale
 #: help:sale.config.settings,group_uom:0
+=======
+#: model:ir.ui.view,arch_db:sale.report_saleorder_document
+msgid "<span groups=\"sale.group_discount_per_so_line\">Disc.(%)</span>"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.report_saleorder_document
+msgid "<strong>Fiscal Position Remark:</strong>"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.report_saleorder_document
+msgid "<strong>Payment Term:</strong>"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.report_saleorder_document
+msgid "<strong>Salesperson:</strong>"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.report_saleorder_document
+msgid "<strong>Shipping address:</strong>"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.report_saleorder_document
+msgid "<strong>Total Without Taxes</strong>"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.report_saleorder_document
+msgid "<strong>Total</strong>"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.report_saleorder_document
+msgid "<strong>Your Reference:</strong>"
+msgstr ""
+
+#. module: sale
+#: selection:sale.config.settings,sale_pricelist_setting:0
+msgid "A single sale price per product"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,help:sale.field_sale_advance_payment_inv_deposit_account_id
+msgid "Account used for deposits"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_config_settings_group_sale_delivery_address
+msgid "Addresses"
+msgstr ""
+
+#. module: sale
+#: model:res.groups,name:sale.group_delivery_invoice_address
+msgid "Addresses in Sales Orders"
+msgstr ""
+
+#. module: sale
+#: code:addons/sale/wizard/sale_make_invoice_advance.py:126
+#, python-format
+msgid "Advance: %s"
+msgstr ""
+
+#. module: sale
+#: selection:sale.config.settings,sale_pricelist_setting:0
+msgid "Advanced pricing based on formula"
+msgstr ""
+
+#. module: sale
+#: selection:sale.config.settings,group_discount_per_so_line:0
+msgid "Allow discounts on sales order lines"
+msgstr ""
+
+#. module: sale
+#: selection:sale.config.settings,auto_done_setting:0
+msgid ""
+"Allow to edit sales order from the 'Sales Order' menu (not from the "
+"Quotation menu)"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,help:sale.field_sale_config_settings_group_sale_pricelist
+msgid ""
+"Allows to manage different prices based on rules per category of customers.\n"
+"                    Example: 10% for retailers, promotion of 5 EUR on this product, etc."
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,help:sale.field_sale_config_settings_group_uom
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid ""
 "Allows you to select and maintain different units of measure for products."
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: help:account.config.settings,group_analytic_account_for_sales:0
+=======
+#: model:ir.model.fields,help:sale.field_account_config_settings_group_analytic_account_for_sales
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Allows you to specify an analytic account on sales orders."
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: help:sale.config.settings,group_sale_delivery_address:0
 msgid ""
 "Allows you to specify different delivery and invoice addresses on a sales "
@@ -380,6 +544,15 @@ msgstr ""
 
 #. module: sale
 #: field:sale.report,analytic_account_id:0
+=======
+#: model:ir.model.fields,field_description:sale.field_crm_team_sales_to_invoice_amount
+msgid "Amount of sales to invoice"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_project_id
+#: model:ir.model.fields,field_description:sale.field_sale_report_analytic_account_id
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Analytic Account"
 msgstr ""
 
@@ -389,6 +562,7 @@ msgid "Analytic Accounting for Sales"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: field:account.config.settings,group_analytic_account_for_sales:0
 msgid "Analytic accounting for sales"
 msgstr ""
@@ -404,6 +578,15 @@ msgstr ""
 msgid ""
 "Before choosing a product,\n"
 " select a customer in the sales form."
+=======
+#: model:ir.model,name:sale.model_account_analytic_line
+msgid "Analytic Line"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_account_config_settings_group_analytic_account_for_sales
+msgid "Analytic accounting for sales"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgstr ""
 
 #. module: sale
@@ -422,6 +605,7 @@ msgid "By Salesteam"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: view:sale.advance.payment.inv:sale.view_sale_advance_payment_inv
 #: view:sale.make.invoice:sale.view_sale_order_make_invoice
 #: view:sale.order.line.make.invoice:sale.view_sale_order_line_make_invoice
@@ -482,10 +666,35 @@ msgstr ""
 
 #. module: sale
 #: help:crm.case.section,use_quotations:0
+=======
+#: model:ir.model.fields,field_description:sale.field_sale_order_line_qty_delivered_updateable
+msgid "Can Edit Delivered"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.view_order_form
+#: model:ir.ui.view,arch_db:sale.view_sale_advance_payment_inv
+msgid "Cancel"
+msgstr "შეწყვეტა"
+
+#. module: sale
+#: selection:sale.order,state:0 selection:sale.report,state:0
+msgid "Cancelled"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,help:sale.field_crm_team_use_invoices
+msgid "Check this box to manage invoices in this sales team."
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,help:sale.field_crm_team_use_quotations
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Check this box to manage quotations in this sales team."
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: view:crm.case.section:sale.crm_case_section_salesteams_view_kanban
 msgid "Click to acces the Sales Analysis."
 msgstr ""
@@ -503,6 +712,15 @@ msgstr ""
 #. module: sale
 #: field:sale.report,delay:0
 msgid "Commitment Delay"
+=======
+#: model:ir.ui.view,arch_db:sale.crm_team_salesteams_view_kanban
+msgid "Click to define a team target"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_report_commercial_partner_id
+msgid "Commercial Entity"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgstr ""
 
 #. module: sale
@@ -511,13 +729,21 @@ msgid "Companies"
 msgstr "კომპანიები"
 
 #. module: sale
+<<<<<<< HEAD
 #: field:sale.order,company_id:0 field:sale.order.line,company_id:0
 #: view:sale.report:sale.view_order_product_search
 #: field:sale.report,company_id:0
+=======
+#: model:ir.model.fields,field_description:sale.field_sale_order_company_id
+#: model:ir.model.fields,field_description:sale.field_sale_order_line_company_id
+#: model:ir.model.fields,field_description:sale.field_sale_report_company_id
+#: model:ir.ui.view,arch_db:sale.view_order_product_search
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Company"
 msgstr "კომპანია"
 
 #. module: sale
+<<<<<<< HEAD
 #: code:addons/sale/sale.py:1148
 #: code:addons/sale/wizard/sale_make_invoice_advance.py:95
 #: code:addons/sale/wizard/sale_make_invoice_advance.py:99
@@ -527,10 +753,14 @@ msgstr ""
 
 #. module: sale
 #: view:sale.order:sale.view_order_form
+=======
+#: model:ir.ui.view,arch_db:sale.view_order_form
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Confirm Sale"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: field:sale.order,date_confirm:0
 msgid "Confirmation Date"
 msgstr ""
@@ -595,34 +825,92 @@ msgstr ""
 #: field:sale.make.invoice,create_uid:0 field:sale.order,create_uid:0
 #: field:sale.order.line,create_uid:0
 #: field:sale.order.line.make.invoice,create_uid:0
+=======
+#: model:ir.ui.view,arch_db:sale.view_order_form
+msgid "Create Invoice"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.view_sale_advance_payment_inv
+msgid "Create Invoices"
+msgstr ""
+
+#. module: sale
+#: model:ir.actions.act_window,help:sale.act_res_partner_2_sale_order
+#: model:ir.actions.act_window,help:sale.action_orders
+#: model:ir.actions.act_window,help:sale.action_orders_salesteams
+#: model:ir.actions.act_window,help:sale.action_quotations
+#: model:ir.actions.act_window,help:sale.action_quotations_salesteams
+msgid "Create a Quotation, the first step of a new sale."
+msgstr ""
+
+#. module: sale
+#: selection:product.template,track_service:0
+msgid "Create a task and track hours"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.view_sale_advance_payment_inv
+msgid "Create and View Invoices"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_advance_payment_inv_create_uid
+#: model:ir.model.fields,field_description:sale.field_sale_order_create_uid
+#: model:ir.model.fields,field_description:sale.field_sale_order_line_create_uid
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Created by"
 msgstr "შემქმნელი"
 
 #. module: sale
+<<<<<<< HEAD
 #: field:sale.advance.payment.inv,create_date:0
 #: field:sale.make.invoice,create_date:0 field:sale.order.line,create_date:0
 #: field:sale.order.line.make.invoice,create_date:0
+=======
+#: model:ir.model.fields,field_description:sale.field_sale_advance_payment_inv_create_date
+#: model:ir.model.fields,field_description:sale.field_sale_order_line_create_date
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Created on"
 msgstr "შექმნის თარიღი"
 
 #. module: sale
+<<<<<<< HEAD
 #: field:sale.order,create_date:0
 msgid "Creation Date"
 msgstr "შექმნის თარიღი"
 
 #. module: sale
 #: field:sale.order,currency_id:0
+=======
+#: model:ir.model.fields,field_description:sale.field_sale_order_create_date
+msgid "Creation Date"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_crm_team_currency_id
+#: model:ir.model.fields,field_description:sale.field_sale_order_currency_id
+#: model:ir.model.fields,field_description:sale.field_sale_order_line_currency_id
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Currency"
 msgstr "ვალუტა"
 
 #. module: sale
+<<<<<<< HEAD
 #: view:sale.order:sale.view_sales_order_filter field:sale.order,partner_id:0
 #: field:sale.order.line,order_partner_id:0
 #: view:sale.report:sale.view_order_product_search
+=======
+#: model:ir.model.fields,field_description:sale.field_sale_order_line_order_partner_id
+#: model:ir.model.fields,field_description:sale.field_sale_order_partner_id
+#: model:ir.ui.view,arch_db:sale.view_order_product_search
+#: model:ir.ui.view,arch_db:sale.view_sales_order_filter
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Customer"
 msgstr "კლიენტი"
 
 #. module: sale
+<<<<<<< HEAD
 #: code:addons/sale/sale.py:464
 #, python-format
 msgid "Customer Invoices"
@@ -640,20 +928,47 @@ msgstr ""
 
 #. module: sale
 #: field:sale.report,date:0
+=======
+#: model:ir.model.fields,field_description:sale.field_sale_order_client_order_ref
+msgid "Customer Reference"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_advance_payment_inv_deposit_taxes_id
+msgid "Customer Taxes"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.view_sales_config
+msgid "Customer portal"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_report_date
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Date Order"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: view:website:sale.report_saleorder_document
+=======
+#: model:ir.ui.view,arch_db:sale.report_saleorder_document
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Date Ordered:"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: help:sale.order,message_last_post:0
+=======
+#: model:ir.model.fields,help:sale.field_sale_order_message_last_post
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Date of the last message posted on the record."
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: help:sale.order,date_confirm:0
 msgid "Date on which sales order is confirmed."
 msgstr ""
@@ -675,10 +990,34 @@ msgstr ""
 
 #. module: sale
 #: view:res.company:sale.view_company_inherit_form2
+=======
+#: model:ir.model.fields,help:sale.field_sale_order_create_date
+msgid "Date on which sales order is created."
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_config_settings_default_invoice_policy
+msgid "Default Invoicing"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_res_company_sale_note
+msgid "Default Terms and Conditions"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,help:sale.field_sale_config_settings_deposit_product_id_setting
+msgid "Default product used for payment advances"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.view_company_inherit_form2
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Default terms & conditions..."
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: help:res.company,sale_note:0
 msgid "Default terms and conditions for quotations."
 msgstr ""
@@ -692,31 +1031,87 @@ msgstr ""
 
 #. module: sale
 #: field:sale.order,partner_shipping_id:0
+=======
+#: model:ir.model.fields,field_description:sale.field_sale_order_line_qty_delivered
+msgid "Delivered"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.view_order_form
+msgid "Delivered Quantity"
+msgstr ""
+
+#. module: sale
+#: selection:product.template,invoice_policy:0
+msgid "Delivered quantities"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_partner_shipping_id
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Delivery Address"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: field:sale.order.line,delay:0
+=======
+#: model:ir.model.fields,field_description:sale.field_sale_order_line_customer_lead
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Delivery Lead Time"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: help:sale.order,partner_shipping_id:0
+=======
+#: model:ir.model.fields,help:sale.field_sale_order_partner_shipping_id
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Delivery address for current sales order."
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: field:sale.order.line,name:0 view:website:sale.report_saleorder_document
+=======
+#: model:product.product,name:sale.advance_product_0
+#: model:product.template,name:sale.advance_product_0_product_template
+msgid "Deposit"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_config_settings_deposit_product_id_setting
+msgid "Deposit Product"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_line_name
+#: model:ir.ui.view,arch_db:sale.report_saleorder_document
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Description"
 msgstr "აღწერილობა"
 
 #. module: sale
+<<<<<<< HEAD
 #: view:website:sale.report_saleorder_document
 msgid "Disc.(%)"
 msgstr ""
 
 #. module: sale
 #: field:sale.order.line,discount:0
+=======
+#: selection:sale.config.settings,sale_pricelist_setting:0
+msgid "Different prices per customer segment"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_config_settings_group_discount_per_so_line
+msgid "Discount"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_line_discount
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Discount (%)"
 msgstr ""
 
@@ -726,6 +1121,7 @@ msgid "Discount on lines"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: field:sale.config.settings,module_sale_margin:0
 msgid "Display margins on sales orders"
 msgstr ""
@@ -746,10 +1142,35 @@ msgstr "დასრულებულია"
 #. module: sale
 #: selection:sale.order.line,state:0
 msgid "Draft"
+=======
+#: selection:sale.config.settings,group_sale_delivery_address:0
+msgid ""
+"Display 3 fields on sales orders: customer, invoice address, delivery "
+"address"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_advance_payment_inv_display_name
+#: model:ir.model.fields,field_description:sale.field_sale_order_display_name
+#: model:ir.model.fields,field_description:sale.field_sale_order_line_display_name
+#: model:ir.model.fields,field_description:sale.field_sale_report_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: sale
+#: model:res.groups,name:sale.group_display_incoterm
+msgid "Display incoterms on Sales Order and related invoices"
+msgstr ""
+
+#. module: sale
+#: selection:sale.config.settings,module_sale_margin:0
+msgid "Display margins on quotations and sales orders"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgstr ""
 
 #. module: sale
 #: selection:sale.order,state:0
+<<<<<<< HEAD
 msgid "Draft Quotation"
 msgstr ""
 
@@ -836,17 +1257,110 @@ msgid ""
 "Forecast of the invoice revenue for the current month. This is the amount the sales \n"
 "team should invoice this month. It is used to compute the progression ratio \n"
 " of the current and forecast revenue on the kanban view."
+=======
+msgid "Done"
+msgstr "დასრულებულია"
+
+#. module: sale
+#: code:addons/sale/wizard/sale_make_invoice_advance.py:70
+#, python-format
+msgid "Down Payment"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_advance_payment_inv_amount
+msgid "Down Payment Amount"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_advance_payment_inv_product_id
+msgid "Down Payment Product"
+msgstr ""
+
+#. module: sale
+#: selection:sale.advance.payment.inv,advance_payment_method:0
+msgid "Down payment (fixed amount)"
+msgstr ""
+
+#. module: sale
+#: selection:sale.advance.payment.inv,advance_payment_method:0
+msgid "Down payment (percentage)"
+msgstr ""
+
+#. module: sale
+#: code:addons/sale/wizard/sale_make_invoice_advance.py:67
+#, python-format
+msgid "Down payment of %s%%"
+msgstr ""
+
+#. module: sale
+#: selection:sale.report,state:0
+msgid "Draft Quotation"
+msgstr ""
+
+#. module: sale
+#: model:ir.model,name:sale.model_mail_compose_message
+msgid "Email composition wizard"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_config_settings_module_website_portal
+msgid "Enable customer portal to track orders, delivery and invoices"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_validity_date
+msgid "Expiration Date"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.view_order_product_search
+msgid "Extended Filters"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_fiscal_position_id
+msgid "Fiscal Position"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,help:sale.field_sale_config_settings_sale_pricelist_setting
+msgid ""
+"Fix Price: all price manage from products sale price.\n"
+"Different prices per Customer: you can assign price on buying of minimum quantity in products sale tab.\n"
+"Advanced pricing based on formula: You can have all the rights on pricelist"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_message_partner_ids
+msgid "Followers (Partners)"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgstr ""
 
 #. module: sale
 #: model:ir.actions.act_window,help:sale.action_account_invoice_report_salesteam
 msgid ""
 "From this report, you can have an overview of the amount invoiced to your "
+<<<<<<< HEAD
 "customer. The tool search can also be used to personalise your Invoices "
+=======
+"customer. The search tool can also be used to personalise your Invoices "
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 "reports and so, match this analysis to your needs."
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: field:sale.config.settings,group_invoice_so_lines:0
 msgid "Generate invoices based on the sales order lines"
 msgstr ""
@@ -869,10 +1383,22 @@ msgstr ""
 #: view:sale.order.line:sale.view_sales_order_line_filter
 #: view:sale.order.line:sale.view_sales_order_uninvoiced_line_filter
 #: view:sale.report:sale.view_order_product_search
+=======
+#: selection:sale.order,invoice_status:0
+#: selection:sale.order.line,invoice_status:0
+msgid "Fully Invoiced"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.view_order_product_search
+#: model:ir.ui.view,arch_db:sale.view_sales_order_filter
+#: model:ir.ui.view,arch_db:sale.view_sales_order_line_filter
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Group By"
 msgstr "დაჯგუფება"
 
 #. module: sale
+<<<<<<< HEAD
 #: field:sale.make.invoice,grouped:0
 msgid "Group the invoices"
 msgstr ""
@@ -894,10 +1420,17 @@ msgstr "საათი"
 #: field:sale.advance.payment.inv,id:0 field:sale.make.invoice,id:0
 #: field:sale.order,id:0 field:sale.order.line,id:0
 #: field:sale.order.line.make.invoice,id:0 field:sale.report,id:0
+=======
+#: model:ir.model.fields,field_description:sale.field_sale_advance_payment_inv_id
+#: model:ir.model.fields,field_description:sale.field_sale_order_id
+#: model:ir.model.fields,field_description:sale.field_sale_order_line_id
+#: model:ir.model.fields,field_description:sale.field_sale_report_id
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "ID"
 msgstr "იდენტიფიკატორი"
 
 #. module: sale
+<<<<<<< HEAD
 #: help:sale.order,message_unread:0
 msgid "If checked new messages require your attention."
 msgstr ""
@@ -944,15 +1477,62 @@ msgstr ""
 #: model:ir.model,name:sale.model_account_invoice
 #: view:sale.order:sale.view_order_form
 #, python-format
+=======
+#: model:ir.ui.view,arch_db:sale.view_order_form
+msgid ""
+"If a sale order is done, you cannot modify it manually anymore. However, you"
+" will still be able to invoice or deliver. This is used to freeze the sale "
+"order."
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,help:sale.field_sale_order_message_unread
+msgid "If checked new messages require your attention."
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,help:sale.field_sale_order_message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.view_sales_order_filter
+msgid "Important Messages"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_advance_payment_inv_deposit_account_id
+msgid "Income Account"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_config_settings_group_display_incoterm
+msgid "Incoterms"
+msgstr ""
+
+#. module: sale
+#: model:ir.model,name:sale.model_account_invoice
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Invoice"
 msgstr "ინვოისი"
 
 #. module: sale
+<<<<<<< HEAD
 #: field:sale.order,partner_invoice_id:0
+=======
+#: code:addons/sale/sale.py:785
+#, python-format
+msgid "Invoice %s paid"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_partner_invoice_id
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Invoice Address"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: field:sale.make.invoice,invoice_date:0
 msgid "Invoice Date"
 msgstr ""
@@ -969,6 +1549,24 @@ msgstr ""
 
 #. module: sale
 #: field:sale.order.line,invoice_lines:0
+=======
+#: model:mail.message.subtype,name:sale.mt_salesteam_invoice_confirmed
+msgid "Invoice Confirmed"
+msgstr ""
+
+#. module: sale
+#: model:mail.message.subtype,name:sale.mt_salesteam_invoice_created
+msgid "Invoice Created"
+msgstr ""
+
+#. module: sale
+#: model:ir.model,name:sale.model_account_invoice_line
+msgid "Invoice Line"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_line_invoice_lines
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Invoice Lines"
 msgstr ""
 
@@ -978,21 +1576,40 @@ msgid "Invoice Order"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: view:sale.advance.payment.inv:sale.view_sale_advance_payment_inv
+=======
+#: model:ir.ui.view,arch_db:sale.view_sale_advance_payment_inv
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Invoice Sales Order"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: field:crm.case.section,invoiced_target:0
+=======
+#: model:ir.model.fields,field_description:sale.field_sale_order_invoice_status
+#: model:ir.model.fields,field_description:sale.field_sale_order_line_invoice_status
+msgid "Invoice Status"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_crm_team_invoiced_target
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Invoice Target"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: help:sale.order,partner_invoice_id:0
+=======
+#: model:ir.model.fields,help:sale.field_sale_order_partner_invoice_id
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Invoice address for current sales order."
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: view:website:sale.report_saleorder_document
 msgid "Invoice address:"
 msgstr ""
@@ -1021,20 +1638,61 @@ msgstr ""
 #: code:addons/sale/sale.py:1224
 #, python-format
 msgid "Invoice paid"
+=======
+#: selection:sale.config.settings,default_invoice_policy:0
+msgid "Invoice based on costs (time and material, expenses)"
+msgstr ""
+
+#. module: sale
+#: selection:product.template,invoice_policy:0
+msgid "Invoice based on time and material"
+msgstr ""
+
+#. module: sale
+#: selection:sale.config.settings,default_invoice_policy:0
+msgid "Invoice delivered quantities"
+msgstr ""
+
+#. module: sale
+#: selection:sale.config.settings,default_invoice_policy:0
+msgid "Invoice ordered quantities"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,help:sale.field_crm_team_invoiced
+msgid ""
+"Invoice revenue for the current month. This is the amount the sales team has"
+" invoiced this month. It is used to compute the progression ratio of the "
+"current and target revenue on the kanban view."
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgstr ""
 
 #. module: sale
 #: selection:sale.advance.payment.inv,advance_payment_method:0
+<<<<<<< HEAD
 msgid "Invoice the whole sales order"
 msgstr ""
 
 #. module: sale
 #: view:crm.case.section:sale.crm_case_section_salesteams_view_kanban
 #: field:sale.order,invoice_exists:0 field:sale.order.line,invoiced:0
+=======
+msgid "Invoiceable lines"
+msgstr ""
+
+#. module: sale
+#: selection:sale.advance.payment.inv,advance_payment_method:0
+msgid "Invoiceable lines (deduct down payments)"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_line_qty_invoiced
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Invoiced"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: field:sale.order,invoiced_rate:0
 msgid "Invoiced Ratio"
 msgstr ""
@@ -1043,6 +1701,23 @@ msgstr ""
 #: view:crm.case.section:sale.crm_case_section_salesteams_view_kanban
 #: model:ir.actions.act_window,name:sale.action_invoice_salesteams
 #: field:sale.order,invoice_ids:0
+=======
+#: model:ir.ui.view,arch_db:sale.view_order_form
+msgid "Invoiced Quantity"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_crm_team_invoiced
+msgid "Invoiced This Month"
+msgstr ""
+
+#. module: sale
+#: model:ir.actions.act_window,name:sale.action_invoice_salesteams
+#: model:ir.model.fields,field_description:sale.field_crm_team_use_invoices
+#: model:ir.model.fields,field_description:sale.field_sale_order_invoice_ids
+#: model:ir.ui.view,arch_db:sale.crm_team_salesteams_view_kanban
+#: model:ir.ui.view,arch_db:sale.view_order_form
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Invoices"
 msgstr ""
 
@@ -1057,6 +1732,7 @@ msgid "Invoices Statistics"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: view:sale.config.settings:sale.view_sales_config
 msgid "Invoicing Process"
 msgstr ""
@@ -1078,26 +1754,96 @@ msgstr ""
 
 #. module: sale
 #: field:sale.order,message_last_post:0
+=======
+#: model:ir.ui.view,arch_db:sale.view_sale_advance_payment_inv
+msgid ""
+"Invoices will be created in draft so that you can update\n"
+"                        them before validation."
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.menu,name:sale.menu_sale_invoicing
+#: model:ir.ui.view,arch_db:sale.view_order_form
+msgid "Invoicing"
+msgstr "ინვოისინგი"
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_product_product_invoice_policy
+#: model:ir.model.fields,field_description:sale.field_product_template_invoice_policy
+msgid "Invoicing Policy"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.report_saleorder_document
+msgid "Invoicing address:"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.report_saleorder_document
+msgid "Invoicing and shipping address:"
+msgstr ""
+
+#. module: sale
+#: selection:sale.config.settings,group_sale_delivery_address:0
+msgid ""
+"Invoicing and shipping addresses are always the same (Example: services "
+"companies)"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.crm_team_salesteams_view_form
+msgid "Invoicing/Progression Ratio"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_message_last_post
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Last Message Date"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: field:sale.advance.payment.inv,write_uid:0
 #: field:sale.make.invoice,write_uid:0 field:sale.order,write_uid:0
 #: field:sale.order.line,write_uid:0
 #: field:sale.order.line.make.invoice,write_uid:0
+=======
+#: model:ir.model.fields,field_description:sale.field_sale_advance_payment_inv___last_update
+#: model:ir.model.fields,field_description:sale.field_sale_order___last_update
+#: model:ir.model.fields,field_description:sale.field_sale_order_line___last_update
+#: model:ir.model.fields,field_description:sale.field_sale_report___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_advance_payment_inv_write_uid
+#: model:ir.model.fields,field_description:sale.field_sale_order_line_write_uid
+#: model:ir.model.fields,field_description:sale.field_sale_order_write_uid
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Last Updated by"
 msgstr "ბოლოს განაახლა"
 
 #. module: sale
+<<<<<<< HEAD
 #: field:sale.advance.payment.inv,write_date:0
 #: field:sale.make.invoice,write_date:0 field:sale.order,write_date:0
 #: field:sale.order.line,write_date:0
 #: field:sale.order.line.make.invoice,write_date:0
+=======
+#: model:ir.model.fields,field_description:sale.field_sale_advance_payment_inv_write_date
+#: model:ir.model.fields,field_description:sale.field_sale_order_line_write_date
+#: model:ir.model.fields,field_description:sale.field_sale_order_write_date
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Last Updated on"
 msgstr "ბოლოს განახლებულია"
 
 #. module: sale
+<<<<<<< HEAD
 #: model:ir.actions.act_window,name:sale.action_sale_order_make_invoice
 msgid "Make Invoices"
 msgstr ""
@@ -1114,10 +1860,34 @@ msgstr "მესიჯები"
 
 #. module: sale
 #: help:sale.order,message_ids:0
+=======
+#: model:ir.model.fields,field_description:sale.field_sale_config_settings_module_sale_contract
+msgid "Manage subscriptions and recurring invoicing"
+msgstr ""
+
+#. module: sale
+#: selection:product.template,track_service:0
+msgid "Manually set quantities on order"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_config_settings_module_sale_margin
+msgid "Margins"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,help:sale.field_sale_order_message_ids
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Messages and communication history"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: view:sale.report:sale.view_order_product_search
 msgid "My Sales"
 msgstr ""
@@ -1125,10 +1895,19 @@ msgstr ""
 #. module: sale
 #: view:sale.order.line:sale.view_sales_order_line_filter
 #: view:sale.order.line:sale.view_sales_order_uninvoiced_line_filter
+=======
+#: model:ir.ui.view,arch_db:sale.view_sales_order_filter
+msgid "My Orders"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.view_sales_order_line_filter
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "My Sales Order Lines"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: view:sale.order:sale.view_order_form
 msgid "New Copy of Quotation"
 msgstr ""
@@ -1189,6 +1968,87 @@ msgstr ""
 #. module: sale
 #: field:sale.config.settings,module_analytic_user_function:0
 msgid "One employee can have different roles per contract"
+=======
+#: selection:sale.config.settings,auto_done_setting:0
+msgid "Never allow to modify a confirmed sale order"
+msgstr ""
+
+#. module: sale
+#: model:ir.actions.act_window,name:sale.action_quotation_form
+msgid "New Quotation"
+msgstr ""
+
+#. module: sale
+#: selection:sale.config.settings,group_discount_per_so_line:0
+msgid "No discount on sales order lines, global discount only"
+msgstr ""
+
+#. module: sale
+#: selection:sale.config.settings,group_display_incoterm:0
+msgid "No incoterm on reports"
+msgstr ""
+
+#. module: sale
+#: selection:sale.config.settings,group_product_variant:0
+msgid "No variants on products"
+msgstr ""
+
+#. module: sale
+#: model:ir.actions.act_window,help:sale.action_quotations
+#: model:ir.actions.act_window,help:sale.action_quotations_salesteams
+msgid ""
+"Note that once a Quotation becomes a Sale Order, it will be moved \n"
+"                from the Quotations list to the Sales Order list."
+msgstr ""
+
+#. module: sale
+#: model:ir.actions.act_window,help:sale.act_res_partner_2_sale_order
+#: model:ir.actions.act_window,help:sale.action_orders
+#: model:ir.actions.act_window,help:sale.action_orders_salesteams
+msgid ""
+"Note that once a Quotation becomes a Sale Order, it will be moved from the "
+"Quotations list to the Sales Order list."
+msgstr ""
+
+#. module: sale
+#: selection:sale.order,invoice_status:0
+#: selection:sale.order.line,invoice_status:0
+msgid "Nothing to Invoice"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,help:sale.field_sale_order_line_customer_lead
+msgid ""
+"Number of days between the order confirmation and the shipping of the "
+"products to the customer"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,help:sale.field_sale_order_message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,help:sale.field_sale_order_message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_config_settings_module_website_quote
+msgid "Online Quotations"
+msgstr ""
+
+#. module: sale
+#. openerp-web
+#: code:addons/sale/static/src/js/sale.js:26
+#, python-format
+msgid "Only Integer Value should be valid."
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgstr ""
 
 #. module: sale
@@ -1197,12 +2057,17 @@ msgid "Open Sale Menu"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: view:sale.order.line:sale.view_sales_order_line_filter
 #: view:sale.order.line:sale.view_sales_order_uninvoiced_line_filter
+=======
+#: model:ir.ui.view,arch_db:sale.view_sales_order_line_filter
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Order"
 msgstr "შეკვეთა"
 
 #. module: sale
+<<<<<<< HEAD
 #: view:sale.order:sale.view_order_form field:sale.order,order_line:0
 msgid "Order Lines"
 msgstr ""
@@ -1230,10 +2095,42 @@ msgstr ""
 
 #. module: sale
 #: field:sale.order,name:0 field:sale.order.line,order_id:0
+=======
+#: model:ir.ui.view,arch_db:sale.report_saleorder_document
+msgid "Order #"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_date_order
+msgid "Order Date"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_order_line
+#: model:ir.ui.view,arch_db:sale.view_order_form
+msgid "Order Lines"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.view_order_product_search
+#: model:ir.ui.view,arch_db:sale.view_sales_order_filter
+msgid "Order Month"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.view_order_tree
+msgid "Order Number"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_line_order_id
+#: model:ir.model.fields,field_description:sale.field_sale_order_name
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Order Reference"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: sql_constraint:sale.order:0
 msgid "Order Reference must be unique per Company!"
 msgstr ""
@@ -1250,10 +2147,29 @@ msgstr ""
 
 #. module: sale
 #: view:sale.report:sale.view_order_product_search
+=======
+#: model:ir.model.fields,field_description:sale.field_sale_order_line_state
+msgid "Order Status"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.view_order_form
+msgid "Ordered Qty"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.view_order_form
+msgid "Ordered Quantity"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.view_order_product_search
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Ordered date of the sales order"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: view:sale.order:sale.view_order_form
 msgid "Other Information"
 msgstr ""
@@ -1307,20 +2223,84 @@ msgstr ""
 
 #. module: sale
 #: view:website:sale.report_saleorder_document
+=======
+#: selection:product.template,invoice_policy:0
+msgid "Ordered quantities"
+msgstr ""
+
+#. module: sale
+#: model:ir.actions.act_window,name:sale.action_orders_upselling
+#: model:ir.ui.menu,name:sale.menu_sale_order_upselling
+msgid "Orders to Upsell"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.view_order_form
+msgid "Other Information"
+msgstr ""
+
+#. module: sale
+#: model:ir.model,name:sale.model_res_partner
+#: model:ir.model.fields,field_description:sale.field_sale_report_partner_id
+msgid "Partner"
+msgstr "პარტნიორი"
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_report_country_id
+msgid "Partner Country"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.view_order_product_search
+msgid "Partner's Country"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_payment_term_id
+msgid "Payment Term"
+msgstr ""
+
+#. module: sale
+#: code:addons/sale/sale.py:233
+#, python-format
+msgid "Please define an accounting sale journal for this company."
+msgstr ""
+
+#. module: sale
+#: code:addons/sale/sale.py:654
+#, python-format
+msgid ""
+"Please define income account for this product: \"%s\" (id:%d) - or for its "
+"category: \"%s\"."
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.report_saleorder_document
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Price"
 msgstr "ფასი"
 
 #. module: sale
+<<<<<<< HEAD
 #: field:sale.order.line,price_reduce:0
+=======
+#: model:ir.model.fields,field_description:sale.field_sale_order_line_price_reduce
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Price Reduce"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: field:sale.order,pricelist_id:0 field:sale.report,pricelist_id:0
+=======
+#: model:ir.model.fields,field_description:sale.field_sale_order_pricelist_id
+#: model:ir.model.fields,field_description:sale.field_sale_report_pricelist_id
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Pricelist"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: code:addons/sale/sale.py:304
 #, python-format
 msgid "Pricelist Warning!"
@@ -1334,6 +2314,20 @@ msgstr ""
 #. module: sale
 #: view:sale.order:sale.view_order_form
 msgid "Print"
+=======
+#: model:ir.model.fields,help:sale.field_sale_order_pricelist_id
+msgid "Pricelist for current sales order."
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.view_order_form
+msgid "Print"
+msgstr ""
+
+#. module: sale
+#: selection:sale.config.settings,module_website_quote:0
+msgid "Print quotes or send by email"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgstr ""
 
 #. module: sale
@@ -1342,35 +2336,62 @@ msgid "Procurement"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: field:sale.order,procurement_group_id:0
 msgid "Procurement group"
 msgstr ""
 
 #. module: sale
 #: field:sale.order.line,procurement_ids:0
+=======
+#: model:ir.model.fields,field_description:sale.field_sale_order_procurement_group_id
+msgid "Procurement Group"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_line_procurement_ids
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Procurements"
 msgstr "შესყიდვები"
 
 #. module: sale
 #: model:ir.model,name:sale.model_product_product
+<<<<<<< HEAD
 #: field:sale.order,product_id:0
 #: view:sale.order.line:sale.view_sales_order_line_filter
 #: view:sale.order.line:sale.view_sales_order_uninvoiced_line_filter
 #: field:sale.order.line,product_id:0 field:sale.report,product_id:0
+=======
+#: model:ir.model.fields,field_description:sale.field_sale_order_line_product_id
+#: model:ir.model.fields,field_description:sale.field_sale_order_product_id
+#: model:ir.model.fields,field_description:sale.field_sale_report_product_id
+#: model:ir.ui.view,arch_db:sale.view_sales_order_line_filter
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Product"
 msgstr "პროდუქტი"
 
 #. module: sale
+<<<<<<< HEAD
 #: view:sale.config.settings:sale.view_sales_config
 msgid "Product Features"
+=======
+#: model:ir.model.fields,field_description:sale.field_sale_report_categ_id
+#: model:ir.ui.view,arch_db:sale.view_order_product_search
+msgid "Product Category"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgstr ""
 
 #. module: sale
 #: model:ir.model,name:sale.model_product_template
+<<<<<<< HEAD
+=======
+#: model:ir.model.fields,field_description:sale.field_sale_report_product_tmpl_id
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Product Template"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: field:sale.order.line,product_uos:0
 msgid "Product UoS"
 msgstr ""
@@ -1379,6 +2400,28 @@ msgstr ""
 #: field:sale.config.settings,module_project:0
 msgid "Project"
 msgstr "პროექტი"
+=======
+#: model:ir.model.fields,field_description:sale.field_sale_config_settings_group_product_variant
+msgid "Product Variants"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.view_sales_config
+msgid "Products"
+msgstr "პროდუქტები"
+
+#. module: sale
+#: selection:sale.config.settings,group_product_variant:0
+msgid ""
+"Products can have several attributes, defining variants (Example: size, "
+"color,...)"
+msgstr ""
+
+#. module: sale
+#: selection:sale.config.settings,group_uom:0
+msgid "Products have only one unit of measure (easier)"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: sale
 #: model:res.groups,name:sale.group_mrp_properties
@@ -1386,18 +2429,43 @@ msgid "Properties on lines"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: view:sale.order.line:sale.view_order_line_tree
+=======
+#: model:ir.ui.view,arch_db:sale.view_order_line_tree
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Qty"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: field:sale.advance.payment.inv,qtty:0
 #: field:sale.order.line,product_uom_qty:0
 #: view:website:sale.report_saleorder_document
+=======
+#: model:ir.model.fields,field_description:sale.field_sale_report_qty_delivered
+msgid "Qty Delivered"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_report_qty_invoiced
+msgid "Qty Invoiced"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_report_qty_to_invoice
+msgid "Qty To Invoice"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_line_product_uom_qty
+#: model:ir.ui.view,arch_db:sale.report_saleorder_document
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Quantity"
 msgstr "რაოდენობა"
 
 #. module: sale
+<<<<<<< HEAD
 #: field:sale.order.line,product_uos_qty:0
 msgid "Quantity (UoS)"
 msgstr ""
@@ -1406,6 +2474,17 @@ msgstr ""
 #: view:sale.order:sale.view_order_form
 #: view:sale.order:sale.view_quotation_tree selection:sale.report,state:0
 msgid "Quotation"
+=======
+#: model:ir.ui.view,arch_db:sale.crm_team_salesteams_view_kanban
+#: model:ir.ui.view,arch_db:sale.view_quotation_tree
+#: selection:sale.order,state:0
+msgid "Quotation"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.report_saleorder_document
+msgid "Quotation #"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgstr ""
 
 #. module: sale
@@ -1414,27 +2493,42 @@ msgid "Quotation / Order"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: view:website:sale.report_saleorder_document
+=======
+#: model:ir.ui.view,arch_db:sale.report_saleorder_document
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Quotation Date:"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: view:sale.order:sale.view_quotation_tree
+=======
+#: model:ir.ui.view,arch_db:sale.view_quotation_tree
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Quotation Number"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: view:website:sale.report_saleorder_document
 msgid "Quotation N°"
 msgstr ""
 
 #. module: sale
+=======
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 #: model:mail.message.subtype,name:sale.mt_salesteam_order_sent
 msgid "Quotation Send"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: selection:sale.order,state:0
+=======
+#: selection:sale.order,state:0 selection:sale.report,state:0
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Quotation Sent"
 msgstr ""
 
@@ -1444,28 +2538,48 @@ msgid "Quotation confirmed"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: code:addons/sale/sale.py:362
 #, python-format
 msgid "Quotation created"
 msgstr ""
 
 #. module: sale
+=======
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 #: model:mail.message.subtype,description:sale.mt_order_sent
 #: model:mail.message.subtype,name:sale.mt_order_sent
 msgid "Quotation sent"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: view:crm.case.section:sale.crm_case_section_salesteams_view_kanban
 #: field:crm.case.section,use_quotations:0
 #: model:ir.actions.act_window,name:sale.action_quotations
 #: model:ir.actions.act_window,name:sale.action_quotations_salesteams
 #: model:ir.ui.menu,name:sale.menu_sale_quotations
 #: view:sale.order:sale.view_sales_order_filter
+=======
+#: model:ir.actions.act_window,name:sale.action_quotations
+#: model:ir.actions.act_window,name:sale.action_quotations_salesteams
+#: model:ir.model.fields,field_description:sale.field_crm_team_use_quotations
+#: model:ir.ui.menu,name:sale.menu_sale_quotations
+#: model:ir.ui.view,arch_db:sale.crm_team_salesteams_view_kanban
+#: model:ir.ui.view,arch_db:sale.view_sales_order_filter
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Quotations"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
+=======
+#: model:ir.ui.view,arch_db:sale.view_sales_config
+msgid "Quotations & Sales"
+msgstr ""
+
+#. module: sale
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 #: model:ir.actions.act_window,name:sale.action_order_report_quotation_salesteam
 msgid "Quotations Analysis"
 msgstr ""
@@ -1476,6 +2590,7 @@ msgid "Quotations and Sales"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: field:crm.case.section,monthly_quoted:0
 msgid "Rate of created quotation per duration"
 msgstr ""
@@ -1497,10 +2612,14 @@ msgstr ""
 
 #. module: sale
 #: help:sale.order,origin:0
+=======
+#: model:ir.model.fields,help:sale.field_sale_order_origin
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Reference of the document that generated this sales order request."
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: field:sale.order,client_order_ref:0
 msgid "Reference/Description"
 msgstr ""
@@ -1543,6 +2662,48 @@ msgstr ""
 #: view:res.partner:sale.res_partner_view_buttons
 #: view:sale.order:sale.view_sales_order_filter
 #: view:sale.report:sale.view_order_product_search
+=======
+#: model:ir.ui.view,arch_db:sale.view_order_form
+msgid "Reporting"
+msgstr "რეპორტინგი"
+
+#. module: sale
+#: selection:sale.order,state:0
+msgid "Sale Order"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_account_analytic_line_so_line
+#: model:ir.model.fields,field_description:sale.field_procurement_order_sale_line_id
+msgid "Sale Order Line"
+msgstr ""
+
+#. module: sale
+#: model:ir.actions.act_window,name:sale.action_product_sale_list
+#: model:ir.model.fields,field_description:sale.field_account_invoice_line_sale_line_ids
+msgid "Sale Order Lines"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_config_settings_auto_done_setting
+msgid "Sale Order Modification"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.view_sales_config
+msgid "Sale Price"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.menu,name:sale.menu_report_product_all
+#: model:ir.ui.view,arch_db:sale.crm_team_salesteams_view_kanban
+#: model:ir.ui.view,arch_db:sale.product_form_view_sale_order_button
+#: model:ir.ui.view,arch_db:sale.product_template_form_view_sale_order_button
+#: model:ir.ui.view,arch_db:sale.res_partner_view_buttons
+#: model:ir.ui.view,arch_db:sale.view_company_inherit_form2
+#: model:ir.ui.view,arch_db:sale.view_order_product_search
+#: model:ir.ui.view,arch_db:sale.view_sales_order_filter
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Sales"
 msgstr "გაყიდვები"
 
@@ -1554,18 +2715,33 @@ msgstr ""
 #. module: sale
 #: model:ir.actions.act_window,name:sale.action_order_report_all
 #: model:ir.actions.act_window,name:sale.action_order_report_so_salesteam
+<<<<<<< HEAD
 #: model:ir.ui.menu,name:sale.menu_report_product_all
 #: view:sale.report:sale.view_order_product_graph
 #: view:sale.report:sale.view_order_product_search
+=======
+#: model:ir.ui.view,arch_db:sale.view_order_product_graph
+#: model:ir.ui.view,arch_db:sale.view_order_product_pivot
+#: model:ir.ui.view,arch_db:sale.view_order_product_search
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Sales Analysis"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
+=======
+#: selection:sale.report,state:0
+msgid "Sales Done"
+msgstr ""
+
+#. module: sale
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 #: model:ir.filters,name:sale.filter_sale_report_sales_funnel
 msgid "Sales Funnel"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: model:ir.model,name:sale.model_sale_make_invoice
 msgid "Sales Make Invoice"
 msgstr ""
@@ -1577,6 +2753,19 @@ msgstr ""
 #: view:sale.order:sale.view_order_form
 #: view:sale.order:sale.view_sales_order_filter selection:sale.order,state:0
 #, python-format
+=======
+#: model:ir.ui.view,arch_db:sale.view_order_form
+msgid "Sales Information"
+msgstr ""
+
+#. module: sale
+#: model:ir.model,name:sale.model_sale_order
+#: model:ir.model.fields,field_description:sale.field_res_partner_sale_order_ids
+#: model:ir.ui.view,arch_db:sale.view_order_form
+#: model:ir.ui.view,arch_db:sale.view_sales_order_filter
+#: model:res.request.link,name:sale.req_link_sale_order
+#: selection:sale.report,state:0
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Sales Order"
 msgstr "გაყიდვის ორდერი"
 
@@ -1592,24 +2781,38 @@ msgid "Sales Order Line"
 msgstr "გაყიდვის ორდერის ხაზი"
 
 #. module: sale
+<<<<<<< HEAD
 #: model:ir.actions.act_window,name:sale.action_order_line_product_tree
 #: view:sale.order:sale.view_order_form
 #: view:sale.order.line:sale.view_order_line_form2
 #: view:sale.order.line:sale.view_order_line_tree
+=======
+#: model:ir.ui.view,arch_db:sale.view_order_form
+#: model:ir.ui.view,arch_db:sale.view_order_line_tree
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Sales Order Lines"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: view:sale.order.line:sale.view_sales_order_line_filter
+=======
+#: model:ir.ui.view,arch_db:sale.view_sales_order_line_filter
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Sales Order Lines ready to be invoiced"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: view:sale.order.line:sale.view_sales_order_line_filter
+=======
+#: model:ir.ui.view,arch_db:sale.view_sales_order_line_filter
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Sales Order Lines related to a Sales Order of mine"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: view:sale.order.line:sale.view_sales_order_uninvoiced_line_filter
 msgid ""
 "Sales Order Lines that are confirmed, done or in exception state and haven't"
@@ -1638,10 +2841,14 @@ msgstr ""
 
 #. module: sale
 #: view:sale.order:sale.view_sales_order_filter
+=======
+#: model:ir.ui.view,arch_db:sale.view_sales_order_filter
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Sales Order that haven't yet been confirmed"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: view:crm.case.section:sale.crm_case_section_salesteams_view_kanban
 #: model:ir.actions.act_window,name:sale.action_orders
 #: model:ir.actions.act_window,name:sale.action_orders_salesteams
@@ -1649,6 +2856,17 @@ msgstr ""
 #: view:sale.order:sale.view_order_tree
 #: view:sale.order:sale.view_sale_order_calendar
 #: view:sale.order:sale.view_sale_order_graph
+=======
+#: model:ir.actions.act_window,name:sale.action_orders
+#: model:ir.actions.act_window,name:sale.action_orders_salesteams
+#: model:ir.actions.act_window,name:sale.action_orders_to_invoice_salesteams
+#: model:ir.ui.menu,name:sale.menu_sale_order
+#: model:ir.ui.view,arch_db:sale.crm_team_salesteams_view_kanban
+#: model:ir.ui.view,arch_db:sale.view_order_tree
+#: model:ir.ui.view,arch_db:sale.view_sale_order_calendar
+#: model:ir.ui.view,arch_db:sale.view_sale_order_graph
+#: model:ir.ui.view,arch_db:sale.view_sale_order_pivot
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Sales Orders"
 msgstr ""
 
@@ -1658,6 +2876,7 @@ msgid "Sales Orders Statistics"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: view:account.invoice:sale.account_invoice_groupby_inherit
 #: view:account.invoice:sale.account_invoice_tree
 #: field:account.invoice,section_id:0
@@ -1666,10 +2885,22 @@ msgstr ""
 #: view:sale.order:sale.view_sales_order_filter field:sale.order,section_id:0
 #: view:sale.report:sale.view_order_product_search
 #: field:sale.report,section_id:0
+=======
+#: model:ir.model,name:sale.model_crm_team
+#: model:ir.model.fields,field_description:sale.field_account_invoice_report_team_id
+#: model:ir.model.fields,field_description:sale.field_account_invoice_team_id
+#: model:ir.model.fields,field_description:sale.field_sale_order_team_id
+#: model:ir.model.fields,field_description:sale.field_sale_report_team_id
+#: model:ir.ui.view,arch_db:sale.account_invoice_groupby_inherit
+#: model:ir.ui.view,arch_db:sale.view_account_invoice_report_search_inherit
+#: model:ir.ui.view,arch_db:sale.view_order_product_search
+#: model:ir.ui.view,arch_db:sale.view_sales_order_filter
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Sales Team"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: model:ir.model,name:sale.model_crm_case_section
 msgid "Sales Teams"
 msgstr ""
@@ -1760,19 +2991,121 @@ msgstr ""
 
 #. module: sale
 #: field:sale.order,origin:0
+=======
+#: model:ir.actions.act_window,name:sale.action_orders_to_invoice
+#: model:ir.ui.menu,name:sale.menu_sale_order_invoice
+#: model:ir.ui.view,arch_db:sale.crm_team_salesteams_view_kanban
+msgid "Sales to Invoice"
+msgstr ""
+
+#. module: sale
+#: selection:sale.config.settings,module_sale_margin:0
+msgid "Salespeople do not need to view margins when quoting"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_line_salesman_id
+#: model:ir.model.fields,field_description:sale.field_sale_order_user_id
+#: model:ir.model.fields,field_description:sale.field_sale_report_user_id
+#: model:ir.ui.view,arch_db:sale.view_order_product_search
+#: model:ir.ui.view,arch_db:sale.view_sales_order_filter
+#: model:ir.ui.view,arch_db:sale.view_sales_order_line_filter
+msgid "Salesperson"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.view_sales_order_filter
+#: model:ir.ui.view,arch_db:sale.view_sales_order_line_filter
+msgid "Search Sales Order"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_config_settings_module_website_sale_digital
+msgid ""
+"Sell digital products - provide downloadable content on your customer portal"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.view_order_form
+msgid "Send by Email"
+msgstr ""
+
+#. module: sale
+#: selection:sale.config.settings,module_website_quote:0
+msgid "Send online quotations based on templates (advanced)"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_line_sequence
+msgid "Sequence"
+msgstr "მიმდევრობა"
+
+#. module: sale
+#. openerp-web
+#: code:addons/sale/static/src/js/sale.js:19
+#, python-format
+msgid "Set an invoicing target: "
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.view_order_form
+msgid "Set to Done"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.view_order_form
+msgid "Set to Quotation"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.view_order_form
+msgid "Setup default terms and conditions in your company settings."
+msgstr ""
+
+#. module: sale
+#: selection:sale.config.settings,group_display_incoterm:0
+msgid "Show incoterms on sale orders and invoices"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_config_settings_group_product_pricelist
+msgid "Show pricelists On Products"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_config_settings_group_pricelist_item
+msgid "Show pricelists to customers"
+msgstr ""
+
+#. module: sale
+#: selection:sale.config.settings,group_uom:0
+msgid ""
+"Some products may be sold/purchased in different unit of measures (advanced)"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_origin
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Source Document"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: field:sale.order,state:0
 #: view:sale.order.line:sale.view_sales_order_line_filter
 #: view:sale.order.line:sale.view_sales_order_uninvoiced_line_filter
 #: field:sale.order.line,state:0
 #: view:sale.report:sale.view_order_product_search
+=======
+#: model:ir.model.fields,field_description:sale.field_sale_order_state
+#: model:ir.model.fields,field_description:sale.field_sale_report_state
+#: model:ir.ui.view,arch_db:sale.view_order_product_search
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Status"
 msgstr "სტატუსი"
 
 #. module: sale
+<<<<<<< HEAD
 #: field:sale.order.line,price_subtotal:0
 msgid "Subtotal"
 msgstr ""
@@ -1792,10 +3125,34 @@ msgstr ""
 #. module: sale
 #: field:sale.order,amount_tax:0 field:sale.order.line,tax_id:0
 #: view:website:sale.report_saleorder_document
+=======
+#: model:ir.ui.view,arch_db:sale.view_sales_config
+msgid "Subscriptions"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_line_price_subtotal
+msgid "Subtotal"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,help:sale.field_crm_team_invoiced_target
+msgid ""
+"Target of invoice revenue for the current month. This is the amount the "
+"sales team estimates to be able to invoice this month."
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_amount_tax
+#: model:ir.model.fields,field_description:sale.field_sale_order_line_price_tax
+#: model:ir.model.fields,field_description:sale.field_sale_order_line_tax_id
+#: model:ir.ui.view,arch_db:sale.report_saleorder_document
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Taxes"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: field:sale.order,note:0
 msgid "Terms and conditions"
 msgstr ""
@@ -1817,10 +3174,37 @@ msgstr ""
 
 #. module: sale
 #: help:sale.order,project_id:0
+=======
+#: model:ir.model.fields,help:sale.field_sale_advance_payment_inv_deposit_taxes_id
+msgid "Taxes used for deposits"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_note
+msgid "Terms and conditions"
+msgstr ""
+
+#. module: sale
+#: code:addons/sale/sale_analytic.py:54
+#, python-format
+msgid ""
+"The Sale Order %s linked to the Analytic Account must be validated before "
+"registering expenses."
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,help:sale.field_sale_advance_payment_inv_amount
+msgid "The amount to be invoiced in advance, taxes excluded."
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,help:sale.field_sale_order_project_id
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "The analytic account related to a sales order."
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: field:sale.config.settings,time_unit:0
 msgid "The default working time unit for services is"
 msgstr ""
@@ -1896,6 +3280,48 @@ msgid ""
 "This is the list of invoices that have been generated for this sales order. "
 "The same sales order may have been invoiced in several times (by line for "
 "example)."
+=======
+#: model:ir.model.fields,help:sale.field_sale_config_settings_group_display_incoterm
+msgid ""
+"The printed reports will display the incoterms for the sale orders and the "
+"related invoices"
+msgstr ""
+
+#. module: sale
+#: code:addons/sale/wizard/sale_make_invoice_advance.py:124
+#, python-format
+msgid ""
+"The product used to invoice a down payment should be of type 'Service'. "
+"Please use another product or update this product."
+msgstr ""
+
+#. module: sale
+#: code:addons/sale/wizard/sale_make_invoice_advance.py:122
+#, python-format
+msgid ""
+"The product used to invoice a down payment should have an invoice policy set"
+" to \"Ordered quantities\". Please update your deposit product to be able to"
+" create a deposit invoice."
+msgstr ""
+
+#. module: sale
+#: code:addons/sale/wizard/sale_make_invoice_advance.py:64
+#, python-format
+msgid "The value of the down payment amount must be positive."
+msgstr ""
+
+#. module: sale
+#: code:addons/sale/wizard/sale_make_invoice_advance.py:60
+#, python-format
+msgid ""
+"There is no income account defined for this product: \"%s\". You may have to"
+" install a chart of account from Accounting app, settings menu."
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.view_order_product_search
+msgid "This Year"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgstr ""
 
 #. module: sale
@@ -1929,6 +3355,7 @@ msgid ""
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: view:sale.order.line:sale.view_sales_order_uninvoiced_line_filter
 msgid "To Do"
 msgstr "გასაკეთებელია"
@@ -1950,21 +3377,50 @@ msgstr ""
 #: field:sale.order,amount_total:0
 #: view:sale.order.line:sale.view_order_line_tree
 #: view:website:sale.report_saleorder_document
+=======
+#: selection:product.template,track_service:0
+msgid "Timesheets on contract"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_line_qty_to_invoice
+#: model:ir.ui.view,arch_db:sale.view_sales_order_filter
+#: model:ir.ui.view,arch_db:sale.view_sales_order_line_filter
+#: selection:sale.order,invoice_status:0
+#: selection:sale.order.line,invoice_status:0
+msgid "To Invoice"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_amount_total
+#: model:ir.model.fields,field_description:sale.field_sale_order_line_price_total
+#: model:ir.ui.view,arch_db:sale.view_order_line_tree
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Total"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: field:sale.report,price_total:0
+=======
+#: model:ir.model.fields,field_description:sale.field_sale_report_price_total
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Total Price"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: view:sale.order:sale.view_order_tree
 #: view:sale.order:sale.view_quotation_tree
+=======
+#: model:ir.ui.view,arch_db:sale.view_order_tree
+#: model:ir.ui.view,arch_db:sale.view_quotation_tree
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Total Tax Included"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: view:website:sale.report_saleorder_document
 msgid "Total Without Taxes"
 msgstr ""
@@ -1987,26 +3443,52 @@ msgstr ""
 #. module: sale
 #: field:sale.order.line,price_unit:0
 #: view:website:sale.report_saleorder_document
+=======
+#: model:ir.model.fields,field_description:sale.field_product_product_track_service
+#: model:ir.model.fields,field_description:sale.field_product_template_track_service
+msgid "Track Service"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_line_price_unit
+#: model:ir.ui.view,arch_db:sale.report_saleorder_document
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Unit Price"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: view:sale.order.line:sale.view_order_line_tree
 #: field:sale.report,product_uom:0
+=======
+#: model:ir.model.fields,field_description:sale.field_sale_order_line_product_uom
+#: model:ir.model.fields,field_description:sale.field_sale_report_product_uom
+#: model:ir.ui.view,arch_db:sale.view_order_line_tree
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Unit of Measure"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: field:sale.order.line,product_uom:0
 msgid "Unit of Measure "
 msgstr ""
 
 #. module: sale
 #: field:sale.order,message_unread:0
+=======
+#: model:ir.model.fields,field_description:sale.field_sale_config_settings_group_uom
+msgid "Unit of Measures"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_message_unread
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Unread Messages"
 msgstr "წაუკითხავი შეტყობინებები"
 
 #. module: sale
+<<<<<<< HEAD
 #: field:sale.order,amount_untaxed:0
 msgid "Untaxed Amount"
 msgstr "ძირითადი"
@@ -2045,15 +3527,44 @@ msgstr ""
 
 #. module: sale
 #: field:sale.config.settings,group_sale_pricelist:0
+=======
+#: model:ir.model.fields,field_description:sale.field_sale_order_message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_amount_untaxed
+msgid "Untaxed Amount"
+msgstr "ძირითადი"
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.view_sales_order_filter
+msgid "Upselling"
+msgstr ""
+
+#. module: sale
+#: selection:sale.order,invoice_status:0
+#: selection:sale.order.line,invoice_status:0
+msgid "Upselling Opportunity"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_config_settings_group_sale_pricelist
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Use pricelists to adapt your price per customers"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: view:website:sale.report_saleorder_document
+=======
+#: model:ir.ui.view,arch_db:sale.report_saleorder_document
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "VAT:"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: view:sale.order:sale.view_order_form
 msgid "View Invoice"
 msgstr ""
@@ -2078,15 +3589,23 @@ msgstr "ყურადღება!"
 
 #. module: sale
 #: field:sale.order,website_message_ids:0
+=======
+#: model:ir.model.fields,field_description:sale.field_sale_order_website_message_ids
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Website Messages"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: help:sale.order,website_message_ids:0
+=======
+#: model:ir.model.fields,help:sale.field_sale_order_website_message_ids
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Website communication history"
 msgstr ""
 
 #. module: sale
+<<<<<<< HEAD
 #: field:sale.order.line,th_weight:0
 msgid "Weight"
 msgstr ""
@@ -2151,3 +3670,73 @@ msgstr "ან"
 #: view:res.partner:sale.res_partner_address_type
 msgid "sale.group_delivery_invoice_address"
 msgstr ""
+=======
+#: model:ir.model.fields,field_description:sale.field_sale_advance_payment_inv_advance_payment_method
+msgid "What do you want to invoice?"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,help:sale.field_sale_config_settings_group_product_variant
+msgid ""
+"Work with product variant allows you to define some variant of the same "
+"products, an ease the product management in the ecommerce for example"
+msgstr ""
+
+#. module: sale
+#. openerp-web
+#: code:addons/sale/static/src/js/sale.js:26
+#, python-format
+msgid "Wrong value entered!"
+msgstr ""
+
+#. module: sale
+#: code:addons/sale/sale.py:741
+#, python-format
+msgid ""
+"You can not remove a sale order line.\n"
+"Discard changes and try setting the quantity to 0."
+msgstr ""
+
+#. module: sale
+#: code:addons/sale/sale.py:153
+#, python-format
+msgid "You can only delete draft quotations!"
+msgstr ""
+
+#. module: sale
+#: model:ir.actions.act_window,help:sale.action_quotations
+#: model:ir.actions.act_window,help:sale.action_quotations_salesteams
+msgid ""
+"Your next actions should flow efficiently: confirm the Quotation \n"
+"                to a Sale Order, then create the Invoice and collect the Payment."
+msgstr ""
+
+#. module: sale
+#: model:ir.actions.act_window,help:sale.act_res_partner_2_sale_order
+#: model:ir.actions.act_window,help:sale.action_orders
+#: model:ir.actions.act_window,help:sale.action_orders_salesteams
+msgid ""
+"Your next actions should flow efficiently: confirm the Quotation to a Sale "
+"Order, then create the Invoice and collect the Payment."
+msgstr ""
+
+#. module: sale
+#: model:ir.model,name:sale.model_account_config_settings
+msgid "account.config.settings"
+msgstr ""
+
+#. module: sale
+#: model:ir.ui.view,arch_db:sale.view_order_form
+msgid "days"
+msgstr "დღეები"
+
+#. module: sale
+#: model:ir.model,name:sale.model_sale_config_settings
+msgid "sale.config.settings"
+msgstr ""
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_config_settings_sale_pricelist_setting
+msgid "unknown"
+msgstr "უცნობი"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0

@@ -3,14 +3,22 @@
 # * document
 # 
 # Translators:
+# William Surya Permana <zarambie_game@yahoo.com>, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 8.0\n"
+"Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2015-01-21 14:08+0000\n"
 "PO-Revision-Date: 2015-11-17 02:53+0000\n"
 "Last-Translator: Wahyu Setiawan <wahyusetiaaa@gmail.com>\n"
 "Language-Team: Indonesian (http://www.transifex.com/odoo/odoo-8/language/id/)\n"
+=======
+"POT-Creation-Date: 2015-09-07 14:40+0000\n"
+"PO-Revision-Date: 2015-10-23 03:14+0000\n"
+"Last-Translator: William Surya Permana <zarambie_game@yahoo.com>\n"
+"Language-Team: Indonesian (http://www.transifex.com/odoo/odoo-9/language/id/)\n"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -18,18 +26,22 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. module: document
+<<<<<<< HEAD
 #: field:report.document.file,nbr:0 field:report.document.user,nbr:0
 msgid "# of Files"
 msgstr "# of Files"
 
 #. module: document
+=======
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 #. openerp-web
-#: code:addons/document/static/src/js/document.js:19
+#: code:addons/document/static/src/js/document.js:25
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
 #. module: document
+<<<<<<< HEAD
 #: code:addons/document/document.py:117 code:addons/document/document.py:307
 #, python-format
 msgid "%s (copy)"
@@ -82,13 +94,16 @@ msgid "April"
 msgstr "April"
 
 #. module: document
+=======
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 #. openerp-web
-#: code:addons/document/static/src/js/document.js:7
+#: code:addons/document/static/src/js/document.js:13
 #, python-format
 msgid "Attachment(s)"
 msgstr "Lampiran"
 
 #. module: document
+<<<<<<< HEAD
 #: view:ir.attachment:document.view_document_file_tree
 msgid "Attachments"
 msgstr "Lampiran"
@@ -781,3 +796,8 @@ msgstr "res_config_contents"
 #: field:report.document.user,user:0
 msgid "unknown"
 msgstr "tidak diketahui"
+=======
+#: model:ir.model,name:document.model_ir_attachment
+msgid "ir.attachment"
+msgstr "ir.attachment"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0

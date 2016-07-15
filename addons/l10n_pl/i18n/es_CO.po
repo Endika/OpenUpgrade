@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 # Translation of OpenERP Server.
+=======
+# Translation of Odoo Server.
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 # This file contains the translation of the following modules:
 # * l10n_pl
 # 
 # Translators:
+<<<<<<< HEAD
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 8.0\n"
@@ -11,6 +16,17 @@ msgstr ""
 "PO-Revision-Date: 2015-05-18 11:32+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: Spanish (Colombia) (http://www.transifex.com/odoo/odoo-8/language/es_CO/)\n"
+=======
+# Mateo Tibaquirá <nestormateo@gmail.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo 9.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-18 08:19+0000\n"
+"PO-Revision-Date: 2015-10-27 15:30+0000\n"
+"Last-Translator: Mateo Tibaquirá <nestormateo@gmail.com>\n"
+"Language-Team: Spanish (Colombia) (http://www.transifex.com/odoo/odoo-9/language/es_CO/)\n"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -18,6 +34,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: l10n_pl
+<<<<<<< HEAD
 #: model:account.account.type,name:l10n_pl.account_type_view
 msgid "Widok"
 msgstr ""
@@ -41,10 +58,16 @@ msgstr ""
 #: model:account.account.type,name:l10n_pl.account_type_payable
 msgid "Zobowiązania"
 msgstr ""
+=======
+#: model:ir.actions.client,name:l10n_pl.action_client_l10n_pl_menu
+msgid "Open Account Dashboard Menu"
+msgstr "Abrir Menú de Contabilidad"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_pl
 #: model:account.account.type,name:l10n_pl.account_type_tax
 msgid "Podatki"
+<<<<<<< HEAD
 msgstr "Información"
 
 #. module: l10n_pl
@@ -60,4 +83,21 @@ msgstr ""
 #. module: l10n_pl
 #: model:account.account.type,name:l10n_pl.account_type_expense
 msgid "Wydatki"
+=======
+msgstr ""
+
+#. module: l10n_pl
+#: model:ir.ui.menu,name:l10n_pl.account_reports_pl_statements_menu
+msgid "Polish Statements"
+msgstr ""
+
+#. module: l10n_pl
+#: model:account.account.type,name:l10n_pl.account_type_nonbalance
+msgid "Pozabilansowe"
+msgstr ""
+
+#. module: l10n_pl
+#: model:account.account.type,name:l10n_pl.account_type_settlement
+msgid "Rozrachunki"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgstr ""

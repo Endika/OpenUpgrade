@@ -1,3 +1,7 @@
+# -*- coding: utf-8 -*-
+# Part of Odoo. See LICENSE file for full copyright and licensing details.
+
+import openerp
 from openerp.osv import fields, osv
 from openerp import api
 
@@ -11,6 +15,7 @@ AVAILABLE_STATES = [
 
 class lead_test(osv.Model):
     _name = "base.action.rule.lead.test"
+    _description = "Action Rule Test"
 
     _columns = {
         'name': fields.char('Subject', required=True, select=1),
@@ -26,9 +31,11 @@ class lead_test(osv.Model):
         'active' : True,
     }
 
+    customer = openerp.fields.Boolean(related='partner_id.customer', readonly=True, store=True)
+
     @api.cr_uid_ids_context
-    def message_post(self, cr, uid, thread_id, body='', subject=None, type='notification', subtype=None, parent_id=False, attachments=None, context=None, **kwargs):
+    def message_post(self, cr, uid, thread_id, body='', subject=None, message_type='notification', subtype=None, parent_id=False, attachments=None, context=None, **kwargs):
         pass
 
-    def message_subscribe(self, cr, uid, ids, partner_ids, subtype_ids=None, context=None):
+    def message_subscribe(self, cr, uid, ids, partner_ids=None, channel_ids=None, subtype_ids=None, force=True, context=None):
         pass

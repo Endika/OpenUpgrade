@@ -5,12 +5,21 @@
 # Translators:
 msgid ""
 msgstr ""
+<<<<<<< HEAD
 "Project-Id-Version: Odoo 8.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-21 14:08+0000\n"
 "PO-Revision-Date: 2016-02-09 23:14+0000\n"
 "Last-Translator: Martin Trigaux\n"
 "Language-Team: Spanish (Peru) (http://www.transifex.com/odoo/odoo-8/language/es_PE/)\n"
+=======
+"Project-Id-Version: Odoo 9.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-07 14:41+0000\n"
+"PO-Revision-Date: 2015-09-24 15:00+0000\n"
+"Last-Translator: Martin Trigaux\n"
+"Language-Team: Spanish (Peru) (http://www.transifex.com/odoo/odoo-9/language/es_PE/)\n"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -18,6 +27,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum_doc.documentation_post
 msgid "&nbsp;"
 msgstr "&nbsp;"
@@ -45,6 +55,15 @@ msgid ""
 "                    This serie of how-to will help you develop your business.\n"
 "                </p>\n"
 "            "
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.forum_question_doc
+msgid "&amp;times;"
+msgstr ""
+
+#. module: website_forum_doc
+#: model:ir.ui.view,arch_db:website_forum_doc.promote_question
+msgid "<span class=\"text-muted\">or</span>"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgstr ""
 
 #. module: website_forum_doc
@@ -53,24 +72,40 @@ msgid "After-sale communication"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum_doc.promote_question
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.promote_question
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Bad answer structure"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum_doc.promote_question
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.promote_question
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Bad questions"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum_doc.promote_question
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.promote_question
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid ""
 "Before submiting the question, help us improve its quality by\n"
 "                        editing the question and the main answer."
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum_doc.promote_question
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.promote_question
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Benefits of having done this setup"
 msgstr ""
 
@@ -80,7 +115,11 @@ msgid "CMS & eCommerce"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: field:forum.documentation.toc,child_ids:0
+=======
+#: model:ir.model.fields,field_description:website_forum_doc.field_forum_documentation_toc_child_ids
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Children Table Of Content"
 msgstr ""
 
@@ -90,19 +129,33 @@ msgid "Claims"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: field:forum.post,color:0
+=======
+#: model:ir.model.fields,field_description:website_forum_doc.field_forum_post_color
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Color Index"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: field:forum.documentation.stage,create_uid:0
 #: field:forum.documentation.toc,create_uid:0
+=======
+#: model:ir.model.fields,field_description:website_forum_doc.field_forum_documentation_stage_create_uid
+#: model:ir.model.fields,field_description:website_forum_doc.field_forum_documentation_toc_create_uid
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Created by"
 msgstr "Creado por"
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: field:forum.documentation.stage,create_date:0
 #: field:forum.documentation.toc,create_date:0
+=======
+#: model:ir.model.fields,field_description:website_forum_doc.field_forum_documentation_stage_create_date
+#: model:ir.model.fields,field_description:website_forum_doc.field_forum_documentation_toc_create_date
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Created on"
 msgstr "Creado en"
 
@@ -117,19 +170,39 @@ msgid "Customers"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:forum.post:website_forum_doc.view_forum_post_kanban
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.view_forum_post_kanban
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Delete"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum_doc.promote_question
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.promote_question
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Describe the business solution"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: model:ir.actions.act_url,name:website_forum_doc.action_open_documentation
 #: model:ir.actions.act_window,name:website_forum_doc.action_documentation_toc
 #: view:website:website.layout
+=======
+#: model:ir.model.fields,field_description:website_forum_doc.field_forum_documentation_stage_display_name
+#: model:ir.model.fields,field_description:website_forum_doc.field_forum_documentation_toc_display_name
+msgid "Display Name"
+msgstr "Nombre a Mostrar"
+
+#. module: website_forum_doc
+#: model:ir.actions.act_url,name:website_forum_doc.action_open_documentation
+#: model:ir.actions.act_window,name:website_forum_doc.action_documentation_toc
+#: model:ir.ui.view,arch_db:website_forum_doc.header_footer_custom
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 #: model:website.menu,name:website_forum_doc.menu_questions
 msgid "Documentation"
 msgstr ""
@@ -141,18 +214,31 @@ msgid "Documentation Posts"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: field:forum.post,documentation_stage_id:0
+=======
+#: model:ir.model.fields,field_description:website_forum_doc.field_forum_post_documentation_stage_id
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Documentation Stage"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:forum.documentation.toc:website_forum_doc.view_documentation_toc_list
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.view_documentation_toc_list
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Documentation TOC"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: field:forum.post,documentation_toc_id:0
 #: model:ir.model,name:website_forum_doc.model_forum_documentation_toc
+=======
+#: model:ir.model,name:website_forum_doc.model_forum_documentation_toc
+#: model:ir.model.fields,field_description:website_forum_doc.field_forum_post_documentation_toc_id
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 #: model:ir.ui.menu,name:website_forum_doc.menu_documentation
 msgid "Documentation ToC"
 msgstr ""
@@ -163,8 +249,13 @@ msgid "Draft"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:forum.post:website_forum_doc.view_forum_post_kanban
 msgid "Edit..."
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.view_forum_post_kanban
+msgid "Edit Post"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgstr ""
 
 #. module: website_forum_doc
@@ -175,20 +266,35 @@ msgstr ""
 #. module: website_forum_doc
 #: constraint:forum.documentation.toc:0
 msgid "Error ! You cannot create recursive categories."
+<<<<<<< HEAD
 msgstr "¡Error! No puede crear categorías recursivas"
 
 #. module: website_forum_doc
 #: view:website:website_forum_doc.promote_question
+=======
+msgstr ""
+
+#. module: website_forum_doc
+#: model:ir.ui.view,arch_db:website_forum_doc.promote_question
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Explain how to configure in Odoo"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum_doc.promote_question
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.promote_question
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Explain how to implement it in Odoo"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: field:forum.documentation.toc,forum_id:0
+=======
+#: model:ir.model.fields,field_description:website_forum_doc.field_forum_documentation_toc_forum_id
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Forum"
 msgstr ""
 
@@ -203,22 +309,38 @@ msgid "Functional Documentation"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum_doc.promote_question
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.promote_question
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Good answer structure"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum_doc.promote_question
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.promote_question
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Good question titles"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum_doc.promote_question
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.promote_question
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "How to compute future inventories for a product?"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum_doc.promote_question
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.promote_question
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "How to forecast sales revenues?"
 msgstr ""
 
@@ -228,7 +350,12 @@ msgid "Human Resources Management"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: field:forum.documentation.stage,id:0 field:forum.documentation.toc,id:0
+=======
+#: model:ir.model.fields,field_description:website_forum_doc.field_forum_documentation_stage_id
+#: model:ir.model.fields,field_description:website_forum_doc.field_forum_documentation_toc_id
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "ID"
 msgstr "ID"
 
@@ -238,19 +365,39 @@ msgid "Ideas"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: field:forum.documentation.toc,introduction:0
+=======
+#: model:ir.model.fields,field_description:website_forum_doc.field_forum_documentation_toc_introduction
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Introduction"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: field:forum.documentation.stage,write_uid:0
 #: field:forum.documentation.toc,write_uid:0
+=======
+#: model:ir.model.fields,field_description:website_forum_doc.field_forum_documentation_stage___last_update
+#: model:ir.model.fields,field_description:website_forum_doc.field_forum_documentation_toc___last_update
+msgid "Last Modified on"
+msgstr "Ultima Modificación en"
+
+#. module: website_forum_doc
+#: model:ir.model.fields,field_description:website_forum_doc.field_forum_documentation_stage_write_uid
+#: model:ir.model.fields,field_description:website_forum_doc.field_forum_documentation_toc_write_uid
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Last Updated by"
 msgstr "Actualizado última vez por"
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: field:forum.documentation.stage,write_date:0
 #: field:forum.documentation.toc,write_date:0
+=======
+#: model:ir.model.fields,field_description:website_forum_doc.field_forum_documentation_stage_write_date
+#: model:ir.model.fields,field_description:website_forum_doc.field_forum_documentation_toc_write_date
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Last Updated on"
 msgstr "Ultima Actualización"
 
@@ -260,27 +407,48 @@ msgid "Lead & Opportunity"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: field:forum.documentation.toc,parent_left:0
+=======
+#: model:ir.model.fields,field_description:website_forum_doc.field_forum_documentation_toc_parent_left
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Left Parent"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: field:forum.documentation.toc,name:0
 msgid "Name"
 msgstr ""
 
 #. module: website_forum_doc
 #: view:website:website_forum_doc.documentation_post
+=======
+#: model:ir.model.fields,field_description:website_forum_doc.field_forum_documentation_toc_name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: website_forum_doc
+#: model:ir.ui.view,arch_db:website_forum_doc.documentation_post
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Need more info?"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum_doc.promote_question
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.promote_question
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "No business benefit"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: field:forum.documentation.toc,parent_id:0
+=======
+#: model:ir.model.fields,field_description:website_forum_doc.field_forum_documentation_toc_parent_id
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Parent Table Of Content"
 msgstr ""
 
@@ -290,17 +458,29 @@ msgid "Post Stage"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: field:forum.documentation.toc,post_ids:0
+=======
+#: model:ir.model.fields,field_description:website_forum_doc.field_forum_documentation_toc_post_ids
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Posts"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum_doc.promote_question
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.promote_question
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Promote question to documentation"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum.post_description_full
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.forum_question_doc
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Promote to Doc"
 msgstr ""
 
@@ -310,27 +490,47 @@ msgid "Publish"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum_doc.promote_question
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.promote_question
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Publish in Chapter:"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum_doc.promote_question
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.promote_question
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Push to documentation"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum_doc.promote_question
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.promote_question
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Question:"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum_doc.documentation_post
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.documentation_post
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Related question"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum_doc.documentation_post
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.documentation_post
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Related topics"
 msgstr ""
 
@@ -340,7 +540,11 @@ msgid "Review"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: field:forum.documentation.toc,parent_right:0
+=======
+#: model:ir.model.fields,field_description:website_forum_doc.field_forum_documentation_toc_parent_right
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Right Parent"
 msgstr ""
 
@@ -360,23 +564,38 @@ msgid "Sales orders"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum_doc.promote_question
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.promote_question
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Samples"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum_doc.documentation
 #: view:website:website_forum_doc.documentation_post
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.documentation
+#: model:ir.ui.view,arch_db:website_forum_doc.documentation_post
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Search"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum_doc.documentation
 #: view:website:website_forum_doc.documentation_post
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.documentation
+#: model:ir.ui.view,arch_db:website_forum_doc.documentation_post
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Search..."
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: field:forum.documentation.stage,sequence:0
 #: field:forum.documentation.toc,sequence:0
 msgid "Sequence"
@@ -384,90 +603,179 @@ msgstr "Secuencia"
 
 #. module: website_forum_doc
 #: field:forum.documentation.stage,name:0
+=======
+#: model:ir.model.fields,field_description:website_forum_doc.field_forum_documentation_stage_sequence
+#: model:ir.model.fields,field_description:website_forum_doc.field_forum_documentation_toc_sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: website_forum_doc
+#: model:ir.model.fields,field_description:website_forum_doc.field_forum_documentation_stage_name
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Stage Name"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum_doc.promote_question
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.promote_question
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "The answer is understandable for someone who does not know Odoo"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum_doc.promote_question
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.promote_question
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "The question describes a real business problem, not a software problem"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum_doc.promote_question
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.promote_question
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "The question title is short and descriptive"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum_doc.documentation_post
 msgid ""
 "This documentation page has been extracted\n"
 "                                        from the Q&A section where you can\n"
+=======
+#: model:forum.documentation.toc,introduction:website_forum_doc.toc_functional_doc
+msgid "This documentation is produced using the best posts from the"
+msgstr ""
+
+#. module: website_forum_doc
+#: model:ir.ui.view,arch_db:website_forum_doc.documentation_post
+msgid ""
+"This documentation page has been extracted\n"
+"                                        from the Q&amp;A section where you can\n"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 "                                        discuss it and get feedback."
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum.post_description_full
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.forum_question_doc
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "This question has been included in the"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum_doc.promote_question
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.promote_question
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid ""
 "To be promoted in the official documentation the question\n"
 "                        and answer must satisfy the following criteria:"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
+=======
+#: model:forum.documentation.toc,introduction:website_forum_doc.toc_sale
+msgid ""
+"Tracks leads, boost opportunities and close deals.\n"
+"                    This serie of how-to will help you develop your business."
+msgstr ""
+
+#. module: website_forum_doc
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 #: model:forum.documentation.toc,name:website_forum_doc.toc_website
 msgid "Website"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: field:forum.documentation.toc,website_meta_description:0
+=======
+#: model:ir.model.fields,field_description:website_forum_doc.field_forum_documentation_toc_website_meta_description
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Website meta description"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: field:forum.documentation.toc,website_meta_keywords:0
+=======
+#: model:ir.model.fields,field_description:website_forum_doc.field_forum_documentation_toc_website_meta_keywords
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Website meta keywords"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: field:forum.documentation.toc,website_meta_title:0
+=======
+#: model:ir.model.fields,field_description:website_forum_doc.field_forum_documentation_toc_website_meta_title
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Website meta title"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum_doc.promote_question
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.promote_question
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "What report should I use to compute probabilities per stage?"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum_doc.promote_question
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.promote_question
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "What's the available stock field?"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum_doc.promote_question
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.promote_question
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "cancel"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum_doc.toc
+=======
+#: model:forum.documentation.toc,introduction:website_forum_doc.toc_functional_doc
+msgid "community forum"
+msgstr ""
+
+#. module: website_forum_doc
+#: model:ir.ui.view,arch_db:website_forum_doc.toc
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "essay"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum_doc.toc
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.toc
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "essays"
 msgstr ""
 
 #. module: website_forum_doc
+<<<<<<< HEAD
 #: view:website:website_forum.post_description_full
 msgid "official documentation"
 msgstr ""
@@ -476,3 +784,8 @@ msgstr ""
 #: view:website:website_forum_doc.promote_question
 msgid "or"
 msgstr "o"
+=======
+#: model:ir.ui.view,arch_db:website_forum_doc.forum_question_doc
+msgid "official documentation"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0

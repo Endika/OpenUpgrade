@@ -1,16 +1,21 @@
-# Translation of OpenERP Server.
+# Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * l10n_br
 # 
 # Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 8.0\n"
+"Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2012-11-24 02:53+0000\n"
 "PO-Revision-Date: 2015-12-02 23:38+0000\n"
+=======
+"POT-Creation-Date: 2015-09-18 08:19+0000\n"
+"PO-Revision-Date: 2015-10-20 07:17+0000\n"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 "Last-Translator: Martin Trigaux\n"
-"Language-Team: Indonesian (http://www.transifex.com/odoo/odoo-8/language/id/)\n"
+"Language-Team: Indonesian (http://www.transifex.com/odoo/odoo-9/language/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -18,44 +23,12 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. module: l10n_br
-#: field:account.tax,tax_discount:0 field:account.tax.code,tax_discount:0
-#: field:account.tax.code.template,tax_discount:0
-#: field:account.tax.template,tax_discount:0
-msgid "Discount this Tax in Prince"
+#: model:ir.ui.menu,name:l10n_br.account_reports_br_statements_menu
+msgid "Brazilian Statements"
 msgstr ""
 
 #. module: l10n_br
-#: model:ir.actions.act_window,name:l10n_br.action_l10n_br_cst_form
-#: model:ir.model,name:l10n_br.model_l10n_br_account_cst
-#: model:ir.ui.menu,name:l10n_br.menu_action_l10n_br_cst
-#: view:l10n_br_account.cst:0
-msgid "Tax Situation Code"
-msgstr ""
-
-#. module: l10n_br
-#: model:account.account.type,name:l10n_br.despesa
-msgid "Despesas"
-msgstr ""
-
-#. module: l10n_br
-#: model:ir.model,name:l10n_br.model_account_tax_code
-#: field:l10n_br_account.cst,tax_code_id:0
-msgid "Tax Code"
-msgstr "Kode Pajak"
-
-#. module: l10n_br
-#: help:account.tax.code,domain:0 help:account.tax.code.template,domain:0
-msgid ""
-"This field is only used if you develop your own module allowing developers "
-"to create specific taxes in a custom domain."
-msgstr "Kolom ini hanya digunakan jika anda membuat perumusan tentang perhitungan pajak sendiri"
-
-#. module: l10n_br
-#: model:account.account.type,name:l10n_br.resultado
-msgid "Resultado"
-msgstr ""
-
-#. module: l10n_br
+<<<<<<< HEAD
 #: model:ir.model,name:l10n_br.model_account_tax_template
 msgid "account.tax.template"
 msgstr "account.tax.template"
@@ -76,25 +49,39 @@ msgid ""
 "Error!\n"
 "You cannot create recursive accounts."
 msgstr "Kesalahan!\nAnda tidak dapat membuat account rekursif."
+=======
+#: model:ir.model.fields,field_description:l10n_br.field_account_tax_tax_discount
+#: model:ir.model.fields,field_description:l10n_br.field_account_tax_template_tax_discount
+msgid "Discount this Tax in Prince"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_br
-#: field:account.tax,amount_mva:0 field:account.tax.template,amount_mva:0
+#: model:ir.model.fields,field_description:l10n_br.field_account_tax_amount_mva
+#: model:ir.model.fields,field_description:l10n_br.field_account_tax_template_amount_mva
 msgid "MVA Percent"
 msgstr ""
 
 #. module: l10n_br
+<<<<<<< HEAD
 #: help:account.tax.template,amount_mva:0
 #: help:account.tax.template,base_reduction:0
 msgid "For taxes of type percentage, enter % ratio between 0-1."
 msgstr "Untuk pajak jenis persentase, masukkan % rasio antara 0-1."
+=======
+#: model:ir.model.fields,help:l10n_br.field_account_tax_tax_discount
+#: model:ir.model.fields,help:l10n_br.field_account_tax_template_tax_discount
+msgid "Mark it for (ICMS, PIS e etc.)."
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_br
-#: field:account.tax,base_reduction:0
-#: field:account.tax.template,base_reduction:0
-msgid "Redution"
+#: model:ir.actions.client,name:l10n_br.action_client_l10n_br_menu
+msgid "Open Account Dashboard Menu"
 msgstr ""
 
 #. module: l10n_br
+<<<<<<< HEAD
 #: sql_constraint:account.tax:0
 msgid "Tax Name must be unique per company!"
 msgstr "Pajak nama harus unik per perusahaan!"
@@ -157,14 +144,36 @@ msgstr "Filter"
 #: field:l10n_br_account.cst,code:0 field:l10n_br_account.cst.template,code:0
 msgid "Code"
 msgstr "Kode"
+=======
+#: model:ir.model.fields,field_description:l10n_br.field_account_tax_base_reduction
+#: model:ir.model.fields,field_description:l10n_br.field_account_tax_template_base_reduction
+msgid "Redution"
+msgstr ""
 
 #. module: l10n_br
-#: help:account.tax,amount_mva:0 help:account.tax,base_reduction:0
+#: model:ir.model,name:l10n_br.model_account_tax
+msgid "Tax"
+msgstr "Pajak"
+
+#. module: l10n_br
+#: model:ir.model,name:l10n_br.model_account_tax_template
+msgid "Templates for Taxes"
+msgstr "Cetakan Perpajakan"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
+
+#. module: l10n_br
+#: model:ir.model.fields,help:l10n_br.field_account_tax_amount_mva
+#: model:ir.model.fields,help:l10n_br.field_account_tax_base_reduction
+#: model:ir.model.fields,help:l10n_br.field_account_tax_template_amount_mva
+#: model:ir.model.fields,help:l10n_br.field_account_tax_template_base_reduction
 msgid "Um percentual decimal em % entre 0-1."
 msgstr ""
+<<<<<<< HEAD
 
 #. module: l10n_br
 #: model:ir.model,name:l10n_br.model_account_tax_code_template
 #: field:l10n_br_account.cst.template,tax_code_template_id:0
 msgid "Tax Code Template"
 msgstr "Kode Pajak"
+=======
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0

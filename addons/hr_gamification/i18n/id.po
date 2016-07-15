@@ -5,12 +5,19 @@
 # Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 8.0\n"
+"Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2015-01-21 14:08+0000\n"
 "PO-Revision-Date: 2015-12-02 23:35+0000\n"
 "Last-Translator: Wahyu Setiawan <wahyusetiaaa@gmail.com>\n"
 "Language-Team: Indonesian (http://www.transifex.com/odoo/odoo-8/language/id/)\n"
+=======
+"POT-Creation-Date: 2015-09-07 14:40+0000\n"
+"PO-Revision-Date: 2015-09-07 20:50+0000\n"
+"Last-Translator: Martin Trigaux\n"
+"Language-Team: Indonesian (http://www.transifex.com/odoo/odoo-9/language/id/)\n"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -18,8 +25,9 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. module: hr_gamification
-#: model:ir.actions.act_window,help:hr_gamification.challenge_list_action2
+#: model:ir.actions.act_window,help:hr_gamification.goals_menu_groupby_action2
 msgid ""
+<<<<<<< HEAD
 "<p class=\"oe_view_nocontent_create\">\n"
 "                    Click to create a challenge. \n"
 "                </p>\n"
@@ -30,10 +38,16 @@ msgid ""
 "                </p>\n"
 "            "
 msgstr "<p class = \"oe_view_nocontent_create\">\n                    Klik untuk membuat sebuah tantangan.\n                </p>\n                <p>\n                    Menetapkan daftar tujuan untuk dipilih pengguna untuk mengevaluasi mereka.\n                    Tantangannya dapat menggunakan periode (mingguan, bulanan ...) untuk penciptaan otomatis dari tujuan.\n                    Tujuan diciptakan untuk pengguna tertentu atau anggota kelompok.\n                </p>\n            "
+=======
+"A goal is defined by a user and a goal type.\n"
+"                    Goals can be created automatically by using challenges."
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: hr_gamification
-#: model:ir.actions.act_window,help:hr_gamification.goals_menu_groupby_action2
+#: model:ir.actions.act_window,help:hr_gamification.challenge_list_action2
 msgid ""
+<<<<<<< HEAD
 "<p class=\"oe_view_nocontent_create\">\n"
 "                    Click to create a goal. \n"
 "                </p>\n"
@@ -43,6 +57,12 @@ msgid ""
 "                </p>\n"
 "            "
 msgstr "<p class=\"oe_view_nocontent_create\"> Klik untuk membuat gol. </p><p> Tujuan didefinisikan oleh pengguna dan jenis sasaran. Gol dapat dibuat secara otomatis dengan menggunakan tantangan. </p>"
+=======
+"Assign a list of goals to chosen users to evaluate them.\n"
+"                    The challenge can use a period (weekly, monthly...) for automatic creation of goals.\n"
+"                    The goals are created for the specified users or member of the group."
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: hr_gamification
 #: model:ir.ui.menu,name:hr_gamification.gamification_badge_menu_hr
@@ -50,55 +70,72 @@ msgid "Badges"
 msgstr "Lencana"
 
 #. module: hr_gamification
-#: view:hr.employee:hr_gamification.hr_hr_employee_view_form
+#: model:ir.ui.view,arch_db:hr_gamification.hr_hr_employee_view_form
 msgid ""
 "Badges are rewards of good work. Give them to people you believe deserve it."
 msgstr "Lencana imbalan kerja yang baik. Beri mereka kepada orang-orang yang Anda percaya layak mendapatkannya."
 
 #. module: hr_gamification
-#: view:gamification.badge.user.wizard:hr_gamification.view_badge_wizard_reward
+#: model:ir.ui.view,arch_db:hr_gamification.view_badge_wizard_reward
 msgid "Cancel"
 msgstr "Batalkan"
 
 #. module: hr_gamification
 #: model:ir.actions.act_window,name:hr_gamification.challenge_list_action2
 #: model:ir.ui.menu,name:hr_gamification.gamification_challenge_menu_hr
+#: model:ir.ui.menu,name:hr_gamification.menu_hr_gamification
 msgid "Challenges"
 msgstr "Tantangan"
+<<<<<<< HEAD
+=======
 
 #. module: hr_gamification
-#: view:hr.employee:hr_gamification.hr_hr_employee_view_form
+#: model:ir.actions.act_window,help:hr_gamification.challenge_list_action2
+msgid "Click to create a challenge."
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
+
+#. module: hr_gamification
+#: model:ir.actions.act_window,help:hr_gamification.goals_menu_groupby_action2
+msgid "Click to create a goal."
+msgstr ""
+
+#. module: hr_gamification
+#: model:ir.ui.view,arch_db:hr_gamification.hr_hr_employee_view_form
 msgid "Click to grant this employee his first badge"
 msgstr "Klik untuk memberikan karyawan ini lencana pertamanya"
 
 #. module: hr_gamification
-#: view:gamification.badge.user.wizard:hr_gamification.view_badge_wizard_reward
+#: model:ir.ui.view,arch_db:hr_gamification.view_badge_wizard_reward
 msgid "Describe what they did and why it matters (will be public)"
 msgstr "Jelaskan apa yang mereka lakukan dan mengapa itu penting (akan public)"
 
 #. module: hr_gamification
-#: field:gamification.badge.user,employee_id:0
-#: field:gamification.badge.user.wizard,employee_id:0
 #: model:ir.model,name:hr_gamification.model_hr_employee
+#: model:ir.model.fields,field_description:hr_gamification.field_gamification_badge_user_employee_id
+#: model:ir.model.fields,field_description:hr_gamification.field_gamification_badge_user_wizard_employee_id
 msgid "Employee"
 msgstr "Karyawan"
 
 #. module: hr_gamification
-#: field:hr.employee,badge_ids:0
+#: model:ir.model.fields,field_description:hr_gamification.field_hr_employee_badge_ids
 msgid "Employee Badges"
 msgstr "Lencana karyawan"
 
 #. module: hr_gamification
-#: field:hr.employee,goal_ids:0
+#: model:ir.model.fields,field_description:hr_gamification.field_hr_employee_goal_ids
 msgid "Employee HR Goals"
 msgstr "Gol HR karyawan"
 
 #. module: hr_gamification
+<<<<<<< HEAD
 #: model:ir.ui.menu,name:hr_gamification.menu_hr_gamification
 msgid "Engagement"
 msgstr "Penghargaan"
 
 #. module: hr_gamification
+=======
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 #: model:ir.model,name:hr_gamification.model_gamification_badge
 msgid "Gamification badge"
 msgstr "Gamification lencana"
@@ -109,44 +146,47 @@ msgid "Gamification user badge"
 msgstr "Gamification pengguna badge"
 
 #. module: hr_gamification
+<<<<<<< HEAD
 #: view:hr.employee:hr_gamification.hr_hr_employee_view_form
 msgid "Goals"
 msgstr "Tujuan"
 
 #. module: hr_gamification
+=======
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 #: model:ir.actions.act_window,name:hr_gamification.goals_menu_groupby_action2
 #: model:ir.ui.menu,name:hr_gamification.gamification_goal_menu_hr
 msgid "Goals History"
 msgstr "Gol Sejarah"
 
 #. module: hr_gamification
-#: view:hr.employee:hr_gamification.hr_hr_employee_view_form
+#: model:ir.ui.view,arch_db:hr_gamification.hr_hr_employee_view_form
 msgid "Grant a Badge"
 msgstr "Memberikan sebuah Badge"
 
 #. module: hr_gamification
-#: view:gamification.badge:hr_gamification.hr_badge_form_view
+#: model:ir.ui.view,arch_db:hr_gamification.hr_badge_form_view
 msgid "Granted Employees"
 msgstr "Karyawan diberikan"
 
 #. module: hr_gamification
-#: field:hr.employee,has_badges:0
+#: model:ir.model.fields,field_description:hr_gamification.field_hr_employee_has_badges
 msgid "Has Badges"
 msgstr "Memiliki Lencana"
 
 #. module: hr_gamification
-#: view:hr.employee:hr_gamification.hr_hr_employee_view_form
+#: model:ir.ui.view,arch_db:hr_gamification.hr_hr_employee_view_form
 msgid "Received Badges"
 msgstr "Lencana menerima"
 
 #. module: hr_gamification
-#: view:gamification.badge.user.wizard:hr_gamification.view_badge_wizard_reward
 #: model:ir.actions.act_window,name:hr_gamification.action_reward_wizard
+#: model:ir.ui.view,arch_db:hr_gamification.view_badge_wizard_reward
 msgid "Reward Employee"
 msgstr "Reward Karyawan"
 
 #. module: hr_gamification
-#: view:gamification.badge.user.wizard:hr_gamification.view_badge_wizard_reward
+#: model:ir.ui.view,arch_db:hr_gamification.view_badge_wizard_reward
 msgid "Reward Employee with"
 msgstr "Reward Karyawan dengan"
 
@@ -156,6 +196,7 @@ msgid "The selected employee does not correspond to the selected user."
 msgstr "Karyawan yang dipilih tidak sesuai dengan pengguna yang dipilih."
 
 #. module: hr_gamification
+<<<<<<< HEAD
 #: code:addons/hr_gamification/wizard/grant_badge.py:45
 #: code:addons/hr_gamification/wizard/grant_badge.py:48
 #, python-format
@@ -166,25 +207,30 @@ msgstr "Perhatian!"
 #: view:gamification.badge.user.wizard:hr_gamification.view_badge_wizard_reward
 msgid "What are you thank for?"
 msgstr "Apa yang Anda terima untuk?"
+=======
+#: model:ir.ui.view,arch_db:hr_gamification.view_badge_wizard_reward
+msgid "What are you thankful for?"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: hr_gamification
-#: code:addons/hr_gamification/wizard/grant_badge.py:48
+#: code:addons/hr_gamification/wizard/grant_badge.py:31
 #, python-format
 msgid "You can not send a badge to yourself"
 msgstr "Anda tidak dapat mengirim lencana untuk diri sendiri"
 
 #. module: hr_gamification
-#: code:addons/hr_gamification/wizard/grant_badge.py:45
+#: code:addons/hr_gamification/wizard/grant_badge.py:28
 #, python-format
 msgid "You can send badges only to employees linked to a user."
 msgstr "Anda dapat mengirim lencana hanya untuk karyawan terkait dengan pengguna."
 
 #. module: hr_gamification
-#: view:gamification.badge.user.wizard:hr_gamification.view_badge_wizard_reward
-msgid "or"
-msgstr "atau"
+#: model:ir.model,name:hr_gamification.model_gamification_badge_user_wizard
+msgid "gamification.badge.user.wizard"
+msgstr ""
 
 #. module: hr_gamification
-#: view:hr.employee:hr_gamification.hr_hr_employee_view_form
+#: model:ir.ui.view,arch_db:hr_gamification.hr_hr_employee_view_form
 msgid "to reward this employee for a good action"
 msgstr "untuk menghargai karyawan ini untuk tindakan yang baik"

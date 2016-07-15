@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
-    <data>
+<odoo>
 
+<<<<<<< HEAD
     <!--
         Définition des Tax Codes
         Version du fichier : 30-09-2013
@@ -237,14 +237,29 @@
       <field name="code">TVA acquittée sur immobilisations 2.1%</field>
       <field name="parent_id" ref="tax_imm"/>
       <field name="sign">1.00</field>
+=======
+    <record id="pcg_58" model="account.account.template">
+      <field name="name">Virements Internes</field>
+      <field name="code">58</field>
+      <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+      <field name="reconcile" eval="True"/>
     </record>
 
-    <record model="account.tax.code.template" id="tax_intra_ht">
-      <field name="name">Base H.T. TVA due intracommunautaire</field>
-      <field name="code">g)</field>
-      <field name="sign">1.00</field>
-      <field name="parent_id" ref="vat_code_chart_root"/>
+  	<!-- Chart template -->
+    <record id="l10n_fr_pcg_chart_template" model="account.chart.template">
+        <field name="name">Plan Comptable Général (France)</field>
+        <field name="currency_id" ref="base.EUR"/>
+        <field name="code_digits" eval="6"/>
+        <field name="bank_account_code_prefix">512</field>
+        <field name="cash_account_code_prefix">53</field>
+        <field name="transfer_account_id" ref="pcg_58"/>
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
     </record>
+
+    <record id="pcg_58" model="account.account.template">
+      <field name="chart_template_id" ref="l10n_fr_pcg_chart_template"/>
+    </record>
+<<<<<<< HEAD
     <record model="account.tax.code.template" id="tax_intra_200_ht">
       <field name="name">Base H.T. 20.0%</field>
       <field name="code">TVA due intracommunautaire 20.0% (Base H.T.)</field>
@@ -441,6 +456,7 @@
             <field name="property_account_income_categ" ref="pcg_7071"/>
             <field name="currency_id" ref="base.EUR"/>
         </record>
+=======
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
-  </data>
-</openerp>
+</odoo>

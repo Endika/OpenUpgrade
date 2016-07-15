@@ -101,9 +101,8 @@ In-database window actions have a few different fields which should be ignored
 by clients, mostly to use in composing the ``views`` list:
 
 ``view_mode``
-    comma-separated list of view types (tree, form, ...) as a string. All of
-    these types will be present in the generated ``views`` list (with at least
-    a ``False`` view_id)
+    comma-separated list of view types as a string. All of these types will be
+    present in the generated ``views`` list (with at least a ``False`` view_id)
 ``view_ids``
     M2M\ [#notquitem2m]_ to view objects, defines the initial content of
     ``views``
@@ -234,7 +233,7 @@ field:
             </field>
         </record>
 
-    will ask the client to open a form for the record if it fullfils some
+    will ask the client to open a form for the record if it fulfills some
     condition
 
 This tends to be the only action type created from :ref:`data files

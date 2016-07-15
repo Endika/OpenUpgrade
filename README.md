@@ -1,10 +1,15 @@
+<<<<<<< HEAD
 [![Build Status](https://travis-ci.org/OpenUpgrade/OpenUpgrade.svg?branch=8.0)](https://travis-ci.org/OpenUpgrade/OpenUpgrade)
+=======
+[![Build Status](https://travis-ci.org/OCA/OpenUpgrade.svg?branch=9.0)](https://travis-ci.org/OCA/OpenUpgrade)
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
-Odoo
-----
+![OpenUpgrade logo](/openerp/openupgrade/doc/source/images/OpenUpgrade.png?raw=true)
 
-Odoo is a suite of web based open source business apps.
+OpenUpgrade
+===========
 
+<<<<<<< HEAD
 It's main apps include an <a href="https://www.odoo.com/page/crm">Open Source CRM</a>, <a href="https://www.odoo.com/page/website-builder">Website Builder</a>, <a href="https://www.odoo.com/page/e-commerce">eCommerce</a>, <a href="https://www.odoo.com/page/project-management">Project Management</a>, <a href="https://www.odoo.com/page/accounting">Billing & Accounting</a>, <a href="https://www.odoo.com/page/point-of-sale">Point of Sale</a>, <a href="https://www.odoo.com/page/employees">Human Resources</a>, Marketing, Manufacturing, Purchase Management, ...  Each application is standalone but you get a full featured <a href="https://www.odoo.com">Open Source ERP</a> if you install several apps as they integrate to each others.
 
 
@@ -52,4 +57,7 @@ To add the odoo-dev remote use this command:
 To fetch odoo merge pull requests refs use this command:
 
     $ ./odoo.py setup_git_review
+=======
+This <a href="https://odoo-community.org">OCA</a> project aims to provide an Open Source upgrade path for <a href="https://github.com/odoo/odoo">Odoo</a>. It is hosted at <a href="https://github.com/oca/openupgrade">GitHub</a>. For documentation, see <a href="https://doc.therp.nl/openupgrade">here</a>.
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 

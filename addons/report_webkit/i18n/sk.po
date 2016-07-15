@@ -5,12 +5,19 @@
 # Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 8.0\n"
+"Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2015-01-21 14:08+0000\n"
 "PO-Revision-Date: 2016-03-19 09:52+0000\n"
 "Last-Translator: Martin Trigaux\n"
 "Language-Team: Slovak (http://www.transifex.com/odoo/odoo-8/language/sk/)\n"
+=======
+"POT-Creation-Date: 2015-09-07 14:41+0000\n"
+"PO-Revision-Date: 2015-10-13 20:50+0000\n"
+"Last-Translator: Pavol Krnáč <pavol.krnac@ekoenergo.sk>\n"
+"Language-Team: Slovak (http://www.transifex.com/odoo/odoo-9/language/sk/)\n"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -74,22 +81,22 @@ msgstr "A9 13 37 x 52 mm"
 
 #. module: report_webkit
 #: model:ir.actions.act_window,name:report_webkit.wizard_ofdo_report_actions
-#: view:report.webkit.actions:report_webkit.view_report_webkit_actions
+#: model:ir.ui.view,arch_db:report_webkit.view_report_webkit_actions
 msgid "Add Print Buttons"
 msgstr "Pridať tlačidlo Tlač"
 
 #. module: report_webkit
-#: field:report.webkit.actions,print_button:0
+#: model:ir.model.fields,field_description:report_webkit.field_report_webkit_actions_print_button
 msgid "Add print button"
 msgstr "Pridať tlačidlo tlač"
 
 #. module: report_webkit
-#: field:res.company,header_image:0
+#: model:ir.model.fields,field_description:report_webkit.field_res_company_header_image
 msgid "Available Images"
 msgstr "Dostupné obrázky"
 
 #. module: report_webkit
-#: field:res.company,header_webkit:0
+#: model:ir.model.fields,field_description:report_webkit.field_res_company_header_webkit
 msgid "Available html"
 msgstr "Dostupné html"
 
@@ -144,7 +151,7 @@ msgid "B9  23  33 x 62 mm"
 msgstr "B9 23 33 x 62 mm"
 
 #. module: report_webkit
-#: field:ir.header_webkit,margin_bottom:0
+#: model:ir.model.fields,field_description:report_webkit.field_ir_header_webkit_margin_bottom
 msgid "Bottom Margin (mm)"
 msgstr "Spodný okraj (mm)"
 
@@ -154,26 +161,26 @@ msgid "C5E 24  163 x 229 mm"
 msgstr "C5E 24 163 x 229 mm"
 
 #. module: report_webkit
-#: view:report.webkit.actions:report_webkit.view_report_webkit_actions
+#: model:ir.ui.view,arch_db:report_webkit.view_report_webkit_actions
 msgid "Cancel"
 msgstr "Zrušiť"
 
 #. module: report_webkit
-#: help:report.webkit.actions,print_button:0
+#: model:ir.model.fields,help:report_webkit.field_report_webkit_actions_print_button
 msgid ""
 "Check this to add a Print action for this Report in the sidebar of the "
 "corresponding document types"
 msgstr "Zaškrtnite toto pre ridanie akcie Tlač pre tento Výkaz na bočnej lište zodpovedajúcich typov dokumentov"
 
 #. module: report_webkit
-#: help:report.webkit.actions,open_action:0
+#: model:ir.model.fields,help:report_webkit.field_report_webkit_actions_open_action
 msgid ""
 "Check this to view the newly added internal print action after creating it "
 "(technical view) "
 msgstr "Zašrtnite toto pre zobrazenie novo pridanej internej akcie tlače po jej vytvorení (technické zobrazenie)"
 
 #. module: report_webkit
-#: code:addons/report_webkit/wizard/report_webkit_actions.py:132
+#: code:addons/report_webkit/wizard/report_webkit_actions.py:107
 #, python-format
 msgid "Client Actions Connections"
 msgstr "Spojenia klientských akcií"
@@ -189,24 +196,27 @@ msgid "Companies"
 msgstr "Spoločnosti"
 
 #. module: report_webkit
-#: field:ir.header_img,company_id:0 field:ir.header_webkit,company_id:0
+#: model:ir.model.fields,field_description:report_webkit.field_ir_header_img_company_id
+#: model:ir.model.fields,field_description:report_webkit.field_ir_header_webkit_company_id
 msgid "Company"
 msgstr "Spoločnost"
 
 #. module: report_webkit
-#: view:res.company:report_webkit.currency_del_img
+#: model:ir.ui.view,arch_db:report_webkit.currency_del_img
 msgid "Configuration (Webkit)"
 msgstr "Konfigurácia (webová súprava)"
 
 #. module: report_webkit
-#: field:ir.header_img,create_uid:0 field:ir.header_webkit,create_uid:0
-#: field:report.webkit.actions,create_uid:0
+#: model:ir.model.fields,field_description:report_webkit.field_ir_header_img_create_uid
+#: model:ir.model.fields,field_description:report_webkit.field_ir_header_webkit_create_uid
+#: model:ir.model.fields,field_description:report_webkit.field_report_webkit_actions_create_uid
 msgid "Created by"
 msgstr "Vytvoril"
 
 #. module: report_webkit
-#: field:ir.header_img,create_date:0 field:ir.header_webkit,create_date:0
-#: field:report.webkit.actions,create_date:0
+#: model:ir.model.fields,field_description:report_webkit.field_ir_header_img_create_date
+#: model:ir.model.fields,field_description:report_webkit.field_ir_header_webkit_create_date
+#: model:ir.model.fields,field_description:report_webkit.field_report_webkit_actions_create_date
 msgid "Created on"
 msgstr "Vytvorené"
 
@@ -216,15 +226,22 @@ msgid "DLE 26 110 x 220 mm"
 msgstr "DLE 26 110 x 220 mm"
 
 #. module: report_webkit
+<<<<<<< HEAD
 #: help:ir.actions.report.xml,webkit_debug:0
 msgid "Enable the webkit engine debugger"
 msgstr "Povoliť ladiaci modul WebKit"
+=======
+#: model:ir.model.fields,field_description:report_webkit.field_ir_header_img_display_name
+#: model:ir.model.fields,field_description:report_webkit.field_ir_header_webkit_display_name
+#: model:ir.model.fields,field_description:report_webkit.field_report_webkit_actions_display_name
+msgid "Display Name"
+msgstr "Zobraziť meno"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: report_webkit
-#: code:addons/report_webkit/webkit_report.py:285
-#, python-format
-msgid "Error!"
-msgstr "Chyba!"
+#: model:ir.model.fields,help:report_webkit.field_ir_act_report_xml_webkit_debug
+msgid "Enable the webkit engine debugger"
+msgstr ""
 
 #. module: report_webkit
 #: selection:ir.header_webkit,format:0
@@ -237,33 +254,34 @@ msgid "Folio 27  210 x 330 mm"
 msgstr "Folio 27 210 x 330 mm"
 
 #. module: report_webkit
-#: view:ir.header_webkit:report_webkit.header_webkit
+#: model:ir.ui.view,arch_db:report_webkit.header_webkit
 msgid "HTML Header"
 msgstr "HTML hlavička"
 
 #. module: report_webkit
-#: field:ir.header_webkit,css:0
+#: model:ir.model.fields,field_description:report_webkit.field_ir_header_webkit_css
 msgid "Header CSS"
 msgstr "Hlavička CSS"
 
 #. module: report_webkit
-#: view:ir.header_img:report_webkit.header_img
+#: model:ir.ui.view,arch_db:report_webkit.header_img
 msgid "Header Image"
 msgstr "Obrázok hlavičky"
 
 #. module: report_webkit
-#: field:ir.header_img,id:0 field:ir.header_webkit,id:0
-#: field:report.webkit.actions,id:0
+#: model:ir.model.fields,field_description:report_webkit.field_ir_header_img_id
+#: model:ir.model.fields,field_description:report_webkit.field_ir_header_webkit_id
+#: model:ir.model.fields,field_description:report_webkit.field_report_webkit_actions_id
 msgid "ID"
 msgstr "ID"
 
 #. module: report_webkit
-#: field:ir.header_img,img:0
+#: model:ir.model.fields,field_description:report_webkit.field_ir_header_img_img
 msgid "Image"
 msgstr "Obrázok"
 
 #. module: report_webkit
-#: help:ir.header_img,type:0
+#: model:ir.model.fields,help:report_webkit.field_ir_header_img_type
 msgid "Image type(png,gif,jpeg)"
 msgstr "Typ obrázku (png,gif,jpeg)"
 
@@ -273,14 +291,23 @@ msgid "Landscape"
 msgstr "Panoráma"
 
 #. module: report_webkit
-#: field:ir.header_img,write_uid:0 field:ir.header_webkit,write_uid:0
-#: field:report.webkit.actions,write_uid:0
+#: model:ir.model.fields,field_description:report_webkit.field_ir_header_img___last_update
+#: model:ir.model.fields,field_description:report_webkit.field_ir_header_webkit___last_update
+#: model:ir.model.fields,field_description:report_webkit.field_report_webkit_actions___last_update
+msgid "Last Modified on"
+msgstr "Posledná modifikácia"
+
+#. module: report_webkit
+#: model:ir.model.fields,field_description:report_webkit.field_ir_header_img_write_uid
+#: model:ir.model.fields,field_description:report_webkit.field_ir_header_webkit_write_uid
+#: model:ir.model.fields,field_description:report_webkit.field_report_webkit_actions_write_uid
 msgid "Last Updated by"
 msgstr "Naposledy upravoval"
 
 #. module: report_webkit
-#: field:ir.header_img,write_date:0 field:ir.header_webkit,write_date:0
-#: field:report.webkit.actions,write_date:0
+#: model:ir.model.fields,field_description:report_webkit.field_ir_header_img_write_date
+#: model:ir.model.fields,field_description:report_webkit.field_ir_header_webkit_write_date
+#: model:ir.model.fields,field_description:report_webkit.field_report_webkit_actions_write_date
 msgid "Last Updated on"
 msgstr "Naposledy upravované"
 
@@ -290,7 +317,7 @@ msgid "Ledger  28  431.8 x 279.4 mm"
 msgstr "Ledger 28 431.8 x 279.4 mm"
 
 #. module: report_webkit
-#: field:ir.header_webkit,margin_left:0
+#: model:ir.model.fields,field_description:report_webkit.field_ir_header_webkit_margin_left
 msgid "Left Margin (mm)"
 msgstr "Ľavý okraj (mm)"
 
@@ -305,44 +332,45 @@ msgid "Letter 2 8.5 x 11 inches, 215.9 x 279.4 mm"
 msgstr "List 2 8.5 x 11 palcov, 215.9 x 279.4 mm"
 
 #. module: report_webkit
-#: field:ir.header_img,name:0 field:ir.header_webkit,name:0
+#: model:ir.model.fields,field_description:report_webkit.field_ir_header_img_name
+#: model:ir.model.fields,field_description:report_webkit.field_ir_header_webkit_name
 msgid "Name"
 msgstr "Meno"
 
 #. module: report_webkit
-#: help:ir.header_img,name:0
+#: model:ir.model.fields,help:report_webkit.field_ir_header_img_name
 msgid "Name of Image"
 msgstr "Názov obrázku"
 
 #. module: report_webkit
-#: code:addons/report_webkit/webkit_report.py:214
+#: code:addons/report_webkit/webkit_report.py:187
 #, python-format
 msgid "No diagnosis message was provided"
 msgstr "žiadne diagnostická správa nebola poskytnutá"
 
 #. module: report_webkit
-#: code:addons/report_webkit/webkit_report.py:290
+#: code:addons/report_webkit/webkit_report.py:261
 #, python-format
 msgid "No header defined for this Webkit report!"
 msgstr "Nie je definovaná hlavička pre tento výkaz Webktu-u!"
 
 #. module: report_webkit
-#: field:report.webkit.actions,open_action:0
+#: model:ir.model.fields,field_description:report_webkit.field_report_webkit_actions_open_action
 msgid "Open added action"
 msgstr "Otvrotiť pridanú akciu"
 
 #. module: report_webkit
-#: field:ir.header_webkit,orientation:0
+#: model:ir.model.fields,field_description:report_webkit.field_ir_header_webkit_orientation
 msgid "Orientation"
 msgstr "Smerovanie"
 
 #. module: report_webkit
-#: field:ir.header_webkit,format:0
+#: model:ir.model.fields,field_description:report_webkit.field_ir_header_webkit_format
 msgid "Paper size"
 msgstr "Veľkosť papiera"
 
 #. module: report_webkit
-#: code:addons/report_webkit/webkit_report.py:148
+#: code:addons/report_webkit/webkit_report.py:122
 #, python-format
 msgid ""
 "Please install executable on your system (sudo apt-get install wkhtmltopdf) "
@@ -352,7 +380,7 @@ msgid ""
 msgstr "Prosím, nainštalujte spustiteľný v systéme (sudo apt-get install wkhtmltopdf) alebo stiahnite tu: http://code.google.com/p/wkhtmltopdf/downloads/list a nastavte trasu v ir.config_parameter with the webkit_path key. Minimálna verzia je 0.9"
 
 #. module: report_webkit
-#: code:addons/report_webkit/webkit_report.py:291
+#: code:addons/report_webkit/webkit_report.py:261
 #, python-format
 msgid "Please set a header in company settings."
 msgstr "Prosím nastavte hlavičku v nastaveniach spoločnosti."
@@ -363,7 +391,7 @@ msgid "Portrait"
 msgstr "Portrét"
 
 #. module: report_webkit
-#: field:ir.actions.report.xml,precise_mode:0
+#: model:ir.model.fields,field_description:report_webkit.field_ir_act_report_xml_precise_mode
 msgid "Precise Mode"
 msgstr "Precízny režim"
 
@@ -373,22 +401,22 @@ msgid "Report on reports"
 msgstr "Výkaz na výkazoch"
 
 #. module: report_webkit
-#: field:ir.header_webkit,margin_right:0
+#: model:ir.model.fields,field_description:report_webkit.field_ir_header_webkit_margin_right
 msgid "Right Margin (mm)"
 msgstr "Pravý okraj (mm)"
 
 #. module: report_webkit
-#: help:ir.header_webkit,format:0
+#: model:ir.model.fields,help:report_webkit.field_ir_header_webkit_format
 msgid "Select Proper Paper size"
 msgstr "Zvoliť správnu veľkosť papiera"
 
 #. module: report_webkit
-#: help:ir.header_webkit,footer_html:0
+#: model:ir.model.fields,help:report_webkit.field_ir_header_webkit_footer_html
 msgid "Set Webkit Report Footer."
 msgstr "Nastaviť Webkit zápätie výkazu."
 
 #. module: report_webkit
-#: help:ir.header_webkit,html:0
+#: model:ir.model.fields,help:report_webkit.field_ir_header_webkit_html
 msgid "Set Webkit Report Header"
 msgstr "Nastaviť Webkit hlavičku výkazu."
 
@@ -398,47 +426,47 @@ msgid "Tabloid 29 279.4 x 431.8 mm"
 msgstr "Tabelačné 29 279.4 x 431.8 mm"
 
 #. module: report_webkit
-#: code:addons/report_webkit/webkit_report.py:219
+#: code:addons/report_webkit/webkit_report.py:191
 #, python-format
 msgid "The command 'wkhtmltopdf' failed with error code = %s. Message: %s"
 msgstr "Príkaz 'wkhtmltopdf' zlyhal s kódom chyby = %s. Správa: %s"
 
 #. module: report_webkit
-#: code:addons/report_webkit/webkit_report.py:216
+#: code:addons/report_webkit/webkit_report.py:189
 #, python-format
 msgid "The following diagnosis message was provided:\n"
 msgstr "Nasledovná diagnostická správa bola poskytnutá:\n"
 
 #. module: report_webkit
-#: help:ir.actions.report.xml,webkit_header:0
+#: model:ir.model.fields,help:report_webkit.field_ir_act_report_xml_webkit_header
 msgid "The header linked to the report"
 msgstr "Hlavička prepojená na výkaz"
 
 #. module: report_webkit
-#: help:ir.actions.report.xml,precise_mode:0
+#: model:ir.model.fields,help:report_webkit.field_ir_act_report_xml_precise_mode
 msgid ""
 "This mode allow more precise element position as each object is printed on a"
 " separate HTML but memory and disk usage are wider."
 msgstr "Tento režim umožňuje precíznejšie umiestnenie elementu keďže je každý objedt vytlačený na separátnom HTML, ale úžitkovosť pamäte a disku sú širšie."
 
 #. module: report_webkit
-#: help:ir.actions.report.xml,report_webkit_data:0
+#: model:ir.model.fields,help:report_webkit.field_ir_act_report_xml_report_webkit_data
 msgid "This template will be used if the main report file is not found"
 msgstr "Táto šablóna bude použitá ak hlavný výkaz nebude nájdený"
 
 #. module: report_webkit
-#: field:ir.header_webkit,margin_top:0
+#: model:ir.model.fields,field_description:report_webkit.field_ir_header_webkit_margin_top
 msgid "Top Margin (mm)"
 msgstr "Horný okraj (mm)"
 
 #. module: report_webkit
-#: field:ir.header_img,type:0
+#: model:ir.model.fields,field_description:report_webkit.field_ir_header_img_type
 msgid "Type"
 msgstr "Typ"
 
 #. module: report_webkit
-#: view:ir.actions.report.xml:report_webkit.act_report_xml_view
 #: model:ir.ui.menu,name:report_webkit.menu_webkit
+#: model:ir.ui.view,arch_db:report_webkit.act_report_xml_view
 msgid "Webkit"
 msgstr "Webkit"
 
@@ -448,7 +476,7 @@ msgid "Webkit Actions"
 msgstr "Webkit akcie"
 
 #. module: report_webkit
-#: field:ir.actions.report.xml,webkit_header:0
+#: model:ir.model.fields,field_description:report_webkit.field_ir_act_report_xml_webkit_header
 msgid "Webkit Header"
 msgstr "Webkit hlavička"
 
@@ -465,37 +493,34 @@ msgid "Webkit Logos"
 msgstr "Webkit logá"
 
 #. module: report_webkit
-#: field:ir.actions.report.xml,report_webkit_data:0
+#: model:ir.model.fields,field_description:report_webkit.field_ir_act_report_xml_report_webkit_data
 msgid "Webkit Template"
 msgstr "Webkit šablóna"
 
 #. module: report_webkit
-#: view:ir.actions.report.xml:report_webkit.act_report_xml_view
+#: model:ir.ui.view,arch_db:report_webkit.act_report_xml_view
 msgid "Webkit Template (used if Report File is not found)"
 msgstr "Webkit šablóna (použitá ak súbor výkazu nebude nájdený)"
 
 #. module: report_webkit
-#: field:ir.actions.report.xml,webkit_debug:0
+#: model:ir.model.fields,field_description:report_webkit.field_ir_act_report_xml_webkit_debug
 msgid "Webkit debug"
 msgstr "Webkit ladenie"
 
 #. module: report_webkit
-#: code:addons/report_webkit/webkit_report.py:218
+#: code:addons/report_webkit/webkit_report.py:257
 #, python-format
-msgid "Webkit error"
+msgid "Webkit report template not found!"
 msgstr ""
 
 #. module: report_webkit
-#: code:addons/report_webkit/webkit_report.py:325
-#: code:addons/report_webkit/webkit_report.py:333
-#: code:addons/report_webkit/webkit_report.py:338
-#: code:addons/report_webkit/webkit_report.py:347
-#: code:addons/report_webkit/webkit_report.py:354
+#: code:addons/report_webkit/webkit_report.py:121
 #, python-format
-msgid "Webkit render!"
+msgid "Wkhtmltopdf library path is not set"
 msgstr ""
 
 #. module: report_webkit
+<<<<<<< HEAD
 #: code:addons/report_webkit/webkit_report.py:285
 #, python-format
 msgid "Webkit report template not found!"
@@ -511,18 +536,33 @@ msgstr "Wkhtmltopdf trasa knižnice nie je nastavená"
 #: view:report.webkit.actions:report_webkit.view_report_webkit_actions
 msgid "_Ok"
 msgstr "_Ok"
+=======
+#: model:ir.ui.view,arch_db:report_webkit.view_report_webkit_actions
+msgid "_Ok"
+msgstr ""
 
 #. module: report_webkit
-#: view:report.webkit.actions:report_webkit.view_report_webkit_actions
-msgid "or"
-msgstr "alebo"
+#: model:ir.model,name:report_webkit.model_ir_actions_report_xml
+msgid "ir.actions.report.xml"
+msgstr "ir.actions.report.xml"
 
 #. module: report_webkit
-#: field:ir.header_webkit,footer_html:0
+#: model:ir.model,name:report_webkit.model_ir_header_img
+msgid "ir.header_img"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
+
+#. module: report_webkit
+#: model:ir.model,name:report_webkit.model_ir_header_webkit
+msgid "ir.header_webkit"
+msgstr ""
+
+#. module: report_webkit
+#: model:ir.model.fields,field_description:report_webkit.field_ir_header_webkit_footer_html
 msgid "webkit footer"
 msgstr "webkit zápätie"
 
 #. module: report_webkit
-#: field:ir.header_webkit,html:0
+#: model:ir.model.fields,field_description:report_webkit.field_ir_header_webkit_html
 msgid "webkit header"
 msgstr "webkit hlavička"

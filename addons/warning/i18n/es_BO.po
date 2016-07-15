@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * warning
@@ -176,3 +177,5 @@ msgstr ""
 #: view:res.partner:warning.view_partner_warning_form
 msgid "Warnings"
 msgstr ""
+=======
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0

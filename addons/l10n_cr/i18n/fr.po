@@ -1,8 +1,9 @@
-# Translation of OpenERP Server.
+# Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * l10n_cr
 # 
 # Translators:
+<<<<<<< HEAD
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014
 # Florian Hatat, 2015
 msgid ""
@@ -13,6 +14,17 @@ msgstr ""
 "PO-Revision-Date: 2015-11-16 14:35+0000\n"
 "Last-Translator: Florian Hatat\n"
 "Language-Team: French (http://www.transifex.com/odoo/odoo-8/language/fr/)\n"
+=======
+# Melanie Bernard <mbe@odoo.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo 9.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-07 14:55+0000\n"
+"PO-Revision-Date: 2015-11-02 12:25+0000\n"
+"Last-Translator: Melanie Bernard <mbe@odoo.com>\n"
+"Language-Team: French (http://www.transifex.com/odoo/odoo-9/language/fr/)\n"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -20,6 +32,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. module: l10n_cr
+<<<<<<< HEAD
 #: model:res.partner.title,name:l10n_cr.res_partner_title_ing
 msgid "Ingeniero/a"
 msgstr "Ingénieur(e)"
@@ -58,20 +71,26 @@ msgstr ""
 #: model:res.partner.title,name:l10n_cr.res_partner_title_dra
 msgid "Doctora"
 msgstr ""
+=======
+#: model:res.partner.title,shortcut:l10n_cr.res_partner_title_asoc
+msgid "Asoc."
+msgstr "Assoc."
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_cr
-#: model:res.partner.title,shortcut:l10n_cr.res_partner_title_lic
-msgid "Lic."
-msgstr ""
+#: model:res.partner.title,name:l10n_cr.res_partner_title_asoc
+msgid "Asociation"
+msgstr "Association"
 
 #. module: l10n_cr
-#: model:res.partner.title,name:l10n_cr.res_partner_title_gov
-msgid "Government"
-msgstr "Gouvernement"
+#: model:res.partner.title,shortcut:l10n_cr.res_partner_title_edu
+msgid "Edu."
+msgstr "Edu."
 
 #. module: l10n_cr
 #: model:res.partner.title,name:l10n_cr.res_partner_title_edu
 msgid "Educational Institution"
+<<<<<<< HEAD
 msgstr "Établissement éducatif"
 
 #. module: l10n_cr
@@ -126,6 +145,9 @@ msgid ""
 "http://translations.launchpad.net/openerp-costa-rica\n"
 "    "
 msgstr "Plan comptable du Costa Rica\ncomprend :\n* account.type\n* account.account.template\n* account.tax.template\n* account.tax.code.template\n* account.chart.template\n\nTout est en anglais avec traduction en espagnol. Les traductions sont les bienvenues, rendez-vous S.V.P. sur \nhttp://translations.launchpad.net/openerp-costa-rica\n    "
+=======
+msgstr "Institution Educative"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_cr
 #: model:res.partner.title,shortcut:l10n_cr.res_partner_title_gov
@@ -133,31 +155,37 @@ msgid "Gov."
 msgstr "Gouv."
 
 #. module: l10n_cr
-#: model:res.partner.title,shortcut:l10n_cr.res_partner_title_licda
-msgid "Licda."
-msgstr ""
+#: model:res.partner.title,name:l10n_cr.res_partner_title_gov
+msgid "Government"
+msgstr "Gouvernement"
 
 #. module: l10n_cr
-#: model:res.partner.title,shortcut:l10n_cr.res_partner_title_prof
-msgid "Prof."
-msgstr "Prof."
-
-#. module: l10n_cr
-#: model:res.partner.title,name:l10n_cr.res_partner_title_asoc
-msgid "Asociation"
-msgstr "Association"
-
-#. module: l10n_cr
-#: model:res.partner.title,shortcut:l10n_cr.res_partner_title_asoc
-msgid "Asoc."
-msgstr "Assoc."
-
-#. module: l10n_cr
-#: model:res.partner.title,shortcut:l10n_cr.res_partner_title_edu
-msgid "Edu."
-msgstr "Edu."
+#: model:res.partner.title,shortcut:l10n_cr.res_partner_title_indprof
+msgid "Ind. Prof."
+msgstr "Prof.Ind"
 
 #. module: l10n_cr
 #: model:res.partner.title,name:l10n_cr.res_partner_title_indprof
 msgid "Independant Professional"
 msgstr "Professionnel Indépendant"
+
+#. module: l10n_cr
+#: model:ir.actions.client,name:l10n_cr.action_client_l10n_cr_menu
+msgid "Open Account Dashboard Menu"
+msgstr "Ouvrez le menu Comptabilité"
+
+#. module: l10n_cr
+#: model:res.partner.title,shortcut:l10n_cr.res_partner_title_sal
+msgid "S.A.L."
+msgstr "S.A.L"
+
+#. module: l10n_cr
+<<<<<<< HEAD
+#: model:res.partner.title,name:l10n_cr.res_partner_title_indprof
+msgid "Independant Professional"
+msgstr "Professionnel Indépendant"
+=======
+#: model:res.partner.title,name:l10n_cr.res_partner_title_sal
+msgid "Sociedad Anónima Laboral"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0

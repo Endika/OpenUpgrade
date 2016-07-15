@@ -5,7 +5,7 @@
 
 -   |
     Given records imitating menu entries similar to the following entry from the base module:
-    <menuitem id="menu_module_tree" parent="menu_management" name="Local Modules"
+    <menuitem id="menu_module_tree" parent="menu_management" name="Apps"
               sequence="5" action="open_module_tree" />
 
     taken from openerp/addons/base/module/module_view.xml
@@ -34,11 +34,11 @@
     !assert { model: ir.ui.menu, id: test_menu_0, string: menu item 0 is properly configured }:
         - name == 'Local Modules 0'
         - sequence == 90
-        - parent_id.name == 'Modules'
-        - action.name == 'Local Modules'
+        - parent_id.name == 'Apps'
+        - action.name == 'Apps'
 -
     !assert { model: ir.ui.menu, id: test_menu_1, string: menu item 1 is properly configured }:
         - name == 'Local Modules 1'
         - sequence == 91
-        - parent_id.name == 'Modules'
-        - action.name == 'Local Modules'
+        - parent_id.name == 'Apps'
+        - action.name == 'Apps'

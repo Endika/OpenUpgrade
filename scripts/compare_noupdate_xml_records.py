@@ -182,7 +182,12 @@ def main(argv=None):
                 for attr in ['eval', 'ref']:
                     if attr in attribs:
                         del attribs[attr]
+<<<<<<< HEAD
                 element.append(etree.Element(record_old_dict[key].tag, attribs))
+=======
+                element.append(
+                    etree.Element(record_old_dict[key].tag, attribs))
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
             else:
                 oldrepr = get_node_value(record_old_dict[key])
                 newrepr = get_node_value(record_new_dict[key])

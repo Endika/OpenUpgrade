@@ -19,7 +19,11 @@
 #
 ##############################################################################
 
+<<<<<<< HEAD
 from openupgrade_tools import table_exists
+=======
+from openupgradelib.openupgrade_tools import table_exists
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 
 def log_xml_id(cr, module, xml_id):

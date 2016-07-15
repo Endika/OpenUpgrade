@@ -3,16 +3,27 @@
 # * sale_margin
 # 
 # Translators:
+<<<<<<< HEAD
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014
 # Goutoudis Kostas <goutoudis@gmail.com>, 2016
+=======
+# Goutoudis Kostas <goutoudis@gmail.com>, 2015
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 8.0\n"
+"Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2015-01-21 14:08+0000\n"
 "PO-Revision-Date: 2016-01-02 21:05+0000\n"
 "Last-Translator: Goutoudis Kostas <goutoudis@gmail.com>\n"
 "Language-Team: Greek (http://www.transifex.com/odoo/odoo-8/language/el/)\n"
+=======
+"POT-Creation-Date: 2015-09-07 14:41+0000\n"
+"PO-Revision-Date: 2015-11-02 21:01+0000\n"
+"Last-Translator: Goutoudis Kostas <goutoudis@gmail.com>\n"
+"Language-Team: Greek (http://www.transifex.com/odoo/odoo-9/language/el/)\n"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -20,28 +31,43 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: sale_margin
-#: field:sale.order.line,purchase_price:0
-msgid "Cost Price"
-msgstr "Τιμή Κόστους"
+#: model:ir.model.fields,field_description:sale_margin.field_sale_order_line_purchase_price
+msgid "Cost"
+msgstr "Κόστος"
 
 #. module: sale_margin
-#: help:sale.order,margin:0
+#: model:ir.model.fields,help:sale_margin.field_sale_order_margin
 msgid ""
 "It gives profitability by calculating the difference between the Unit Price "
-"and the cost price."
-msgstr ""
+"and the cost."
+msgstr "Δίνει την κερδοφορία με τον υπολογισμό της διαφοράς μεταξύ της τιμή μονάδας και το κόστος."
 
 #. module: sale_margin
-#: field:sale.order,margin:0 field:sale.order.line,margin:0
+#: model:ir.model.fields,field_description:sale_margin.field_sale_order_line_margin
+#: model:ir.model.fields,field_description:sale_margin.field_sale_order_margin
+#: model:ir.model.fields,field_description:sale_margin.field_sale_report_margin
 msgid "Margin"
 msgstr "Περιθώριο"
 
 #. module: sale_margin
 #: model:ir.model,name:sale_margin.model_sale_order
 msgid "Sales Order"
+<<<<<<< HEAD
 msgstr "Παραγγελίες"
+=======
+msgstr "Παραγγελία Πώλησης"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: sale_margin
 #: model:ir.model,name:sale_margin.model_sale_order_line
 msgid "Sales Order Line"
+<<<<<<< HEAD
 msgstr "Γραμμή Παραγγελίας"
+=======
+msgstr "Γραμμή Εντολής Πώλησης"
+
+#. module: sale_margin
+#: model:ir.model,name:sale_margin.model_sale_report
+msgid "Sales Orders Statistics"
+msgstr "Στατιστικά Πωλήσεων Παραγγελιών"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0

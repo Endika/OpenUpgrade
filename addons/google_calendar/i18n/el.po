@@ -6,12 +6,19 @@
 # Goutoudis Kostas <goutoudis@gmail.com>, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 8.0\n"
+"Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2015-09-07 12:39+0000\n"
 "PO-Revision-Date: 2015-12-27 23:52+0000\n"
 "Last-Translator: Goutoudis Kostas <goutoudis@gmail.com>\n"
 "Language-Team: Greek (http://www.transifex.com/odoo/odoo-8/language/el/)\n"
+=======
+"POT-Creation-Date: 2015-09-07 14:40+0000\n"
+"PO-Revision-Date: 2015-10-22 01:17+0000\n"
+"Last-Translator: Martin Trigaux\n"
+"Language-Team: Greek (http://www.transifex.com/odoo/odoo-9/language/el/)\n"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -19,6 +26,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: google_calendar
+<<<<<<< HEAD
 #: view:base.config.settings:google_calendar.view_calendar_config_settings
 msgid "\"Authorized redirect URI\""
 msgstr "\"Authorized redirect URI\""
@@ -82,6 +90,21 @@ msgstr ") και θα πρέπει να εισάγετε τα 2 παρακάτω
 #: view:base.config.settings:google_calendar.view_calendar_config_settings
 msgid ", then click on"
 msgstr ", και μετά κάντε κλικ στο"
+=======
+#: model:ir.ui.view,arch_db:google_calendar.view_calendar_config_settings
+msgid ""
+"<br/> You can now click on <b>'Create Client ID'</b>\n"
+"                                    <br/><br/>"
+msgstr ""
+
+#. module: google_calendar
+#: model:ir.ui.view,arch_db:google_calendar.view_calendar_config_settings
+msgid ""
+"<br/> You should now configure the allowed pages on which you will be redirected. To do it, you need to complete the field <b>\"Authorized redirect URI\"</b>\n"
+"                                    and set as value  (your own domain followed by <i>'/google_account/authentication'</i>):\n"
+"                                    <br/>==&gt;"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: google_calendar
 #: model:ir.actions.act_window,name:google_calendar.action_config_settings_google_calendar
@@ -100,7 +123,14 @@ msgstr "Ενεργοποιήστε το Calendar API κάνοντας κλικ �
 
 #. module: google_calendar
 #. openerp-web
-#: code:addons/google_calendar/static/src/js/calendar_sync.js:55
+#: code:addons/google_calendar/static/src/js/calendar_sync.js:77
+#, python-format
+msgid "Accounts"
+msgstr "Λογαριασμοί"
+
+#. module: google_calendar
+#. openerp-web
+#: code:addons/google_calendar/static/src/js/calendar_sync.js:67
 #, python-format
 msgid ""
 "All events have been disconnected from your previous account. You can now "
@@ -109,7 +139,7 @@ msgstr "Όλα τα συμβάντα έχουν αποσυνδεθεί από τ
 
 #. module: google_calendar
 #. openerp-web
-#: code:addons/google_calendar/static/src/js/calendar_sync.js:38
+#: code:addons/google_calendar/static/src/js/calendar_sync.js:49
 #, python-format
 msgid ""
 "An administrator needs to configure Google Synchronization before you can "
@@ -118,7 +148,7 @@ msgstr "Ένας διαχειριστής θα πρέπει να ρυθμίσε�
 
 #. module: google_calendar
 #. openerp-web
-#: code:addons/google_calendar/static/src/js/calendar_sync.js:58
+#: code:addons/google_calendar/static/src/js/calendar_sync.js:71
 #, python-format
 msgid ""
 "An error occured while disconnecting events from your previous account. "
@@ -131,12 +161,12 @@ msgid "Attendee information"
 msgstr "Πληροφορίες Συμμετέχοντα"
 
 #. module: google_calendar
-#: view:res.users:google_calendar.view_users_form
+#: model:ir.ui.view,arch_db:google_calendar.view_users_form
 msgid "Calendar"
 msgstr "Ημερολόγιο"
 
 #. module: google_calendar
-#: field:res.users,google_calendar_cal_id:0
+#: model:ir.model.fields,field_description:google_calendar.field_res_users_google_calendar_cal_id
 msgid "Calendar ID"
 msgstr "Αναγνωριστικό Ημερολογίου"
 
@@ -146,6 +176,7 @@ msgid "Check that the Application type is set on"
 msgstr "Βεβαιωθείτε ότι ο τύπος της εφαρμογή είναι στο On"
 
 #. module: google_calendar
+<<<<<<< HEAD
 #: view:base.config.settings:google_calendar.view_calendar_config_settings
 msgid "Click on"
 msgstr "Κλικ στο"
@@ -159,25 +190,53 @@ msgstr "Client ID"
 #: view:base.config.settings:google_calendar.view_calendar_config_settings
 msgid "Client Secret"
 msgstr "Client Secret"
+=======
+#: model:ir.ui.view,arch_db:google_calendar.view_calendar_config_settings
+msgid ""
+"Check that the Application type is set on <b>'Web Application'</b>, then click on <b>'Configure consent screen'</b>.\n"
+"                                    <br/> Specify an email address and a product name, then save.\n"
+"                                    <br/><br/>"
+msgstr ""
 
 #. module: google_calendar
-#: field:base.config.settings,cal_client_id:0
+#: model:ir.ui.view,arch_db:google_calendar.view_calendar_config_settings
+msgid ""
+"Click on <b>'Create a project...'</b> and enter a project name and change your id if you want. Don't forget to accept the Terms of Services\n"
+"                                    <br/><br/>"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
+
+#. module: google_calendar
+#: model:ir.model.fields,field_description:google_calendar.field_base_config_settings_cal_client_id
 msgid "Client_id"
 msgstr "Client_id"
 
 #. module: google_calendar
-#: field:base.config.settings,cal_client_secret:0
+#: model:ir.model.fields,field_description:google_calendar.field_base_config_settings_cal_client_secret
 msgid "Client_key"
 msgstr "Client_key"
 
 #. module: google_calendar
-#: view:base.config.settings:google_calendar.view_calendar_config_settings
+#. openerp-web
+#: code:addons/google_calendar/static/src/js/calendar_sync.js:46
+#: code:addons/google_calendar/static/src/js/calendar_sync.js:50
+#, python-format
+msgid "Configuration"
+msgstr "Ρυθμίσεις"
+
+#. module: google_calendar
+#: model:ir.ui.view,arch_db:google_calendar.view_calendar_config_settings
 msgid "Connect on your google account and go to"
 msgstr "Συνδέστε τον Google λογαριασμό σας και πηγαίνετε στο"
 
 #. module: google_calendar
+#: model:ir.model.fields,field_description:google_calendar.field_google_calendar_display_name
+msgid "Display Name"
+msgstr "Όνομα εμφάνισης"
+
+#. module: google_calendar
 #. openerp-web
-#: code:addons/google_calendar/static/src/js/calendar_sync.js:47
+#: code:addons/google_calendar/static/src/js/calendar_sync.js:58
 #, python-format
 msgid "Do you want to do this now?"
 msgstr "Θέλετε να το κάνετε αυτό τώρα;"
@@ -185,27 +244,43 @@ msgstr "Θέλετε να το κάνετε αυτό τώρα;"
 #. module: google_calendar
 #: model:ir.model,name:google_calendar.model_calendar_event
 msgid "Event"
+<<<<<<< HEAD
 msgstr "Συμβάν"
+=======
+msgstr "Γεγονός"
 
 #. module: google_calendar
 #. openerp-web
-#: code:addons/google_calendar/static/src/xml/web_calendar.xml:8
+#: code:addons/google_calendar/static/src/js/calendar_sync.js:72
 #, python-format
-msgid "Google"
-msgstr "Google"
+msgid "Event disconnection error"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: google_calendar
-#: field:calendar.attendee,google_internal_event_id:0
+#. openerp-web
+#: code:addons/google_calendar/static/src/js/calendar_sync.js:68
+#, python-format
+<<<<<<< HEAD
+msgid "Google"
+msgstr "Google"
+=======
+msgid "Event disconnection success"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
+
+#. module: google_calendar
+#: model:ir.model.fields,field_description:google_calendar.field_calendar_attendee_google_internal_event_id
 msgid "Google Calendar Event Id"
 msgstr "Αναγνωριστικό Συμβάντος Google Calendar"
 
 #. module: google_calendar
-#: view:base.config.settings:google_calendar.view_calendar_config_settings
+#: model:ir.ui.view,arch_db:google_calendar.view_calendar_config_settings
 msgid "Google Client ID"
 msgstr "Google Client ID"
 
 #. module: google_calendar
-#: view:base.config.settings:google_calendar.view_calendar_config_settings
+#: model:ir.ui.view,arch_db:google_calendar.view_calendar_config_settings
 msgid "Google Client Secret"
 msgstr "Google Client Secret"
 
@@ -215,13 +290,13 @@ msgid "Google ID should be unique!"
 msgstr "Το Αναγνωριστικό Google πρέπει να είναι μοναδικό!"
 
 #. module: google_calendar
-#: field:google.calendar,id:0
+#: model:ir.model.fields,field_description:google_calendar.field_google_calendar_id
 msgid "ID"
-msgstr "Κωδικός"
+msgstr "ID"
 
 #. module: google_calendar
 #. openerp-web
-#: code:addons/google_calendar/static/src/js/calendar_sync.js:46
+#: code:addons/google_calendar/static/src/js/calendar_sync.js:57
 #, python-format
 msgid ""
 "In order to do this, you first need to disconnect all existing events from "
@@ -229,55 +304,92 @@ msgid ""
 msgstr "Για να γίνει αυτό, πρέπει πρώτα να αποσυνδέσετε όλα τα υπάρχοντα συμβάντα από το παλιό λογαριασμό."
 
 #. module: google_calendar
+<<<<<<< HEAD
 #: view:base.config.settings:google_calendar.view_calendar_config_settings
 msgid "In the menu on left side, select the sub menu"
 msgstr "Στο μενού στην αριστερή πλευρά, επιλέξτε το υπομενού"
+=======
+#: model:ir.ui.view,arch_db:google_calendar.view_calendar_config_settings
+msgid ""
+"In the menu on left side, select the sub menu <b>'Credentials'</b> (from menu APIs and auth) and click on button <b>'Create new Client ID'</b>\n"
+"                                    <br/><br/>"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: google_calendar
-#: view:base.config.settings:google_calendar.view_calendar_config_settings
+#: model:ir.ui.view,arch_db:google_calendar.view_calendar_config_settings
 msgid ""
+<<<<<<< HEAD
 "In the menu on left side, select the sub menu APIs (from menu APIs and auth)"
 " and click on"
 msgstr "Στο μενού στην αριστερή πλευρά, επιλέξτε το υπομενού APIs (από το μενού APIs and auth) και κάντε κλικ στο"
+=======
+"In the menu on left side, select the sub menu APIs (from menu APIs and auth) and click on <b>'Calendar API'</b>.\n"
+"                                    <br/> Activate the Calendar API by clicking on the blue button <b>'Enable API'</b>.\n"
+"                                    <br/> When it's done, the Calendar API overview will be available\n"
+"                                    <br/><br/>"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: google_calendar
-#: help:res.users,google_calendar_cal_id:0
+#: model:ir.model.fields,help:google_calendar.field_res_users_google_calendar_cal_id
 msgid ""
 "Last Calendar ID who has been synchronized. If it is changed, we remove all "
 "links between GoogleID and Odoo Google Internal ID"
 msgstr "Τελευταίο Αναγνωριστικό Ημερολογίου που έχει συγχρονιστεί. Εάν αλλάξει, αφαιρέστε όλες τις συνδέσεις μεταξύ Αναγνωριστικό Google και Odoo Google Εσωτερικό Αναγνωριστικό"
 
 #. module: google_calendar
-#: field:res.users,google_calendar_last_sync_date:0
+#: model:ir.model.fields,field_description:google_calendar.field_google_calendar___last_update
+msgid "Last Modified on"
+msgstr "Τελευταία αλλαγή στις"
+
+#. module: google_calendar
+#: model:ir.model.fields,field_description:google_calendar.field_res_users_google_calendar_last_sync_date
 msgid "Last synchro date"
 msgstr "Τελευταία ημερομηνία συγχρονισμού"
 
 #. module: google_calendar
-#: field:calendar.attendee,oe_synchro_date:0
+#: model:ir.model.fields,field_description:google_calendar.field_calendar_attendee_oe_synchro_date
 msgid "Odoo Synchro Date"
 msgstr "Ημερομηνία συγχρονισμού Odoo"
 
 #. module: google_calendar
-#: field:calendar.event,oe_update_date:0
+#: model:ir.model.fields,field_description:google_calendar.field_calendar_event_oe_update_date
 msgid "Odoo Update Date"
 msgstr " Ημερομηνία Ενημέρωσης Odoo"
 
 #. module: google_calendar
+<<<<<<< HEAD
 #: view:base.config.settings:google_calendar.view_calendar_config_settings
 msgid "Once done, you will have the both informations ("
 msgstr "Μόλις γίνει, θα έχετε και τις δύο πληροφορίες ("
+=======
+#: model:ir.ui.view,arch_db:google_calendar.view_calendar_config_settings
+msgid ""
+"Once done, you will have the both informations (<b>Client ID</b> and <b>Client Secret</b>) that you need to insert in the 2 fields below!\n"
+"                                    <br/><br/>"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: google_calendar
-#: field:res.users,google_calendar_rtoken:0
+#. openerp-web
+#: code:addons/google_calendar/static/src/js/calendar_sync.js:38
+#, python-format
+msgid "Redirection"
+msgstr ""
+
+#. module: google_calendar
+#: model:ir.model.fields,field_description:google_calendar.field_res_users_google_calendar_rtoken
 msgid "Refresh Token"
 msgstr "Ανανέωση Διακριτικού"
 
 #. module: google_calendar
-#: view:base.config.settings:google_calendar.view_calendar_config_settings
+#: model:ir.ui.view,arch_db:google_calendar.view_calendar_config_settings
 msgid "Return at Top"
 msgstr "Επιστροφή στην Κορυφή"
 
 #. module: google_calendar
+<<<<<<< HEAD
 #: field:base.config.settings,google_cal_sync:0
 msgid "Show tutorial to know how to get my 'Client ID' and my 'Client Secret'"
 msgstr "Εμφάνιση οδηγιών για να μάθω πώς να πάρω το δικό μου 'Client ID' και 'Client Secret'"
@@ -286,17 +398,27 @@ msgstr "Εμφάνιση οδηγιών για να μάθω πώς να πάρ�
 #: view:base.config.settings:google_calendar.view_calendar_config_settings
 msgid "Specify an email address and a product name, then save."
 msgstr "Ορίστε μια διεύθυνση email και ένα όνομα προϊόντος, στη συνέχεια, αποθηκεύστε."
+=======
+#: model:ir.model.fields,field_description:google_calendar.field_base_config_settings_google_cal_sync
+msgid "Show Tutorial"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: google_calendar
 #. openerp-web
-#: code:addons/google_calendar/static/src/xml/web_calendar.xml:8
+#: code:addons/google_calendar/static/src/js/calendar_sync.js:87
 #, python-format
+<<<<<<< HEAD
 msgid "Sync with"
 msgstr "Συγχρονισμός με"
+=======
+msgid "Sync with <b>Google</b>"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: google_calendar
 #. openerp-web
-#: code:addons/google_calendar/static/src/js/calendar_sync.js:33
+#: code:addons/google_calendar/static/src/js/calendar_sync.js:42
 #, python-format
 msgid ""
 "The Google Synchronization needs to be configured before you can use it, do "
@@ -305,32 +427,39 @@ msgstr "Ο συγχρονισμός Google πρέπει να ρυθμιστεί 
 
 #. module: google_calendar
 #. openerp-web
-#: code:addons/google_calendar/static/src/js/calendar_sync.js:45
+#: code:addons/google_calendar/static/src/js/calendar_sync.js:56
 #, python-format
 msgid ""
 "The account you are trying to synchronize (%s) is not the same as the last "
 "one used (%s)!"
+<<<<<<< HEAD
 msgstr "Ο λογαριασμός που προσπαθείτε να συγχρονίσετε (%s) δεν είναι ο ίδιος με τον τελευταίο που χρησιμοποιήθηκε (%s)!"
 
 #. module: google_calendar
 #: view:base.config.settings:google_calendar.view_calendar_config_settings
+=======
+msgstr ""
+
+#. module: google_calendar
+#: model:ir.ui.view,arch_db:google_calendar.view_calendar_config_settings
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid ""
 "To setup the signin process with Google, first you have to perform the "
 "following steps"
 msgstr "Για να ρυθμίσετε τη διαδικασία σύνδεσης μέσω Google, πρώτα θα πρέπει να ακολουθήστε τα παρακάτω βήματα"
 
 #. module: google_calendar
-#: field:res.users,google_calendar_token_validity:0
+#: model:ir.model.fields,field_description:google_calendar.field_res_users_google_calendar_token_validity
 msgid "Token Validity"
 msgstr "Εγκυρότητα Διακριτικού"
 
 #. module: google_calendar
-#: field:base.config.settings,server_uri:0
+#: model:ir.model.fields,field_description:google_calendar.field_base_config_settings_server_uri
 msgid "URI for tuto"
 msgstr "URI για tuto"
 
 #. module: google_calendar
-#: field:res.users,google_calendar_token:0
+#: model:ir.model.fields,field_description:google_calendar.field_res_users_google_calendar_token
 msgid "User token"
 msgstr "Διακριτικό Χρήστη"
 
@@ -340,6 +469,7 @@ msgid "Users"
 msgstr "Χρήστες"
 
 #. module: google_calendar
+<<<<<<< HEAD
 #: view:base.config.settings:google_calendar.view_calendar_config_settings
 msgid "When it's done, the Calendar API overview will be available"
 msgstr "Όταν γίνει αυτό, η επισκόπηση του Calendar API θα είναι διαθέσιμη"
@@ -357,10 +487,13 @@ msgid ""
 msgstr "Θα πρέπει τώρα να ρυθμίσετε τις επιτρεπόμενες σελίδες στις οποίες θα μεταφερθείτε. Για να το κάνετε, θα πρέπει να συμπληρώσετε το πεδίο"
 
 #. module: google_calendar
+=======
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 #. openerp-web
-#: code:addons/google_calendar/static/src/js/calendar_sync.js:28
+#: code:addons/google_calendar/static/src/js/calendar_sync.js:34
 #, python-format
 msgid "You will be redirected to Google to authorize access to your calendar!"
+<<<<<<< HEAD
 msgstr "Θα μεταφερθείτε στην Google να εγκρίνετε την πρόσβαση στο ημερολόγιό σας!"
 
 #. module: google_calendar
@@ -384,3 +517,21 @@ msgstr "και ορίστε ως τιμή (τον δικό σας τομέα π�
 #: view:base.config.settings:google_calendar.view_calendar_config_settings
 msgid "https://console.developers.google.com/"
 msgstr "https://console.developers.google.com/"
+=======
+msgstr ""
+
+#. module: google_calendar
+#: model:ir.model,name:google_calendar.model_base_config_settings
+msgid "base.config.settings"
+msgstr ""
+
+#. module: google_calendar
+#: model:ir.model,name:google_calendar.model_google_calendar
+msgid "google.calendar"
+msgstr ""
+
+#. module: google_calendar
+#: model:ir.ui.view,arch_db:google_calendar.view_calendar_config_settings
+msgid "https://console.developers.google.com/"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0

@@ -4,7 +4,7 @@
     <data noupdate="1">
 
         <!--Email template -->
-        <record id="email_template_edi_sale" model="email.template">
+        <record id="email_template_edi_sale" model="mail.template">
             <field name="name">Sales Order - Send by Email (Portal)</field>
             <field name="email_from">${(object.user_id.email or '')|safe}</field>
             <field name="subject">${object.company_id.name|safe} ${object.state in ('draft', 'sent') and 'Quotation' or 'Order'} (Ref ${object.name or 'n/a' })</field>
@@ -27,6 +27,9 @@
        &nbsp;&nbsp;Order number: <strong>${object.name}</strong><br />
        &nbsp;&nbsp;Order total: <strong>${object.amount_total} ${object.pricelist_id.currency_id.name}</strong><br />
        &nbsp;&nbsp;Order date:  ${format_tz(object.date_order, tz=user.tz, context={'lang':object.partner_id.lang})}<br />
+       % if object.validity_date and object.state in ('draft', 'sent'):
+       &nbsp;&nbsp;Expiration date: ${object.validity_date}<br />
+       % endif
        % if object.origin:
        &nbsp;&nbsp;Order reference: ${object.origin}<br />
        % endif
@@ -38,8 +41,13 @@
        % endif
     </p>
 
+<<<<<<< HEAD
     % set signup_url = object.get_signup_url()
     % if signup_url:
+=======
+    <% set signup_url = object.get_signup_url() %>
+    % if signup_url and object.amount_total > 0 :
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
     <p>
     You can access this document and pay online via our Customer Portal:
     </p>
@@ -47,7 +55,7 @@
            href="${signup_url}">View ${object.state in ('draft', 'sent') and 'Quotation' or 'Order'}</a>
     % endif
 
-    % if object.paypal_url:
+    % if object.paypal_url and object.amount_total > 0 :
     <br/>
     <p>It is also possible to directly pay with Paypal:</p>
         <a style="margin-left: 120px;" href="${object.paypal_url}">
@@ -66,18 +74,7 @@
     </div>
     <div style="width: 347px; margin: 0px; padding: 5px 14px; line-height: 16px; background-color: #F2F2F2;">
         <span style="color: #222; margin-bottom: 5px; display: block; ">
-        % if object.company_id.street:
-            ${object.company_id.street}<br/>
-        % endif
-        % if object.company_id.street2:
-            ${object.company_id.street2}<br/>
-        % endif
-        % if object.company_id.city or object.company_id.zip:
-            ${object.company_id.zip} ${object.company_id.city}<br/>
-        % endif
-        % if object.company_id.country_id:
-            ${object.company_id.state_id and ('%s, ' % object.company_id.state_id.name) or ''} ${object.company_id.country_id.name or ''}<br/>
-        % endif
+            ${object.company_id.partner_id.sudo().with_context(show_address=True, html_format=True).name_get()[0][1] | safe}
         </span>
         % if object.company_id.phone:
             <div style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; ">
@@ -95,7 +92,7 @@
             ]]></field>
         </record>
 
-        <record id="email_template_edi_invoice" model="email.template">
+        <record id="email_template_edi_invoice" model="mail.template">
             <field name="name">Invoice - Send by Email (Portal)</field>
             <field name="email_from">${(object.user_id.email or object.company_id.email or 'noreply@localhost')|safe}</field>
             <field name="subject">${object.company_id.name|safe} Invoice (Ref ${object.number or 'n/a' })</field>
@@ -153,18 +150,7 @@
     </div>
     <div style="width: 347px; margin: 0px; padding: 5px 14px; line-height: 16px; background-color: #F2F2F2;">
         <span style="color: #222; margin-bottom: 5px; display: block; ">
-        % if object.company_id.street:
-            ${object.company_id.street}<br/>
-        % endif
-        % if object.company_id.street2:
-            ${object.company_id.street2}<br/>
-        % endif
-        % if object.company_id.city or object.company_id.zip:
-            ${object.company_id.zip} ${object.company_id.city}<br/>
-        % endif
-        % if object.company_id.country_id:
-            ${object.company_id.state_id and ('%s, ' % object.company_id.state_id.name) or ''} ${object.company_id.country_id.name or ''}<br/>
-        % endif
+            ${object.company_id.partner_id.sudo().with_context(show_address=True, html_format=True).name_get()[0][1] | safe}
         </span>
         % if object.company_id.phone:
             <div style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; ">

@@ -123,7 +123,11 @@ class install_all_wizard(TransientModel):
                 cr, uid, module_ids, {'state': 'to install'}, context=context)
             cr.commit()
             _db, pool = pooler.restart_pool(cr.dbname, update_module=True)
+<<<<<<< HEAD
             self.write(cr, uid, ids, {'state': 'ready'}, context=context)
+=======
+            self.write(cr, uid, ids, {'state': 'ready'}, context)
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
         return True
 
 install_all_wizard()
