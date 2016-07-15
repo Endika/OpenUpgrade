@@ -3,16 +3,26 @@
 # * crm_claim
 # 
 # Translators:
+<<<<<<< HEAD
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2012,2014
 # Jeffery Chenn <jeffery9@gmail.com>, 2016
+=======
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 8.0\n"
+"Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2015-01-21 14:07+0000\n"
 "PO-Revision-Date: 2016-04-04 15:04+0000\n"
 "Last-Translator: Jeffery Chenn <jeffery9@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/odoo/odoo-8/language/zh_CN/)\n"
+=======
+"POT-Creation-Date: 2015-09-18 08:11+0000\n"
+"PO-Revision-Date: 2015-10-22 07:23+0000\n"
+"Last-Translator: Martin Trigaux\n"
+"Language-Team: Chinese (China) (http://www.transifex.com/odoo/odoo-9/language/zh_CN/)\n"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -20,27 +30,28 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. module: crm_claim
-#: field:res.partner,claim_count:0
+#: model:ir.model.fields,field_description:crm_claim.field_res_partner_claim_count
 msgid "# Claims"
 msgstr "# 投诉"
 
 #. module: crm_claim
-#: field:crm.claim.report,email:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_email
 msgid "# Emails"
 msgstr "# 电子邮件"
 
 #. module: crm_claim
-#: field:crm.claim.report,nbr:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_nbr
 msgid "# of Claims"
 msgstr "# 投诉"
 
 #. module: crm_claim
-#: code:addons/crm_claim/crm_claim.py:167
+#: code:addons/crm_claim/crm_claim.py:142
 #, python-format
 msgid "%s (copy)"
 msgstr "%s (副本)"
 
 #. module: crm_claim
+<<<<<<< HEAD
 #: model:ir.actions.act_window,help:crm_claim.crm_case_categ_claim0
 msgid ""
 "<p class=\"oe_view_nocontent_create\">\n"
@@ -77,23 +88,32 @@ msgstr "<p class=\"oe_view_nocontent_create\">\n                点击创建处�
 
 #. module: crm_claim
 #: view:crm.claim:crm_claim.crm_case_claims_form_view
+=======
+#: model:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Action Description..."
 msgstr "行动说明..."
 
 #. module: crm_claim
-#: field:crm.claim,type_action:0 field:crm.claim.report,type_action:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_message_needaction
+msgid "Action Needed"
+msgstr "所需行动"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_type_action
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_type_action
 msgid "Action Type"
 msgstr "行动类型"
 
 #. module: crm_claim
-#: view:crm.claim:crm_claim.crm_case_claims_form_view
+#: model:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
 msgid "Actions"
 msgstr "行动"
 
 #. module: crm_claim
-#: field:crm.claim,active:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_active
 msgid "Active"
-msgstr "激活"
+msgstr "有效"
 
 #. module: crm_claim
 #: model:ir.model,name:crm_claim.model_crm_claim_report
@@ -106,63 +126,71 @@ msgid "Categories"
 msgstr "分类"
 
 #. module: crm_claim
-#: field:crm.claim,categ_id:0
-#: view:crm.claim.report:crm_claim.view_report_crm_claim_filter
-#: field:crm.claim.report,categ_id:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_categ_id
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_categ_id
+#: model:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
 msgid "Category"
-msgstr "分类"
+msgstr "类别"
 
 #. module: crm_claim
-#: view:crm.claim:crm_claim.crm_case_claims_form_view
+#: model:ir.model,name:crm_claim.model_crm_claim_category
+msgid "Category of claim"
+msgstr ""
+
+#. module: crm_claim
 #: model:ir.model,name:crm_claim.model_crm_claim
 #: model:ir.ui.menu,name:crm_claim.menu_config_claim
+#: model:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
 msgid "Claim"
 msgstr "投诉"
 
 #. module: crm_claim
 #: model:ir.actions.act_window,name:crm_claim.crm_claim_categ_action
+#: model:ir.ui.view,arch_db:crm_claim.crm_claim_category_form
+#: model:ir.ui.view,arch_db:crm_claim.crm_claim_category_tree
 msgid "Claim Categories"
 msgstr "投诉类别"
 
 #. module: crm_claim
-#: field:crm.claim,date:0 field:crm.claim.report,claim_date:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_date
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_claim_date
 msgid "Claim Date"
 msgstr "投诉日期"
 
 #. module: crm_claim
-#: view:crm.claim:crm_claim.view_crm_case_claims_filter
+#: model:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
 msgid "Claim Date by Month"
 msgstr "投诉日期"
 
 #. module: crm_claim
-#: view:crm.claim:crm_claim.crm_case_claims_form_view
+#: model:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
 msgid "Claim Description"
 msgstr "投诉说明"
 
 #. module: crm_claim
-#: view:crm.claim:crm_claim.view_crm_case_claims_filter
-#: view:crm.claim.report:crm_claim.view_report_crm_claim_filter
+#: model:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
 msgid "Claim Month"
 msgstr "投诉月份"
 
 #. module: crm_claim
-#: view:crm.claim:crm_claim.crm_case_claims_form_view
+#: model:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
 msgid "Claim Reporter"
 msgstr "投诉者"
 
 #. module: crm_claim
-#: view:crm.claim.stage:crm_claim.crm_claim_stage_form
+#: model:ir.ui.view,arch_db:crm_claim.crm_claim_stage_form
 msgid "Claim Stage"
 msgstr "投诉阶段"
 
 #. module: crm_claim
-#: view:crm.claim.stage:crm_claim.crm_claim_stage_tree
 #: model:ir.actions.act_window,name:crm_claim.crm_claim_stage_act
+#: model:ir.ui.view,arch_db:crm_claim.crm_claim_stage_tree
 msgid "Claim Stages"
 msgstr "投诉阶段"
 
 #. module: crm_claim
-#: field:crm.claim,name:0 field:crm.claim.report,subject:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_name
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_subject
 msgid "Claim Subject"
 msgstr "投诉主题"
 
@@ -172,57 +200,68 @@ msgid "Claim stages"
 msgstr "索赔阶段"
 
 #. module: crm_claim
-#: view:crm.claim:crm_claim.crm_case_claims_form_view
+#: model:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
 msgid "Claim/Action Description"
 msgstr "投诉/行动说明"
 
 #. module: crm_claim
-#: view:crm.claim:crm_claim.crm_case_claims_calendar_view
-#: view:crm.claim:crm_claim.crm_case_claims_form_view
-#: view:crm.claim:crm_claim.crm_case_claims_tree_view
-#: view:crm.claim:crm_claim.view_crm_case_claims_filter
-#: view:crm.claim.report:crm_claim.view_report_crm_claim_graph
-#: model:ir.actions.act_window,name:crm_claim.crm_case_categ_claim0
+#: model:ir.actions.act_window,name:crm_claim.crm_claim_category_claim0
 #: model:ir.ui.menu,name:crm_claim.menu_crm_case_claims
-#: view:res.partner:crm_claim.view_claim_res_partner_info_form
+#: model:ir.ui.menu,name:crm_claim.menu_report_crm_claim_tree
+#: model:ir.ui.view,arch_db:crm_claim.crm_case_claims_calendar_view
+#: model:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
+#: model:ir.ui.view,arch_db:crm_claim.crm_case_claims_tree_view
+#: model:ir.ui.view,arch_db:crm_claim.view_claim_res_partner_info_form
+#: model:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+#: model:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_graph
+#: model:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_pivot
 msgid "Claims"
 msgstr "投诉"
 
 #. module: crm_claim
 #: model:ir.actions.act_window,name:crm_claim.action_report_crm_claim
-#: model:ir.ui.menu,name:crm_claim.menu_report_crm_claim_tree
 msgid "Claims Analysis"
 msgstr "投诉分析"
 
 #. module: crm_claim
-#: field:crm.claim.report,date_closed:0
+#: model:ir.actions.act_window,help:crm_claim.crm_claim_categ_action
+msgid "Click to create a claim category."
+msgstr ""
+
+#. module: crm_claim
+#: model:ir.actions.act_window,help:crm_claim.crm_claim_stage_act
+msgid "Click to setup a new stage in the processing of the claims."
+msgstr ""
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_date_closed
 msgid "Close Date"
 msgstr "关闭日期"
 
 #. module: crm_claim
-#: field:crm.claim,date_closed:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_date_closed
 msgid "Closed"
 msgstr "已关闭"
 
 #. module: crm_claim
-#: view:crm.claim:crm_claim.view_crm_case_claims_filter
+#: model:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
 msgid "Closure"
 msgstr "关闭"
 
 #. module: crm_claim
-#: field:crm.claim.stage,case_default:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage_case_default
 msgid "Common to All Teams"
 msgstr "适用于所有团队"
 
 #. module: crm_claim
-#: field:crm.claim,company_id:0
-#: view:crm.claim.report:crm_claim.view_report_crm_claim_filter
-#: field:crm.claim.report,company_id:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_company_id
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_company_id
+#: model:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
 msgid "Company"
 msgstr "公司"
 
 #. module: crm_claim
-#: model:crm.tracking.campaign,name:crm_claim.claim_source1
+#: model:utm.campaign,name:crm_claim.claim_source1
 msgid "Corrective"
 msgstr "纠正"
 
@@ -232,89 +271,124 @@ msgid "Corrective Action"
 msgstr "纠正行动"
 
 #. module: crm_claim
-#: field:crm.claim.report,create_date:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_create_date
 msgid "Create Date"
 msgstr "创建日期"
 
 #. module: crm_claim
-#: field:crm.claim,create_uid:0 field:crm.claim.stage,create_uid:0
+#: model:ir.actions.act_window,help:crm_claim.crm_claim_categ_action
+msgid ""
+"Create claim categories to better manage and classify your\n"
+"                claims. Some example of claims can be: preventive action,\n"
+"                corrective action."
+msgstr ""
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category_create_uid
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_create_uid
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage_create_uid
 msgid "Created by"
-msgstr "创建人"
+msgstr "创建于"
 
 #. module: crm_claim
-#: field:crm.claim.stage,create_date:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category_create_date
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage_create_date
 msgid "Created on"
-msgstr "创建"
+msgstr "创建于"
 
 #. module: crm_claim
-#: field:crm.claim,create_date:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_create_date
 msgid "Creation Date"
 msgstr "创建日期"
 
 #. module: crm_claim
-#: view:crm.claim:crm_claim.view_crm_case_claims_filter
+#: model:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
+msgid "Creation Month"
+msgstr "创建月份"
+
+#. module: crm_claim
+#: model:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
 msgid "Date Closed"
 msgstr "关闭日期"
 
 #. module: crm_claim
-#: help:crm.claim,message_last_post:0
+#: model:ir.model.fields,help:crm_claim.field_crm_claim_message_last_post
 msgid "Date of the last message posted on the record."
-msgstr "发布到记录上的最后信息的日期"
+msgstr "发布到记录上的最后消息的日期"
 
 #. module: crm_claim
-#: view:crm.claim:crm_claim.crm_case_claims_form_view
+#: model:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
 msgid "Dates"
 msgstr "日期"
 
 #. module: crm_claim
-#: view:crm.claim:crm_claim.view_crm_case_claims_filter
-#: field:crm.claim,date_deadline:0 field:crm.claim.report,date_deadline:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_date_deadline
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_date_deadline
+#: model:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
 msgid "Deadline"
 msgstr "截止日期"
 
 #. module: crm_claim
-#: field:crm.claim.report,delay_close:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_delay_close
 msgid "Delay to close"
 msgstr "延迟关闭"
 
 #. module: crm_claim
-#: field:crm.claim,description:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_description
 msgid "Description"
 msgstr "说明"
 
 #. module: crm_claim
-#: help:crm.claim,email_from:0
+#: model:ir.model.fields,help:crm_claim.field_crm_claim_email_from
 msgid "Destination email for email gateway."
 msgstr "目的邮件地址"
 
 #. module: crm_claim
-#: field:crm.claim,email_from:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category_display_name
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_display_name
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_display_name
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage_display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_email_from
 msgid "Email"
-msgstr "电子邮件"
+msgstr "Email"
 
 #. module: crm_claim
-#: view:crm.claim.report:crm_claim.view_report_crm_claim_filter
+#: model:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
 msgid "Extended Filters..."
-msgstr "增加筛选条件"
+msgstr "扩展过滤器..."
 
 #. module: crm_claim
-#: model:crm.case.categ,name:crm_claim.categ_claim1
+#: model:crm.claim.category,name:crm_claim.categ_claim1
 msgid "Factual Claims"
 msgstr "实际投诉"
 
 #. module: crm_claim
-#: view:crm.claim:crm_claim.crm_case_claims_form_view
+#: model:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
 msgid "Follow Up"
 msgstr "跟进"
 
 #. module: crm_claim
-#: field:crm.claim,message_follower_ids:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_message_follower_ids
 msgid "Followers"
 msgstr "关注者"
 
 #. module: crm_claim
-#: view:crm.claim:crm_claim.view_crm_case_claims_filter
-#: view:crm.claim.report:crm_claim.view_report_crm_claim_filter
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_message_channel_ids
+msgid "Followers (Channels)"
+msgstr "关注者(频道)"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_message_partner_ids
+msgid "Followers (Partners)"
+msgstr "关注者（合作伙伴）"
+
+#. module: crm_claim
+#: model:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+#: model:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
 msgid "Group By"
 msgstr "分组"
 
@@ -331,24 +405,25 @@ msgid "High"
 msgstr "高"
 
 #. module: crm_claim
-#: help:crm.claim,message_summary:0
-msgid ""
-"Holds the Chatter summary (number of messages, ...). This summary is "
-"directly in html format in order to be inserted in kanban views."
-msgstr "保存复杂的摘要(消息数量,……等)。为了插入到看板视图，这一摘要直接是是HTML格式。"
-
-#. module: crm_claim
-#: field:crm.claim,id:0 field:crm.claim.report,id:0 field:crm.claim.stage,id:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category_id
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_id
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_id
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage_id
 msgid "ID"
 msgstr "ID"
 
 #. module: crm_claim
-#: help:crm.claim,message_unread:0
+#: model:ir.model.fields,help:crm_claim.field_crm_claim_message_unread
 msgid "If checked new messages require your attention."
-msgstr "如果要求你关注新消息，勾选此项"
+msgstr "查看是否有需要留意的新信息。"
 
 #. module: crm_claim
-#: help:crm.claim.stage,case_default:0
+#: model:ir.model.fields,help:crm_claim.field_crm_claim_message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "确认后, 会出现新消息."
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim_stage_case_default
 msgid ""
 "If you check this field, this stage will be proposed by default on each "
 "sales team. It will not assign this stage to existing teams."
@@ -360,27 +435,38 @@ msgid "In Progress"
 msgstr "进行中"
 
 #. module: crm_claim
-#: field:crm.claim,message_is_follower:0
-msgid "Is a Follower"
-msgstr "是一个关注者"
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_message_is_follower
+msgid "Is Follower"
+msgstr "是否关注者"
 
 #. module: crm_claim
-#: field:crm.claim,message_last_post:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_message_last_post
 msgid "Last Message Date"
-msgstr "最后信息日期"
+msgstr "最后消息日期"
 
 #. module: crm_claim
-#: field:crm.claim,write_uid:0 field:crm.claim.stage,write_uid:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim___last_update
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category___last_update
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report___last_update
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage___last_update
+msgid "Last Modified on"
+msgstr "最后修改日"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category_write_uid
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage_write_uid
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_write_uid
 msgid "Last Updated by"
 msgstr "最后更新"
 
 #. module: crm_claim
-#: field:crm.claim.stage,write_date:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category_write_date
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage_write_date
 msgid "Last Updated on"
-msgstr "最后一次更新"
+msgstr "最后更新"
 
 #. module: crm_claim
-#: help:crm.claim.stage,section_ids:0
+#: model:ir.model.fields,help:crm_claim.field_crm_claim_stage_team_ids
 msgid ""
 "Link between stages and sales teams. When set, this limitate the current "
 "stage to the selected sales teams."
@@ -392,34 +478,34 @@ msgid "Low"
 msgstr "低"
 
 #. module: crm_claim
-#: field:crm.claim,message_ids:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_message_ids
 msgid "Messages"
 msgstr "消息"
 
 #. module: crm_claim
-#: help:crm.claim,message_ids:0
+#: model:ir.model.fields,help:crm_claim.field_crm_claim_message_ids
 msgid "Messages and communication history"
-msgstr "消息和通信记录"
+msgstr "消息和通信历史"
 
 #. module: crm_claim
-#: view:crm.claim.report:crm_claim.view_report_crm_claim_filter
+#: model:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
 msgid "Month of claim"
 msgstr "投诉月份"
 
 #. module: crm_claim
-#: view:crm.claim.report:crm_claim.view_report_crm_claim_filter
-msgid "My Case(s)"
-msgstr "我的业务"
-
-#. module: crm_claim
-#: view:crm.claim.report:crm_claim.view_report_crm_claim_filter
+#: model:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
 msgid "My Company"
 msgstr "我的公司"
 
 #. module: crm_claim
-#: view:crm.claim.report:crm_claim.view_report_crm_claim_filter
+#: model:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
 msgid "My Sales Team(s)"
 msgstr "我的销售团队"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category_name
+msgid "Name"
+msgstr "名称"
 
 #. module: crm_claim
 #: model:crm.claim.stage,name:crm_claim.stage_claim1
@@ -427,17 +513,17 @@ msgid "New"
 msgstr "新建"
 
 #. module: crm_claim
-#: field:crm.claim,action_next:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_action_next
 msgid "Next Action"
 msgstr "下一行动"
 
 #. module: crm_claim
-#: field:crm.claim,date_action_next:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_date_action_next
 msgid "Next Action Date"
 msgstr "下一行动日期"
 
 #. module: crm_claim
-#: code:addons/crm_claim/crm_claim.py:183
+#: code:addons/crm_claim/crm_claim.py:158
 #, python-format
 msgid "No Subject"
 msgstr "无主题"
@@ -445,40 +531,55 @@ msgstr "无主题"
 #. module: crm_claim
 #: selection:crm.claim,priority:0 selection:crm.claim.report,priority:0
 msgid "Normal"
-msgstr "普通"
+msgstr "一般"
 
 #. module: crm_claim
-#: help:crm.claim.report,delay_close:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_message_needaction_counter
+msgid "Number of Actions"
+msgstr "动作的序列号"
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim_report_delay_close
 msgid "Number of Days to close the case"
 msgstr "到期天数"
 
 #. module: crm_claim
-#: field:crm.claim.report,delay_expected:0
+#: model:ir.model.fields,help:crm_claim.field_crm_claim_message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "需要动作的消息编号"
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim_message_unread_counter
+msgid "Number of unread messages"
+msgstr "未读的消息数量"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_delay_expected
 msgid "Overpassed Deadline"
 msgstr "超过截止日期"
 
 #. module: crm_claim
-#: view:crm.claim:crm_claim.crm_case_claims_form_view
-#: view:crm.claim:crm_claim.view_crm_case_claims_filter
-#: field:crm.claim,partner_id:0
-#: view:crm.claim.report:crm_claim.view_report_crm_claim_filter
-#: field:crm.claim.report,partner_id:0
 #: model:ir.model,name:crm_claim.model_res_partner
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_partner_id
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_partner_id
+#: model:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
+#: model:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+#: model:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
 msgid "Partner"
 msgstr "业务伙伴"
 
 #. module: crm_claim
-#: field:crm.claim,partner_phone:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_partner_phone
 msgid "Phone"
 msgstr "电话"
 
 #. module: crm_claim
-#: model:crm.case.categ,name:crm_claim.categ_claim3
+#: model:crm.claim.category,name:crm_claim.categ_claim3
 msgid "Policy Claims"
 msgstr "投诉政策"
 
 #. module: crm_claim
-#: model:crm.tracking.campaign,name:crm_claim.claim_source2
+#: model:utm.campaign,name:crm_claim.claim_source2
 msgid "Preventive"
 msgstr "预防措施"
 
@@ -488,14 +589,28 @@ msgid "Preventive Action"
 msgstr "预防措施行动"
 
 #. module: crm_claim
-#: field:crm.claim,priority:0 field:crm.claim.report,priority:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_priority
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_priority
 msgid "Priority"
 msgstr "优先级"
 
 #. module: crm_claim
-#: field:crm.claim,ref:0
+#: model:ir.actions.act_window,help:crm_claim.crm_claim_category_claim0
+msgid ""
+"Record and track your customers' claims. Claims may be linked to a sales "
+"order or a lot.You can send emails with attachments and keep the full "
+"history for a claim (emails sent, intervention type and so on).Claims may "
+"automatically be linked to an email address using the mail gateway module."
+msgstr ""
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_ref
 msgid "Reference"
+<<<<<<< HEAD
 msgstr "参考"
+=======
+msgstr "引用"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: crm_claim
 #: model:crm.claim.stage,name:crm_claim.stage_claim3
@@ -503,81 +618,72 @@ msgid "Rejected"
 msgstr "已拒绝"
 
 #. module: crm_claim
-#: field:crm.claim,resolution:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_resolution
 msgid "Resolution"
 msgstr "解决方案"
 
 #. module: crm_claim
-#: view:crm.claim:crm_claim.crm_case_claims_form_view
+#: model:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
 msgid "Resolution Actions"
 msgstr "解决方案行动"
 
 #. module: crm_claim
-#: view:crm.claim:crm_claim.crm_case_claims_form_view
+#: model:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
 msgid "Responsibilities"
 msgstr "责任人"
 
 #. module: crm_claim
-#: view:crm.claim:crm_claim.view_crm_case_claims_filter
-#: field:crm.claim,user_id:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_user_id
+#: model:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
 msgid "Responsible"
 msgstr "负责人"
 
 #. module: crm_claim
-#: view:crm.claim:crm_claim.view_crm_case_claims_filter
+#: model:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
 msgid "Responsible User"
-msgstr "负责用户"
+msgstr "责任用户"
 
 #. module: crm_claim
-#: help:crm.claim,section_id:0
+#: model:ir.model.fields,help:crm_claim.field_crm_claim_team_id
 msgid ""
 "Responsible sales team. Define Responsible user and Email account for mail "
 "gateway."
 msgstr "负责的销售团队。定义一个负责的用户和Email 账户"
 
 #. module: crm_claim
-#: field:crm.claim,cause:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_cause
 msgid "Root Cause"
 msgstr "根本原因"
 
 #. module: crm_claim
-#: view:crm.claim:crm_claim.crm_case_claims_form_view
+#: model:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
 msgid "Root Causes"
 msgstr "根本原因"
 
 #. module: crm_claim
-#: field:crm.claim,section_id:0
-#: view:crm.claim.report:crm_claim.view_report_crm_claim_filter
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category_team_id
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_team_id
+#: model:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
 msgid "Sales Team"
 msgstr "销售团队"
 
 #. module: crm_claim
-#: view:crm.claim.report:crm_claim.view_report_crm_claim_filter
+#: model:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
 msgid "Salesperson"
 msgstr "销售员"
 
 #. module: crm_claim
-#: view:crm.claim.report:crm_claim.view_report_crm_claim_filter
+#: model:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
 msgid "Search"
 msgstr "搜索"
 
 #. module: crm_claim
-#: view:crm.claim:crm_claim.view_crm_case_claims_filter
+#: model:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
 msgid "Search Claims"
 msgstr "搜索投诉"
 
 #. module: crm_claim
-#: field:crm.claim.report,section_id:0
-msgid "Section"
-msgstr "划分"
-
-#. module: crm_claim
-#: field:crm.claim.stage,section_ids:0
-msgid "Sections"
-msgstr "节"
-
-#. module: crm_claim
-#: field:crm.claim.stage,sequence:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage_sequence
 msgid "Sequence"
 msgstr "序号"
 
@@ -587,15 +693,15 @@ msgid "Settled"
 msgstr "解决"
 
 #. module: crm_claim
-#: view:crm.claim:crm_claim.view_crm_case_claims_filter
-#: field:crm.claim,stage_id:0
-#: view:crm.claim.report:crm_claim.view_report_crm_claim_filter
-#: field:crm.claim.report,stage_id:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_stage_id
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage_id_8819
+#: model:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+#: model:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
 msgid "Stage"
 msgstr "阶段"
 
 #. module: crm_claim
-#: field:crm.claim.stage,name:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage_name
 msgid "Stage Name"
 msgstr "阶段名称"
 
@@ -605,71 +711,81 @@ msgid "Stages"
 msgstr "阶段"
 
 #. module: crm_claim
-#: field:crm.claim,message_summary:0
-msgid "Summary"
-msgstr "总览"
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_team_id
+msgid "Team"
+msgstr "团队"
 
 #. module: crm_claim
-#: help:crm.claim,email_cc:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage_team_ids
+msgid "Teams"
+msgstr "团队"
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim_email_cc
 msgid ""
 "These email addresses will be added to the CC field of all inbound and "
 "outbound emails for this record before being sent. Separate multiple email "
 "addresses with a comma"
-msgstr "这些邮件地址将添加到之前发送记录的发送和接收邮件的抄送字段，分隔多个邮件地址有逗号。"
+msgstr "这些邮箱地址将添加到所有接收的发送邮件的抄送字段，用逗号分隔多个邮件地址。"
 
 #. module: crm_claim
-#: field:crm.claim,user_fault:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_user_fault
 msgid "Trouble Responsible"
 msgstr "问题责任"
 
 #. module: crm_claim
-#: view:crm.claim:crm_claim.crm_case_claims_tree_view
-#: view:crm.claim:crm_claim.view_crm_case_claims_filter
+#: model:ir.ui.view,arch_db:crm_claim.crm_case_claims_tree_view
+#: model:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
 msgid "Type"
 msgstr "类型"
 
 #. module: crm_claim
-#: view:crm.claim:crm_claim.view_crm_case_claims_filter
+#: model:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
 msgid "Unassigned Claims"
 msgstr "未分配的投诉"
 
 #. module: crm_claim
-#: field:crm.claim,message_unread:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_message_unread
 msgid "Unread Messages"
 msgstr "未读消息"
 
 #. module: crm_claim
-#: field:crm.claim,write_date:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "未读消息计数器"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_write_date
 msgid "Update Date"
 msgstr "更新日期"
 
 #. module: crm_claim
-#: help:crm.claim.stage,sequence:0
+#: model:ir.model.fields,help:crm_claim.field_crm_claim_stage_sequence
 msgid "Used to order stages. Lower is better."
 msgstr "用于阶段的排序，数字越小越好。"
 
 #. module: crm_claim
-#: field:crm.claim.report,user_id:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_user_id
 msgid "User"
 msgstr "用户"
 
 #. module: crm_claim
-#: model:crm.case.categ,name:crm_claim.categ_claim2
+#: model:crm.claim.category,name:crm_claim.categ_claim2
 msgid "Value Claims"
 msgstr "投诉金额"
 
 #. module: crm_claim
-#: field:crm.claim,email_cc:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_email_cc
 msgid "Watchers Emails"
 msgstr "关注者的电子邮件"
 
 #. module: crm_claim
-#: field:crm.claim,website_message_ids:0
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_website_message_ids
 msgid "Website Messages"
 msgstr "网站消息"
 
 #. module: crm_claim
-#: help:crm.claim,website_message_ids:0
+#: model:ir.model.fields,help:crm_claim.field_crm_claim_website_message_ids
 msgid "Website communication history"
 msgstr "网站沟通记录"
 
@@ -677,3 +793,11 @@ msgstr "网站沟通记录"
 #: model:ir.filters,name:crm_claim.filter_report_crm_claim_workload
 msgid "Workload"
 msgstr "工作量"
+
+#. module: crm_claim
+#: model:ir.actions.act_window,help:crm_claim.crm_claim_stage_act
+msgid ""
+"You can create claim stages to categorize the status of every\n"
+"                claim entered in the system. The stages define all the steps\n"
+"                required for the resolution of a claim."
+msgstr ""

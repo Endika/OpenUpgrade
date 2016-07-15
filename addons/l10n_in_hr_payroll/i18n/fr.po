@@ -1,18 +1,31 @@
-# Translation of OpenERP Server.
+# Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * l10n_in_hr_payroll
 # 
 # Translators:
+<<<<<<< HEAD
 # Florian Hatat, 2015
 # Friderici Claude, 2015
+=======
+# Loic <loic.richard2@gmail.com>, 2015
+# Lucas Deliege <lud@odoo.com>, 2015
+# Melanie Bernard <mbe@odoo.com>, 2015
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 8.0\n"
+"Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2012-11-24 02:53+0000\n"
 "PO-Revision-Date: 2015-11-26 02:01+0000\n"
 "Last-Translator: Florian Hatat\n"
 "Language-Team: French (http://www.transifex.com/odoo/odoo-8/language/fr/)\n"
+=======
+"POT-Creation-Date: 2015-09-21 09:27+0000\n"
+"PO-Revision-Date: 2015-11-02 13:19+0000\n"
+"Last-Translator: Melanie Bernard <mbe@odoo.com>\n"
+"Language-Team: French (http://www.transifex.com/odoo/odoo-9/language/fr/)\n"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -20,26 +33,28 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. module: l10n_in_hr_payroll
-#: report:salary.detail.byyear:0
-msgid "E-mail Address"
-msgstr "Adresse de courriel"
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payment_advice_report_nbr
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payment_advice_tree
+msgid "# Payment Lines"
+msgstr "#Lignes de paiement"
 
 #. module: l10n_in_hr_payroll
-#: field:payment.advice.report,employee_bank_no:0
-msgid "Employee Bank Account"
-msgstr "Compte bancaire de l'employé"
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payslip_tree
+msgid "# Payslip Lines"
+msgstr "#Lignes du bulletin de paie"
 
 #. module: l10n_in_hr_payroll
-#: view:payment.advice.report:0
-msgid "Payment Advices which are in draft state"
-msgstr "Avis de paiement en état brouillon"
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payslip_report_nbr
+msgid "# Payslip lines"
+msgstr "#Lignes du bulletin de paie"
 
 #. module: l10n_in_hr_payroll
-#: report:salary.detail.byyear:0
-msgid "Title"
-msgstr "Civilité"
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_payrolladvice
+msgid "<span>Dear Sir/Madam,</span>"
+msgstr "<span>Cher(e) Monsieur, Madame,</span>"
 
 #. module: l10n_in_hr_payroll
+<<<<<<< HEAD
 #: report:payroll.advice:0
 msgid "Payment Advice from"
 msgstr "Accompte depuis"
@@ -53,33 +68,56 @@ msgstr "Salaire par catégorie d'employé"
 #: view:payslip.report:0
 msgid "Payslips which are paid"
 msgstr "Fiches de paie qui ont été payées"
+=======
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_hryearlysalary
+msgid "<strong> Allowances with Basic:</strong>"
+msgstr "<strong> Allocations avec Basic:</strong>"
 
 #. module: l10n_in_hr_payroll
-#: view:hr.payroll.advice:0 view:payment.advice.report:0 view:payslip.report:0
-msgid "Group By..."
-msgstr "Regrouper par..."
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_hryearlysalary
+msgid "<strong> Deductions:</strong>"
+msgstr "<strong> Deductions:</strong>"
 
 #. module: l10n_in_hr_payroll
-#: report:salary.detail.byyear:0
-msgid "Allowances with Basic:"
-msgstr ""
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_payrolladvice
+msgid "<strong><span>The Manager,</span></strong>"
+msgstr "<strong><span>Le Manager,</span></strong>"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_in_hr_payroll
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_payrolladvice
+msgid "<strong><span>To,</span></strong>"
+msgstr "<strong><span>A,</span></strong>"
+
+#. module: l10n_in_hr_payroll
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_hryearlysalary
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_payslipdetails
+msgid "<strong>Address</strong>"
+msgstr "<strong>Adresse</strong>"
+
+#. module: l10n_in_hr_payroll
+<<<<<<< HEAD
 #: view:payslip.report:0
 msgid "Payslips which are in done state"
 msgstr "Paies qui sont terminées"
+=======
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_payslipdetails
+msgid "<strong>Authorized signature</strong>"
+msgstr "<strong>Signature autorisée</strong>"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_in_hr_payroll
-#: report:salary.detail.byyear:0
-msgid "Department"
-msgstr "Département"
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_payslipdetails
+msgid "<strong>Bank Account</strong>"
+msgstr "<strong>Compte bancaire</strong>"
 
 #. module: l10n_in_hr_payroll
-#: report:salary.detail.byyear:0
-msgid "Deductions:"
-msgstr ""
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_hryearlysalary
+msgid "<strong>Bank</strong>"
+msgstr "<strong>Banque</strong>"
 
 #. module: l10n_in_hr_payroll
+<<<<<<< HEAD
 #: report:payroll.advice:0
 msgid "A/C no."
 msgstr "A/C no."
@@ -95,51 +133,71 @@ msgstr "Compte en banque de l'employé"
 #: model:ir.ui.menu,name:l10n_in_hr_payroll.menu_yearly_salary_detail
 msgid "Yearly Salary by Employee"
 msgstr "Salaire annuel par employé"
+=======
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_payslipdetails
+msgid "<strong>Date From</strong>"
+msgstr "<strong>Date du</strong>"
 
 #. module: l10n_in_hr_payroll
-#: model:ir.actions.act_window,name:l10n_in_hr_payroll.act_hr_emp_payslip_list
-msgid "Payslips"
-msgstr "Feuilles de paye"
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_payslipdetails
+msgid "<strong>Date To</strong>"
+msgstr "<strong>Date au</strong>"
 
 #. module: l10n_in_hr_payroll
-#: selection:payment.advice.report,month:0 selection:payslip.report,month:0
-msgid "March"
-msgstr "Mars"
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_hryearlysalary
+msgid "<strong>Department</strong>"
+msgstr "<strong>Départment</strong>"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_in_hr_payroll
-#: view:hr.payroll.advice:0 field:hr.payroll.advice,company_id:0
-#: field:hr.payroll.advice.line,company_id:0 view:payment.advice.report:0
-#: field:payment.advice.report,company_id:0 view:payslip.report:0
-#: field:payslip.report,company_id:0
-msgid "Company"
-msgstr "Société"
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_hryearlysalary
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_payslipdetails
+msgid "<strong>Designation</strong>"
+msgstr "<strong>Désignation</strong>"
 
 #. module: l10n_in_hr_payroll
-#: report:payroll.advice:0
-msgid "The Manager"
-msgstr ""
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_hryearlysalary
+msgid "<strong>E-mail Address</strong>"
+msgstr "<strong>Courriel</strong>"
 
 #. module: l10n_in_hr_payroll
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_payslipdetails
+msgid "<strong>Email</strong>"
+msgstr "<strong>Courriel</strong>"
+
+#. module: l10n_in_hr_payroll
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_hryearlysalary
+msgid "<strong>Employee Code</strong>"
+msgstr "<strong>Code Employé</strong>"
+
+#. module: l10n_in_hr_payroll
+<<<<<<< HEAD
 #: view:hr.payroll.advice:0
 msgid "Letter Details"
 msgstr "Détails de la lettre"
+=======
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_hryearlysalary
+msgid "<strong>Employee Name</strong>"
+msgstr "<strong>Nom de l'employé</strong>"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_in_hr_payroll
-#: view:hr.payroll.advice:0
-msgid "Set to Draft"
-msgstr "Mettre en brouillon"
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_payslipdetails
+msgid "<strong>Identification No</strong>"
+msgstr "<strong>N° d'identification</strong>"
 
 #. module: l10n_in_hr_payroll
-#: report:payroll.advice:0
-msgid "to"
-msgstr "au"
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_payslipdetails
+msgid "<strong>Name</strong>"
+msgstr "<strong>Nom</strong>"
 
 #. module: l10n_in_hr_payroll
-#: report:payroll.advice:0
-msgid "Total :"
-msgstr "Total :"
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_hryearlysalary
+msgid "<strong>Phone No.</strong>"
+msgstr "<strong>Numéro de Téléphone</strong>"
 
 #. module: l10n_in_hr_payroll
+<<<<<<< HEAD
 #: field:hr.payslip.run,available_advice:0
 msgid "Made Payment Advice?"
 msgstr "Faire des accomptes?"
@@ -158,49 +216,104 @@ msgstr "#Lignes du bulletin de paie"
 #: help:hr.contract,tds:0
 msgid "Amount for Tax Deduction at Source"
 msgstr "Montant pour déduction de la taxe à la source"
+=======
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_payslipdetails
+msgid "<strong>Reference</strong>"
+msgstr "Référence"
 
 #. module: l10n_in_hr_payroll
-#: model:ir.model,name:l10n_in_hr_payroll.model_hr_payslip
-msgid "Pay Slip"
-msgstr "Feuille de paie"
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_payrolladvice
+msgid "<strong>Total :</strong>"
+msgstr "<strong>Total :</strong>"
 
 #. module: l10n_in_hr_payroll
-#: view:payment.advice.report:0 field:payment.advice.report,day:0
-#: view:payslip.report:0 field:payslip.report,day:0
-msgid "Day"
-msgstr "Jour"
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_hrsalarybymonth
+msgid "<strong>Total</strong>"
+msgstr "<strong>Total</strong>"
 
 #. module: l10n_in_hr_payroll
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_payrolladvice
+msgid "A/C no."
+msgstr "A/C no."
+
+#. module: l10n_in_hr_payroll
+#: model:ir.model.fields,help:l10n_in_hr_payroll.field_hr_payroll_advice_date
+msgid "Advice Date is used to search Payslips"
+msgstr "La Date d'avis est utilisée pour rechercher les fiches de paie"
+
+#. module: l10n_in_hr_payroll
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_advice_line_form
+msgid "Advice Lines"
+msgstr ""
+
+#. module: l10n_in_hr_payroll
+#: model:ir.actions.act_window,name:l10n_in_hr_payroll.action_payment_advice_report_all
+#: model:ir.ui.menu,name:l10n_in_hr_payroll.menu_reporting_payment_advice
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payment_advice_search
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payment_advice_tree
+msgid "Advices Analysis"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
+
+#. module: l10n_in_hr_payroll
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payment_advice_search
+msgid "Advices which are paid using NEFT transfer"
+msgstr ""
+
+#. module: l10n_in_hr_payroll
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.hr_contract_form_in_inherit
+msgid "Allowance"
+msgstr "Allocation"
+
+#. module: l10n_in_hr_payroll
+<<<<<<< HEAD
 #: view:payment.advice.report:0
 msgid "Month of Payment Advices"
 msgstr "Mois de l'accompte"
+=======
+#: model:ir.model.fields,help:l10n_in_hr_payroll.field_hr_contract_tds
+msgid "Amount for Tax Deduction at Source"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_in_hr_payroll
-#: constraint:hr.payslip:0
-msgid "Payslip 'Date From' must be before 'Date To'."
-msgstr "La date de début doit être antérieure à la date de fin."
+#: selection:payment.advice.report,month:0 selection:payslip.report,month:0
+msgid "April"
+msgstr "Avril"
 
 #. module: l10n_in_hr_payroll
+<<<<<<< HEAD
 #: field:hr.payroll.advice,batch_id:0
 msgid "Batch"
 msgstr "Mode Groupé"
+=======
+#: selection:payment.advice.report,month:0 selection:payslip.report,month:0
+msgid "August"
+msgstr "Août"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_in_hr_payroll
-#: report:paylip.details.in:0
-msgid "Code"
-msgstr "Code"
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_payrolladvice
+msgid "Authorized Signature"
+msgstr "Signature autorisée"
 
 #. module: l10n_in_hr_payroll
-#: view:hr.payroll.advice:0
-msgid "Other Information"
-msgstr "Autres informations"
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payroll_advice_bank_id
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payment_advice_report_bank_id
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_payrolladvice
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_hr_payroll_advice_filter
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payment_advice_search
+msgid "Bank"
+msgstr "Banque"
 
 #. module: l10n_in_hr_payroll
-#: selection:hr.payroll.advice,state:0 selection:payment.advice.report,state:0
-msgid "Cancelled"
-msgstr "Annulée"
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payroll_advice_line_name
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_payrolladvice
+msgid "Bank Account No."
+msgstr "Compte bancaire n°"
 
 #. module: l10n_in_hr_payroll
+<<<<<<< HEAD
 #: model:ir.actions.act_window,help:l10n_in_hr_payroll.action_payslip_report_all
 msgid "This report performs analysis on Payslip"
 msgstr "Ce rapport montre des analyses des fiches de paie"
@@ -209,70 +322,114 @@ msgstr "Ce rapport montre des analyses des fiches de paie"
 #: report:payroll.advice:0
 msgid "For"
 msgstr "Pour"
+=======
+#: model:ir.model,name:l10n_in_hr_payroll.model_hr_payroll_advice
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payroll_advice_line_advice_id
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payslip_advice_id
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_hr_bank_advice_form
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_hr_bank_advice_tree
+msgid "Bank Advice"
+msgstr ""
 
 #. module: l10n_in_hr_payroll
-#: report:paylip.details.in:0
-msgid "Details by Salary Rule Category:"
-msgstr "Détails par catégorie de règle salariale"
+#: model:ir.model,name:l10n_in_hr_payroll.model_hr_payroll_advice_line
+msgid "Bank Advice Lines"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_in_hr_payroll
-#: field:hr.payroll.advice,number:0 report:paylip.details.in:0
-msgid "Reference"
-msgstr "Référence"
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payroll_advice_batch_id
+msgid "Batch"
+msgstr "Mode Groupé"
 
 #. module: l10n_in_hr_payroll
-#: field:hr.contract,medical_insurance:0
-msgid "Medical Insurance"
-msgstr "Assurance médicale"
-
-#. module: l10n_in_hr_payroll
-#: report:paylip.details.in:0
-msgid "Identification No"
-msgstr "N° d'identification"
-
-#. module: l10n_in_hr_payroll
-#: view:payslip.report:0 field:payslip.report,struct_id:0
-msgid "Structure"
-msgstr "Structure"
-
-#. module: l10n_in_hr_payroll
-#: report:payroll.advice:0
-msgid "form period"
-msgstr "formulaire périodique"
-
-#. module: l10n_in_hr_payroll
-#: selection:hr.payroll.advice,state:0 selection:payment.advice.report,state:0
-msgid "Confirmed"
-msgstr "Confirmé"
-
-#. module: l10n_in_hr_payroll
-#: report:salary.detail.byyear:0 report:salary.employee.bymonth:0
-msgid "From"
-msgstr "Période du"
-
-#. module: l10n_in_hr_payroll
-#: field:hr.payroll.advice.line,bysal:0 field:payment.advice.report,bysal:0
-#: report:payroll.advice:0
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payroll_advice_line_bysal
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payment_advice_report_bysal
 msgid "By Salary"
 msgstr "Par salaire"
 
 #. module: l10n_in_hr_payroll
-#: view:hr.payroll.advice:0 view:payment.advice.report:0
-msgid "Confirm"
-msgstr "Confirmer"
+<<<<<<< HEAD
+#: field:hr.contract,medical_insurance:0
+msgid "Medical Insurance"
+msgstr "Assurance médicale"
+=======
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_payrolladvice
+msgid "By salary"
+msgstr "Par salaire"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_in_hr_payroll
-#: field:hr.payroll.advice,chaque_nos:0
-#: field:payment.advice.report,cheque_nos:0
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payroll_advice_line_debit_credit
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_payrolladvice
+msgid "C/D"
+msgstr "C/D"
+
+#. module: l10n_in_hr_payroll
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_salary_employee_month
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_yearly_salary_detail
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: l10n_in_hr_payroll
+<<<<<<< HEAD
+#: report:payroll.advice:0
+msgid "form period"
+msgstr "formulaire périodique"
+=======
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_hr_bank_advice_form
+msgid "Cancel Advice"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
+
+#. module: l10n_in_hr_payroll
+#: selection:hr.payroll.advice,state:0 selection:payment.advice.report,state:0
+msgid "Cancelled"
+msgstr "Annulé"
+
+#. module: l10n_in_hr_payroll
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_salary_employee_month_category_id
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payslip_report_category_id
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_hrsalarybymonth
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payslip_search
+msgid "Category"
+msgstr "Catégorie"
+
+#. module: l10n_in_hr_payroll
+<<<<<<< HEAD
+#: field:hr.payroll.advice.line,bysal:0 field:payment.advice.report,bysal:0
+#: report:payroll.advice:0
+msgid "By Salary"
+msgstr "Par salaire"
+=======
+#: model:ir.model.fields,help:l10n_in_hr_payroll.field_hr_contract_driver_salay
+msgid "Check this box if you provide allowance for driver"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
+
+#. module: l10n_in_hr_payroll
+#: model:ir.model.fields,help:l10n_in_hr_payroll.field_res_company_dearness_allowance
+msgid "Check this box if your company provide Dearness Allowance to employee"
+msgstr ""
+
+#. module: l10n_in_hr_payroll
+#: model:ir.model.fields,help:l10n_in_hr_payroll.field_hr_payroll_advice_neft
+msgid "Check this box if your company use online transfer for salary"
+msgstr ""
+
+#. module: l10n_in_hr_payroll
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payroll_advice_chaque_nos
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payment_advice_report_cheque_nos
 msgid "Cheque Numbers"
 msgstr "Numéros de chèque"
 
 #. module: l10n_in_hr_payroll
-#: constraint:res.company:0
-msgid "Error! You can not create recursive companies."
-msgstr "Erreur ! Vous ne pouvez pas créer de sociétés récursives"
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_payslipdetails
+msgid "Code"
+msgstr "Code"
 
 #. module: l10n_in_hr_payroll
+<<<<<<< HEAD
 #: model:ir.actions.act_window,name:l10n_in_hr_payroll.action_salary_employee_month
 #: model:ir.actions.report.xml,name:l10n_in_hr_payroll.hr_salary_employee_bymonth
 #: model:ir.ui.menu,name:l10n_in_hr_payroll.menu_salary_employee_month
@@ -304,59 +461,107 @@ msgstr "Déduction à l'égard de la société fournie par une assurance médica
 #: model:ir.model,name:l10n_in_hr_payroll.model_hr_payroll_advice_line
 msgid "Bank Advice Lines"
 msgstr "Lignes de Bank Advice"
+=======
+#: model:ir.model,name:l10n_in_hr_payroll.model_res_company
+msgid "Companies"
+msgstr "Sociétés"
 
 #. module: l10n_in_hr_payroll
-#: view:payslip.report:0
-msgid "Day of Payslip"
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payroll_advice_company_id
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payroll_advice_line_company_id
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payment_advice_report_company_id
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payslip_report_company_id
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_hr_payroll_advice_filter
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payment_advice_search
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payslip_search
+msgid "Company"
+msgstr "Société"
+
+#. module: l10n_in_hr_payroll
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_hr_bank_advice_form
+msgid "Compute Advice"
 msgstr ""
 
 #. module: l10n_in_hr_payroll
-#: report:paylip.details.in:0
-msgid "Email"
-msgstr "Courriel"
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_hr_payroll_advice_filter
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payment_advice_search
+msgid "Confirm"
+msgstr "Confirmer"
 
 #. module: l10n_in_hr_payroll
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_hr_payroll_advice_filter
+msgid "Confirm Advices"
+msgstr ""
+
+#. module: l10n_in_hr_payroll
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_hr_bank_advice_form
+msgid "Confirm Sheet"
+msgstr "Confirmer feuille"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
+
+#. module: l10n_in_hr_payroll
+#: selection:hr.payroll.advice,state:0 selection:payment.advice.report,state:0
+msgid "Confirmed"
+msgstr "Confirmé"
+
+#. module: l10n_in_hr_payroll
+#: model:ir.model,name:l10n_in_hr_payroll.model_hr_contract
+msgid "Contract"
+msgstr "Contrat"
+
+#. module: l10n_in_hr_payroll
+<<<<<<< HEAD
 #: help:hr.payslip.run,available_advice:0
 msgid ""
 "If this box is checked which means that Payment Advice exists for current "
 "batch"
 msgstr "Si cette case est cochée, cela veut dire qu'il y a des accomptes pour le batch en cours"
-
-#. module: l10n_in_hr_payroll
-#: code:addons/l10n_in_hr_payroll/l10n_in_hr_payroll.py:108
-#: code:addons/l10n_in_hr_payroll/l10n_in_hr_payroll.py:134
-#: code:addons/l10n_in_hr_payroll/l10n_in_hr_payroll.py:190
-#: code:addons/l10n_in_hr_payroll/l10n_in_hr_payroll.py:207
-#, python-format
-msgid "Error !"
-msgstr "Erreur !"
-
-#. module: l10n_in_hr_payroll
-#: field:payslip.report,paid:0
-msgid "Made Payment Order ? "
-msgstr "Établir l'ordre de paiement "
-
-#. module: l10n_in_hr_payroll
-#: view:hr.salary.employee.month:0 view:yearly.salary.detail:0
-msgid "Print"
-msgstr "Imprimer"
-
-#. module: l10n_in_hr_payroll
-#: selection:payslip.report,state:0
-msgid "Rejected"
-msgstr "Refusé"
-
-#. module: l10n_in_hr_payroll
-#: view:payslip.report:0
-msgid "Year of Payslip"
+=======
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.hr_payslip_run_form_inherit
+msgid "Create Advice"
 msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_in_hr_payroll
-#: model:ir.model,name:l10n_in_hr_payroll.model_hr_payslip_run
-msgid "Payslip Batches"
-msgstr "Lots de bulletins de paie"
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payroll_advice_create_uid
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payroll_advice_line_create_uid
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_salary_employee_month_create_uid
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_yearly_salary_detail_create_uid
+msgid "Created by"
+msgstr "Créé par"
 
 #. module: l10n_in_hr_payroll
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payroll_advice_create_date
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payroll_advice_line_create_date
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_salary_employee_month_create_date
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_yearly_salary_detail_create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: l10n_in_hr_payroll
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payroll_advice_date
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payment_advice_report_date
+msgid "Date"
+msgstr "Date"
+
+#. module: l10n_in_hr_payroll
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payslip_report_date_from
+msgid "Date From"
+msgstr "Date début"
+
+#. module: l10n_in_hr_payroll
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payslip_report_date_to
+msgid "Date To"
+msgstr "Date de fin"
+
+#. module: l10n_in_hr_payroll
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payment_advice_report_day
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payslip_report_day
+msgid "Day"
+msgstr "Jour"
+
+#. module: l10n_in_hr_payroll
+<<<<<<< HEAD
 #: field:hr.payroll.advice.line,debit_credit:0 report:payroll.advice:0
 msgid "C/D"
 msgstr "C/D"
@@ -375,23 +580,53 @@ msgstr "Imrpimer l'accompte"
 #: field:hr.payroll.advice,line_ids:0
 msgid "Employee Salary"
 msgstr "Salaire de l'Employé"
+=======
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_res_company_dearness_allowance
+msgid "Dearness Allowance"
+msgstr ""
 
 #. module: l10n_in_hr_payroll
 #: selection:payment.advice.report,month:0 selection:payslip.report,month:0
-msgid "July"
-msgstr "Juillet"
+msgid "December"
+msgstr "Décembre"
 
 #. module: l10n_in_hr_payroll
-#: view:res.company:0
-msgid "Configuration"
-msgstr "Configuration"
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.hr_contract_form_in_inherit
+msgid "Deduction"
+msgstr "Déduction"
 
 #. module: l10n_in_hr_payroll
-#: view:payslip.report:0
-msgid "Payslip Line"
-msgstr "Ligne de bulletin de salaire"
+#: model:ir.model.fields,help:l10n_in_hr_payroll.field_hr_contract_medical_insurance
+msgid "Deduction towards company provided medical insurance"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_in_hr_payroll
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payroll_advice_note
+msgid "Description"
+msgstr "Description"
+
+#. module: l10n_in_hr_payroll
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_payslipdetails
+msgid "Details by Salary Rule Category"
+msgstr ""
+
+#. module: l10n_in_hr_payroll
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payroll_advice_display_name
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payroll_advice_line_display_name
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_salary_employee_month_display_name
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payment_advice_report_display_name
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payslip_report_display_name
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_report_l10n_in_hr_payroll_report_hrsalarybymonth_display_name
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_report_l10n_in_hr_payroll_report_hryearlysalary_display_name
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_report_l10n_in_hr_payroll_report_payrolladvice_display_name
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_report_l10n_in_hr_payroll_report_payslipdetails_display_name
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_yearly_salary_detail_display_name
+msgid "Display Name"
+msgstr "Afficher le nom"
+
+#. module: l10n_in_hr_payroll
+<<<<<<< HEAD
 #: model:ir.actions.act_window,name:l10n_in_hr_payroll.action_view_hr_bank_advice_tree
 #: model:ir.ui.menu,name:l10n_in_hr_payroll.hr_menu_payment_advice
 msgid "Payment Advices"
@@ -415,13 +650,43 @@ msgstr "Cet assistant va imprimer le rapport du détails des fiches de paie à u
 #: field:hr.payroll.advice.line,ifsc:0
 msgid "IFSC"
 msgstr "IFSC"
+=======
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payslip_search
+#: selection:payslip.report,state:0
+msgid "Done"
+msgstr "Terminé"
 
 #. module: l10n_in_hr_payroll
-#: report:paylip.details.in:0 field:payslip.report,date_to:0
-msgid "Date To"
-msgstr "Date de fin"
+#: selection:hr.payroll.advice,state:0
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_hr_payroll_advice_filter
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payment_advice_search
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payslip_search
+#: selection:payment.advice.report,state:0 selection:payslip.report,state:0
+msgid "Draft"
+msgstr "Brouillon"
 
 #. module: l10n_in_hr_payroll
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_hr_payroll_advice_filter
+msgid "Draft Advices"
+msgstr ""
+
+#. module: l10n_in_hr_payroll
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_contract_driver_salay
+msgid "Driver Salary"
+msgstr "Salaire du chauffeur"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
+
+#. module: l10n_in_hr_payroll
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payroll_advice_line_employee_id
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payment_advice_report_employee_id
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payslip_report_employee_id
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payment_advice_search
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payslip_search
+msgid "Employee"
+msgstr "Employé"
+
+#. module: l10n_in_hr_payroll
+<<<<<<< HEAD
 #: field:hr.contract,tds:0
 msgid "TDS"
 msgstr "TDS"
@@ -430,62 +695,105 @@ msgstr "TDS"
 #: view:hr.payroll.advice:0
 msgid "Confirm Advices"
 msgstr "Confirmer l'accompte"
+=======
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payment_advice_report_employee_bank_no
+msgid "Employee Bank Account"
+msgstr "Compte en banque de l'employé"
 
 #. module: l10n_in_hr_payroll
-#: constraint:hr.contract:0
-msgid "Error! Contract start-date must be less than contract end-date."
-msgstr "Erreur! La date de début du contrat doit être avant la date de fin."
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_salary_employee_month
+msgid "Employee Pay Head Breakup"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_in_hr_payroll
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payroll_advice_line_ids
+msgid "Employee Salary"
+msgstr "Salaire de l'Employé"
+
+#. module: l10n_in_hr_payroll
+<<<<<<< HEAD
 #: field:res.company,dearness_allowance:0
 msgid "Dearness Allowance"
 msgstr "Dearness Allowance"
+=======
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_salary_employee_month_employee_ids
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_yearly_salary_detail_employee_ids
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_salary_employee_month
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_yearly_salary_detail
+msgid "Employees"
+msgstr "Employés"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_in_hr_payroll
-#: selection:payment.advice.report,month:0 selection:payslip.report,month:0
-msgid "August"
-msgstr "Août"
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_salary_employee_month_end_date
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_yearly_salary_detail_date_to
+msgid "End Date"
+msgstr "Date de fin"
 
 #. module: l10n_in_hr_payroll
+<<<<<<< HEAD
 #: view:hr.contract:0
 msgid "Deduction"
 msgstr "Déduction"
-
-#. module: l10n_in_hr_payroll
-#: report:payroll.advice:0
-msgid "SI. No."
-msgstr ""
-
-#. module: l10n_in_hr_payroll
-#: view:payment.advice.report:0
-msgid "Payment Advices which are in confirm state"
-msgstr "Accomptes qui sont confirmés"
+=======
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payment_advice_search
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payslip_search
+msgid "Extended Filters..."
+msgstr "Filtres étendus"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_in_hr_payroll
 #: selection:payment.advice.report,month:0 selection:payslip.report,month:0
-msgid "December"
-msgstr "Décembre"
+msgid "February"
+msgstr "Février"
 
 #. module: l10n_in_hr_payroll
+<<<<<<< HEAD
+#: view:payment.advice.report:0
+msgid "Payment Advices which are in confirm state"
+msgstr "Accomptes qui sont confirmés"
+=======
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_payrolladvice
+msgid "For"
+msgstr "Pour"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
+
+#. module: l10n_in_hr_payroll
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_hrsalarybymonth
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_hryearlysalary
+msgid "From"
+msgstr "De"
+
+#. module: l10n_in_hr_payroll
+<<<<<<< HEAD
 #: view:hr.payroll.advice:0
 msgid "Confirm Sheet"
 msgstr "Confirmer feuille"
+=======
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_hr_payroll_advice_filter
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payment_advice_search
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payslip_search
+msgid "Group By"
+msgstr "Regrouper par"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_in_hr_payroll
-#: view:payment.advice.report:0 field:payment.advice.report,month:0
-#: view:payslip.report:0 field:payslip.report,month:0
-msgid "Month"
-msgstr "Mois"
+#: model:ir.model.fields,help:l10n_in_hr_payroll.field_hr_contract_house_rent_allowance_metro_nonmetro
+msgid ""
+"HRA is an allowance given by the employer to the employee for taking care of his rental or accommodation expenses for metro city it is 50% and for non metro 40%. \n"
+"HRA computed as percentage(%)"
+msgstr "a"
 
 #. module: l10n_in_hr_payroll
-#: report:salary.detail.byyear:0
-msgid "Employee Code"
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_contract_house_rent_allowance_metro_nonmetro
+msgid "House Rent Allowance (%)"
 msgstr ""
 
 #. module: l10n_in_hr_payroll
-#: view:hr.salary.employee.month:0 view:yearly.salary.detail:0
-msgid "or"
-msgstr "ou"
+#: model:ir.model,name:l10n_in_hr_payroll.model_yearly_salary_detail
+msgid "Hr Salary Employee By Category Report"
+msgstr ""
 
 #. module: l10n_in_hr_payroll
 #: model:ir.model,name:l10n_in_hr_payroll.model_hr_salary_employee_month
@@ -493,12 +801,21 @@ msgid "Hr Salary Employee By Month Report"
 msgstr "Salaire par mois"
 
 #. module: l10n_in_hr_payroll
-#: field:hr.salary.employee.month,category_id:0 view:payslip.report:0
-#: field:payslip.report,category_id:0
-msgid "Category"
-msgstr "Catégorie"
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payroll_advice_id
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payroll_advice_line_id
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_salary_employee_month_id
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payment_advice_report_id
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payslip_report_id
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_report_l10n_in_hr_payroll_report_hrsalarybymonth_id
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_report_l10n_in_hr_payroll_report_hryearlysalary_id
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_report_l10n_in_hr_payroll_report_payrolladvice_id
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_report_l10n_in_hr_payroll_report_payslipdetails_id
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_yearly_salary_detail_id
+msgid "ID"
+msgstr "ID"
 
 #. module: l10n_in_hr_payroll
+<<<<<<< HEAD
 #: code:addons/l10n_in_hr_payroll/l10n_in_hr_payroll.py:190
 #, python-format
 msgid ""
@@ -509,47 +826,84 @@ msgstr "Un accompte existe déjà pour %s, \"Mettez à Brouillon' pour créer un
 #: view:hr.payslip.run:0
 msgid "To Advice"
 msgstr "A conseiller"
+=======
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payroll_advice_line_ifsc
+msgid "IFSC"
+msgstr "IFSC"
 
 #. module: l10n_in_hr_payroll
-#: report:paylip.details.in:0
-msgid "Note"
-msgstr "Note"
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payroll_advice_line_ifsc_code
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payment_advice_report_ifsc_code
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_payrolladvice
+msgid "IFSC Code"
+msgstr "IFSC Code"
 
 #. module: l10n_in_hr_payroll
-#: report:paylip.details.in:0
-msgid "Salary Rule Category"
-msgstr "Catégorie de règle salariale"
+#: model:ir.model.fields,help:l10n_in_hr_payroll.field_hr_payslip_run_available_advice
+msgid ""
+"If this box is checked which means that Payment Advice exists for current "
+"batch"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_in_hr_payroll
-#: view:hr.payroll.advice:0 selection:hr.payroll.advice,state:0
-#: view:payment.advice.report:0 selection:payment.advice.report,state:0
-#: view:payslip.report:0 selection:payslip.report,state:0
-msgid "Draft"
-msgstr "Brouillon"
+#: selection:payment.advice.report,month:0 selection:payslip.report,month:0
+msgid "January"
+msgstr "Janvier"
 
 #. module: l10n_in_hr_payroll
-#: report:paylip.details.in:0 field:payslip.report,date_from:0
-msgid "Date From"
-msgstr "Date début"
+#: selection:payment.advice.report,month:0 selection:payslip.report,month:0
+msgid "July"
+msgstr "Juillet"
 
 #. module: l10n_in_hr_payroll
-#: report:salary.detail.byyear:0
-msgid "Employee Name"
-msgstr "Nom de l'employé"
+#: selection:payment.advice.report,month:0 selection:payslip.report,month:0
+msgid "June"
+msgstr "Juin"
 
 #. module: l10n_in_hr_payroll
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payroll_advice___last_update
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payroll_advice_line___last_update
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_salary_employee_month___last_update
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payment_advice_report___last_update
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payslip_report___last_update
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_report_l10n_in_hr_payroll_report_hrsalarybymonth___last_update
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_report_l10n_in_hr_payroll_report_hryearlysalary___last_update
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_report_l10n_in_hr_payroll_report_payrolladvice___last_update
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_report_l10n_in_hr_payroll_report_payslipdetails___last_update
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_yearly_salary_detail___last_update
+msgid "Last Modified on"
+msgstr "Dernière Modification le"
+
+#. module: l10n_in_hr_payroll
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payroll_advice_line_write_uid
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payroll_advice_write_uid
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_salary_employee_month_write_uid
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_yearly_salary_detail_write_uid
+msgid "Last Updated by"
+msgstr "Mis à jour par"
+
+#. module: l10n_in_hr_payroll
+<<<<<<< HEAD
 #: model:ir.model,name:l10n_in_hr_payroll.model_payment_advice_report
 msgid "Payment Advice Analysis"
 msgstr "Analyse des accomptes"
+=======
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payroll_advice_line_write_date
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payroll_advice_write_date
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_salary_employee_month_write_date
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_yearly_salary_detail_write_date
+msgid "Last Updated on"
+msgstr "Mis à jour le"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_in_hr_payroll
-#: view:hr.payroll.advice:0 field:hr.payroll.advice,state:0
-#: view:payment.advice.report:0 field:payment.advice.report,state:0
-#: view:payslip.report:0 field:payslip.report,state:0
-msgid "Status"
-msgstr "État"
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_hr_bank_advice_form
+msgid "Letter Details"
+msgstr "Détails de la lettre"
 
 #. module: l10n_in_hr_payroll
+<<<<<<< HEAD
 #: help:res.company,dearness_allowance:0
 msgid "Check this box if your company provide Dearness Allowance to employee"
 msgstr "Cochez cette case si votre société fournit des Dearness aux employés"
@@ -559,18 +913,29 @@ msgstr "Cochez cette case si votre société fournit des Dearness aux employés"
 #: field:payment.advice.report,ifsc_code:0 report:payroll.advice:0
 msgid "IFSC Code"
 msgstr "IFSC Code"
+=======
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payslip_run_available_advice
+msgid "Made Payment Advice?"
+msgstr ""
+
+#. module: l10n_in_hr_payroll
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payslip_report_paid
+msgid "Made Payment Order ? "
+msgstr "Établir l'ordre de paiement "
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_in_hr_payroll
 #: selection:payment.advice.report,month:0 selection:payslip.report,month:0
-msgid "June"
-msgstr "Juin"
+msgid "March"
+msgstr "Mars"
 
 #. module: l10n_in_hr_payroll
-#: view:payslip.report:0
-msgid "Paid"
-msgstr "Payé"
+#: selection:payment.advice.report,month:0 selection:payslip.report,month:0
+msgid "May"
+msgstr "Mai"
 
 #. module: l10n_in_hr_payroll
+<<<<<<< HEAD
 #: help:hr.contract,voluntary_provident_fund:0
 msgid ""
 "VPF is a safe option wherein you can contribute more than the PF ceiling of "
@@ -582,36 +947,71 @@ msgstr "VPF est une option pour contribuer plus que le seuil de PF de 12% qui a 
 #: view:payment.advice.report:0 field:payment.advice.report,nbr:0
 msgid "# Payment Lines"
 msgstr "#Lignes de paiement"
+=======
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_contract_medical_insurance
+msgid "Medical Insurance"
+msgstr "Assurance Médicale"
 
 #. module: l10n_in_hr_payroll
-#: model:ir.actions.report.xml,name:l10n_in_hr_payroll.payslip_details_report
-msgid "PaySlip Details"
-msgstr "Détails du bulletin de paie"
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payment_advice_report_month
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payslip_report_month
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payment_advice_search
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payslip_search
+msgid "Month"
+msgstr "Mois"
 
 #. module: l10n_in_hr_payroll
-#: view:hr.payroll.advice:0
-msgid "Payment Lines"
-msgstr "Lignes de paiement"
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payment_advice_search
+msgid "Month of Payment Advices"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_in_hr_payroll
-#: field:hr.payroll.advice,date:0 field:payment.advice.report,date:0
-msgid "Date"
-msgstr "Date"
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payslip_search
+msgid "Month of Payslip"
+msgstr "Mois de la fiche de paie"
 
 #. module: l10n_in_hr_payroll
-#: selection:payment.advice.report,month:0 selection:payslip.report,month:0
-msgid "November"
-msgstr "novembre"
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payment_advice_search
+msgid "NEFT"
+msgstr "NEFT"
 
 #. module: l10n_in_hr_payroll
-#: view:payment.advice.report:0 view:payslip.report:0
-msgid "Extended Filters..."
-msgstr "Filtres étendus..."
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payroll_advice_neft
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payment_advice_report_neft
+msgid "NEFT Transaction"
+msgstr "Transaction NEFT"
 
 #. module: l10n_in_hr_payroll
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payroll_advice_name
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payment_advice_report_name
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payslip_report_name
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_hrsalarybymonth
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_hr_bank_advice_form
+msgid "Name"
+msgstr "Nom"
+
+#. module: l10n_in_hr_payroll
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_payrolladvice
+msgid "Name Of Employee"
+msgstr "Nom de l'employé"
+
+#. module: l10n_in_hr_payroll
+<<<<<<< HEAD
 #: model:ir.actions.act_window,help:l10n_in_hr_payroll.action_payment_advice_report_all
 msgid "This report performs analysis on Payment Advices"
 msgstr "Ce rapport fait une analyse des accomptes de paiements"
+=======
+#: selection:payment.advice.report,month:0 selection:payslip.report,month:0
+msgid "November"
+msgstr "Novembre"
+
+#. module: l10n_in_hr_payroll
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payment_advice_report_number
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payslip_report_number
+msgid "Number"
+msgstr "Nombre"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_in_hr_payroll
 #: selection:payment.advice.report,month:0 selection:payslip.report,month:0
@@ -619,6 +1019,7 @@ msgid "October"
 msgstr "Octobre"
 
 #. module: l10n_in_hr_payroll
+<<<<<<< HEAD
 #: report:paylip.details.in:0 report:salary.detail.byyear:0
 msgid "Designation"
 msgstr "Désignation"
@@ -627,33 +1028,39 @@ msgstr "Désignation"
 #: view:payslip.report:0
 msgid "Month of Payslip"
 msgstr "Mois de la fiche de paie"
+=======
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_hr_bank_advice_form
+msgid "Other Information"
+msgstr "Autres informations"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_in_hr_payroll
-#: selection:payment.advice.report,month:0 selection:payslip.report,month:0
-msgid "January"
-msgstr "Janvier"
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payslip_search
+msgid "Paid"
+msgstr "Réglé"
 
 #. module: l10n_in_hr_payroll
-#: view:yearly.salary.detail:0
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_yearly_salary_detail
 msgid "Pay Head Employee Breakup"
 msgstr "Détail de la fiche de paie"
 
 #. module: l10n_in_hr_payroll
-#: model:ir.model,name:l10n_in_hr_payroll.model_res_company
-msgid "Companies"
-msgstr "Sociétés"
+#: model:ir.model,name:l10n_in_hr_payroll.model_hr_payslip
+msgid "Pay Slip"
+msgstr "Feuille de paie"
 
 #. module: l10n_in_hr_payroll
-#: report:paylip.details.in:0 report:payroll.advice:0
-msgid "Authorized Signature"
-msgstr "Signature autorisée"
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_payslipdetails
+msgid "Pay Slip Details"
+msgstr "Détails du bulletin"
 
 #. module: l10n_in_hr_payroll
-#: model:ir.model,name:l10n_in_hr_payroll.model_hr_contract
-msgid "Contract"
-msgstr "Contrat"
+#: model:ir.actions.report.xml,name:l10n_in_hr_payroll.payslip_details_report
+msgid "PaySlip Details"
+msgstr "Détails du bulletin de paie"
 
 #. module: l10n_in_hr_payroll
+<<<<<<< HEAD
 #: field:hr.contract,supplementary_allowance:0
 msgid "Supplementary Allowance"
 msgstr "Allocation supplémentaire"
@@ -662,13 +1069,25 @@ msgstr "Allocation supplémentaire"
 #: view:hr.payroll.advice.line:0
 msgid "Advice Lines"
 msgstr "Lignes d'accompte"
-
-#. module: l10n_in_hr_payroll
-#: report:payroll.advice:0
-msgid "To,"
+=======
+#: model:ir.model,name:l10n_in_hr_payroll.model_payment_advice_report
+msgid "Payment Advice Analysis"
 msgstr ""
 
 #. module: l10n_in_hr_payroll
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_payrolladvice
+msgid "Payment Advice from"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
+
+#. module: l10n_in_hr_payroll
+#: model:ir.actions.act_window,name:l10n_in_hr_payroll.action_view_hr_bank_advice_tree
+#: model:ir.ui.menu,name:l10n_in_hr_payroll.hr_menu_payment_advice
+msgid "Payment Advices"
+msgstr ""
+
+#. module: l10n_in_hr_payroll
+<<<<<<< HEAD
 #: help:hr.contract,driver_salay:0
 msgid "Check this box if you provide allowance for driver"
 msgstr "Cochez cette case si vous fournissez une allocation pour conducteuer"
@@ -684,13 +1103,31 @@ msgstr "Fiches de paie ayant comme status: brouillons"
 #: model:ir.model,name:l10n_in_hr_payroll.model_hr_payroll_advice
 msgid "Bank Advice"
 msgstr "Bank Advice"
-
-#. module: l10n_in_hr_payroll
-#: report:salary.detail.byyear:0
-msgid "Other No."
+=======
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payment_advice_search
+msgid "Payment Advices which are in confirm state"
 msgstr ""
 
 #. module: l10n_in_hr_payroll
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payment_advice_search
+msgid "Payment Advices which are in draft state"
+msgstr ""
+
+#. module: l10n_in_hr_payroll
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_hr_bank_advice_form
+msgid "Payment Lines"
+msgstr "Lignes de paiement"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
+
+#. module: l10n_in_hr_payroll
+#: code:addons/l10n_in_hr_payroll/l10n_in_hr_payroll.py:166
+#, python-format
+msgid ""
+"Payment advice already exists for %s, 'Set to Draft' to create a new advice."
+msgstr ""
+
+#. module: l10n_in_hr_payroll
+<<<<<<< HEAD
 #: view:hr.payroll.advice:0
 msgid "Draft Advices"
 msgstr "Accomptes brouillons"
@@ -699,34 +1136,49 @@ msgstr "Accomptes brouillons"
 #: help:hr.payroll.advice,neft:0
 msgid "Check this box if your company use online transfer for salary"
 msgstr "Cochez cette case si votre société utilise le paiement en ligne pour les salaires"
+=======
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_res_company_da
+msgid "Payroll"
+msgstr "Paie"
 
 #. module: l10n_in_hr_payroll
-#: field:payment.advice.report,number:0 field:payslip.report,number:0
-msgid "Number"
-msgstr "Numéro"
+#: model:ir.actions.act_window,name:l10n_in_hr_payroll.action_payslip_report_all
+#: model:ir.model,name:l10n_in_hr_payroll.model_payslip_report
+#: model:ir.ui.menu,name:l10n_in_hr_payroll.menu_reporting_payslip
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.hr_department_view_kanban
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payslip_search
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payslip_tree
+msgid "Payslip Analysis"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_in_hr_payroll
-#: selection:payment.advice.report,month:0 selection:payslip.report,month:0
-msgid "September"
-msgstr "Septembre"
+#: model:ir.model,name:l10n_in_hr_payroll.model_hr_payslip_run
+msgid "Payslip Batches"
+msgstr "Lots de bulletins de paie"
 
 #. module: l10n_in_hr_payroll
-#: view:payslip.report:0 selection:payslip.report,state:0
-msgid "Done"
-msgstr "Terminé"
-
-#. module: l10n_in_hr_payroll
-#: view:hr.payroll.advice:0 view:hr.salary.employee.month:0
-#: view:yearly.salary.detail:0
-msgid "Cancel"
-msgstr "Annuler"
-
-#. module: l10n_in_hr_payroll
-#: view:payment.advice.report:0
-msgid "Day of Payment Advices"
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.hr_payslip_run_search_inherit
+msgid "Payslip Batches ready to be Adviced"
 msgstr ""
 
 #. module: l10n_in_hr_payroll
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payslip_search
+msgid "Payslip Line"
+msgstr "Ligne de bulletin de salaire"
+
+#. module: l10n_in_hr_payroll
+#: model:ir.actions.act_window,name:l10n_in_hr_payroll.act_hr_emp_payslip_list
+msgid "Payslips"
+msgstr "Feuilles de paye"
+
+#. module: l10n_in_hr_payroll
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payslip_search
+msgid "Payslips which are in done state"
+msgstr ""
+
+#. module: l10n_in_hr_payroll
+<<<<<<< HEAD
 #: view:hr.payroll.advice:0
 msgid "Search Payment advice"
 msgstr "Rechercher l'accompte"
@@ -759,111 +1211,154 @@ msgstr "Employé"
 #: view:hr.payroll.advice:0
 msgid "Compute Advice"
 msgstr "Calculer l'accompte"
-
-#. module: l10n_in_hr_payroll
-#: report:payroll.advice:0
-msgid "Dear Sir/Madam,"
+=======
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payslip_search
+msgid "Payslips which are in draft state"
 msgstr ""
 
 #. module: l10n_in_hr_payroll
-#: field:hr.payroll.advice,note:0
-msgid "Description"
-msgstr "Description"
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payslip_search
+msgid "Payslips which are paid"
+msgstr ""
 
 #. module: l10n_in_hr_payroll
-#: selection:payment.advice.report,month:0 selection:payslip.report,month:0
-msgid "May"
-msgstr "Mai"
+#: code:addons/l10n_in_hr_payroll/l10n_in_hr_payroll.py:89
+#: code:addons/l10n_in_hr_payroll/l10n_in_hr_payroll.py:184
+#, python-format
+msgid "Please define bank account for the %s employee"
+msgstr ""
 
 #. module: l10n_in_hr_payroll
-#: view:res.company:0
-msgid "Payroll"
-msgstr "Paie"
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_salary_employee_month
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_yearly_salary_detail
+msgid "Print"
+msgstr "Imprimer"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_in_hr_payroll
+#: model:ir.actions.report.xml,name:l10n_in_hr_payroll.payroll_advice
+msgid "Print Advice"
+msgstr ""
+
+#. module: l10n_in_hr_payroll
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payroll_advice_number
+msgid "Reference"
+msgstr "Référence"
+
+#. module: l10n_in_hr_payroll
+#: selection:payslip.report,state:0
+msgid "Rejected"
+msgstr "Rejeté"
+
+#. module: l10n_in_hr_payroll
+#: model:ir.ui.menu,name:l10n_in_hr_payroll.menu_l10n_in_hr_payroll_report
+msgid "Reports"
+msgstr "Rapports"
+
+#. module: l10n_in_hr_payroll
+<<<<<<< HEAD
 #: view:payment.advice.report:0
 msgid "NEFT"
 msgstr "NEFT"
+=======
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_payrolladvice
+msgid "SI No."
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_in_hr_payroll
-#: report:paylip.details.in:0 report:salary.detail.byyear:0
-msgid "Address"
-msgstr "Adresse"
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_payslipdetails
+msgid "Salary Rule Category"
+msgstr "Catégorie de règle salariale"
 
 #. module: l10n_in_hr_payroll
-#: view:hr.payroll.advice:0 field:hr.payroll.advice,bank_id:0
-#: view:payment.advice.report:0 field:payment.advice.report,bank_id:0
-#: report:payroll.advice:0 report:salary.detail.byyear:0
-msgid "Bank"
-msgstr "Banque"
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_hr_payroll_advice_filter
+msgid "Search Payment advice"
+msgstr ""
 
 #. module: l10n_in_hr_payroll
-#: field:hr.salary.employee.month,end_date:0
-#: field:yearly.salary.detail,date_to:0
-msgid "End Date"
-msgstr "Date de fin"
+#: model:ir.model.fields,help:l10n_in_hr_payroll.field_hr_payroll_advice_bank_id
+msgid "Select the Bank from which the salary is going to be paid"
+msgstr ""
 
 #. module: l10n_in_hr_payroll
 #: selection:payment.advice.report,month:0 selection:payslip.report,month:0
-msgid "February"
-msgstr "Février"
+msgid "September"
+msgstr "Septembre"
 
 #. module: l10n_in_hr_payroll
-#: sql_constraint:res.company:0
-msgid "The company name must be unique !"
-msgstr "Le nom de la société doit être unique !"
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_hr_bank_advice_form
+msgid "Set to Draft"
+msgstr "Mettre à l'état \"Brouillon\""
 
 #. module: l10n_in_hr_payroll
-#: view:hr.payroll.advice:0 field:hr.payroll.advice,name:0
-#: report:paylip.details.in:0 field:payment.advice.report,name:0
-#: field:payslip.report,name:0 report:salary.employee.bymonth:0
-msgid "Name"
-msgstr "Nom"
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_salary_employee_month_start_date
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_yearly_salary_detail_date_from
+msgid "Start Date"
+msgstr "Date de début"
 
 #. module: l10n_in_hr_payroll
-#: view:hr.salary.employee.month:0
-#: field:hr.salary.employee.month,employee_ids:0 view:yearly.salary.detail:0
-#: field:yearly.salary.detail,employee_ids:0
-msgid "Employees"
-msgstr "Employés"
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_payroll_advice_state
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payment_advice_report_state
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payslip_report_state
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_hr_payroll_advice_filter
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payment_advice_search
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payslip_search
+msgid "Status"
+msgstr "Statut"
 
 #. module: l10n_in_hr_payroll
-#: report:paylip.details.in:0
-msgid "Bank Account"
-msgstr "Compte bancaire"
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payslip_report_struct_id
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payslip_search
+msgid "Structure"
+msgstr "Structure"
 
 #. module: l10n_in_hr_payroll
+<<<<<<< HEAD
 #: model:ir.actions.act_window,name:l10n_in_hr_payroll.action_payslip_report_all
 #: model:ir.model,name:l10n_in_hr_payroll.model_payslip_report
 #: model:ir.ui.menu,name:l10n_in_hr_payroll.menu_reporting_payslip
 #: view:payslip.report:0
 msgid "Payslip Analysis"
 msgstr "Analyse de la paie"
+=======
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_contract_supplementary_allowance
+msgid "Supplementary Allowance"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_in_hr_payroll
-#: selection:payment.advice.report,month:0 selection:payslip.report,month:0
-msgid "April"
-msgstr "Avril"
-
-#. module: l10n_in_hr_payroll
-#: report:payroll.advice:0
-msgid "Name of the Employe"
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_contract_tds
+msgid "TDS"
 msgstr ""
 
 #. module: l10n_in_hr_payroll
+#: model:ir.actions.act_window,help:l10n_in_hr_payroll.action_payment_advice_report_all
+msgid "This report performs analysis on Payment Advices"
+msgstr ""
+
+#. module: l10n_in_hr_payroll
+<<<<<<< HEAD
 #: code:addons/l10n_in_hr_payroll/l10n_in_hr_payroll.py:108
 #: code:addons/l10n_in_hr_payroll/l10n_in_hr_payroll.py:207
 #, python-format
 msgid "Please define bank account for the %s employee"
 msgstr "Veuillez définir un compte en banque pour cet %s employé"
+=======
+#: model:ir.actions.act_window,help:l10n_in_hr_payroll.action_payslip_report_all
+msgid "This report performs analysis on Payslip"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_in_hr_payroll
-#: field:hr.salary.employee.month,start_date:0
-#: field:yearly.salary.detail,date_from:0
-msgid "Start Date"
-msgstr "Date de début"
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_yearly_salary_detail
+msgid ""
+"This wizard will print report which display a pay head employee breakup for "
+"a specified dates."
+msgstr ""
 
 #. module: l10n_in_hr_payroll
+<<<<<<< HEAD
 #: view:hr.contract:0
 msgid "Allowance"
 msgstr "Allocation"
@@ -887,18 +1382,64 @@ msgstr "Sélectionnez la banque à laquelle le salaire sera payé. "
 #: view:hr.salary.employee.month:0
 msgid "Employee Pay Head Breakup"
 msgstr "Détail de la fiche de paie"
-
-#. module: l10n_in_hr_payroll
-#: report:salary.detail.byyear:0
-msgid "Phone No."
+=======
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_salary_employee_month
+msgid ""
+"This wizard will print report which displays employees break-up of Net Head "
+"for a specified dates."
 msgstr ""
 
 #. module: l10n_in_hr_payroll
-#: report:paylip.details.in:0
-msgid "Credit"
-msgstr "Crédit"
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_hryearlysalary
+msgid "Title"
+msgstr "Titre"
 
 #. module: l10n_in_hr_payroll
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_hrsalarybymonth
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_hryearlysalary
+msgid "To"
+msgstr "A"
+
+#. module: l10n_in_hr_payroll
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.hr_payslip_run_search_inherit
+msgid "To Advice"
+msgstr ""
+
+#. module: l10n_in_hr_payroll
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payslip_report_total
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_hrsalarybymonth
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_hryearlysalary
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_payslipdetails
+msgid "Total"
+msgstr "Total"
+
+#. module: l10n_in_hr_payroll
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.view_payment_advice_tree
+msgid "Total Salary"
+msgstr "Salaire Total"
+
+#. module: l10n_in_hr_payroll
+#: model:ir.model.fields,help:l10n_in_hr_payroll.field_hr_contract_voluntary_provident_fund
+msgid ""
+"VPF is a safe option wherein you can contribute more than the PF ceiling of "
+"12% that has been mandated by the government and VPF computed as "
+"percentage(%)"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
+
+#. module: l10n_in_hr_payroll
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_hr_contract_voluntary_provident_fund
+msgid "Voluntary Provident Fund (%)"
+msgstr ""
+
+#. module: l10n_in_hr_payroll
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payment_advice_report_year
+#: model:ir.model.fields,field_description:l10n_in_hr_payroll.field_payslip_report_year
+msgid "Year"
+msgstr "Année"
+
+#. module: l10n_in_hr_payroll
+<<<<<<< HEAD
 #: field:hr.payroll.advice.line,name:0 report:payroll.advice:0
 msgid "Bank Account No."
 msgstr "Compte bancaire n°"
@@ -917,33 +1458,74 @@ msgstr "Batches de paies prêt à faire un accompte"
 #: view:hr.payslip.run:0
 msgid "Create Advice"
 msgstr "Créer accompte"
+=======
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_hrsalarybymonth
+msgid "Yearly Salary Details"
+msgstr ""
 
 #. module: l10n_in_hr_payroll
-#: view:payment.advice.report:0 field:payment.advice.report,year:0
-#: view:payslip.report:0 field:payslip.report,year:0
-msgid "Year"
-msgstr "Année"
+#: model:ir.actions.act_window,name:l10n_in_hr_payroll.action_yearly_salary_detail
+#: model:ir.actions.report.xml,name:l10n_in_hr_payroll.yearly_salary
+#: model:ir.ui.menu,name:l10n_in_hr_payroll.menu_yearly_salary_detail
+msgid "Yearly Salary by Employee"
+msgstr ""
 
 #. module: l10n_in_hr_payroll
+#: model:ir.actions.act_window,name:l10n_in_hr_payroll.action_salary_employee_month
+#: model:ir.actions.report.xml,name:l10n_in_hr_payroll.hr_salary_bymonth
+#: model:ir.ui.menu,name:l10n_in_hr_payroll.menu_salary_employee_month
+msgid "Yearly Salary by Head"
+msgstr ""
+
+#. module: l10n_in_hr_payroll
+#: code:addons/l10n_in_hr_payroll/l10n_in_hr_payroll.py:115
+#, python-format
+msgid "You can not confirm Payment advice without advice lines."
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
+
+#. module: l10n_in_hr_payroll
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_payrolladvice
+msgid "Yours Sincerely"
+msgstr "Bien à vous"
+
+#. module: l10n_in_hr_payroll
+<<<<<<< HEAD
 #: field:hr.payroll.advice,neft:0 field:payment.advice.report,neft:0
 msgid "NEFT Transaction"
 msgstr "Transaction NEFT"
-
-#. module: l10n_in_hr_payroll
-#: report:paylip.details.in:0 field:payslip.report,total:0
-#: report:salary.detail.byyear:0 report:salary.employee.bymonth:0
-msgid "Total"
-msgstr "Total"
-
-#. module: l10n_in_hr_payroll
-#: help:hr.contract,house_rent_allowance_metro_nonmetro:0
-msgid ""
-"HRA is an allowance given by the employer to the employee for taking care of"
-" his rental or accommodation expenses for metro city it is 50 % and for non "
-"metro 40%.HRA computed as percentage(%)"
+=======
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_payrolladvice
+msgid "form period"
 msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_in_hr_payroll
-#: view:payment.advice.report:0
-msgid "Year of Payment Advices"
-msgstr ""
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_hrsalarybymonth
+msgid "of"
+msgstr "de"
+
+#. module: l10n_in_hr_payroll
+#: model:ir.model,name:l10n_in_hr_payroll.model_report_l10n_in_hr_payroll_report_hrsalarybymonth
+msgid "report.l10n_in_hr_payroll.report_hrsalarybymonth"
+msgstr "report.l10n_in_hr_payroll.report_hrsalarybymonth"
+
+#. module: l10n_in_hr_payroll
+#: model:ir.model,name:l10n_in_hr_payroll.model_report_l10n_in_hr_payroll_report_hryearlysalary
+msgid "report.l10n_in_hr_payroll.report_hryearlysalary"
+msgstr "report.l10n_in_hr_payroll.report_hryearlysalary"
+
+#. module: l10n_in_hr_payroll
+#: model:ir.model,name:l10n_in_hr_payroll.model_report_l10n_in_hr_payroll_report_payrolladvice
+msgid "report.l10n_in_hr_payroll.report_payrolladvice"
+msgstr "report.l10n_in_hr_payroll.report_payrolladvice"
+
+#. module: l10n_in_hr_payroll
+#: model:ir.model,name:l10n_in_hr_payroll.model_report_l10n_in_hr_payroll_report_payslipdetails
+msgid "report.l10n_in_hr_payroll.report_payslipdetails"
+msgstr "report.l10n_in_hr_payroll.report_payslipdetails"
+
+#. module: l10n_in_hr_payroll
+#: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_payrolladvice
+msgid "to"
+msgstr "au"

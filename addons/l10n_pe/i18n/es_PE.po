@@ -1,17 +1,28 @@
-# Translation of OpenERP Server.
+# Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * l10n_pe
 # 
 # Translators:
+<<<<<<< HEAD
 # Fernando Perez Egana <fperezegana@gmail.com>, 2016
+=======
+# Cesar Vergara <cesarvergarab@gmail.com>, 2015
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 8.0\n"
+"Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2012-11-24 02:53+0000\n"
 "PO-Revision-Date: 2016-01-08 21:20+0000\n"
 "Last-Translator: Fernando Perez Egana <fperezegana@gmail.com>\n"
 "Language-Team: Spanish (Peru) (http://www.transifex.com/odoo/odoo-8/language/es_PE/)\n"
+=======
+"POT-Creation-Date: 2015-09-07 14:55+0000\n"
+"PO-Revision-Date: 2015-09-24 14:57+0000\n"
+"Last-Translator: Cesar Vergara <cesarvergarab@gmail.com>\n"
+"Language-Team: Spanish (Peru) (http://www.transifex.com/odoo/odoo-9/language/es_PE/)\n"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -19,6 +30,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: l10n_pe
+<<<<<<< HEAD
 #: model:account.account.type,name:l10n_pe.account_account_type_EGP_FU_070
 msgid "Gastos Financieros"
 msgstr "Gastos Financieros"
@@ -152,6 +164,11 @@ msgstr "Gastos Financieros por Naturaleza"
 #: model:account.account.type,name:l10n_pe.account_account_type_EGP_FU_090
 msgid "Otros Gastos"
 msgstr "Otros Gastos"
+=======
+#: model:account.account.type,name:l10n_pe.account_account_type_EGP_NA_080
+msgid "(+/-) Variación de Envases y Embalajes"
+msgstr "(+/-) Variación de Envases y Embalajes"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_pe
 #: model:account.account.type,name:l10n_pe.account_account_type_EGP_NA_060
@@ -159,9 +176,15 @@ msgid "(+/-) Variación de Materias Primas"
 msgstr "(+/-) Variación de Materias Primas"
 
 #. module: l10n_pe
+<<<<<<< HEAD
 #: model:account.account.type,name:l10n_pe.account_account_type_BG_PTN_20
 msgid "Capital Adicional"
 msgstr "Capital Adicional"
+=======
+#: model:account.account.type,name:l10n_pe.account_account_type_EGP_NA_020
+msgid "(+/-) Variación de Mercaderías"
+msgstr "(+/-) Variación de Mercaderías"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_pe
 #: model:account.account.type,name:l10n_pe.account_account_type_EGP_NA_070
@@ -169,6 +192,7 @@ msgid "(+/-)Variación de Materiales Auxiliares, Suministros y Repuestos"
 msgstr "(+/-)Variación de Materiales Auxiliares, Suministros y Repuestos"
 
 #. module: l10n_pe
+<<<<<<< HEAD
 #: model:account.account.type,name:l10n_pe.account_account_type_BG_ACC_60
 msgid "Existencias"
 msgstr "Existencias"
@@ -227,6 +251,11 @@ msgstr "Gastos Pagados por Anticipado"
 #: model:account.account.type,name:l10n_pe.account_account_type_EGP_FU_140
 msgid "Gastos Extraordinarios"
 msgstr "Gastos Extraordinarios"
+=======
+#: model:account.account.type,name:l10n_pe.account_account_type_EGP_NA_050
+msgid "Compras de Envases y Emabalajes"
+msgstr "Compras de Envases y Emabalajes"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_pe
 #: model:account.account.type,name:l10n_pe.account_account_type_EGP_NA_040
@@ -234,6 +263,7 @@ msgid "Compras de Materiales Auxiliares, Suministros y Repuestos"
 msgstr "Compras de Materiales Auxiliares, Suministros y Repuestos"
 
 #. module: l10n_pe
+<<<<<<< HEAD
 #: model:account.account.type,name:l10n_pe.account_account_type_EGP_FU_150
 msgid "Interés Minoritario"
 msgstr "Interés Minoritario"
@@ -327,6 +357,21 @@ msgstr "Participaciones"
 #: model:account.account.type,name:l10n_pe.account_account_type_EGP_FU_055
 msgid "Ganancias (Pérdidas) por Venta de Activos"
 msgstr "Ganancias (Pérdidas) por Venta de Activos"
+=======
+#: model:account.account.type,name:l10n_pe.account_account_type_ORD
+msgid "Cuentas de Orden"
+msgstr "Cuentas de Orden"
+
+#. module: l10n_pe
+#: model:account.account.type,name:l10n_pe.account_account_type_EGP_NA_150
+msgid "Gastos Financieros por Naturaleza"
+msgstr "Gastos Financieros por Naturaleza"
+
+#. module: l10n_pe
+#: model:account.account.type,name:l10n_pe.account_account_type_EGP_NA_100
+msgid "Gastos de Personal, Directores y Gerentes"
+msgstr "Gastos de Personal, Directores y Gerentes"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_pe
 #: model:account.account.type,name:l10n_pe.account_account_type_EGP_NA_090
@@ -334,6 +379,7 @@ msgid "Gastos por Servicios Prestados por Terceros"
 msgstr "Gastos de Servicios Prestados por Terceros"
 
 #. module: l10n_pe
+<<<<<<< HEAD
 #: model:account.account.type,name:l10n_pe.account_account_type_BG_PTN_60
 msgid "Otras Reservas"
 msgstr "Otras Reservas"
@@ -357,6 +403,11 @@ msgstr "Gastos de Venta"
 #: model:account.account.type,name:l10n_pe.account_account_type_BG_ACC_75
 msgid "Otros Activos Corrientes"
 msgstr "Otros Activos Corrientes"
+=======
+#: model:account.account.type,name:l10n_pe.account_account_type_EGP_NA_110
+msgid "Gastos por Tributos"
+msgstr "Gastos por Tributos"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_pe
 #: model:account.account.type,name:l10n_pe.account_account_type_BG_ACN_70
@@ -364,6 +415,7 @@ msgid "Impuesto a la Renta y Participaciones Diferidos Activo"
 msgstr "Impuesto a la Renta y Participaciones Diferidas Activo"
 
 #. module: l10n_pe
+<<<<<<< HEAD
 #: model:account.account.type,name:l10n_pe.account_account_type_BG_PAC_20
 msgid "Cuentas por Pagar Comerciales"
 msgstr "Cuentas por Pagar Comerciales"
@@ -377,6 +429,16 @@ msgstr "Ventas Netas (ingresos operacionales)"
 #: model:account.account.type,name:l10n_pe.account_account_type_BG_PAN_10
 msgid "Deudas a Largo Plazo"
 msgstr "Deudas a Largo Plazo"
+=======
+#: model:account.account.type,name:l10n_pe.account_account_type_EGP_FU_150
+msgid "Interés Minoritario"
+msgstr "Interés Minoritario"
+
+#. module: l10n_pe
+#: model:ir.actions.client,name:l10n_pe.action_client_l10n_pe_menu
+msgid "Open Account Dashboard Menu"
+msgstr "Menú del Panel de Cuentas Abiertas"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_pe
 #: model:account.account.type,name:l10n_pe.account_account_type_EGP_NA_130
@@ -384,11 +446,17 @@ msgid "Pérdida por Medición de Activos No Financieros a Valor Razonable"
 msgstr "Pérdida por Medición de Activos No Financieros a Valor Razonable"
 
 #. module: l10n_pe
+<<<<<<< HEAD
 #: model:account.account.type,name:l10n_pe.account_account_type_view
 msgid "Vista"
 msgstr "Vista"
+=======
+#: model:account.account.type,name:l10n_pe.account_account_type_BG_PTN_70
+msgid "Resultados Acumulados"
+msgstr "Resultados Acumulados"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_pe
-#: model:account.account.type,name:l10n_pe.account_account_type_EGP_NA_080
-msgid "(+/-) Variación de Envases y Embalajes"
-msgstr "(+/-) Variación de Envases y Embalajes"
+#: model:account.account.type,name:l10n_pe.account_account_type_EGP_NA_140
+msgid "Valuación y Deterioro de Activos y Provisiones"
+msgstr "Valuación y Deterioro de Activos y Provisiones"

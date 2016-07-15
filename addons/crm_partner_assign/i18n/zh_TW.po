@@ -3,15 +3,19 @@
 # * crm_partner_assign
 # 
 # Translators:
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2014
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 8.0\n"
+"Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2015-09-08 15:14+0000\n"
 "PO-Revision-Date: 2015-12-04 06:06+0000\n"
+=======
+"POT-Creation-Date: 2015-09-14 10:27+0000\n"
+"PO-Revision-Date: 2015-09-14 09:06+0000\n"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 "Last-Translator: Martin Trigaux\n"
-"Language-Team: Chinese (Taiwan) (http://www.transifex.com/odoo/odoo-8/language/zh_TW/)\n"
+"Language-Team: Chinese (Taiwan) (http://www.transifex.com/odoo/odoo-9/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -19,7 +23,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. module: crm_partner_assign
-#: model:email.template,body_html:crm_partner_assign.email_template_lead_forward_mail
+#: model:mail.template,body_html:crm_partner_assign.email_template_lead_forward_mail
 msgid ""
 "\n"
 "            \n"
@@ -56,55 +60,72 @@ msgid ""
 msgstr ""
 
 #. module: crm_partner_assign
-#: field:crm.lead.report.assign,nbr:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_report_assign_nbr
 msgid "# of Cases"
 msgstr "# 業務量"
 
 #. module: crm_partner_assign
-#: field:crm.partner.report.assign,opp:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_partner_report_assign_opp
 msgid "# of Opportunity"
 msgstr "商機編號"
 
 #. module: crm_partner_assign
-#: code:addons/crm_partner_assign/wizard/crm_channel_interested.py:48
+#: code:addons/crm_partner_assign/wizard/crm_channel_interested.py:30
 #, python-format
 msgid "<p>I am interested by this lead.</p>"
 msgstr ""
 
 #. module: crm_partner_assign
-#: code:addons/crm_partner_assign/wizard/crm_channel_interested.py:53
+#: code:addons/crm_partner_assign/wizard/crm_channel_interested.py:35
 #, python-format
-msgid "<p>I am not interested by this lead. I %scontacted the lead.</p>"
+msgid "<p>I am not interested by this lead. I contacted the lead.</p>"
 msgstr ""
 
 #. module: crm_partner_assign
-#: code:addons/crm_partner_assign/wizard/crm_channel_interested.py:55
+#: code:addons/crm_partner_assign/wizard/crm_channel_interested.py:37
 #, python-format
 msgid ""
 "<p>I am not interested by this lead. I have not contacted the lead.</p>"
 msgstr ""
 
 #. module: crm_partner_assign
-#: field:crm.partner.report.assign,activation:0
-#: view:res.partner:crm_partner_assign.view_res_partner_filter_assign
-#: field:res.partner,activation:0
-#: view:res.partner.activation:crm_partner_assign.res_partner_activation_form
-#: view:res.partner.activation:crm_partner_assign.res_partner_activation_tree
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_crm_lead_geo_assign_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_crm_opportunity_geo_assign_form
+msgid ""
+"<span class=\"oe_grey\" attrs=\"{'invisible':[('partner_latitude','&lt;=',0)]}\">N </span>\n"
+"                                <span class=\"oe_grey\" attrs=\"{'invisible':[('partner_latitude','&gt;=',0)]}\">S </span>"
+msgstr ""
+
+#. module: crm_partner_assign
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_crm_lead_geo_assign_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_crm_opportunity_geo_assign_form
+msgid ""
+"<span class=\"oe_grey\" attrs=\"{'invisible':[('partner_longitude','&lt;=',0)]}\">E </span>\n"
+"                                <span class=\"oe_grey\" attrs=\"{'invisible':[('partner_longitude','&gt;=',0)]}\">W </span>\n"
+"                                <span class=\"oe_grey\">) </span>"
+msgstr ""
+
+#. module: crm_partner_assign
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_partner_report_assign_activation
+#: model:ir.model.fields,field_description:crm_partner_assign.field_res_partner_activation
+#: model:ir.ui.view,arch_db:crm_partner_assign.res_partner_activation_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.res_partner_activation_tree
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_res_partner_filter_assign
 msgid "Activation"
 msgstr ""
 
 #. module: crm_partner_assign
-#: field:res.partner.grade,active:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_res_partner_grade_active
 msgid "Active"
-msgstr "生效"
+msgstr "活躍"
 
 #. module: crm_partner_assign
-#: field:crm.lead.report.assign,date_assign:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_report_assign_date_assign
 msgid "Assign Date"
 msgstr "分配日期"
 
 #. module: crm_partner_assign
-#: view:crm.lead.report.assign:crm_partner_assign.view_report_crm_lead_assign_filter
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_report_crm_lead_assign_filter
 msgid "Assign Month"
 msgstr ""
 
@@ -114,46 +135,50 @@ msgid "Assign salesman of assigned partner"
 msgstr ""
 
 #. module: crm_partner_assign
-#: field:crm.lead,date_assign:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_date_assign
 msgid "Assignation Date"
 msgstr "指定日期"
 
 #. module: crm_partner_assign
-#: model:crm.case.stage,name:crm_partner_assign.stage_portal_lead_assigned
+#: model:crm.stage,name:crm_partner_assign.stage_portal_lead_assigned
 msgid "Assigned"
 msgstr ""
 
 #. module: crm_partner_assign
-#: view:res.partner:crm_partner_assign.view_crm_partner_assign_form
-#: field:res.partner,opportunity_assigned_ids:0
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_crm_partner_assign_form
 msgid "Assigned Opportunities"
 msgstr "轉為商機"
 
 #. module: crm_partner_assign
-#: view:crm.lead:crm_partner_assign.crm_lead_partner_filter
-#: view:crm.lead:crm_partner_assign.crm_opportunity_partner_filter
-#: view:crm.lead:crm_partner_assign.view_crm_lead_geo_assign_form
-#: view:crm.lead:crm_partner_assign.view_crm_opportunity_geo_assign_form
-#: field:crm.lead,partner_assigned_id:0
-#: field:crm.lead.assignation,partner_assigned_id:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_assignation_partner_assigned_id
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_partner_assigned_id
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_lead_partner_filter
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_opportunity_partner_filter
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_crm_lead_geo_assign_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_crm_opportunity_geo_assign_form
 msgid "Assigned Partner"
 msgstr "指定的業務夥伴"
 
 #. module: crm_partner_assign
-#: view:crm.lead:crm_partner_assign.view_crm_lead_geo_assign_form
-#: view:crm.lead:crm_partner_assign.view_crm_opportunity_geo_assign_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_crm_lead_geo_assign_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_crm_opportunity_geo_assign_form
 msgid "Automatic Assignation"
 msgstr ""
 
 #. module: crm_partner_assign
-#: help:crm.lead.forward.to.partner,body:0
+#: model:ir.model.fields,help:crm_partner_assign.field_crm_lead_forward_to_partner_body
 msgid "Automatically sanitized HTML contents"
 msgstr ""
 
 #. module: crm_partner_assign
-#: field:crm.lead.report.assign,probability:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_report_assign_probability
 msgid "Avg Probability"
 msgstr "平均概率"
+
+#. module: crm_partner_assign
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_opportunity_portal_tree
+msgid "Avg. of Probability"
+msgstr ""
 
 #. module: crm_partner_assign
 #: model:ir.model,name:crm_partner_assign.model_crm_lead_report_assign
@@ -166,182 +191,166 @@ msgid "CRM Partner Report"
 msgstr "CRM業務夥伴報表"
 
 #. module: crm_partner_assign
-#: view:crm.lead.channel.interested:crm_partner_assign.crm_lead_channel_interested_form
-#: view:crm.lead.forward.to.partner:crm_partner_assign.crm_lead_forward_to_partner_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_lead_channel_interested_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_lead_forward_to_partner_form
 msgid "Cancel"
 msgstr "取消"
 
 #. module: crm_partner_assign
-#: view:crm.lead:crm_partner_assign.crm_opportunity_portal_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_opportunity_portal_form
 msgid "Categorization"
-msgstr ""
+msgstr "分類"
 
 #. module: crm_partner_assign
-#: field:crm.lead.report.assign,date_closed:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_report_assign_date_closed
 msgid "Close Date"
 msgstr "結束日期"
 
 #. module: crm_partner_assign
-#: field:crm.lead.channel.interested,comment:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_channel_interested_comment
 msgid "Comment"
 msgstr "評語"
 
 #. module: crm_partner_assign
-#: view:crm.lead:crm_partner_assign.crm_opportunity_portal_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_opportunity_portal_form
 msgid "Communication"
-msgstr ""
+msgstr "通訊"
 
 #. module: crm_partner_assign
-#: view:crm.lead.report.assign:crm_partner_assign.view_report_crm_lead_assign_filter
-#: field:crm.lead.report.assign,company_id:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_report_assign_company_id
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_report_crm_lead_assign_filter
 msgid "Company"
 msgstr "公司"
 
 #. module: crm_partner_assign
-#: view:crm.lead.channel.interested:crm_partner_assign.crm_lead_channel_interested_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_lead_channel_interested_form
 msgid "Confirm"
-msgstr ""
+msgstr "確認"
 
 #. module: crm_partner_assign
-#: view:crm.lead:crm_partner_assign.crm_opportunity_portal_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_opportunity_portal_form
 msgid "Contact"
-msgstr ""
+msgstr "聯絡人"
 
 #. module: crm_partner_assign
-#: field:crm.lead.forward.to.partner,body:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_forward_to_partner_body
 msgid "Contents"
 msgstr "內容"
 
 #. module: crm_partner_assign
-#: view:res.partner:crm_partner_assign.view_crm_partner_assign_form
-msgid "Convert to Opportunity"
-msgstr "轉換為商機"
-
-#. module: crm_partner_assign
-#: view:crm.lead.report.assign:crm_partner_assign.view_report_crm_lead_assign_filter
-#: field:crm.lead.report.assign,country_id:0
-#: field:crm.partner.report.assign,country_id:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_report_assign_country_id
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_partner_report_assign_country_id
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_report_crm_lead_assign_filter
 msgid "Country"
-msgstr "國家"
+msgstr "國家/地區"
 
 #. module: crm_partner_assign
-#: field:crm.lead.report.assign,create_date:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_report_assign_create_date
 msgid "Create Date"
 msgstr "建立日期"
 
 #. module: crm_partner_assign
-#: field:crm.lead.assignation,create_uid:0
-#: field:crm.lead.channel.interested,create_uid:0
-#: field:crm.lead.forward.to.partner,create_uid:0
-#: field:res.partner.activation,create_uid:0
-#: field:res.partner.grade,create_uid:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_assignation_create_uid
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_channel_interested_create_uid
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_forward_to_partner_create_uid
+#: model:ir.model.fields,field_description:crm_partner_assign.field_res_partner_activation_create_uid
+#: model:ir.model.fields,field_description:crm_partner_assign.field_res_partner_grade_create_uid
 msgid "Created by"
+<<<<<<< HEAD
 msgstr "建立人"
+=======
+msgstr "建立者"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: crm_partner_assign
-#: field:crm.lead.assignation,create_date:0
-#: field:crm.lead.channel.interested,create_date:0
-#: field:crm.lead.forward.to.partner,create_date:0
-#: field:res.partner.activation,create_date:0
-#: field:res.partner.grade,create_date:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_assignation_create_date
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_channel_interested_create_date
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_forward_to_partner_create_date
+#: model:ir.model.fields,field_description:crm_partner_assign.field_res_partner_activation_create_date
+#: model:ir.model.fields,field_description:crm_partner_assign.field_res_partner_grade_create_date
 msgid "Created on"
-msgstr ""
+msgstr "建立於"
 
 #. module: crm_partner_assign
-#: view:crm.lead:crm_partner_assign.crm_lead_partner_filter
-#: view:crm.lead:crm_partner_assign.crm_opportunity_portal_form
-#: view:crm.lead:crm_partner_assign.crm_opportunity_portal_tree
-#: field:crm.lead.report.assign,partner_id:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_report_assign_partner_id
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_opportunity_portal_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_opportunity_portal_tree
 msgid "Customer"
 msgstr "客戶"
 
 #. module: crm_partner_assign
-#: view:crm.lead:crm_partner_assign.crm_opportunity_portal_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_opportunity_portal_form
 msgid "Customer Name"
-msgstr ""
+msgstr "客戶名稱"
 
 #. module: crm_partner_assign
-#: view:crm.partner.report.assign:crm_partner_assign.view_report_crm_partner_assign_filter
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_report_crm_partner_assign_filter
 msgid "Date Partnership"
 msgstr ""
 
 #. module: crm_partner_assign
-#: view:crm.partner.report.assign:crm_partner_assign.view_report_crm_partner_assign_filter
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_report_crm_partner_assign_filter
 msgid "Date Review"
 msgstr ""
 
 #. module: crm_partner_assign
-#: field:crm.lead.report.assign,delay_open:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_report_assign_delay_open
 msgid "Delay to Assign"
 msgstr ""
 
 #. module: crm_partner_assign
-#: field:crm.lead.report.assign,delay_close:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_report_assign_delay_close
 msgid "Delay to Close"
 msgstr "延遲關閉"
 
 #. module: crm_partner_assign
-#: view:crm.lead:crm_partner_assign.crm_opportunity_portal_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_opportunity_portal_form
 msgid "Details"
-msgstr ""
+msgstr "詳情"
 
 #. module: crm_partner_assign
-#: field:crm.lead.channel.interested,contacted:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_channel_interested_contacted
 msgid "Did you contact the lead?"
 msgstr ""
 
 #. module: crm_partner_assign
-#: view:crm.lead.channel.interested:crm_partner_assign.crm_lead_channel_interested_form
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_assignation_display_name
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_channel_interested_display_name
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_forward_to_partner_display_name
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_report_assign_display_name
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_partner_report_assign_display_name
+#: model:ir.model.fields,field_description:crm_partner_assign.field_res_partner_activation_display_name
+#: model:ir.model.fields,field_description:crm_partner_assign.field_res_partner_grade_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: crm_partner_assign
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_lead_channel_interested_form
 msgid "Do you have contacted the customer?"
 msgstr ""
 
 #. module: crm_partner_assign
-#: code:addons/crm_partner_assign/wizard/crm_forward_to_partner.py:102
-#: code:addons/crm_partner_assign/wizard/crm_forward_to_partner.py:105
-#, python-format
-msgid "Email Error"
-msgstr ""
-
-#. module: crm_partner_assign
-#: view:crm.lead.forward.to.partner:crm_partner_assign.crm_lead_forward_to_partner_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_lead_forward_to_partner_form
 msgid "Email Template"
 msgstr ""
 
 #. module: crm_partner_assign
-#: code:addons/crm_partner_assign/wizard/crm_forward_to_partner.py:87
-#, python-format
-msgid "Email Template Error"
-msgstr ""
-
-#. module: crm_partner_assign
-#: code:addons/crm_partner_assign/crm_lead.py:34
-#: code:addons/crm_partner_assign/wizard/crm_channel_interested.py:44
-#, python-format
-msgid "Error!"
-msgstr ""
-
-#. module: crm_partner_assign
-#: view:res.partner:crm_partner_assign.view_crm_partner_assign_form
-msgid "Escalate"
-msgstr "提升"
-
-#. module: crm_partner_assign
-#: view:crm.lead:crm_partner_assign.crm_opportunity_portal_tree
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_opportunity_portal_tree
 msgid "Expected Revenues"
-msgstr ""
+msgstr "預期收入"
 
 #. module: crm_partner_assign
-#: view:crm.lead.report.assign:crm_partner_assign.view_report_crm_lead_assign_filter
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_report_crm_lead_assign_filter
 msgid "Extended Filters..."
-msgstr "增加篩選條件"
+msgstr "增加篩選條件..."
 
 #. module: crm_partner_assign
-#: field:crm.lead.forward.to.partner,partner_id:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_forward_to_partner_partner_id
 msgid "Forward Leads To"
 msgstr ""
 
 #. module: crm_partner_assign
-#: field:crm.lead.forward.to.partner,forward_type:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_forward_to_partner_forward_type
 msgid "Forward selected leads to"
 msgstr ""
 
@@ -352,64 +361,45 @@ msgid "Forward to Partner"
 msgstr "轉發給業務夥伴"
 
 #. module: crm_partner_assign
-#: model:email.template,subject:crm_partner_assign.email_template_lead_forward_mail
+#: model:mail.template,subject:crm_partner_assign.email_template_lead_forward_mail
 msgid "Fwd: Lead: ${ctx['partner_id'].name}"
 msgstr ""
 
 #. module: crm_partner_assign
-#: field:crm.lead,partner_latitude:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_partner_latitude
 msgid "Geo Latitude"
 msgstr "Geo 緯度"
 
 #. module: crm_partner_assign
-#: view:res.partner:crm_partner_assign.view_crm_partner_assign_form
-msgid "Geo Localization"
-msgstr "Geo 定位"
-
-#. module: crm_partner_assign
-#: view:res.partner:crm_partner_assign.view_crm_partner_assign_form
-msgid "Geo Localize"
-msgstr "Geo 定位"
-
-#. module: crm_partner_assign
-#: field:crm.lead,partner_longitude:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_partner_longitude
 msgid "Geo Longitude"
 msgstr "Geo 經度"
 
 #. module: crm_partner_assign
-#: view:crm.lead:crm_partner_assign.view_crm_lead_geo_assign_form
-#: view:crm.lead:crm_partner_assign.view_crm_opportunity_geo_assign_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_crm_lead_geo_assign_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_crm_opportunity_geo_assign_form
 msgid "Geolocation"
 msgstr ""
 
 #. module: crm_partner_assign
-#: help:res.partner,partner_weight:0 help:res.partner.grade,partner_weight:0
+#: model:ir.model.fields,help:crm_partner_assign.field_res_partner_grade_partner_weight
+#: model:ir.model.fields,help:crm_partner_assign.field_res_partner_partner_weight
 msgid ""
 "Gives the probability to assign a lead to this partner. (0 means no "
 "assignation.)"
 msgstr "為潛在客戶指定一個業務夥伴的概率（表示沒指派）"
 
 #. module: crm_partner_assign
-#: field:crm.lead.report.assign,grade_id:0
-#: field:crm.partner.report.assign,grade_id:0 field:res.partner,grade_id:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_report_assign_grade_id
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_partner_report_assign_grade_id
 msgid "Grade"
 msgstr "級別"
 
 #. module: crm_partner_assign
-#: field:res.partner.grade,name:0
-msgid "Grade Name"
-msgstr "級別名稱"
-
-#. module: crm_partner_assign
-#: field:res.partner,partner_weight:0 field:res.partner.grade,partner_weight:0
-msgid "Grade Weight"
-msgstr ""
-
-#. module: crm_partner_assign
-#: view:crm.lead.report.assign:crm_partner_assign.view_report_crm_lead_assign_filter
-#: view:crm.partner.report.assign:crm_partner_assign.view_report_crm_partner_assign_filter
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_report_crm_lead_assign_filter
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_report_crm_partner_assign_filter
 msgid "Group By"
-msgstr ""
+msgstr "分組方式"
 
 #. module: crm_partner_assign
 #: selection:crm.lead.report.assign,priority:0
@@ -417,46 +407,50 @@ msgid "High"
 msgstr "高"
 
 #. module: crm_partner_assign
-#: view:crm.lead:crm_partner_assign.crm_lead_portal_form
-#: view:crm.lead:crm_partner_assign.crm_lead_portal_tree
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_lead_portal_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_lead_portal_tree
 msgid "I'm interested"
 msgstr ""
 
 #. module: crm_partner_assign
-#: view:crm.lead:crm_partner_assign.crm_lead_portal_form
-#: view:crm.lead:crm_partner_assign.crm_lead_portal_tree
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_lead_portal_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_lead_portal_tree
 msgid "I'm not interested"
 msgstr ""
 
 #. module: crm_partner_assign
-#: field:crm.lead.assignation,id:0 field:crm.lead.channel.interested,id:0
-#: field:crm.lead.forward.to.partner,id:0 field:crm.lead.report.assign,id:0
-#: field:crm.partner.report.assign,id:0 field:res.partner.activation,id:0
-#: field:res.partner.grade,id:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_assignation_id
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_channel_interested_id
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_forward_to_partner_id
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_report_assign_id
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_partner_report_assign_id
+#: model:ir.model.fields,field_description:crm_partner_assign.field_res_partner_activation_id
+#: model:ir.model.fields,field_description:crm_partner_assign.field_res_partner_grade_id
 msgid "ID"
-msgstr ""
+msgstr "編號"
 
 #. module: crm_partner_assign
-#: field:res.partner,implemented_partner_ids:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_res_partner_implemented_partner_ids
 msgid "Implementation References"
 msgstr ""
 
 #. module: crm_partner_assign
-#: field:res.partner,assigned_partner_id:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_res_partner_assigned_partner_id
 msgid "Implemented by"
 msgstr ""
 
 #. module: crm_partner_assign
-#: field:crm.lead.channel.interested,interested:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_channel_interested_interested
 msgid "Interested by this lead"
 msgstr ""
 
 #. module: crm_partner_assign
-#: field:crm.partner.report.assign,period_id:0
-msgid "Invoice Period"
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_partner_report_assign_date
+msgid "Invoice Account Date"
 msgstr ""
 
 #. module: crm_partner_assign
+<<<<<<< HEAD
 #: field:crm.lead.assignation,write_uid:0
 #: field:crm.lead.channel.interested,write_uid:0
 #: field:crm.lead.forward.to.partner,write_uid:0
@@ -464,40 +458,65 @@ msgstr ""
 #: field:res.partner.grade,write_uid:0
 msgid "Last Updated by"
 msgstr "最後更新人"
+=======
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_assignation___last_update
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_channel_interested___last_update
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_forward_to_partner___last_update
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_report_assign___last_update
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_partner_report_assign___last_update
+#: model:ir.model.fields,field_description:crm_partner_assign.field_res_partner_activation___last_update
+#: model:ir.model.fields,field_description:crm_partner_assign.field_res_partner_grade___last_update
+msgid "Last Modified on"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: crm_partner_assign
-#: field:crm.lead.assignation,write_date:0
-#: field:crm.lead.channel.interested,write_date:0
-#: field:crm.lead.forward.to.partner,write_date:0
-#: field:res.partner.activation,write_date:0
-#: field:res.partner.grade,write_date:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_assignation_write_uid
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_channel_interested_write_uid
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_forward_to_partner_write_uid
+#: model:ir.model.fields,field_description:crm_partner_assign.field_res_partner_activation_write_uid
+#: model:ir.model.fields,field_description:crm_partner_assign.field_res_partner_grade_write_uid
+msgid "Last Updated by"
+msgstr "最後更新："
+
+#. module: crm_partner_assign
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_assignation_write_date
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_channel_interested_write_date
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_forward_to_partner_write_date
+#: model:ir.model.fields,field_description:crm_partner_assign.field_res_partner_activation_write_date
+#: model:ir.model.fields,field_description:crm_partner_assign.field_res_partner_grade_write_date
 msgid "Last Updated on"
+<<<<<<< HEAD
 msgstr "最後更新時間"
+=======
+msgstr "最後更新於"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: crm_partner_assign
-#: help:crm.lead,date_assign:0
+#: model:ir.model.fields,help:crm_partner_assign.field_crm_lead_date_assign
 msgid "Last date this case was forwarded/assigned to a partner"
 msgstr "這業務指定/轉發的業務夥伴的最後期限"
 
 #. module: crm_partner_assign
-#: field:crm.partner.report.assign,date_review:0
-#: field:res.partner,date_review:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_partner_report_assign_date_review
+#: model:ir.model.fields,field_description:crm_partner_assign.field_res_partner_date_review
 msgid "Latest Partner Review"
 msgstr ""
 
 #. module: crm_partner_assign
-#: field:crm.lead.assignation,lead_id:0
 #: selection:crm.lead.report.assign,type:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_assignation_lead_id
 msgid "Lead"
 msgstr "潛在客戶"
 
 #. module: crm_partner_assign
-#: field:crm.lead.assignation,lead_link:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_assignation_lead_link
 msgid "Lead  Single Links"
 msgstr ""
 
 #. module: crm_partner_assign
-#: view:crm.lead.report.assign:crm_partner_assign.view_report_crm_lead_assign_graph
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_report_crm_lead_assign_graph
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_report_crm_lead_assign_pivot
 msgid "Lead Assign"
 msgstr "潛在客戶指定"
 
@@ -507,7 +526,7 @@ msgid "Lead Feedback"
 msgstr ""
 
 #. module: crm_partner_assign
-#: field:crm.lead.assignation,lead_location:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_assignation_lead_location
 msgid "Lead Location"
 msgstr ""
 
@@ -517,24 +536,41 @@ msgid "Lead/Opportunity"
 msgstr "潛在客戶/商機"
 
 #. module: crm_partner_assign
-#: view:crm.lead:crm_partner_assign.crm_lead_portal_form
-#: view:crm.lead:crm_partner_assign.crm_lead_portal_tree
-#: view:crm.lead:crm_partner_assign.crm_opportunity_portal_form
-#: view:crm.lead:crm_partner_assign.crm_opportunity_portal_tree
 #: model:ir.actions.act_window,name:crm_partner_assign.action_portal_leads
 #: model:ir.ui.menu,name:crm_partner_assign.openerp_portal_menu_sales_leads_current
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_lead_portal_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_lead_portal_tree
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_opportunity_portal_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_opportunity_portal_tree
 msgid "Leads"
-msgstr ""
+msgstr "潛在客戶"
 
 #. module: crm_partner_assign
 #: model:ir.ui.menu,name:crm_partner_assign.portal_leads
 msgid "Leads & Opportunities"
+msgstr "潛在客戶與機會"
+
+#. module: crm_partner_assign
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_report_crm_lead_assign_filter
+msgid "Leads Analysis"
+msgstr "潛在客戶分析"
+
+#. module: crm_partner_assign
+#: model:ir.model.fields,field_description:crm_partner_assign.field_res_partner_grade_id_9621
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_partner_grade_form
+msgid "Level"
+msgstr "級別"
+
+#. module: crm_partner_assign
+#: model:ir.model.fields,field_description:crm_partner_assign.field_res_partner_grade_name
+msgid "Level Name"
 msgstr ""
 
 #. module: crm_partner_assign
-#: view:crm.lead.report.assign:crm_partner_assign.view_report_crm_lead_assign_filter
-msgid "Leads Analysis"
-msgstr "潛在客戶分析"
+#: model:ir.model.fields,field_description:crm_partner_assign.field_res_partner_grade_partner_weight
+#: model:ir.model.fields,field_description:crm_partner_assign.field_res_partner_partner_weight
+msgid "Level Weight"
+msgstr ""
 
 #. module: crm_partner_assign
 #: selection:crm.lead.report.assign,priority:0
@@ -542,48 +578,48 @@ msgid "Low"
 msgstr "低"
 
 #. module: crm_partner_assign
-#: field:crm.lead.report.assign,probability_max:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_report_assign_probability_max
 msgid "Max Probability"
 msgstr "最大可能"
 
 #. module: crm_partner_assign
-#: view:crm.lead:crm_partner_assign.crm_lead_partner_filter
-#: view:crm.lead:crm_partner_assign.crm_opportunity_partner_filter
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_lead_partner_filter
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_opportunity_partner_filter
 msgid "My Assigned Partners"
 msgstr ""
 
 #. module: crm_partner_assign
-#: field:res.partner.activation,name:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_res_partner_activation_name
 msgid "Name"
 msgstr "名稱"
 
 #. module: crm_partner_assign
-#: field:res.partner,date_review_next:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_res_partner_date_review_next
 msgid "Next Partner Review"
 msgstr ""
 
 #. module: crm_partner_assign
 #: selection:crm.lead.report.assign,priority:0
 msgid "Normal"
-msgstr "普通"
+msgstr "正常"
 
 #. module: crm_partner_assign
-#: help:crm.lead.report.assign,delay_close:0
+#: model:ir.model.fields,help:crm_partner_assign.field_crm_lead_report_assign_delay_close
 msgid "Number of Days to close the case"
 msgstr "到期天數"
 
 #. module: crm_partner_assign
-#: help:crm.lead.report.assign,delay_open:0
+#: model:ir.model.fields,help:crm_partner_assign.field_crm_lead_report_assign_delay_open
 msgid "Number of Days to open the case"
 msgstr "業務開啟的天數"
 
 #. module: crm_partner_assign
-#: view:crm.lead.channel.interested:crm_partner_assign.crm_lead_channel_interested_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_lead_channel_interested_form
 msgid "Once the lead is processed, it will be in your \"Opportunities\" menu."
 msgstr ""
 
 #. module: crm_partner_assign
-#: field:crm.lead.report.assign,opening_date:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_report_assign_opening_date
 msgid "Opening Date"
 msgstr "開啟日期"
 
@@ -597,35 +633,35 @@ msgstr "商機指定分析"
 #: model:ir.actions.act_window,name:crm_partner_assign.action_portal_opportunities
 #: model:ir.ui.menu,name:crm_partner_assign.openerp_portal_menu_sales_leads_current1
 msgid "Opportunities"
-msgstr ""
+msgstr "機會"
 
 #. module: crm_partner_assign
-#: view:crm.partner.report.assign:crm_partner_assign.view_report_crm_partner_assign_graph
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_report_crm_partner_assign_graph
 msgid "Opportunities Assignment Analysis"
 msgstr "商機指定分析"
 
 #. module: crm_partner_assign
-#: view:crm.lead:crm_partner_assign.crm_opportunity_portal_form
-#: view:crm.lead:crm_partner_assign.crm_opportunity_portal_tree
 #: selection:crm.lead.report.assign,type:0
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_opportunity_portal_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_opportunity_portal_tree
 msgid "Opportunity"
 msgstr "商機"
 
 #. module: crm_partner_assign
-#: field:crm.lead.report.assign,delay_expected:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_report_assign_delay_expected
 msgid "Overpassed Deadline"
 msgstr "超過截止日期"
 
 #. module: crm_partner_assign
-#: field:crm.lead.report.assign,partner_assigned_id:0
-#: view:crm.partner.report.assign:crm_partner_assign.view_report_crm_partner_assign_filter
-#: field:crm.partner.report.assign,partner_id:0
 #: model:ir.model,name:crm_partner_assign.model_res_partner
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_report_assign_partner_assigned_id
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_partner_report_assign_partner_id
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_report_crm_partner_assign_filter
 msgid "Partner"
-msgstr "業務夥伴"
+msgstr "伙伴"
 
 #. module: crm_partner_assign
-#: view:res.partner:crm_partner_assign.view_crm_partner_assign_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_crm_partner_assign_form
 msgid "Partner Activation"
 msgstr ""
 
@@ -636,177 +672,184 @@ msgid "Partner Activations"
 msgstr ""
 
 #. module: crm_partner_assign
-#: view:crm.lead:crm_partner_assign.view_crm_lead_geo_assign_form
-#: view:crm.lead:crm_partner_assign.view_crm_opportunity_geo_assign_form
-#: field:crm.lead.assignation,forward_id:0
-#: field:crm.lead.forward.to.partner,assignation_lines:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_assignation_forward_id
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_forward_to_partner_assignation_lines
 msgid "Partner Assignation"
 msgstr "指定業務夥伴"
 
 #. module: crm_partner_assign
 #: model:ir.actions.act_window,name:crm_partner_assign.res_partner_grade_action
 #: model:ir.ui.menu,name:crm_partner_assign.menu_res_partner_grade_action
-#: view:res.partner.grade:crm_partner_assign.view_partner_grade_form
-#: view:res.partner.grade:crm_partner_assign.view_partner_grade_tree
-msgid "Partner Grade"
-msgstr "業務夥伴級別"
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_partner_grade_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_partner_grade_tree
+msgid "Partner Level"
+msgstr ""
 
 #. module: crm_partner_assign
-#: field:crm.lead.assignation,partner_location:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_assignation_partner_location
 msgid "Partner Location"
 msgstr ""
 
 #. module: crm_partner_assign
-#: view:crm.lead:crm_partner_assign.crm_lead_portal_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_lead_portal_form
 msgid "Partner Name"
 msgstr ""
 
 #. module: crm_partner_assign
-#: view:res.partner:crm_partner_assign.view_crm_partner_assign_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_crm_partner_assign_form
 msgid "Partner Review"
 msgstr ""
 
 #. module: crm_partner_assign
-#: view:crm.partner.report.assign:crm_partner_assign.view_report_crm_partner_assign_filter
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_report_crm_partner_assign_filter
 msgid "Partner assigned Analysis"
 msgstr "業務夥伴分配分析"
 
 #. module: crm_partner_assign
-#: help:crm.lead,partner_assigned_id:0
+#: model:ir.model.fields,help:crm_partner_assign.field_crm_lead_partner_assigned_id
 msgid "Partner this case has been forwarded/assigned to."
 msgstr "這業務的業務夥伴已提出/已指定"
 
 #. module: crm_partner_assign
 #: model:ir.actions.act_window,name:crm_partner_assign.action_report_crm_partner_assign
-#: model:ir.ui.menu,name:crm_partner_assign.menu_report_crm_partner_assign_tree
 msgid "Partnership Analysis"
 msgstr "業務夥伴分析"
 
 #. module: crm_partner_assign
-#: field:crm.partner.report.assign,date_partnership:0
-#: field:res.partner,date_partnership:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_partner_report_assign_date_partnership
+#: model:ir.model.fields,field_description:crm_partner_assign.field_res_partner_date_partnership
 msgid "Partnership Date"
 msgstr ""
 
 #. module: crm_partner_assign
-#: field:crm.lead.report.assign,planned_revenue:0
+#: model:ir.ui.menu,name:crm_partner_assign.menu_report_crm_partner_assign_tree
+msgid "Partnerships"
+msgstr ""
+
+#. module: crm_partner_assign
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_report_assign_planned_revenue
 msgid "Planned Revenue"
 msgstr "計劃收入"
 
 #. module: crm_partner_assign
-#: code:addons/crm_partner_assign/wizard/crm_forward_to_partner.py:92
-#, python-format
-msgid "Portal Group Error"
-msgstr ""
-
-#. module: crm_partner_assign
-#: view:crm.lead:crm_partner_assign.crm_opportunity_portal_form
-#: field:crm.lead.report.assign,priority:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_report_assign_priority
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_opportunity_portal_form
 msgid "Priority"
-msgstr "優先級"
+msgstr "優先次序"
 
 #. module: crm_partner_assign
-#: field:crm.lead.report.assign,probable_revenue:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_report_assign_probable_revenue
 msgid "Probable Revenue"
 msgstr "預計收入"
 
 #. module: crm_partner_assign
-#: view:crm.lead.report.assign:crm_partner_assign.view_report_crm_lead_assign_filter
-#: field:crm.lead.report.assign,section_id:0
-#: view:crm.partner.report.assign:crm_partner_assign.view_report_crm_partner_assign_filter
-#: field:crm.partner.report.assign,section_id:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_report_assign_team_id
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_partner_report_assign_team_id
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_report_crm_lead_assign_filter
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_report_crm_partner_assign_filter
 msgid "Sales Team"
 msgstr "銷售團隊"
 
 #. module: crm_partner_assign
-#: view:crm.lead.report.assign:crm_partner_assign.view_report_crm_lead_assign_filter
-#: view:crm.partner.report.assign:crm_partner_assign.view_report_crm_partner_assign_filter
-#: view:res.partner:crm_partner_assign.view_res_partner_filter_assign
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_report_crm_lead_assign_filter
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_report_crm_partner_assign_filter
 msgid "Salesperson"
 msgstr "銷售人員"
 
 #. module: crm_partner_assign
-#: view:crm.lead.forward.to.partner:crm_partner_assign.crm_lead_forward_to_partner_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_lead_forward_to_partner_form
 msgid "Send"
-msgstr "發送"
+msgstr "傳送"
 
 #. module: crm_partner_assign
-#: view:crm.lead:crm_partner_assign.view_crm_lead_geo_assign_form
-#: view:crm.lead:crm_partner_assign.view_crm_opportunity_geo_assign_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_crm_lead_geo_assign_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_crm_opportunity_geo_assign_form
 msgid "Send Email"
 msgstr ""
 
 #. module: crm_partner_assign
-#: view:crm.lead.channel.interested:crm_partner_assign.crm_lead_channel_interested_form
-#: view:crm.lead.forward.to.partner:crm_partner_assign.crm_lead_forward_to_partner_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_lead_channel_interested_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_lead_forward_to_partner_form
 msgid "Send Mail"
 msgstr "發送郵件"
 
 #. module: crm_partner_assign
-#: field:res.partner.activation,sequence:0 field:res.partner.grade,sequence:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_res_partner_activation_sequence
+#: model:ir.model.fields,field_description:crm_partner_assign.field_res_partner_grade_sequence
 msgid "Sequence"
-msgstr "順序"
+msgstr "序列"
 
 #. module: crm_partner_assign
-#: view:crm.lead:crm_partner_assign.crm_opportunity_partner_filter
-#: view:crm.lead.report.assign:crm_partner_assign.view_report_crm_lead_assign_filter
-#: field:crm.lead.report.assign,stage_id:0
+#: code:addons/crm_partner_assign/wizard/crm_forward_to_partner.py:84
+#, python-format
+msgid "Set an email address for the partner %s"
+msgstr ""
+
+#. module: crm_partner_assign
+#: code:addons/crm_partner_assign/wizard/crm_forward_to_partner.py:82
+#, python-format
+msgid "Set an email address for the partner(s): %s"
+msgstr ""
+
+#. module: crm_partner_assign
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_report_assign_stage_id
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_report_crm_lead_assign_filter
 msgid "Stage"
 msgstr "階段"
 
 #. module: crm_partner_assign
-#: view:crm.lead:crm_partner_assign.crm_lead_portal_tree
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_lead_portal_tree
 msgid "Subject"
-msgstr "主題"
+msgstr "主旨"
 
 #. module: crm_partner_assign
-#: code:addons/crm_partner_assign/crm_lead.py:34
+#: code:addons/crm_partner_assign/crm_lead.py:17
 #, python-format
 msgid "The CRM Channel Interested Action is missing"
 msgstr ""
 
 #. module: crm_partner_assign
-#: code:addons/crm_partner_assign/wizard/crm_forward_to_partner.py:88
+#: code:addons/crm_partner_assign/wizard/crm_forward_to_partner.py:69
 #, python-format
 msgid "The Forward Email Template is not in the database"
 msgstr ""
 
 #. module: crm_partner_assign
-#: code:addons/crm_partner_assign/wizard/crm_forward_to_partner.py:93
+#: code:addons/crm_partner_assign/wizard/crm_forward_to_partner.py:73
 #, python-format
 msgid "The Portal group cannot be found"
 msgstr ""
 
 #. module: crm_partner_assign
-#: help:crm.lead.channel.interested,contacted:0
+#: model:ir.model.fields,help:crm_partner_assign.field_crm_lead_channel_interested_contacted
 msgid "The lead has been contacted"
 msgstr ""
 
 #. module: crm_partner_assign
-#: model:crm.case.stage,name:crm_partner_assign.stage_portal_lead_recycle
+#: model:crm.stage,name:crm_partner_assign.stage_portal_lead_recycle
 msgid "To Recycle"
 msgstr ""
 
 #. module: crm_partner_assign
-#: field:crm.partner.report.assign,turnover:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_partner_report_assign_turnover
 msgid "Turnover"
 msgstr "營業額"
 
 #. module: crm_partner_assign
-#: field:crm.lead.report.assign,type:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_report_assign_type
 msgid "Type"
 msgstr "類型"
 
 #. module: crm_partner_assign
-#: help:crm.lead.report.assign,type:0
+#: model:ir.model.fields,help:crm_partner_assign.field_crm_lead_report_assign_type
 msgid "Type is used to separate Leads and Opportunities"
-msgstr "類型用於區分線索和商機"
+msgstr "類型用於區分潛在客戶和商機"
 
 #. module: crm_partner_assign
-#: field:crm.lead.report.assign,user_id:0
-#: field:crm.partner.report.assign,user_id:0
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead_report_assign_user_id
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_partner_report_assign_user_id
 msgid "User"
-msgstr "使用者"
+msgstr "用戶"
 
 #. module: crm_partner_assign
 #: selection:crm.lead.report.assign,priority:0
@@ -814,27 +857,22 @@ msgid "Very High"
 msgstr ""
 
 #. module: crm_partner_assign
-#: selection:crm.lead.report.assign,priority:0
-msgid "Very Low"
-msgstr ""
-
-#. module: crm_partner_assign
-#: help:crm.lead.channel.interested,comment:0
+#: model:ir.model.fields,help:crm_partner_assign.field_crm_lead_channel_interested_comment
 msgid "What are the elements that have led to this decision?"
 msgstr ""
 
 #. module: crm_partner_assign
-#: view:crm.lead.channel.interested:crm_partner_assign.crm_lead_channel_interested_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_lead_channel_interested_form
 msgid "What is the next action? When? What is the expected revenue?"
 msgstr ""
 
 #. module: crm_partner_assign
-#: view:crm.lead.channel.interested:crm_partner_assign.crm_lead_channel_interested_form
+#: model:ir.ui.view,arch_db:crm_partner_assign.crm_lead_channel_interested_form
 msgid "Why aren't you interested by this lead?"
 msgstr ""
 
 #. module: crm_partner_assign
-#: code:addons/crm_partner_assign/wizard/crm_channel_interested.py:44
+#: code:addons/crm_partner_assign/wizard/crm_channel_interested.py:26
 #, python-format
 msgid "You must contact the lead before saying that you are interested"
 msgstr ""
@@ -845,10 +883,34 @@ msgid "a single partner: manual selection of partner"
 msgstr ""
 
 #. module: crm_partner_assign
-#: view:crm.lead.channel.interested:crm_partner_assign.crm_lead_channel_interested_form
-#: view:crm.lead.forward.to.partner:crm_partner_assign.crm_lead_forward_to_partner_form
-msgid "or"
-msgstr "或"
+#: model:ir.model,name:crm_partner_assign.model_crm_lead_assignation
+msgid "crm.lead.assignation"
+msgstr ""
+
+#. module: crm_partner_assign
+#: model:ir.model,name:crm_partner_assign.model_crm_lead_channel_interested
+msgid "crm.lead.channel.interested"
+msgstr ""
+
+#. module: crm_partner_assign
+#: model:ir.model,name:crm_partner_assign.model_crm_lead_forward_to_partner
+msgid "crm.lead.forward.to.partner"
+msgstr ""
+
+#. module: crm_partner_assign
+#: model:ir.ui.view,arch_db:crm_partner_assign.view_partner_grade_form
+msgid "e.g. Gold Partner"
+msgstr ""
+
+#. module: crm_partner_assign
+#: model:ir.model,name:crm_partner_assign.model_res_partner_activation
+msgid "res.partner.activation"
+msgstr ""
+
+#. module: crm_partner_assign
+#: model:ir.model,name:crm_partner_assign.model_res_partner_grade
+msgid "res.partner.grade"
+msgstr "res.partner.grade"
 
 #. module: crm_partner_assign
 #: selection:crm.lead.forward.to.partner,forward_type:0

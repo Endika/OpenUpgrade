@@ -78,7 +78,7 @@ class website_hr_recruitment(http.Controller):
         })
 
     @http.route('/jobs/apply/<model("hr.job"):job>', type='http', auth="public", website=True)
-    def jobs_apply(self, job):
+    def jobs_apply(self, job, **kwargs):
         error = {}
         default = {}
         if 'website_hr_recruitment_error' in request.session:
@@ -89,6 +89,7 @@ class website_hr_recruitment(http.Controller):
             'error': error,
             'default': default,
         })
+<<<<<<< HEAD
 
     def _get_applicant_char_fields(self):
         return ['email_from', 'partner_name', 'description']
@@ -145,3 +146,5 @@ class website_hr_recruitment(http.Controller):
         return request.render("website_hr_recruitment.thankyou", {})
 
 # vim :et:
+=======
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0

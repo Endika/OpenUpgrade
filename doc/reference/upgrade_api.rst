@@ -71,7 +71,7 @@ The list of errors.
 
 A list of dictionaries, each dictionary giving information about one particular
 error. Each dictionary can contain various keys depending of the type of error
-but you will always get the *reason* and the *message* keys:
+but you will always get the ``reason`` and the ``message`` keys:
 
 * ``reason``: the error type
 * ``message``: a human friendly message

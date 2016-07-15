@@ -3,17 +3,14 @@
 # * marketing
 # 
 # Translators:
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2014
-# Khwunchai Jaengsawang <khwunchai.j@ku.th>, 2015
-# Seksan Poltree <seksan.poltree@gmail.com>, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 8.0\n"
+"Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-21 14:08+0000\n"
-"PO-Revision-Date: 2015-10-02 06:53+0000\n"
-"Last-Translator: Khwunchai Jaengsawang <khwunchai.j@ku.th>\n"
-"Language-Team: Thai (http://www.transifex.com/odoo/odoo-8/language/th/)\n"
+"POT-Creation-Date: 2015-09-07 14:40+0000\n"
+"PO-Revision-Date: 2015-08-25 10:19+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: Thai (http://www.transifex.com/odoo/odoo-9/language/th/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -21,97 +18,78 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. module: marketing
-#: view:marketing.config.settings:marketing.view_marketing_configuration
+#: model:ir.ui.view,arch_db:marketing.view_marketing_configuration
 msgid "Apply"
-msgstr "ใช้งาน"
+msgstr "นำไปใช้"
 
 #. module: marketing
-#: view:marketing.config.settings:marketing.view_marketing_configuration
+#: model:ir.ui.view,arch_db:marketing.view_marketing_configuration
 msgid "Cancel"
 msgstr "ยกเลิก"
 
 #. module: marketing
 #: model:ir.actions.act_window,name:marketing.action_marketing_configuration
-#: view:marketing.config.settings:marketing.view_marketing_configuration
 msgid "Configure Marketing"
 msgstr "การตั้งค่าการตลาด"
 
 #. module: marketing
-#: field:marketing.config.settings,create_uid:0
+#: model:ir.model.fields,field_description:marketing.field_marketing_config_settings_create_uid
 msgid "Created by"
-msgstr "สร้างโดย"
+msgstr "จัดทำโดย"
 
 #. module: marketing
-#: field:marketing.config.settings,create_date:0
+#: model:ir.model.fields,field_description:marketing.field_marketing_config_settings_create_date
 msgid "Created on"
 msgstr "สร้างเมื่อ"
 
 #. module: marketing
-#: field:marketing.config.settings,id:0
-msgid "ID"
-msgstr "ID"
+#: model:ir.model.fields,field_description:marketing.field_marketing_config_settings_display_name
+msgid "Display Name"
+msgstr ""
 
 #. module: marketing
-#: field:marketing.config.settings,write_uid:0
+#: model:ir.model.fields,field_description:marketing.field_marketing_config_settings_id
+msgid "ID"
+msgstr "รหัส"
+
+#. module: marketing
+#: model:ir.model.fields,field_description:marketing.field_marketing_config_settings___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: marketing
+#: model:ir.model.fields,field_description:marketing.field_marketing_config_settings_write_uid
 msgid "Last Updated by"
 msgstr "อัพเดทครั้งสุดท้ายโดย"
 
 #. module: marketing
-#: field:marketing.config.settings,write_date:0
+#: model:ir.model.fields,field_description:marketing.field_marketing_config_settings_write_date
 msgid "Last Updated on"
 msgstr "อัพเดทครั้งสุดท้ายเมื่อ"
 
 #. module: marketing
-#: model:res.groups,name:marketing.group_marketing_manager
+#: model:res.groups,name:marketing.group_lead_automation_manager
 msgid "Manager"
 msgstr "ผู้จัดการ"
 
 #. module: marketing
-#: model:ir.ui.menu,name:marketing.menu_marketing_configuration
-msgid "Marketing"
-msgstr "การตลาด"
-
-#. module: marketing
-#: view:marketing.config.settings:marketing.view_marketing_configuration
-msgid "Marketing Campaigns"
-msgstr "แคมเปญการตลาด"
-
-#. module: marketing
-#: field:marketing.config.settings,module_marketing_campaign:0
+#: model:ir.model.fields,field_description:marketing.field_marketing_config_settings_module_marketing_campaign
 msgid "Marketing campaigns"
 msgstr "แคมเปญการตลาด"
 
 #. module: marketing
-#: view:marketing.config.settings:marketing.view_marketing_configuration
-#: field:marketing.config.settings,module_mass_mailing:0
-msgid "Mass Mailing"
-msgstr "การส่งจดหมายจำนวนมาก"
-
-#. module: marketing
-#: help:marketing.config.settings,module_mass_mailing:0
-msgid ""
-"Provide a way to perform mass mailings.\n"
-"-This installs the module mass_mailing."
-msgstr "ให้ช่องทางในการส่งจำหมายจำนวนมาก\n- นี่จะเป็นการติดตั้งโมดูล mass_mailing"
-
-#. module: marketing
-#: help:marketing.config.settings,module_marketing_campaign:0
+#: model:ir.model.fields,help:marketing.field_marketing_config_settings_module_marketing_campaign
 msgid ""
 "Provides leads automation through marketing campaigns. Campaigns can in fact be defined on any resource, not just CRM leads.\n"
 "-This installs the module marketing_campaign."
 msgstr ""
 
 #. module: marketing
-#: view:marketing.config.settings:marketing.view_marketing_configuration
-msgid "Settings"
-msgstr "ตั้งค่า"
-
-#. module: marketing
-#: model:res.groups,name:marketing.group_marketing_user
+#: model:res.groups,name:marketing.group_lead_automation_user
 msgid "User"
-msgstr "ผู้ใช้"
+msgstr "ผู้ใช้งาน"
 
 #. module: marketing
-#: view:marketing.config.settings:marketing.view_marketing_configuration
-msgid "or"
-msgstr "หรือ"
+#: model:ir.model,name:marketing.model_marketing_config_settings
+msgid "marketing.config.settings"
+msgstr "marketing.config.settings"

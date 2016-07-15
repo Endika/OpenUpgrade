@@ -7,12 +7,19 @@
 # Mustafa Rawi <mustafa@cubexco.com>, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 8.0\n"
+"Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2015-01-21 14:08+0000\n"
 "PO-Revision-Date: 2015-11-19 17:25+0000\n"
 "Last-Translator: Mustafa Rawi <mustafa@cubexco.com>\n"
 "Language-Team: Arabic (http://www.transifex.com/odoo/odoo-8/language/ar/)\n"
+=======
+"POT-Creation-Date: 2015-09-07 14:40+0000\n"
+"PO-Revision-Date: 2015-11-05 19:26+0000\n"
+"Last-Translator: Martin Trigaux\n"
+"Language-Team: Arabic (http://www.transifex.com/odoo/odoo-9/language/ar/)\n"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -20,8 +27,9 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 #. module: hr_gamification
-#: model:ir.actions.act_window,help:hr_gamification.challenge_list_action2
+#: model:ir.actions.act_window,help:hr_gamification.goals_menu_groupby_action2
 msgid ""
+<<<<<<< HEAD
 "<p class=\"oe_view_nocontent_create\">\n"
 "                    Click to create a challenge. \n"
 "                </p>\n"
@@ -32,10 +40,16 @@ msgid ""
 "                </p>\n"
 "            "
 msgstr "<p class=\"oe_view_nocontent_create\">\n                    انقر لإنشاء تحدي جديد. \n                </p>\n                <p>\n                    قم بتعيين قائمة من الأهداف لمجموعة محددة من المستخدمين لتقييمهم.\n                    قد يكون التحدي دورياً (أسبوعياً أو شهرياً) وسيتم تجديد الأهداف آلياً.\n                    يتم إنشاء الأهداف للمستخدمين المحددين أو لأعضاء مجموعة ما.\n                </p>\n            "
+=======
+"A goal is defined by a user and a goal type.\n"
+"                    Goals can be created automatically by using challenges."
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: hr_gamification
-#: model:ir.actions.act_window,help:hr_gamification.goals_menu_groupby_action2
+#: model:ir.actions.act_window,help:hr_gamification.challenge_list_action2
 msgid ""
+<<<<<<< HEAD
 "<p class=\"oe_view_nocontent_create\">\n"
 "                    Click to create a goal. \n"
 "                </p>\n"
@@ -45,75 +59,125 @@ msgid ""
 "                </p>\n"
 "            "
 msgstr "<p class=\"oe_view_nocontent_create\">\n                    انقر لإنشاء هدف جديد. \n                </p>\n                <p>\n                    يتم تحديد الهدف ونوعه بواسطة المستخدم.\n                    يمكن تجديد الأهداف آلياً أو إنشاءها عبر استخدام التحديات.\n                </p>\n            "
+=======
+"Assign a list of goals to chosen users to evaluate them.\n"
+"                    The challenge can use a period (weekly, monthly...) for automatic creation of goals.\n"
+"                    The goals are created for the specified users or member of the group."
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: hr_gamification
 #: model:ir.ui.menu,name:hr_gamification.gamification_badge_menu_hr
 msgid "Badges"
+<<<<<<< HEAD
 msgstr "الشارات"
+=======
+msgstr "شارات"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: hr_gamification
-#: view:hr.employee:hr_gamification.hr_hr_employee_view_form
+#: model:ir.ui.view,arch_db:hr_gamification.hr_hr_employee_view_form
 msgid ""
 "Badges are rewards of good work. Give them to people you believe deserve it."
+<<<<<<< HEAD
 msgstr "الشارات هي مكافئات أو منح للدلالة على العمل الجيد. امنح الشارات لمن ترى أنهم يستحقونها."
+=======
+msgstr "الشارات هي جوائز العمل الجيد، أعطها للأشخاص اللذين تعتقد أنهم يستحقونها."
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: hr_gamification
-#: view:gamification.badge.user.wizard:hr_gamification.view_badge_wizard_reward
+#: model:ir.ui.view,arch_db:hr_gamification.view_badge_wizard_reward
 msgid "Cancel"
 msgstr "إلغاء"
 
 #. module: hr_gamification
 #: model:ir.actions.act_window,name:hr_gamification.challenge_list_action2
 #: model:ir.ui.menu,name:hr_gamification.gamification_challenge_menu_hr
+#: model:ir.ui.menu,name:hr_gamification.menu_hr_gamification
 msgid "Challenges"
+<<<<<<< HEAD
 msgstr "التحديات"
 
 #. module: hr_gamification
 #: view:hr.employee:hr_gamification.hr_hr_employee_view_form
 msgid "Click to grant this employee his first badge"
 msgstr "انقر لمنح هذا الموظف شارته الأولى"
+=======
+msgstr "تحديات"
 
 #. module: hr_gamification
-#: view:gamification.badge.user.wizard:hr_gamification.view_badge_wizard_reward
+#: model:ir.actions.act_window,help:hr_gamification.challenge_list_action2
+msgid "Click to create a challenge."
+msgstr ""
+
+#. module: hr_gamification
+#: model:ir.actions.act_window,help:hr_gamification.goals_menu_groupby_action2
+msgid "Click to create a goal."
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
+
+#. module: hr_gamification
+#: model:ir.ui.view,arch_db:hr_gamification.hr_hr_employee_view_form
+msgid "Click to grant this employee his first badge"
+msgstr "اضغط لتضمن لهذا الموظف شارته الأولى"
+
+#. module: hr_gamification
+#: model:ir.ui.view,arch_db:hr_gamification.view_badge_wizard_reward
 msgid "Describe what they did and why it matters (will be public)"
+<<<<<<< HEAD
 msgstr "صف مافعلوه وما أهميته (سيعرض على العامة)"
+=======
+msgstr "صف مافعلوه وما أهميته (سيكون عام)"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: hr_gamification
-#: field:gamification.badge.user,employee_id:0
-#: field:gamification.badge.user.wizard,employee_id:0
 #: model:ir.model,name:hr_gamification.model_hr_employee
+#: model:ir.model.fields,field_description:hr_gamification.field_gamification_badge_user_employee_id
+#: model:ir.model.fields,field_description:hr_gamification.field_gamification_badge_user_wizard_employee_id
 msgid "Employee"
 msgstr "الموظف"
 
 #. module: hr_gamification
-#: field:hr.employee,badge_ids:0
+#: model:ir.model.fields,field_description:hr_gamification.field_hr_employee_badge_ids
 msgid "Employee Badges"
 msgstr "شارات الموظف"
 
 #. module: hr_gamification
-#: field:hr.employee,goal_ids:0
+#: model:ir.model.fields,field_description:hr_gamification.field_hr_employee_goal_ids
 msgid "Employee HR Goals"
+<<<<<<< HEAD
 msgstr "أهداف الموظفين"
 
 #. module: hr_gamification
 #: model:ir.ui.menu,name:hr_gamification.menu_hr_gamification
 msgid "Engagement"
 msgstr "التفاعل"
+=======
+msgstr "أهداف الموظف الخاصة بالموارد البشرية"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: hr_gamification
 #: model:ir.model,name:hr_gamification.model_gamification_badge
 msgid "Gamification badge"
+<<<<<<< HEAD
 msgstr "شارة التنافسية"
+=======
+msgstr "شارة التلعيب"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: hr_gamification
 #: model:ir.model,name:hr_gamification.model_gamification_badge_user
 msgid "Gamification user badge"
+<<<<<<< HEAD
 msgstr "شارة تنافسية المستخدم"
 
 #. module: hr_gamification
 #: view:hr.employee:hr_gamification.hr_hr_employee_view_form
 msgid "Goals"
 msgstr "الأهداف"
+=======
+msgstr "شارة مستخدم التلعيب"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: hr_gamification
 #: model:ir.actions.act_window,name:hr_gamification.goals_menu_groupby_action2
@@ -122,39 +186,56 @@ msgid "Goals History"
 msgstr "تاريخ الأهداف"
 
 #. module: hr_gamification
-#: view:hr.employee:hr_gamification.hr_hr_employee_view_form
+#: model:ir.ui.view,arch_db:hr_gamification.hr_hr_employee_view_form
 msgid "Grant a Badge"
+<<<<<<< HEAD
 msgstr "امنح شارة"
+=======
+msgstr "اضمن شارة"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: hr_gamification
-#: view:gamification.badge:hr_gamification.hr_badge_form_view
+#: model:ir.ui.view,arch_db:hr_gamification.hr_badge_form_view
 msgid "Granted Employees"
 msgstr "الموظفون الممنوحون"
 
 #. module: hr_gamification
-#: field:hr.employee,has_badges:0
+#: model:ir.model.fields,field_description:hr_gamification.field_hr_employee_has_badges
 msgid "Has Badges"
 msgstr "لديه شارات"
 
 #. module: hr_gamification
-#: view:hr.employee:hr_gamification.hr_hr_employee_view_form
+#: model:ir.ui.view,arch_db:hr_gamification.hr_hr_employee_view_form
 msgid "Received Badges"
+<<<<<<< HEAD
 msgstr "الشارات المتلقاة"
+=======
+msgstr "استلم شارات"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: hr_gamification
-#: view:gamification.badge.user.wizard:hr_gamification.view_badge_wizard_reward
 #: model:ir.actions.act_window,name:hr_gamification.action_reward_wizard
+#: model:ir.ui.view,arch_db:hr_gamification.view_badge_wizard_reward
 msgid "Reward Employee"
+<<<<<<< HEAD
 msgstr "مكافأة الموظف"
+=======
+msgstr "كافأ موظف"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: hr_gamification
-#: view:gamification.badge.user.wizard:hr_gamification.view_badge_wizard_reward
+#: model:ir.ui.view,arch_db:hr_gamification.view_badge_wizard_reward
 msgid "Reward Employee with"
+<<<<<<< HEAD
 msgstr "مكافأة الموظف بـ"
+=======
+msgstr "كافأ موظف بـ"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: hr_gamification
 #: constraint:gamification.badge.user:0
 msgid "The selected employee does not correspond to the selected user."
+<<<<<<< HEAD
 msgstr "الموظف المحدد لا يتفق مع المستخدم المحدد."
 
 #. module: hr_gamification
@@ -168,25 +249,37 @@ msgstr "تحذير!"
 #: view:gamification.badge.user.wizard:hr_gamification.view_badge_wizard_reward
 msgid "What are you thank for?"
 msgstr "علام تشكره؟"
+=======
+msgstr "الموظف المختار ﻻ يتوافق مع المستخدم المختار."
 
 #. module: hr_gamification
-#: code:addons/hr_gamification/wizard/grant_badge.py:48
+#: model:ir.ui.view,arch_db:hr_gamification.view_badge_wizard_reward
+msgid "What are you thankful for?"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
+
+#. module: hr_gamification
+#: code:addons/hr_gamification/wizard/grant_badge.py:31
 #, python-format
 msgid "You can not send a badge to yourself"
 msgstr "لا يمكنك ارسال شارة لنفسك"
 
 #. module: hr_gamification
-#: code:addons/hr_gamification/wizard/grant_badge.py:45
+#: code:addons/hr_gamification/wizard/grant_badge.py:28
 #, python-format
 msgid "You can send badges only to employees linked to a user."
 msgstr "يمكنك ارسال الشارات فقط للموظفين المرتبطين بمستخدم."
 
 #. module: hr_gamification
-#: view:gamification.badge.user.wizard:hr_gamification.view_badge_wizard_reward
-msgid "or"
-msgstr "أو"
+#: model:ir.model,name:hr_gamification.model_gamification_badge_user_wizard
+msgid "gamification.badge.user.wizard"
+msgstr ""
 
 #. module: hr_gamification
-#: view:hr.employee:hr_gamification.hr_hr_employee_view_form
+#: model:ir.ui.view,arch_db:hr_gamification.hr_hr_employee_view_form
 msgid "to reward this employee for a good action"
+<<<<<<< HEAD
 msgstr "لمكافأة هذا الموظف على أداء جيد"
+=======
+msgstr "لمكافأة هذا الموظف على اجراء جيد"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0

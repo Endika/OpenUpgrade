@@ -28,7 +28,11 @@
             <field name="model">openupgrade.record</field>
             <field name="type">form</field>
             <field name="arch" type="xml">
+<<<<<<< HEAD
                 <form string="OpenUpgrade Record">
+=======
+                <form string="OpenUpgrade Record" version="6.1">
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
                     <field name="module" select="1"/>
                     <field name="model" select="1"/>
                     <field name="field" select="1"/>

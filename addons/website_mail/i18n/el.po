@@ -6,12 +6,19 @@
 # Goutoudis Kostas <goutoudis@gmail.com>, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 8.0\n"
+"Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2015-01-21 14:09+0000\n"
 "PO-Revision-Date: 2015-12-21 20:56+0000\n"
 "Last-Translator: Goutoudis Kostas <goutoudis@gmail.com>\n"
 "Language-Team: Greek (http://www.transifex.com/odoo/odoo-8/language/el/)\n"
+=======
+"POT-Creation-Date: 2015-09-29 10:26+0000\n"
+"PO-Revision-Date: 2015-10-07 23:39+0000\n"
+"Last-Translator: Martin Trigaux\n"
+"Language-Team: Greek (http://www.transifex.com/odoo/odoo-9/language/el/)\n"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -19,6 +26,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_mail
+<<<<<<< HEAD
 #: view:website:website_mail.email_designer_snippets
 msgid "A Great Headline"
 msgstr "Μια σπουδαία επικεφαλίδα"
@@ -152,10 +160,14 @@ msgstr "Σχεδιάστε το email σας"
 
 #. module: website_mail
 #: model:mail.group,name:website_mail.group_all_employees
+=======
+#: model:mail.channel,name:website_mail.channel_public
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Discussion Group"
 msgstr "Ομάδα Συζήτησης"
 
 #. module: website_mail
+<<<<<<< HEAD
 #: code:addons/website_mail/models/email_template.py:15
 #: view:email.template:website_mail.email_template_form_inherit_website_link
 #, python-format
@@ -173,11 +185,14 @@ msgid "Email Templates"
 msgstr "Πρότυπα Email"
 
 #. module: website_mail
+=======
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 #: model:ir.model,name:website_mail.model_mail_thread
 msgid "Email Thread"
 msgstr "Νήμα Email"
 
 #. module: website_mail
+<<<<<<< HEAD
 #: view:website:website_mail.email_designer_snippets
 msgid "Enterprise package"
 msgstr "Πακέτο επιχείρησης"
@@ -242,6 +257,11 @@ msgstr "Εικόνα-Κείμενο"
 #: view:website:website_mail.email_designer_snippets
 msgid "Limited support"
 msgstr "Περιορισμένη υποστήριξη"
+=======
+#: model:ir.ui.view,arch_db:website_mail.message_thread
+msgid "Leave a comment"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: website_mail
 #: model:ir.model,name:website_mail.model_mail_message
@@ -249,11 +269,12 @@ msgid "Message"
 msgstr "Μήνυμα"
 
 #. module: website_mail
-#: help:mail.message,description:0
+#: model:ir.model.fields,help:website_mail.field_mail_message_description
 msgid "Message description: either the subject, or the beginning of the body"
 msgstr "Περιγραφή μηνύματος: είτε το θέμα, ή την αρχή του σώματος"
 
 #. module: website_mail
+<<<<<<< HEAD
 #: view:website:website_mail.email_designer
 msgid "New Template"
 msgstr "Νέο πρότυπο"
@@ -280,10 +301,19 @@ msgstr "Επαγγελματίας"
 
 #. module: website_mail
 #: field:mail.message,website_published:0
+=======
+#: model:ir.ui.view,arch_db:website_mail.message_thread
+msgid "Oops! Something went wrong. Try to reload the page and to log in."
+msgstr ""
+
+#. module: website_mail
+#: model:ir.model.fields,field_description:website_mail.field_mail_message_website_published
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Published"
 msgstr "Δημοσιοποιημένη"
 
 #. module: website_mail
+<<<<<<< HEAD
 #: view:website:website_mail.email_designer_snippets
 msgid "Screen: 2.5 inch"
 msgstr "Οθόνη: 2.5 ιντσών"
@@ -327,10 +357,19 @@ msgstr "Θέμα:"
 
 #. module: website_mail
 #: view:website:website_mail.follow
+=======
+#: model:ir.ui.view,arch_db:website_mail.message_thread
+msgid "Send"
+msgstr "Αποστολή"
+
+#. module: website_mail
+#: model:ir.ui.view,arch_db:website_mail.follow
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Subscribe"
 msgstr "Εγγραφείτε"
 
 #. module: website_mail
+<<<<<<< HEAD
 #: view:website:website_mail.email_designer_snippets
 msgid "Text Block"
 msgstr "Πλαίσιο Κειμένου"
@@ -347,6 +386,9 @@ msgstr "Ευχαριστούμε για την εγγραφή σας!"
 
 #. module: website_mail
 #: code:addons/website_mail/models/mail_message.py:88
+=======
+#: code:addons/website_mail/models/mail_message.py:69
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 #, python-format
 msgid ""
 "The requested operation cannot be completed due to security restrictions. Please contact your system administrator.\n"
@@ -355,6 +397,7 @@ msgid ""
 msgstr "Η λειτουργία που ζητήθηκε δεν μπορεί να ολοκληρωθεί λόγω των περιορισμών ασφαλείας. Παρακαλούμε επικοινωνήστε με τον διαχειριστή του συστήματός σας.\n\n(Τύπος εγγράφου: %s, Λειτουργία: %s)"
 
 #. module: website_mail
+<<<<<<< HEAD
 #: view:website:website_mail.email_designer_snippets
 msgid "The top of the top"
 msgstr "Το πιο κορυφαίο"
@@ -376,35 +419,47 @@ msgstr "Απεριόριστη υποστήριξη"
 
 #. module: website_mail
 #: view:website:website_mail.follow
+=======
+#: model:ir.ui.view,arch_db:website_mail.follow
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Unsubscribe"
 msgstr "Κατάργηση εγγραφής "
 
 #. module: website_mail
+<<<<<<< HEAD
 #: view:website:website_mail.email_designer_snippets
 msgid "View Product"
 msgstr "Δείτε το προϊόν"
 
 #. module: website_mail
 #: help:mail.message,website_published:0
+=======
+#: model:ir.model.fields,help:website_mail.field_mail_message_website_published
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Visible on the website as a comment"
 msgstr "Ορατό στον ιστότοπο ως ένα σχόλιο"
 
 #. module: website_mail
+<<<<<<< HEAD
 #: model:res.groups,name:website_mail.group_comment
 msgid "Website Comments"
 msgstr "Σχόλια ιστότοπου"
 
 #. module: website_mail
 #: field:mail.thread,website_message_ids:0
+=======
+#: model:ir.model.fields,field_description:website_mail.field_mail_thread_website_message_ids
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Website Messages"
 msgstr "Μηνύματα Ιστότοπου"
 
 #. module: website_mail
-#: help:mail.thread,website_message_ids:0
+#: model:ir.model.fields,help:website_mail.field_mail_thread_website_message_ids
 msgid "Website communication history"
 msgstr "Ιστορικό επικοινωνίας ιστότοπου"
 
 #. module: website_mail
+<<<<<<< HEAD
 #: view:website:website_mail.email_designer_snippets
 msgid "Weight: 1.1 ounces"
 msgstr "Βάρος: 1,1 ουγκιές"
@@ -431,13 +486,50 @@ msgstr "Γράψτε μία πρόταση για να πείσετε τον ε�
 #: view:website:website_mail.email_designer_snippets
 msgid "per month"
 msgstr "ανά μήνα"
+=======
+#: model:ir.ui.view,arch_db:website_mail.message_thread
+msgid "Write a message..."
+msgstr ""
 
 #. module: website_mail
-#: field:mail.message,description:0
+#: model:ir.ui.view,arch_db:website_mail.message_thread
+msgid "You must be"
+msgstr ""
+
+#. module: website_mail
+#. openerp-web
+#: code:addons/website_mail/static/src/xml/chatter_message.xml:8
+#, python-format
+msgid "just now"
+msgstr ""
+
+#. module: website_mail
+#: model:ir.ui.view,arch_db:website_mail.message_thread
+msgid "logged in"
+msgstr ""
+
+#. module: website_mail
+#: model:ir.ui.view,arch_db:website_mail.message_thread
+msgid "on"
+msgstr "στις"
+
+#. module: website_mail
+#: model:ir.model,name:website_mail.model_publisher_warranty_contract
+msgid "publisher_warranty.contract"
+msgstr ""
+
+#. module: website_mail
+#: model:ir.ui.view,arch_db:website_mail.message_thread
+msgid "to post a comment."
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
+
+#. module: website_mail
+#: model:ir.model.fields,field_description:website_mail.field_mail_message_description
 msgid "unknown"
 msgstr "άγνωστο"
 
 #. module: website_mail
-#: view:website:website_mail.follow
+#: model:ir.ui.view,arch_db:website_mail.follow
 msgid "your email..."
 msgstr "το emails σας..."

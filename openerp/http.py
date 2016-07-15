@@ -6,9 +6,9 @@ import ast
 import collections
 import contextlib
 import datetime
-import errno
 import functools
-import getpass
+import hashlib
+import hmac
 import inspect
 import logging
 import mimetypes
@@ -17,7 +17,6 @@ import pprint
 import random
 import re
 import sys
-import tempfile
 import threading
 import time
 import traceback
@@ -26,8 +25,9 @@ import warnings
 from zlib import adler32
 
 import babel.core
+import passlib.utils
 import psycopg2
-import simplejson
+import json
 import werkzeug.contrib.sessions
 import werkzeug.datastructures
 import werkzeug.exceptions
@@ -43,11 +43,10 @@ except ImportError:
     psutil = None
 
 import openerp
-from openerp import SUPERUSER_ID
 from openerp.service.server import memory_info
 from openerp.service import security, model as service_model
 from openerp.tools.func import lazy_property
-from openerp.tools import ustr
+from openerp.tools import ustr, consteq
 
 _logger = logging.getLogger(__name__)
 rpc_request = logging.getLogger(__name__ + '.rpc.request')
@@ -80,6 +79,8 @@ def replace_request_password(args):
 # *broken*
 NO_POSTMORTEM = (openerp.osv.orm.except_orm,
                  openerp.exceptions.AccessError,
+                 openerp.exceptions.ValidationError,
+                 openerp.exceptions.MissingError,
                  openerp.exceptions.AccessDenied,
                  openerp.exceptions.Warning,
                  openerp.exceptions.RedirectWarning)
@@ -110,8 +111,6 @@ def dispatch_rpc(service_name, method, params):
             dispatch = openerp.service.model.dispatch
         elif service_name == 'report':
             dispatch = openerp.service.report.dispatch
-        else:
-            dispatch = openerp.service.wsgi_server.rpc_handlers.get(service_name)
         result = dispatch(method, params)
 
         if rpc_request_flag or rpc_response_flag:
@@ -289,7 +288,7 @@ class WebRequest(object):
         if self.endpoint.routing['type'] != self._request_type:
             msg = "%s, %s: Function declared as capable of handling request of type '%s' but called with a request of type '%s'"
             params = (self.endpoint.original, self.httprequest.path, self.endpoint.routing['type'], self._request_type)
-            _logger.error(msg, *params)
+            _logger.info(msg, *params)
             raise werkzeug.exceptions.BadRequest(msg % params)
 
         if self.endpoint_arguments:
@@ -306,7 +305,11 @@ class WebRequest(object):
             # case, the request cursor is unusable. Rollback transaction to create a new one.
             if self._cr:
                 self._cr.rollback()
-            return self.endpoint(*a, **kw)
+            result = self.endpoint(*a, **kw)
+            if isinstance(result, Response) and result.is_qweb:
+                # Early rendering of lazy responses to benefit from @service_model.check protection
+                result.flatten()
+            return result
 
         if self.db:
             return checked_call(self.db, *args, **kwargs)
@@ -316,7 +319,10 @@ class WebRequest(object):
     def debug(self):
         """ Indicates whether the current request is in "debug" mode
         """
-        return 'debug' in self.httprequest.args
+        debug = 'debug' in self.httprequest.args
+        if not debug and self.httprequest.referrer:
+            debug = bool(urlparse.parse_qs(urlparse.urlparse(self.httprequest.referrer).query, keep_blank_values=True).get('debug'))
+        return debug
 
     @contextlib.contextmanager
     def registry_cr(self):
@@ -365,6 +371,48 @@ class WebRequest(object):
         """
         return self.session
 
+    def csrf_token(self, time_limit=3600):
+        """ Generates and returns a CSRF token for the current session
+
+        :param time_limit: the CSRF token should only be valid for the
+                           specified duration (in second), by default 1h,
+                           ``None`` for the token to be valid as long as the
+                           current user's session is.
+        :type time_limit: int | None
+        :returns: ASCII token string
+        """
+        token = self.session.sid
+        max_ts = '' if not time_limit else int(time.time() + time_limit)
+        msg = '%s%s' % (token, max_ts)
+        secret = self.env['ir.config_parameter'].sudo().get_param('database.secret')
+        assert secret, "CSRF protection requires a configured database secret"
+        hm = hmac.new(str(secret), msg, hashlib.sha1).hexdigest()
+        return '%so%s' % (hm, max_ts)
+
+    def validate_csrf(self, csrf):
+        if not csrf:
+            return False
+
+        try:
+            hm, _, max_ts = str(csrf).rpartition('o')
+        except UnicodeEncodeError:
+            return False
+
+        if max_ts:
+            try:
+                if int(max_ts) < int(time.time()):
+                    return False
+            except ValueError:
+                return False
+
+        token = self.session.sid
+
+        msg = '%s%s' % (token, max_ts)
+        secret = self.env['ir.config_parameter'].sudo().get_param('database.secret')
+        assert secret, "CSRF protection requires a configured database secret"
+        hm_expected = hmac.new(str(secret), msg, hashlib.sha1).hexdigest()
+        return consteq(hm, hm_expected)
+
 def route(route=None, **kw):
     """
     Decorator marking the decorated method as being a handler for
@@ -390,9 +438,21 @@ def route(route=None, **kw):
     :param methods: A sequence of http methods this route applies to. If not
                     specified, all methods are allowed.
     :param cors: The Access-Control-Allow-Origin cors directive value.
+    :param bool csrf: Whether CSRF protection should be enabled for the route.
+
+                      Defaults to ``True``.
+
+                      CSRF protection only applies to *UNSAFE* methods as
+                      defined by :rfc:`7231`: GET, HEAD, TRACE and OPTIONS are
+                      safe, all other methods are unsafe.
+
+                      CSRF protection requires a csrf token to be sent as part
+                      of the request's form data, it can be obtained via
+                      :meth:`request.csrf_token()
+                      <openerp.http.WebRequest.csrf_token>`
     """
     routing = kw.copy()
-    assert not 'type' in routing or routing['type'] in ("http", "json")
+    assert 'type' not in routing or routing['type'] in ("http", "json")
     def decorator(f):
         if route:
             if isinstance(route, list):
@@ -497,10 +557,10 @@ class JsonRequest(WebRequest):
 
         # Read POST content or POST Form Data named "request"
         try:
-            self.jsonrequest = simplejson.loads(request)
-        except simplejson.JSONDecodeError:
+            self.jsonrequest = json.loads(request)
+        except ValueError:
             msg = 'Invalid JSON data: %r' % (request,)
-            _logger.error('%s: %s', self.httprequest.path, msg)
+            _logger.info('%s: %s', self.httprequest.path, msg)
             raise werkzeug.exceptions.BadRequest(msg)
 
         self.params = dict(self.jsonrequest.get("params", {}))
@@ -522,10 +582,10 @@ class JsonRequest(WebRequest):
             # We need then to manage http sessions manually.
             response['session_id'] = self.session_id
             mime = 'application/javascript'
-            body = "%s(%s);" % (self.jsonp, simplejson.dumps(response),)
+            body = "%s(%s);" % (self.jsonp, json.dumps(response),)
         else:
             mime = 'application/json'
-            body = simplejson.dumps(response)
+            body = json.dumps(response)
 
         return Response(
                     body, headers=[('Content-Type', mime),
@@ -538,7 +598,7 @@ class JsonRequest(WebRequest):
         try:
             return super(JsonRequest, self)._handle_exception(exception)
         except Exception:
-            if not isinstance(exception, (openerp.exceptions.Warning, SessionExpiredException)):
+            if not isinstance(exception, (openerp.exceptions.Warning, SessionExpiredException, openerp.exceptions.except_orm)):
                 _logger.exception("Exception during JSON request handling.")
             error = {
                     'code': 200,
@@ -597,15 +657,24 @@ def serialize_exception(e):
         "debug": traceback.format_exc(),
         "message": ustr(e),
         "arguments": to_jsonable(e.args),
+        "exception_type": "internal_error"
     }
-    if isinstance(e, openerp.osv.osv.except_osv):
-        tmp["exception_type"] = "except_osv"
+    if isinstance(e, openerp.exceptions.UserError):
+        tmp["exception_type"] = "user_error"
     elif isinstance(e, openerp.exceptions.Warning):
+        tmp["exception_type"] = "warning"
+    elif isinstance(e, openerp.exceptions.RedirectWarning):
         tmp["exception_type"] = "warning"
     elif isinstance(e, openerp.exceptions.AccessError):
         tmp["exception_type"] = "access_error"
+    elif isinstance(e, openerp.exceptions.MissingError):
+        tmp["exception_type"] = "missing_error"
     elif isinstance(e, openerp.exceptions.AccessDenied):
         tmp["exception_type"] = "access_denied"
+    elif isinstance(e, openerp.exceptions.ValidationError):
+        tmp["exception_type"] = "validation_error"
+    elif isinstance(e, openerp.exceptions.except_orm):
+        tmp["exception_type"] = "except_orm"
     return tmp
 
 def to_jsonable(o):
@@ -667,9 +736,16 @@ class HttpRequest(WebRequest):
         try:
             return super(HttpRequest, self)._handle_exception(exception)
         except SessionExpiredException:
-            if not request.params.get('noredirect'):
+            redirect = None
+            req = request.httprequest
+            if req.method == 'POST':
+                request.session.save_request_data()
+                redirect = '/web/proxy/post{r.path}?{r.query_string}'.format(r=req)
+            elif not request.params.get('noredirect'):
+                redirect = req.url
+            if redirect:
                 query = werkzeug.urls.url_encode({
-                    'redirect': request.httprequest.url,
+                    'redirect': redirect,
                 })
                 return werkzeug.utils.redirect('/web/login?%s' % query)
         except werkzeug.exceptions.HTTPException, e:
@@ -682,6 +758,12 @@ class HttpRequest(WebRequest):
                 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
             }
             return Response(status=200, headers=headers)
+
+        if request.httprequest.method not in ('GET', 'HEAD', 'OPTIONS', 'TRACE') \
+                and request.endpoint.routing.get('csrf', True): # csrf checked by default
+            token = self.params.pop('csrf_token', None)
+            if not self.validate_csrf(token):
+                raise werkzeug.exceptions.BadRequest('Invalid CSRF Token')
 
         r = self._call_function(**self.params)
         if not r:
@@ -1163,6 +1245,46 @@ class OpenERPSession(werkzeug.contrib.sessions.Session):
         saved_actions = self.get('saved_actions', {})
         return saved_actions.get("actions", {}).get(key)
 
+    def save_request_data(self):
+        import uuid
+        req = request.httprequest
+        files = werkzeug.datastructures.MultiDict()
+        # NOTE we do not store files in the session itself to avoid loading them in memory.
+        #      By storing them in the session store, we ensure every worker (even ones on other
+        #      servers) can access them. It also allow stale files to be deleted by `session_gc`.
+        for f in req.files.values():
+            storename = 'werkzeug_%s_%s.file' % (self.sid, uuid.uuid4().hex)
+            path = os.path.join(root.session_store.path, storename)
+            with open(path, 'w') as fp:
+                f.save(fp)
+            files.add(f.name, (storename, f.filename, f.content_type))
+        self['serialized_request_data'] = {
+            'form': req.form,
+            'files': files,
+        }
+
+    @contextlib.contextmanager
+    def load_request_data(self):
+        data = self.pop('serialized_request_data', None)
+        files = werkzeug.datastructures.MultiDict()
+        try:
+            if data:
+                # regenerate files filenames with the current session store
+                for name, (storename, filename, content_type) in data['files'].iteritems():
+                    path = os.path.join(root.session_store.path, storename)
+                    files.add(name, (path, filename, content_type))
+                yield werkzeug.datastructures.CombinedMultiDict([data['form'], files])
+            else:
+                yield None
+        finally:
+            # cleanup files
+            for f, _, _ in files.values():
+                try:
+                    os.unlink(f)
+                except IOError:
+                    pass
+
+
 def session_gc(session_store):
     if random.random() < 0.001:
         # we keep session one week
@@ -1232,6 +1354,7 @@ class Response(werkzeug.wrappers.Response):
         """
         view_obj = request.registry["ir.ui.view"]
         uid = self.uid or request.uid or openerp.SUPERUSER_ID
+        self.qcontext['request'] = request
         return view_obj.render(
             request.cr, uid, self.template, self.qcontext,
             context=request.context)
@@ -1240,8 +1363,9 @@ class Response(werkzeug.wrappers.Response):
         """ Forces the rendering of the response's template, sets the result
         as response body and unsets :attr:`.template`
         """
-        self.response.append(self.render())
-        self.template = None
+        if self.template:
+            self.response.append(self.render())
+            self.template = None
 
 class DisableCacheMiddleware(object):
     def __init__(self, app):
@@ -1381,6 +1505,17 @@ class Root(object):
         else:
             response = result
 
+        # save to cache if requested and possible
+        if getattr(request, 'cache_save', False) and response.status_code == 200:
+            response.freeze()
+            r = response.response
+            if isinstance(r, list) and len(r) == 1 and isinstance(r[0], str):
+                request.registry.cache[request.cache_save] = {
+                    'content': r[0],
+                    'mimetype': response.headers['Content-Type'],
+                    'time': time.time(),
+                }
+
         if httprequest.session.should_save:
             if httprequest.session.rotate:
                 self.session_store.delete(httprequest.session)
@@ -1428,13 +1563,19 @@ class Root(object):
                     try:
                         with openerp.tools.mute_logger('openerp.sql_db'):
                             ir_http = request.registry['ir.http']
-                    except (AttributeError, psycopg2.OperationalError):
+                    except (AttributeError, psycopg2.OperationalError, psycopg2.ProgrammingError):
                         # psycopg2 error or attribute error while constructing
-                        # the registry. That means the database probably does
-                        # not exists anymore or the code doesnt match the db.
+                        # the registry. That means either
+                        # - the database probably does not exists anymore
+                        # - the database is corrupted
+                        # - the database version doesnt match the server version
                         # Log the user out and fall back to nodb
                         request.session.logout()
-                        result = _dispatch_nodb()
+                        # If requesting /web this will loop
+                        if request.httprequest.path == '/web':
+                            result = werkzeug.utils.redirect('/web/database/selector')
+                        else:
+                            result = _dispatch_nodb()
                     else:
                         result = ir_http._dispatch()
                         openerp.modules.registry.RegistryManager.signal_caches_change(db)
@@ -1453,7 +1594,7 @@ class Root(object):
         return request.registry['ir.http'].routing_map()
 
 def db_list(force=False, httprequest=None):
-    dbs = dispatch_rpc("db", "list", [force])
+    dbs = openerp.service.db.list_dbs(force)
     return db_filter(dbs, httprequest=httprequest)
 
 def db_filter(dbs, httprequest=None):
@@ -1603,8 +1744,5 @@ class CommonController(Controller):
         nsession = root.session_store.new()
         return nsession.sid
 
-# register main wsgi handler
+#  main wsgi handler
 root = Root()
-openerp.service.wsgi_server.register_wsgi_handler(root)
-
-# vim:et:ts=4:sw=4:

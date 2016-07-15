@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+<<<<<<< HEAD
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
@@ -19,6 +20,9 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
+=======
+# Part of Odoo. See LICENSE file for full copyright and licensing details.
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 """ Modules migration handling. """
 
@@ -186,6 +190,9 @@ class MigrationManager(object):
                         if mod:
                             del mod
                     # OpenUpgrade edit end
+<<<<<<< HEAD
 
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
+=======
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0

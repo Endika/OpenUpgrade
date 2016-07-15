@@ -20,7 +20,11 @@
             <field name="model">openupgrade.comparison.config</field>
             <field name="type">form</field>
             <field name="arch" type="xml">
+<<<<<<< HEAD
                 <form string="OpenUpgrade Comparison Config">
+=======
+                <form string="OpenUpgrade Comparison Config" version="6.1">
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
                     <field name="name"/>
                     <field name="protocol"/>
                     <field name="server"/>

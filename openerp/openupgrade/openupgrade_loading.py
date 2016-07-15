@@ -117,6 +117,11 @@ def log_model(model, local_registry):
     if not model._name:
         return
 
+<<<<<<< HEAD
+=======
+    typemap = {'monetary': 'float'}
+
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
     # persistent models only
     if isinstance(model, (orm.TransientModel, models.TransientModel)):
         return
@@ -138,7 +143,11 @@ def log_model(model, local_registry):
     def isrelated(model, k):
         if (isinstance(model._columns[k], fields.related) or
                 model._fields[k].related):
+<<<<<<< HEAD
             return 'property'
+=======
+            return 'related'
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
         return ''
 
     model_registry = local_registry.setdefault(
@@ -147,7 +156,11 @@ def log_model(model, local_registry):
         model_registry['_inherits'] = {'_inherits': unicode(model._inherits)}
     for k, v in model._columns.items():
         properties = {
+<<<<<<< HEAD
             'type': v._type,
+=======
+            'type': typemap.get(v._type, v._type),
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
             'isfunction': isfunction(model, k),
             'isproperty': isproperty(model, k),
             'isrelated': isrelated(model, k),
@@ -166,14 +179,24 @@ def log_model(model, local_registry):
                     sorted([x[0] for x in v.selection]))
             else:
                 properties['selection_keys'] = 'function'
+<<<<<<< HEAD
         if v.required and k in model._defaults:
             if isinstance(model._defaults[k], types.FunctionType):
+=======
+        default = model._defaults.get(k, False) or model._fields[k].default
+        if v.required and default:
+            if isinstance(default, types.FunctionType):
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
                 # todo: in OpenERP 5 (and in 6 as well),
                 # literals are wrapped in a lambda function
                 properties['req_default'] = 'function'
             else:
+<<<<<<< HEAD
                 properties['req_default'] = unicode(
                     model._defaults[k])
+=======
+                properties['req_default'] = unicode(default)
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
         for key, value in properties.items():
             if value:
                 model_registry.setdefault(k, {})[key] = value

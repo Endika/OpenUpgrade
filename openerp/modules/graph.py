@@ -1,24 +1,5 @@
 # -*- coding: utf-8 -*-
-##############################################################################
-#
-#    OpenERP, Open Source Management Solution
-#    Copyright (C) 2004-2009 Tiny SPRL (<http://tiny.be>).
-#    Copyright (C) 2010-2014 OpenERP s.a. (<http://openerp.com>).
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as
-#    published by the Free Software Foundation, either version 3 of the
-#    License, or (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
-##############################################################################
+# Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 """ Modules dependency graph. """
 
@@ -87,7 +68,11 @@ class Graph(dict):
         if ('base' in self and additional_data['base']['dbdemo'] and
                 additional_data['base']['installed_version'] <
                 release.major_version):
+<<<<<<< HEAD
             openupgrade.logged_query(cr, "UPDATE ir_module_module SET demo = false")
+=======
+            cr.execute("UPDATE ir_module_module SET demo = false")
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
             for data in additional_data.values():
                 data['dbdemo'] = False
 
@@ -233,6 +218,3 @@ class Node(object):
         for c in self.children:
             s += '%s`-> %s' % ('   ' * depth, c._pprint(depth+1))
         return s
-
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

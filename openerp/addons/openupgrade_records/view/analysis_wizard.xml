@@ -6,7 +6,11 @@
             <field name="model">openupgrade.analysis.wizard</field>
             <field name="type">form</field>
             <field name="arch" type="xml">
+<<<<<<< HEAD
                 <form string="OpenUpgrade Analysis Wizard">
+=======
+                <form string="OpenUpgrade Analysis Wizard" version="6.1">
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
                     <field name="server_config" readonly="1"/>
                     <field name="state"/>
                     <field name="log" colspan="4"

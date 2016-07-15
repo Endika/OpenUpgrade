@@ -1,19 +1,24 @@
-# Translation of OpenERP Server.
+# Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * l10n_ma
 # 
 # Translators:
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2014
-# Friderici Claude, 2015
-# lucasdeliege <deliegelucas@gmail.com>, 2015
+# Maxime Chambreuil <maxime.chambreuil@gmail.com>, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 8.0\n"
+"Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2012-11-24 02:53+0000\n"
 "PO-Revision-Date: 2015-11-10 13:32+0000\n"
 "Last-Translator: Florian Hatat\n"
 "Language-Team: French (http://www.transifex.com/odoo/odoo-8/language/fr/)\n"
+=======
+"POT-Creation-Date: 2015-09-18 08:19+0000\n"
+"PO-Revision-Date: 2015-09-20 22:59+0000\n"
+"Last-Translator: Maxime Chambreuil <maxime.chambreuil@gmail.com>\n"
+"Language-Team: French (http://www.transifex.com/odoo/odoo-9/language/fr/)\n"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -21,6 +26,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. module: l10n_ma
+<<<<<<< HEAD
 #: model:account.account.type,name:l10n_ma.cpt_type_imm
 msgid "Immobilisations"
 msgstr "Immobilisations"
@@ -144,3 +150,8 @@ msgstr ""
 #: model:account.account.type,name:l10n_ma.cpt_type_aut
 msgid "Charges Autres"
 msgstr ""
+=======
+#: model:ir.ui.menu,name:l10n_ma.account_reports_ma_statements_menu
+msgid "Moroccan Statements"
+msgstr "Relevés pour le Maroc"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0

@@ -3,15 +3,21 @@
 # * website_crm
 # 
 # Translators:
-# jonas jensen <j.jensen@tcomp.dk>, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 8.0\n"
+"Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2015-01-21 14:08+0000\n"
 "PO-Revision-Date: 2016-04-05 22:25+0000\n"
 "Last-Translator: Hans Henrik Gabelgaard <hhg@gabelgaard.org>\n"
 "Language-Team: Danish (http://www.transifex.com/odoo/odoo-8/language/da/)\n"
+=======
+"POT-Creation-Date: 2015-09-07 14:41+0000\n"
+"PO-Revision-Date: 2015-09-08 09:54+0000\n"
+"Last-Translator: Martin Trigaux\n"
+"Language-Team: Danish (http://www.transifex.com/odoo/odoo-9/language/da/)\n"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -19,56 +25,62 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_crm
+<<<<<<< HEAD
 #: view:website:website_crm.contactus_thanks
 msgid "&times;"
 msgstr "&timer;"
-
-#. module: website_crm
-#: code:addons/website_crm/controllers/main.py:85
-#, python-format
-msgid "Custom Fields: "
+=======
+#: model:ir.ui.view,arch_db:website_crm.contactus_thanks
+msgid "&amp;times;"
 msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: website_crm
-#: view:website:website.contactus
+#: model:ir.ui.view,arch_db:website_crm.contactus_form
 msgid "Email"
 msgstr "E-mail"
 
 #. module: website_crm
+<<<<<<< HEAD
 #: code:addons/website_crm/controllers/main.py:94
 #, python-format
 msgid "Environ Fields: "
 msgstr "Miljø områder: "
-
-#. module: website_crm
-#: view:website:website_crm.contactus_thanks
+=======
+#: model:ir.ui.view,arch_db:website_crm.contactus_thanks
 msgid "If you have an emergency, do not hesitate to contact us by phone:"
-msgstr "Hvis du har en nødsituation, tøv ikke med at kontakte os på telefon:"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: website_crm
-#: view:website:website.contactus
+#: model:ir.model,name:website_crm.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Emne/Forventning"
+
+#. module: website_crm
+#: model:ir.ui.view,arch_db:website_crm.contactus_form
 msgid "Phone Number"
 msgstr "Telefon nummer"
 
 #. module: website_crm
-#: view:website:website.contactus
+#: model:ir.ui.view,arch_db:website_crm.contactus_form
 msgid "Send"
 msgstr "Send"
 
 #. module: website_crm
-#: view:website:website.contactus
+#: model:ir.ui.view,arch_db:website_crm.contactus_form
 msgid "Subject"
 msgstr "Emne"
 
 #. module: website_crm
-#: view:website:website_crm.contactus_thanks
+#: model:ir.ui.view,arch_db:website_crm.contactus_thanks
 msgid "Thanks!"
 msgstr "Tak!"
 
 #. module: website_crm
-#: view:website:website_crm.contactus_thanks
+#: model:ir.ui.view,arch_db:website_crm.contactus_thanks
 msgid "We will get back to you shortly."
-msgstr "Vi vil vende tilbage til dig snarest."
+msgstr ""
 
 #. module: website_crm
 #: model:ir.actions.act_url,name:website_crm.action_open_website
@@ -76,26 +88,26 @@ msgid "Website Contact Form"
 msgstr "Web side kontakt form"
 
 #. module: website_crm
-#: view:website:website.contactus
+#: model:ir.ui.view,arch_db:website_crm.contactus_form
 msgid "Your Company"
 msgstr "Dit firma"
 
 #. module: website_crm
-#: view:website:website.contactus
+#: model:ir.ui.view,arch_db:website_crm.contactus_form
 msgid "Your Name"
 msgstr "Dit navn"
 
 #. module: website_crm
-#: view:website:website.contactus
+#: model:ir.ui.view,arch_db:website_crm.contactus_form
 msgid "Your Question"
 msgstr "Dit spørgsmål"
 
 #. module: website_crm
-#: view:website:website_crm.contactus_thanks
+#: model:ir.ui.view,arch_db:website_crm.contactus_thanks
 msgid "Your message has been sent successfully."
 msgstr "Din meddelelse er afsendt."
 
 #. module: website_crm
-#: view:website:website.contactus
+#: model:ir.ui.view,arch_db:website_crm.contactus_form
 msgid "e.g. (+32).81.81.37.00"
 msgstr "f.eks. (+45) 55772020"

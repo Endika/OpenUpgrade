@@ -3,15 +3,21 @@
 # * website_mail
 # 
 # Translators:
-# oon arfiandwi <oon.arfiandwi@gmail.com>, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 8.0\n"
+"Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2015-01-21 14:09+0000\n"
 "PO-Revision-Date: 2015-12-02 11:35+0000\n"
 "Last-Translator: Wahyu Setiawan <wahyusetiaaa@gmail.com>\n"
 "Language-Team: Indonesian (http://www.transifex.com/odoo/odoo-8/language/id/)\n"
+=======
+"POT-Creation-Date: 2015-09-29 10:26+0000\n"
+"PO-Revision-Date: 2015-09-30 09:29+0000\n"
+"Last-Translator: Martin Trigaux\n"
+"Language-Team: Indonesian (http://www.transifex.com/odoo/odoo-9/language/id/)\n"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -19,6 +25,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. module: website_mail
+<<<<<<< HEAD
 #: view:website:website_mail.email_designer_snippets
 msgid "A Great Headline"
 msgstr "A Great Headline"
@@ -152,10 +159,14 @@ msgstr "Desain Email Anda"
 
 #. module: website_mail
 #: model:mail.group,name:website_mail.group_all_employees
+=======
+#: model:mail.channel,name:website_mail.channel_public
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Discussion Group"
 msgstr "Grup Diskusi"
 
 #. module: website_mail
+<<<<<<< HEAD
 #: code:addons/website_mail/models/email_template.py:15
 #: view:email.template:website_mail.email_template_form_inherit_website_link
 #, python-format
@@ -173,11 +184,14 @@ msgid "Email Templates"
 msgstr "Contoh Email"
 
 #. module: website_mail
+=======
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 #: model:ir.model,name:website_mail.model_mail_thread
 msgid "Email Thread"
 msgstr "Untaian email"
 
 #. module: website_mail
+<<<<<<< HEAD
 #: view:website:website_mail.email_designer_snippets
 msgid "Enterprise package"
 msgstr "Paket perusahaan"
@@ -242,6 +256,11 @@ msgstr "Gambar-Teks"
 #: view:website:website_mail.email_designer_snippets
 msgid "Limited support"
 msgstr "Dukungan terbatas"
+=======
+#: model:ir.ui.view,arch_db:website_mail.message_thread
+msgid "Leave a comment"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: website_mail
 #: model:ir.model,name:website_mail.model_mail_message
@@ -249,11 +268,12 @@ msgid "Message"
 msgstr "Pesan"
 
 #. module: website_mail
-#: help:mail.message,description:0
+#: model:ir.model.fields,help:website_mail.field_mail_message_description
 msgid "Message description: either the subject, or the beginning of the body"
 msgstr "Deskripsi pesan: baik subjek, atau awal tubuh"
 
 #. module: website_mail
+<<<<<<< HEAD
 #: view:website:website_mail.email_designer
 msgid "New Template"
 msgstr "Template baru"
@@ -262,33 +282,24 @@ msgstr "Template baru"
 #: view:website:website_mail.email_designer_snippets
 msgid "No support"
 msgstr "Tidak mendukung"
+=======
+#: model:ir.ui.view,arch_db:website_mail.message_thread
+msgid "Oops! Something went wrong. Try to reload the page and to log in."
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: website_mail
-#: view:website:website_mail.email_designer_snippets
-msgid "Order now"
-msgstr "Pesan sekarang"
-
-#. module: website_mail
-#: view:website:website_mail.email_designer_snippets
-msgid "Our Offers"
-msgstr "Penawaran Kami"
-
-#. module: website_mail
-#: view:website:website_mail.email_designer_snippets
-msgid "Professional"
-msgstr "Profesional"
-
-#. module: website_mail
-#: field:mail.message,website_published:0
+#: model:ir.model.fields,field_description:website_mail.field_mail_message_website_published
 msgid "Published"
 msgstr "Terpublikasi"
 
 #. module: website_mail
-#: view:website:website_mail.email_designer_snippets
-msgid "Screen: 2.5 inch"
-msgstr "Layar: 2.5 inci"
+#: model:ir.ui.view,arch_db:website_mail.message_thread
+msgid "Send"
+msgstr "Kirim"
 
 #. module: website_mail
+<<<<<<< HEAD
 #: view:website:website_mail.email_designer_snippets
 msgid "Screen: 2.8 inch"
 msgstr "Layar: 2.8 inch"
@@ -327,26 +338,14 @@ msgstr "Subyek:"
 
 #. module: website_mail
 #: view:website:website_mail.follow
+=======
+#: model:ir.ui.view,arch_db:website_mail.follow
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Subscribe"
 msgstr "Langganan"
 
 #. module: website_mail
-#: view:website:website_mail.email_designer_snippets
-msgid "Text Block"
-msgstr "Blok Teks"
-
-#. module: website_mail
-#: view:website:website_mail.email_designer_snippets
-msgid "Text-Image"
-msgstr "Teks-Gambar"
-
-#. module: website_mail
-#: view:website:website_mail.follow
-msgid "Thanks for your subscription!"
-msgstr "Terima kasih anda sudah berlangganan!"
-
-#. module: website_mail
-#: code:addons/website_mail/models/mail_message.py:88
+#: code:addons/website_mail/models/mail_message.py:69
 #, python-format
 msgid ""
 "The requested operation cannot be completed due to security restrictions. Please contact your system administrator.\n"
@@ -355,6 +354,7 @@ msgid ""
 msgstr "Operasi yang diminta tidak dapat diselesaikan karena batasan keamanan. Hubungi administrator sistem Anda.\n\n(Jenis dokumen: %s, operasi: %s)"
 
 #. module: website_mail
+<<<<<<< HEAD
 #: view:website:website_mail.email_designer_snippets
 msgid "The top of the top"
 msgstr "Bagian atas atas"
@@ -376,10 +376,14 @@ msgstr "Dukungan tak terbatas"
 
 #. module: website_mail
 #: view:website:website_mail.follow
+=======
+#: model:ir.ui.view,arch_db:website_mail.follow
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Unsubscribe"
 msgstr "Berhenti Berlangganan"
 
 #. module: website_mail
+<<<<<<< HEAD
 #: view:website:website_mail.email_designer_snippets
 msgid "View Product"
 msgstr "Lihat Produk"
@@ -403,18 +407,46 @@ msgstr "Pesan situs"
 #: help:mail.thread,website_message_ids:0
 msgid "Website communication history"
 msgstr "Sejarah komunikasi situs"
+=======
+#: model:ir.model.fields,help:website_mail.field_mail_message_website_published
+msgid "Visible on the website as a comment"
+msgstr ""
 
 #. module: website_mail
-#: view:website:website_mail.email_designer_snippets
-msgid "Weight: 1.1 ounces"
-msgstr "Berat: 1.1 ons"
+#: model:ir.model.fields,field_description:website_mail.field_mail_thread_website_message_ids
+msgid "Website Messages"
+msgstr ""
 
 #. module: website_mail
-#: view:website:website_mail.email_designer_snippets
-msgid "Weight: 1.2 ounces"
-msgstr "Berat: 1.2 ons"
+#: model:ir.model.fields,help:website_mail.field_mail_thread_website_message_ids
+msgid "Website communication history"
+msgstr ""
 
 #. module: website_mail
+#: model:ir.ui.view,arch_db:website_mail.message_thread
+msgid "Write a message..."
+msgstr ""
+
+#. module: website_mail
+#: model:ir.ui.view,arch_db:website_mail.message_thread
+msgid "You must be"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
+
+#. module: website_mail
+#. openerp-web
+#: code:addons/website_mail/static/src/xml/chatter_message.xml:8
+#, python-format
+msgid "just now"
+msgstr ""
+
+#. module: website_mail
+#: model:ir.ui.view,arch_db:website_mail.message_thread
+msgid "logged in"
+msgstr ""
+
+#. module: website_mail
+<<<<<<< HEAD
 #: view:website:website_mail.email_designer_snippets
 msgid ""
 "Write one or two paragraphs describing your product,\n"
@@ -426,18 +458,28 @@ msgstr "Menulis satu atau dua paragraf yang menjelaskan produk Anda, layanan ata
 #: view:website:website_mail.email_designer_snippets
 msgid "Write one sentence to convince visitor about your message."
 msgstr "Menulis satu kalimat untuk meyakinkan pengunjung tentang pesan Anda."
+=======
+#: model:ir.ui.view,arch_db:website_mail.message_thread
+msgid "on"
+msgstr ""
 
 #. module: website_mail
-#: view:website:website_mail.email_designer_snippets
-msgid "per month"
-msgstr "per bulan"
+#: model:ir.model,name:website_mail.model_publisher_warranty_contract
+msgid "publisher_warranty.contract"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: website_mail
-#: field:mail.message,description:0
+#: model:ir.ui.view,arch_db:website_mail.message_thread
+msgid "to post a comment."
+msgstr ""
+
+#. module: website_mail
+#: model:ir.model.fields,field_description:website_mail.field_mail_message_description
 msgid "unknown"
 msgstr "tidak diketahui"
 
 #. module: website_mail
-#: view:website:website_mail.follow
+#: model:ir.ui.view,arch_db:website_mail.follow
 msgid "your email..."
 msgstr "email anda..."

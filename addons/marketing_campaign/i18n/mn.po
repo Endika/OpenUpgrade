@@ -3,15 +3,21 @@
 # * marketing_campaign
 # 
 # Translators:
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2014
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 8.0\n"
+"Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2015-01-21 14:08+0000\n"
 "PO-Revision-Date: 2015-11-15 13:23+0000\n"
 "Last-Translator: Martin Trigaux\n"
 "Language-Team: Mongolian (http://www.transifex.com/odoo/odoo-8/language/mn/)\n"
+=======
+"POT-Creation-Date: 2015-09-07 14:40+0000\n"
+"PO-Revision-Date: 2015-08-25 10:19+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: Mongolian (http://www.transifex.com/odoo/odoo-9/language/mn/)\n"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -19,57 +25,55 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: marketing_campaign
-#: field:campaign.analysis,count:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_campaign_analysis_count
 msgid "# of Actions"
 msgstr "Үйлдлийн #"
 
 #. module: marketing_campaign
-#: model:ir.actions.act_window,help:marketing_campaign.action_marketing_campaign_form
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_form
 msgid ""
-"<p class=\"oe_view_nocontent_create\">\n"
-"            Click to create a marketing campaign.\n"
-"          </p><p>\n"
-"            Odoo's marketing campaign allows you to automate communication\n"
-"            to your prospects. You can define a segment (set of conditions) on\n"
-"            your leads and partners to fullfil the campaign.\n"
-"          </p><p>\n"
-"            A campaign can have many activities like sending an email, printing\n"
-"            a letter, assigning to a team, etc. These activities are triggered\n"
-"            from specific situations; contact form, 10 days after first\n"
-"            contact, if a lead is not closed yet, etc.\n"
-"          </p>\n"
-"        "
+"<span class=\"o_stat_text\">Campaign</span>\n"
+"                            <span class=\"o_stat_text\">Statistics</span>"
 msgstr ""
 
 #. module: marketing_campaign
-#: field:marketing.campaign.activity,server_action_id:0
-msgid "Action"
-msgstr "Vйлдэл"
+#: model:ir.actions.act_window,help:marketing_campaign.action_marketing_campaign_form
+msgid ""
+"A campaign can have many activities like sending an email, printing\n"
+"            a letter, assigning to a team, etc. These activities are triggered\n"
+"            from specific situations; contact form, 10 days after first\n"
+"            contact, if a lead is not closed yet, etc."
+msgstr ""
 
 #. module: marketing_campaign
-#: view:marketing.campaign:marketing_campaign.view_marketing_campaign_form
-#: field:marketing.campaign,activity_ids:0
-#: view:marketing.campaign.activity:marketing_campaign.view_marketing_campaign_activity_form
-#: view:marketing.campaign.activity:marketing_campaign.view_marketing_campaign_activity_tree
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_activity_server_action_id
+msgid "Action"
+msgstr "Үйлдэл"
+
+#. module: marketing_campaign
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_activity_ids
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_activity_form
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_activity_tree
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_form
 msgid "Activities"
 msgstr "Үйл ажиллагаа"
 
 #. module: marketing_campaign
-#: view:campaign.analysis:marketing_campaign.view_campaign_analysis_search
-#: field:campaign.analysis,activity_id:0
-#: view:marketing.campaign.workitem:marketing_campaign.view_marketing_campaign_workitem_search
-#: field:marketing.campaign.workitem,activity_id:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_campaign_analysis_activity_id
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_workitem_activity_id
+#: model:ir.ui.view,arch_db:marketing_campaign.view_campaign_analysis_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_workitem_search
 msgid "Activity"
-msgstr "Үйл ажиллагаа"
+msgstr "Ажилбар"
 
 #. module: marketing_campaign
-#: code:addons/marketing_campaign/marketing_campaign.py:501
+#: code:addons/marketing_campaign/marketing_campaign.py:479
 #, python-format
 msgid "After %(interval_nbr)d %(interval_type)s"
 msgstr "%(interval_nbr)d %(interval_type)s-н дараа"
 
 #. module: marketing_campaign
-#: view:marketing.campaign.segment:marketing_campaign.view_marketing_campaign_segment_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_segment_search
 msgid "All"
 msgstr "Бүх"
 
@@ -79,7 +83,7 @@ msgid "All records (no duplicates)"
 msgstr "Бүх бичлэг (давхардал үгүй)"
 
 #. module: marketing_campaign
-#: help:marketing.campaign.activity,signal:0
+#: model:ir.model.fields,help:marketing_campaign.field_marketing_campaign_activity_signal
 msgid ""
 "An activity with a signal can be called programmatically. Be careful, the "
 "workitem is always created when a signal is sent"
@@ -101,28 +105,29 @@ msgid "Automatic"
 msgstr "Автомат"
 
 #. module: marketing_campaign
-#: code:addons/marketing_campaign/marketing_campaign.py:500
+#: code:addons/marketing_campaign/marketing_campaign.py:478
 #, python-format
 msgid "Automatic transition"
 msgstr "Автомат шилжилт"
 
 #. module: marketing_campaign
-#: help:marketing.campaign.activity,keep_if_condition_not_met:0
+#: model:ir.model.fields,help:marketing_campaign.field_marketing_campaign_activity_keep_if_condition_not_met
 msgid ""
 "By activating this option, workitems that aren't executed because the "
 "condition is not met are marked as cancelled instead of being deleted."
 msgstr "Энэ сонголтыг идэвхжүүлснээр нөхцөл биелээгүйн улмаас биелэгдээгүй ажлыг устгахын оронд цуцлагдсан гэж тэмдэглэдэг."
 
 #. module: marketing_campaign
-#: view:campaign.analysis:marketing_campaign.view_campaign_analysis_search
-#: field:campaign.analysis,campaign_id:0
-#: view:marketing.campaign:marketing_campaign.view_marketing_campaign_form
-#: view:marketing.campaign:marketing_campaign.view_marketing_campaign_search
-#: field:marketing.campaign.activity,campaign_id:0
-#: view:marketing.campaign.segment:marketing_campaign.view_marketing_campaign_segment_search
-#: field:marketing.campaign.segment,campaign_id:0
-#: view:marketing.campaign.workitem:marketing_campaign.view_marketing_campaign_workitem_search
-#: field:marketing.campaign.workitem,campaign_id:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_campaign_analysis_campaign_id
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_activity_campaign_id
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_segment_campaign_id
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_workitem_campaign_id
+#: model:ir.ui.menu,name:marketing_campaign.menu_action_campaign_analysis_all
+#: model:ir.ui.view,arch_db:marketing_campaign.view_campaign_analysis_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_form
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_segment_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_workitem_search
 msgid "Campaign"
 msgstr "Аян"
 
@@ -132,22 +137,19 @@ msgid "Campaign Activity"
 msgstr "Аяны Үйл ажиллагаа"
 
 #. module: marketing_campaign
-#: view:campaign.analysis:marketing_campaign.view_campaign_analysis_search
 #: model:ir.actions.act_window,name:marketing_campaign.action_campaign_analysis_all
 #: model:ir.model,name:marketing_campaign.model_campaign_analysis
-#: model:ir.ui.menu,name:marketing_campaign.menu_action_campaign_analysis_all
+#: model:ir.ui.view,arch_db:marketing_campaign.view_campaign_analysis_search
 msgid "Campaign Analysis"
 msgstr "Аяны Шинжилгээ"
 
 #. module: marketing_campaign
-#: view:marketing.campaign:marketing_campaign.view_marketing_campaign_diagram
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_diagram
 msgid "Campaign Editor"
 msgstr "Аян Засварлагч"
 
 #. module: marketing_campaign
 #: model:ir.actions.act_window,name:marketing_campaign.act_marketing_campaing_stat
-#: model:ir.actions.act_window,name:marketing_campaign.action_marketing_campaign_workitem
-#: model:ir.ui.menu,name:marketing_campaign.menu_action_marketing_campaign_workitem
 msgid "Campaign Follow-up"
 msgstr "Аяны мөшгөлт"
 
@@ -168,30 +170,30 @@ msgstr "Аяны ажил"
 
 #. module: marketing_campaign
 #: model:ir.actions.act_window,name:marketing_campaign.action_marketing_campaign_form
-#: model:ir.ui.menu,name:marketing_campaign.menu_marketing_campaign
+#: model:ir.ui.menu,name:marketing_campaign.menu_marketing_campaign_campaigns
 #: model:ir.ui.menu,name:marketing_campaign.menu_marketing_campaign_form
-#: view:marketing.campaign:marketing_campaign.view_marketing_campaign_search
-#: view:marketing.campaign:marketing_campaign.view_marketing_campaign_tree
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_tree
 msgid "Campaigns"
 msgstr "Аянууд"
 
 #. module: marketing_campaign
-#: view:marketing.campaign.workitem:marketing_campaign.view_marketing_campaign_workitem_tree
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_workitem_tree
 msgid "Cancel"
 msgstr "Цуцлах"
 
 #. module: marketing_campaign
-#: view:marketing.campaign:marketing_campaign.view_marketing_campaign_form
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_form
 msgid "Cancel Campaign"
 msgstr "Аянг Цуцлах"
 
 #. module: marketing_campaign
-#: view:marketing.campaign.segment:marketing_campaign.view_marketing_campaign_segment_form
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_segment_form
 msgid "Cancel Segment"
 msgstr "Сегментийг Цуцлах"
 
 #. module: marketing_campaign
-#: view:marketing.campaign.workitem:marketing_campaign.view_marketing_campaign_workitem_form
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_workitem_form
 msgid "Cancel Workitem"
 msgstr "Ажлыг цуцлах"
 
@@ -203,65 +205,70 @@ msgid "Cancelled"
 msgstr "Цуцлагдсан"
 
 #. module: marketing_campaign
-#: help:marketing.campaign,object_id:0
+#: model:ir.model.fields,help:marketing_campaign.field_marketing_campaign_object_id
 msgid "Choose the resource on which you want this campaign to be run"
 msgstr "Энэ аян явагдах нөөцийг сонгоно уу"
 
 #. module: marketing_campaign
-#: view:marketing.campaign.segment:marketing_campaign.view_marketing_campaign_segment_form
+#: model:ir.actions.act_window,help:marketing_campaign.action_marketing_campaign_form
+msgid "Click to create a marketing campaign."
+msgstr ""
+
+#. module: marketing_campaign
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_segment_form
 msgid "Close"
 msgstr "Хаах"
 
 #. module: marketing_campaign
-#: field:marketing.campaign.activity,condition:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_activity_condition
 msgid "Condition"
 msgstr "Нөхцөл"
 
 #. module: marketing_campaign
-#: model:email.template,subject:marketing_campaign.email_template_2
+#: model:mail.template,subject:marketing_campaign.email_template_2
 msgid "Congratulations! You are now a Silver Partner!"
 msgstr "Баяр хүргэе! Та одоо Мөнгөн Түнш!"
 
 #. module: marketing_campaign
-#: model:email.template,subject:marketing_campaign.email_template_3
+#: model:mail.template,subject:marketing_campaign.email_template_3
 msgid "Congratulations! You are now one of our Gold Partners!"
 msgstr "Баяр хүргэе! Та одоо Алтан Түнш боллоо."
 
 #. module: marketing_campaign
-#: code:addons/marketing_campaign/marketing_campaign.py:502
+#: code:addons/marketing_campaign/marketing_campaign.py:480
 #: selection:marketing.campaign.transition,trigger:0
 #, python-format
 msgid "Cosmetic"
 msgstr "Гоо сайхны"
 
 #. module: marketing_campaign
-#: view:campaign.analysis:marketing_campaign.view_campaign_analysis_tree
-#: field:campaign.analysis,total_cost:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_campaign_analysis_total_cost
+#: model:ir.ui.view,arch_db:marketing_campaign.view_campaign_analysis_tree
 msgid "Cost"
 msgstr "Өртөг"
 
 #. module: marketing_campaign
-#: field:campaign.analysis,country_id:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_campaign_analysis_country_id
 msgid "Country"
 msgstr "Улс"
 
 #. module: marketing_campaign
-#: field:marketing.campaign,create_uid:0
-#: field:marketing.campaign.activity,create_uid:0
-#: field:marketing.campaign.segment,create_uid:0
-#: field:marketing.campaign.transition,create_uid:0
-#: field:marketing.campaign.workitem,create_uid:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_activity_create_uid
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_create_uid
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_segment_create_uid
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_transition_create_uid
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_workitem_create_uid
 msgid "Created by"
 msgstr "Үүсгэгч"
 
 #. module: marketing_campaign
-#: field:marketing.campaign,create_date:0
-#: field:marketing.campaign.activity,create_date:0
-#: field:marketing.campaign.segment,create_date:0
-#: field:marketing.campaign.transition,create_date:0
-#: field:marketing.campaign.workitem,create_date:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_activity_create_date
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_create_date
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_segment_create_date
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_transition_create_date
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_workitem_create_date
 msgid "Created on"
-msgstr "Үүсгэсэн огноо"
+msgstr "Үүсгэсэн"
 
 #. module: marketing_campaign
 #: selection:marketing.campaign.activity,type:0
@@ -269,26 +276,16 @@ msgid "Custom Action"
 msgstr "Өөриймшүүлсэн Үйлдэл"
 
 #. module: marketing_campaign
-#: field:campaign.analysis,date:0
-msgid "Date"
-msgstr "Огноо"
-
-#. module: marketing_campaign
-#: help:marketing.campaign.segment,sync_last_date:0
+#: model:ir.model.fields,help:marketing_campaign.field_marketing_campaign_segment_sync_last_date
 msgid ""
 "Date on which this segment was synchronized last time (automatically or "
 "manually)"
 msgstr "Энэ сегмент хамгийн сүүлд ижилтгэл хийгдсэн огноо (автоматаар эсвэл гараар)"
 
 #. module: marketing_campaign
-#: help:marketing.campaign.segment,date_done:0
+#: model:ir.model.fields,help:marketing_campaign.field_marketing_campaign_segment_date_done
 msgid "Date this segment was last closed or cancelled."
 msgstr "Энэ сегмент хамгийн сүүлд хаагдсан эсвэл цуцлагдсан огноо."
-
-#. module: marketing_campaign
-#: field:campaign.analysis,day:0
-msgid "Day"
-msgstr "Өдөр"
 
 #. module: marketing_campaign
 #: selection:marketing.campaign.transition,interval_type:0
@@ -301,7 +298,7 @@ msgid "December"
 msgstr "12-р сар"
 
 #. module: marketing_campaign
-#: help:marketing.campaign.segment,sync_mode:0
+#: model:ir.model.fields,help:marketing_campaign.field_marketing_campaign_segment_sync_mode
 msgid ""
 "Determines an additional criterion to add to the filter when selecting new "
 "records to inject in the campaign. \"No duplicates\" prevents selecting "
@@ -312,91 +309,107 @@ msgid ""
 msgstr "Аянд шинэ бичлэгүүдийг нэмэхээр шүүх үед хэрэглэх шүүлтүүрийн нэмэлт нөхцөлийг тодорхойлдог. \"Давхардал үгүй\" нь аянд урьд нь нэмэгдсэн бичлэгийг дахин сонгуулдаггүй. Хэрэв аян нь \"үл давцах талбар\"-тай бол \"давхардал үгүй\" нь өмнө нь аянд нэмэгдсэн бөгөөд давхацсан утгатай талбартай байвал тэдгээрийг сонгуулдаггүй."
 
 #. module: marketing_campaign
-#: field:marketing.campaign.activity,report_directory_id:0
-msgid "Directory"
-msgstr "Хавтас"
+#: model:ir.model.fields,field_description:marketing_campaign.field_campaign_analysis_display_name
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_activity_display_name
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_display_name
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_segment_display_name
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_transition_display_name
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_workitem_display_name
+msgid "Display Name"
+msgstr ""
 
 #. module: marketing_campaign
-#: field:marketing.campaign.activity,keep_if_condition_not_met:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_activity_keep_if_condition_not_met
 msgid "Don't Delete Workitems"
 msgstr "Ажлыг битгий устга"
 
 #. module: marketing_campaign
-#: view:campaign.analysis:marketing_campaign.view_campaign_analysis_search
 #: selection:campaign.analysis,state:0
-#: view:marketing.campaign:marketing_campaign.view_marketing_campaign_form
+#: model:ir.ui.view,arch_db:marketing_campaign.view_campaign_analysis_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_form
 #: selection:marketing.campaign,state:0
 #: selection:marketing.campaign.segment,state:0
 #: selection:marketing.campaign.workitem,state:0
 msgid "Done"
-msgstr "Хийгдсэн"
+msgstr "Дууссан"
 
 #. module: marketing_campaign
-#: view:marketing.campaign:marketing_campaign.view_marketing_campaign_search
-#: view:marketing.campaign.segment:marketing_campaign.view_marketing_campaign_segment_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_segment_search
 msgid "Draft"
 msgstr "Ноорог"
 
 #. module: marketing_campaign
-#: selection:marketing.campaign.activity,type:0
-msgid "Email"
-msgstr "Эмэйл"
+#: code:addons/marketing_campaign/marketing_campaign.py:170
+#, python-format
+msgid "Duplicating campaigns is not supported."
+msgstr ""
 
 #. module: marketing_campaign
-#: code:addons/marketing_campaign/marketing_campaign.py:774
+#: selection:marketing.campaign.activity,type:0
+msgid "Email"
+msgstr "Имэйл"
+
+#. module: marketing_campaign
+#: code:addons/marketing_campaign/marketing_campaign.py:752
 #, python-format
 msgid "Email Preview"
 msgstr "Э-мэйл уридчлан харах"
 
 #. module: marketing_campaign
-#: field:marketing.campaign.activity,email_template_id:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_activity_email_template_id
 msgid "Email Template"
 msgstr "Э-мэйл үлгэр"
 
 #. module: marketing_campaign
-#: model:ir.model,name:marketing_campaign.model_email_template
+#: model:ir.model,name:marketing_campaign.model_mail_template
 msgid "Email Templates"
-msgstr "Эмэйл Үлгэрүүд"
+msgstr "Имэйл Үлгэрүүд"
 
 #. module: marketing_campaign
-#: field:marketing.campaign.segment,date_done:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_segment_date_done
 msgid "End Date"
 msgstr "Дуусах огноо"
 
 #. module: marketing_campaign
-#: code:addons/marketing_campaign/marketing_campaign.py:111
-#: code:addons/marketing_campaign/marketing_campaign.py:123
-#: code:addons/marketing_campaign/marketing_campaign.py:133
-#, python-format
-msgid "Error"
-msgstr "Алдаа"
-
-#. module: marketing_campaign
-#: view:marketing.campaign.workitem:marketing_campaign.view_marketing_campaign_workitem_form
-#: field:marketing.campaign.workitem,error_msg:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_workitem_error_msg
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_workitem_form
 msgid "Error Message"
-msgstr "Алдааны Мэдэгдэл"
+msgstr "Алдааны мэссэж"
 
 #. module: marketing_campaign
 #: selection:campaign.analysis,state:0
-#: view:marketing.campaign.workitem:marketing_campaign.view_marketing_campaign_workitem_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_workitem_search
 #: selection:marketing.campaign.workitem,state:0
 msgid "Exception"
-msgstr "Саатал"
+msgstr "Алдаа"
 
 #. module: marketing_campaign
-#: view:campaign.analysis:marketing_campaign.view_campaign_analysis_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_campaign_analysis_search
 msgid "Exceptions"
 msgstr "Саатлууд"
 
 #. module: marketing_campaign
-#: field:marketing.campaign.workitem,date:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_campaign_analysis_date
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_workitem_date
 msgid "Execution Date"
 msgstr "Гүйцэтгэх огноо"
 
 #. module: marketing_campaign
-#: view:marketing.campaign.workitem:marketing_campaign.view_marketing_campaign_workitem_search
+#: model:ir.model.fields,field_description:marketing_campaign.field_campaign_analysis_day
+msgid "Execution Day"
+msgstr ""
+
+#. module: marketing_campaign
+#: model:ir.model.fields,field_description:marketing_campaign.field_campaign_analysis_month
+#: model:ir.ui.view,arch_db:marketing_campaign.view_campaign_analysis_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_workitem_search
 msgid "Execution Month"
+msgstr ""
+
+#. module: marketing_campaign
+#: model:ir.model.fields,field_description:marketing_campaign.field_campaign_analysis_year
+msgid "Execution Year"
 msgstr ""
 
 #. module: marketing_campaign
@@ -405,12 +418,12 @@ msgid "February"
 msgstr "2-р сар"
 
 #. module: marketing_campaign
-#: field:marketing.campaign.segment,ir_filter_id:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_segment_ir_filter_id
 msgid "Filter"
-msgstr "Шүүлтүүр"
+msgstr "Шүүлт"
 
 #. module: marketing_campaign
-#: help:marketing.campaign.segment,ir_filter_id:0
+#: model:ir.model.fields,help:marketing_campaign.field_marketing_campaign_segment_ir_filter_id
 msgid ""
 "Filter to select the matching resource records that belong to this segment. "
 "New filters can be created and saved using the advanced search on the list "
@@ -419,12 +432,12 @@ msgid ""
 msgstr "Энэ сегментэд харъяалагдах нөөцийн бичлэгүүдийг сонгохдоо шүүнэ. Шинэ шүүтүүүр нь нөөцийн жагсаалт харагдац дээрх дэлгэрүүлсэн хайлтыг ашиглан үүсгэж, хадгалж болно. Хэрэв шүүлтүүр тохируулагдаагүй бол бүх бичлэг шүүтүүргүйгээр сонгогдоно. Мөн ижилтгэх горим нь шүүх нөхцөлийг нэмж болно."
 
 #. module: marketing_campaign
-#: field:marketing.campaign,fixed_cost:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_fixed_cost
 msgid "Fixed Cost"
 msgstr "Тогтмол Өртөг"
 
 #. module: marketing_campaign
-#: help:marketing.campaign,fixed_cost:0
+#: model:ir.model.fields,help:marketing_campaign.field_marketing_campaign_fixed_cost
 msgid ""
 "Fixed cost for running this campaign. You may also specify variable cost and"
 " revenue on each campaign activity. Cost and Revenue statistics are included"
@@ -432,32 +445,38 @@ msgid ""
 msgstr "Энэ аянг ажиллуулахад тогтмол өртөгтэй. Аяны үйл ажиллагаа бүр дээр хувьсах өртөг болон орлогыг зааж өгч болно. Өртөг болон Орлого нь Аяны тайлагналд агуулагддаг."
 
 #. module: marketing_campaign
-#: view:marketing.campaign:marketing_campaign.view_marketing_campaign_form
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_form
 msgid "Follow-Up"
 msgstr "Мөшгөлт"
 
 #. module: marketing_campaign
-#: view:campaign.analysis:marketing_campaign.view_campaign_analysis_search
-#: view:marketing.campaign:marketing_campaign.view_marketing_campaign_search
-#: view:marketing.campaign.segment:marketing_campaign.view_marketing_campaign_segment_search
-#: view:marketing.campaign.workitem:marketing_campaign.view_marketing_campaign_workitem_search
+#: model:ir.actions.act_window,name:marketing_campaign.action_marketing_campaign_workitem
+#: model:ir.ui.menu,name:marketing_campaign.menu_action_marketing_campaign_workitem
+msgid "Follow-up"
+msgstr "Мөшгөлт"
+
+#. module: marketing_campaign
+#: model:ir.ui.view,arch_db:marketing_campaign.view_campaign_analysis_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_segment_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_workitem_search
 msgid "Group By"
 msgstr "Бүлэглэх"
 
 #. module: marketing_campaign
-#: model:email.template,body_html:marketing_campaign.email_template_1
+#: model:mail.template,body_html:marketing_campaign.email_template_1
 msgid "Hello, you will receive your welcome pack via email shortly."
 msgstr "Сайн байна уу? Таныг урьсан багцыг товчхоноор эмэйлээр та хүлээн авах болно."
 
 #. module: marketing_campaign
-#: model:email.template,body_html:marketing_campaign.email_template_3
+#: model:mail.template,body_html:marketing_campaign.email_template_3
 msgid ""
 "Hi, we are delighted to let you know that you have entered the select circle"
 " of our Gold Partners"
 msgstr "Сайн байна уу, Танд манай Алтан түнш болсныг дуулгахдаа бид таатай байна."
 
 #. module: marketing_campaign
-#: model:email.template,body_html:marketing_campaign.email_template_2
+#: model:mail.template,body_html:marketing_campaign.email_template_2
 msgid ""
 "Hi, we are delighted to welcome you among our Silver Partners as of today!"
 msgstr "Сайн байна уу? Өнөөдөр таныг манай Мөнгөн харилцагч болсныг мэдэгдэхэд таатай байна!"
@@ -465,29 +484,30 @@ msgstr "Сайн байна уу? Өнөөдөр таныг манай Мөнг�
 #. module: marketing_campaign
 #: selection:marketing.campaign.transition,interval_type:0
 msgid "Hour(s)"
-msgstr "Хугацаа(ууд)"
+msgstr "Цаг"
 
 #. module: marketing_campaign
-#: help:marketing.campaign.transition,trigger:0
+#: model:ir.model.fields,help:marketing_campaign.field_marketing_campaign_transition_trigger
 msgid "How is the destination workitem triggered"
 msgstr "Зорилтот ажил яаж өдөөгдөх"
 
 #. module: marketing_campaign
-#: field:campaign.analysis,id:0 field:marketing.campaign,id:0
-#: field:marketing.campaign.activity,id:0
-#: field:marketing.campaign.segment,id:0
-#: field:marketing.campaign.transition,id:0
-#: field:marketing.campaign.workitem,id:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_campaign_analysis_id
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_activity_id
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_id
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_segment_id
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_transition_id
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_workitem_id
 msgid "ID"
 msgstr "ID"
 
 #. module: marketing_campaign
-#: help:marketing.campaign.workitem,date:0
+#: model:ir.model.fields,help:marketing_campaign.field_marketing_campaign_workitem_date
 msgid "If date is not set, this workitem has to be run manually"
 msgstr "Хэрэв огноог тохируулаагүй бол энэ ажилыг гараар ажлуулах хэрэгтэй"
 
 #. module: marketing_campaign
-#: help:marketing.campaign,unique_field_id:0
+#: model:ir.model.fields,help:marketing_campaign.field_marketing_campaign_unique_field_id
 msgid ""
 "If set, this field will help segments that work in \"no duplicates\" mode to"
 " avoid selecting similar records twice. Similar records are records that "
@@ -500,22 +520,22 @@ msgid ""
 msgstr "Хэрэв сонгосон бол энэ талбар нь \"давхардал үгүй\" горимоор ажиллаж байгаа сегментүүдэд төстэй бичлэгийг хоёр дахин сонгохоос зайлсхийхэд тусладаг. Төстэй бичлэг гэдэг нь үл давхцах талбар дээрээ ижил утгатай бичлэгүүдийг хэлдэг. Тухайлбал \"email_from\" талбарыг CRM сэжимээс сонгосноор нэг аянг нэг хаяг руу дахин дахин эмэйлээр илгээхээс зайлсхийнэ. Хэрэв сонгоогүй бол \"давхардал үгүй\" аян нь ижил бичлэгийг дахин оруулахаас л зайлсхийнэ. Зөвхөн хялбархан харьцуулж болох текст, тоо, сонголт талбаруудыг л ашиглах боломжтой."
 
 #. module: marketing_campaign
-#: view:marketing.campaign.activity:marketing_campaign.view_marketing_campaign_activity_form
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_activity_form
 msgid "Incoming Transitions"
-msgstr "Ирж буй шилжилтүүд"
+msgstr "Орох шилжилтүүд"
 
 #. module: marketing_campaign
-#: help:marketing.campaign.segment,date_run:0
+#: model:ir.model.fields,help:marketing_campaign.field_marketing_campaign_segment_date_run
 msgid "Initial start date of this segment."
 msgstr "Энэ сегментийн эхлүүлэх эхлэлийн огноо"
 
 #. module: marketing_campaign
-#: field:marketing.campaign.transition,interval_type:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_transition_interval_type
 msgid "Interval Unit"
 msgstr "Интервал нэгж"
 
 #. module: marketing_campaign
-#: field:marketing.campaign.transition,interval_nbr:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_transition_interval_nbr
 msgid "Interval Value"
 msgstr "Интервалын утга"
 
@@ -535,40 +555,55 @@ msgid "June"
 msgstr "6-р сар"
 
 #. module: marketing_campaign
-#: field:marketing.campaign.segment,sync_last_date:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_campaign_analysis___last_update
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign___last_update
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_activity___last_update
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_segment___last_update
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_transition___last_update
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_workitem___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: marketing_campaign
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_segment_sync_last_date
 msgid "Last Synchronization"
 msgstr "Сүүлийн Ижилтгэл"
 
 #. module: marketing_campaign
-#: field:marketing.campaign,write_uid:0
-#: field:marketing.campaign.activity,write_uid:0
-#: field:marketing.campaign.segment,write_uid:0
-#: field:marketing.campaign.transition,write_uid:0
-#: field:marketing.campaign.workitem,write_uid:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_activity_write_uid
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_segment_write_uid
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_transition_write_uid
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_workitem_write_uid
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_write_uid
 msgid "Last Updated by"
 msgstr "Сүүлийн засвар хийсэн"
 
 #. module: marketing_campaign
-#: field:marketing.campaign,write_date:0
-#: field:marketing.campaign.activity,write_date:0
-#: field:marketing.campaign.segment,write_date:0
-#: field:marketing.campaign.transition,write_date:0
-#: field:marketing.campaign.workitem,write_date:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_activity_write_date
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_segment_write_date
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_transition_write_date
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_workitem_write_date
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_write_date
 msgid "Last Updated on"
 msgstr "Сүүлийн засвар хийсэн огноо"
 
 #. module: marketing_campaign
-#: field:marketing.campaign.segment,date_run:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_segment_date_run
 msgid "Launch Date"
 msgstr "Эхлэх огноо"
 
 #. module: marketing_campaign
-#: view:marketing.campaign.segment:marketing_campaign.view_marketing_campaign_segment_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_segment_search
 msgid "Launch Month"
 msgstr ""
 
 #. module: marketing_campaign
-#: view:marketing.campaign:marketing_campaign.view_marketing_campaign_search
+#: model:ir.ui.menu,name:marketing_campaign.menu_marketing_campaign_root
+msgid "Lead Automation"
+msgstr ""
+
+#. module: marketing_campaign
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_search
 msgid "Manual Mode"
 msgstr "Гар Горим"
 
@@ -579,35 +614,36 @@ msgstr "3-р сар"
 
 #. module: marketing_campaign
 #: model:ir.model,name:marketing_campaign.model_marketing_campaign
-#: view:marketing.campaign:marketing_campaign.view_marketing_campaign_form
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_form
 msgid "Marketing Campaign"
 msgstr "Маркетингийн Аян"
 
 #. module: marketing_campaign
-#: view:marketing.campaign.workitem:marketing_campaign.view_marketing_campaign_workitem_form
-#: view:marketing.campaign.workitem:marketing_campaign.view_marketing_campaign_workitem_search
-#: view:marketing.campaign.workitem:marketing_campaign.view_marketing_campaign_workitem_tree
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_workitem_form
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_workitem_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_workitem_tree
 msgid "Marketing Campaign Activities"
 msgstr "Маркетингийн Аяны Үйл ажиллагаанууд"
 
 #. module: marketing_campaign
-#: view:marketing.campaign.workitem:marketing_campaign.view_marketing_campaign_workitem_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_workitem_search
 msgid "Marketing Campaign Activity"
 msgstr "Аяны үйл ажиллагаа"
 
 #. module: marketing_campaign
-#: view:marketing.campaign.segment:marketing_campaign.view_marketing_campaign_segment_form
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_segment_form
 msgid "Marketing Campaign Segment"
 msgstr "Маркетингийн аяны сегмент"
 
 #. module: marketing_campaign
-#: view:marketing.campaign:marketing_campaign.view_marketing_campaign_form
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_form
 msgid "Marketing Campaign Statistics"
 msgstr ""
 
 #. module: marketing_campaign
-#: view:campaign.analysis:marketing_campaign.view_campaign_analysis_tree
-#: view:campaign.analysis:marketing_campaign.view_report_campaign_analysis_graph
+#: model:ir.ui.view,arch_db:marketing_campaign.view_campaign_analysis_tree
+#: model:ir.ui.view,arch_db:marketing_campaign.view_report_campaign_analysis_graph
+#: model:ir.ui.view,arch_db:marketing_campaign.view_report_campaign_analysis_pivot
 msgid "Marketing Reports"
 msgstr "Маркетингийн тайлан"
 
@@ -617,8 +653,8 @@ msgid "May"
 msgstr "5-р сар"
 
 #. module: marketing_campaign
-#: view:marketing.campaign:marketing_campaign.view_marketing_campaign_search
-#: field:marketing.campaign,mode:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_mode
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_search
 msgid "Mode"
 msgstr "Горим"
 
@@ -628,20 +664,15 @@ msgid "Model of filter must be same as resource model of Campaign "
 msgstr "Шүүлтүүрийн модель нь аяны нөөцийн модельтой ижил байх ёстой "
 
 #. module: marketing_campaign
-#: view:campaign.analysis:marketing_campaign.view_campaign_analysis_search
-#: field:campaign.analysis,month:0
-msgid "Month"
-msgstr "Сар"
-
-#. module: marketing_campaign
 #: selection:marketing.campaign.transition,interval_type:0
 msgid "Month(s)"
 msgstr "Сар(ууд)"
 
 #. module: marketing_campaign
-#: field:marketing.campaign,name:0 field:marketing.campaign.activity,name:0
-#: field:marketing.campaign.segment,name:0
-#: field:marketing.campaign.transition,name:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_activity_name
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_name
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_segment_name
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_transition_name
 msgid "Name"
 msgstr "Нэр"
 
@@ -652,41 +683,35 @@ msgid "New"
 msgstr "Шинэ"
 
 #. module: marketing_campaign
-#: view:marketing.campaign.segment:marketing_campaign.view_marketing_campaign_segment_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_segment_search
 msgid "Newly Created"
 msgstr "Шинээр үүсгэсэн"
 
 #. module: marketing_campaign
-#: view:marketing.campaign.segment:marketing_campaign.view_marketing_campaign_segment_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_segment_search
 msgid "Newly Modified"
 msgstr "Шинээр засварлагдсан"
 
 #. module: marketing_campaign
-#: view:marketing.campaign.activity:marketing_campaign.view_marketing_campaign_activity_form
-#: field:marketing.campaign.activity,to_ids:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_activity_to_ids
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_activity_form
 msgid "Next Activities"
 msgstr "Дараагийн үйл ажиллагаа"
 
 #. module: marketing_campaign
-#: field:marketing.campaign.transition,activity_to_id:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_transition_activity_to_id
 msgid "Next Activity"
 msgstr "Дараагийн үйл ажиллагаа"
 
 #. module: marketing_campaign
-#: field:marketing.campaign.segment,date_next_sync:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_segment_date_next_sync
 msgid "Next Synchronization"
 msgstr "Дараагийн ижилтгэл"
 
 #. module: marketing_campaign
-#: help:marketing.campaign.segment,date_next_sync:0
+#: model:ir.model.fields,help:marketing_campaign.field_marketing_campaign_segment_date_next_sync
 msgid "Next time the synchronization job is scheduled to run automatically"
 msgstr "Дараачийн удаа ижилтгэх ажил автоматаар ажиллахаар товлогдлоо"
-
-#. module: marketing_campaign
-#: code:addons/marketing_campaign/marketing_campaign.py:800
-#, python-format
-msgid "No preview"
-msgstr "Урьдчилж харахгүй"
 
 #. module: marketing_campaign
 #: selection:marketing.campaign,mode:0
@@ -699,14 +724,22 @@ msgid "November"
 msgstr "11-р сар"
 
 #. module: marketing_campaign
-#: field:marketing.campaign.activity,object_id:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_activity_object_id
 msgid "Object"
-msgstr "Обьект"
+msgstr "Объект"
 
 #. module: marketing_campaign
 #: selection:campaign.analysis,month:0
 msgid "October"
 msgstr "10-р сар"
+
+#. module: marketing_campaign
+#: model:ir.actions.act_window,help:marketing_campaign.action_marketing_campaign_form
+msgid ""
+"Odoo's marketing campaign allows you to automate communication\n"
+"            to your prospects. You can define a segment (set of conditions) on\n"
+"            your leads and partners to fullfil the campaign."
+msgstr ""
 
 #. module: marketing_campaign
 #: selection:marketing.campaign.segment,sync_mode:0
@@ -724,24 +757,18 @@ msgid "Open Marketing Menu"
 msgstr "Маркетинг цэс нээх"
 
 #. module: marketing_campaign
-#: code:addons/marketing_campaign/marketing_campaign.py:189
-#, python-format
-msgid "Operation not supported"
-msgstr "Үйлдэл дэмжигдээгүй"
-
-#. module: marketing_campaign
-#: view:marketing.campaign.activity:marketing_campaign.view_marketing_campaign_activity_form
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_activity_form
 msgid "Outgoing Transitions"
-msgstr "Гарах шилжилтүүд"
+msgstr "Гарах шилжилт"
 
 #. module: marketing_campaign
-#: field:campaign.analysis,partner_id:0
-#: field:marketing.campaign.workitem,partner_id:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_campaign_analysis_partner_id
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_workitem_partner_id
 msgid "Partner"
 msgstr "Харилцагч"
 
 #. module: marketing_campaign
-#: field:marketing.campaign,partner_field_id:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_partner_field_id
 msgid "Partner Field"
 msgstr "Харилцагч талбар"
 
@@ -751,30 +778,30 @@ msgid "Partners"
 msgstr "Харилцагч"
 
 #. module: marketing_campaign
-#: view:marketing.campaign.workitem:marketing_campaign.view_marketing_campaign_workitem_form
-#: view:marketing.campaign.workitem:marketing_campaign.view_marketing_campaign_workitem_tree
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_workitem_form
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_workitem_tree
 msgid "Preview"
-msgstr "Урьдчилж харах"
+msgstr "Урьдчилан харах"
 
 #. module: marketing_campaign
-#: view:marketing.campaign.activity:marketing_campaign.view_marketing_campaign_activity_form
-#: field:marketing.campaign.activity,from_ids:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_activity_from_ids
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_activity_form
 msgid "Previous Activities"
 msgstr "Өмнөх Үйл ажиллагаа"
 
 #. module: marketing_campaign
-#: field:marketing.campaign.transition,activity_from_id:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_transition_activity_from_id
 msgid "Previous Activity"
 msgstr "Өмнөх Үйл ажиллагаа"
 
 #. module: marketing_campaign
-#: view:marketing.campaign.workitem:marketing_campaign.view_marketing_campaign_workitem_form
-#: view:marketing.campaign.workitem:marketing_campaign.view_marketing_campaign_workitem_tree
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_workitem_form
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_workitem_tree
 msgid "Process"
 msgstr "Процесс"
 
 #. module: marketing_campaign
-#: help:marketing.campaign.activity,condition:0
+#: model:ir.model.fields,help:marketing_campaign.field_marketing_campaign_activity_condition
 msgid ""
 "Python expression to decide whether the activity can be executed, otherwise it will be deleted or cancelled.The expression may use the following [browsable] variables:\n"
 "   - activity: the campaign activity\n"
@@ -785,76 +812,81 @@ msgid ""
 msgstr "Үйл ажиллагааг ажиллуулах эсэхийг шийдэхн Python илэрхийлэл, үгүй бол энэ устгагдах юмуу цуцлагдана. Илэрхийлэл нь дараах [тольдох] хувьсагчдийг хэрэглэх боломжтой:\n   - activity: аяны үйл ажиллагаа\n   - workitem: аяны ажил\n   - resource: энэ аяны илтгэж байгаа нөөцийн обьект\n   - transitions: энэ үйл ажиллагаанаас шилжсэн аяны шилжилтийн жагсаалт\n...- re: Python-н regular expression модуль"
 
 #. module: marketing_campaign
-#: field:marketing.campaign.activity,report_id:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_activity_report_id
 #: selection:marketing.campaign.activity,type:0
 msgid "Report"
 msgstr "Тайлан"
 
 #. module: marketing_campaign
-#: view:marketing.campaign.workitem:marketing_campaign.view_marketing_campaign_workitem_form
-msgid "Reset"
-msgstr "Шинэчлэх"
+#: model:ir.ui.menu,name:marketing_campaign.report_marketing_campaign
+msgid "Reports"
+msgstr "Тайлан"
 
 #. module: marketing_campaign
-#: field:campaign.analysis,res_id:0
-#: view:marketing.campaign:marketing_campaign.view_marketing_campaign_search
-#: field:marketing.campaign,object_id:0
-#: field:marketing.campaign.segment,object_id:0
-#: view:marketing.campaign.workitem:marketing_campaign.view_marketing_campaign_workitem_search
-#: field:marketing.campaign.workitem,object_id:0
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_workitem_form
+msgid "Reset"
+msgstr "Сэргээх"
+
+#. module: marketing_campaign
+#: model:ir.model.fields,field_description:marketing_campaign.field_campaign_analysis_res_id
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_object_id
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_segment_object_id
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_workitem_object_id
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_workitem_search
 msgid "Resource"
 msgstr "Нөөц"
 
 #. module: marketing_campaign
-#: view:marketing.campaign.workitem:marketing_campaign.view_marketing_campaign_workitem_search
-#: field:marketing.campaign.workitem,res_id:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_workitem_res_id
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_workitem_search
 msgid "Resource ID"
 msgstr "Нөөц ID"
 
 #. module: marketing_campaign
-#: field:marketing.campaign.workitem,res_name:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_workitem_res_name
 msgid "Resource Name"
 msgstr "Нөөцийн нэр"
 
 #. module: marketing_campaign
-#: field:campaign.analysis,revenue:0
-#: field:marketing.campaign.activity,revenue:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_campaign_analysis_revenue
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_activity_revenue
 msgid "Revenue"
 msgstr "Орлого"
 
 #. module: marketing_campaign
-#: view:marketing.campaign:marketing_campaign.view_marketing_campaign_form
-#: view:marketing.campaign.segment:marketing_campaign.view_marketing_campaign_segment_form
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_form
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_segment_form
 msgid "Run"
 msgstr "Ажиллуулах"
 
 #. module: marketing_campaign
-#: view:marketing.campaign:marketing_campaign.view_marketing_campaign_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_segment_search
 #: selection:marketing.campaign,state:0
-#: view:marketing.campaign.segment:marketing_campaign.view_marketing_campaign_segment_search
 #: selection:marketing.campaign.segment,state:0
 msgid "Running"
-msgstr "Ажиллаж байна"
+msgstr "Ажиллаж буй"
 
 #. module: marketing_campaign
-#: view:campaign.analysis:marketing_campaign.view_campaign_analysis_search
-#: field:campaign.analysis,segment_id:0
-#: view:marketing.campaign.segment:marketing_campaign.view_marketing_campaign_segment_search
-#: view:marketing.campaign.workitem:marketing_campaign.view_marketing_campaign_workitem_search
-#: field:marketing.campaign.workitem,segment_id:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_campaign_analysis_segment_id
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_workitem_segment_id
+#: model:ir.ui.view,arch_db:marketing_campaign.view_campaign_analysis_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_segment_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_workitem_search
 msgid "Segment"
 msgstr "Сегмент"
 
 #. module: marketing_campaign
 #: model:ir.actions.act_window,name:marketing_campaign.act_marketing_campaing_segment_opened
 #: model:ir.actions.act_window,name:marketing_campaign.action_marketing_campaign_segment_form
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_segment_ids
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_segments_count
 #: model:ir.ui.menu,name:marketing_campaign.menu_marketing_campaign_segment_form
-#: view:marketing.campaign:marketing_campaign.view_marketing_campaign_form
-#: field:marketing.campaign,segment_ids:0
-#: field:marketing.campaign,segments_count:0
-#: view:marketing.campaign.segment:marketing_campaign.view_marketing_campaign_segment_form
-#: view:marketing.campaign.segment:marketing_campaign.view_marketing_campaign_segment_search
-#: view:marketing.campaign.segment:marketing_campaign.view_marketing_campaign_segment_tree
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_form
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_segment_form
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_segment_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_segment_tree
 msgid "Segments"
 msgstr "Сегментүүд"
 
@@ -864,7 +896,7 @@ msgid "September"
 msgstr "9-р сар"
 
 #. module: marketing_campaign
-#: help:marketing.campaign.activity,variable_cost:0
+#: model:ir.model.fields,help:marketing_campaign.field_marketing_campaign_activity_variable_cost
 msgid ""
 "Set a variable cost if you consider that every campaign item that has "
 "reached this point has entailed a certain cost. You can get cost statistics "
@@ -872,7 +904,7 @@ msgid ""
 msgstr "Хэрэв та аяны зүйл бүр нь энэ цэгт хүрээд тодорхой өртөгийг дагуулахаар бодож байгаа бол хувьсах өртөгийг тохируулна уу. Тайлан хэсгээс статистикуудыг харах боломжтой."
 
 #. module: marketing_campaign
-#: help:marketing.campaign.activity,revenue:0
+#: model:ir.model.fields,help:marketing_campaign.field_marketing_campaign_activity_revenue
 msgid ""
 "Set an expected revenue if you consider that every campaign item that has "
 "reached this point has generated a certain revenue. You can get revenue "
@@ -880,65 +912,60 @@ msgid ""
 msgstr "Хэрэв та аяны зүйл бүр нь энэ цэгт хүрэхээрээ тодорхой оролго үүсгэдэг байхаар бодож байгаа бол таамагласан оролгыг тохируулна. Тайлан хэсэгт оролгын статистикийг харж болно."
 
 #. module: marketing_campaign
-#: view:marketing.campaign:marketing_campaign.view_marketing_campaign_form
-#: view:marketing.campaign.segment:marketing_campaign.view_marketing_campaign_segment_form
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_form
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_segment_form
 msgid "Set to Draft"
 msgstr "Ноороглох"
 
 #. module: marketing_campaign
-#: field:marketing.campaign.activity,signal:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_activity_signal
 msgid "Signal"
 msgstr "Сигнал"
 
 #. module: marketing_campaign
-#: field:marketing.campaign.activity,start:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_activity_start
 msgid "Start"
 msgstr "Эхлэх"
 
 #. module: marketing_campaign
-#: view:marketing.campaign:marketing_campaign.view_marketing_campaign_form
-msgid "Statistics"
-msgstr "Статистик"
-
-#. module: marketing_campaign
-#: view:campaign.analysis:marketing_campaign.view_campaign_analysis_search
-#: field:campaign.analysis,state:0
-#: view:marketing.campaign:marketing_campaign.view_marketing_campaign_search
-#: field:marketing.campaign,state:0
-#: view:marketing.campaign.segment:marketing_campaign.view_marketing_campaign_segment_search
-#: field:marketing.campaign.segment,state:0
-#: view:marketing.campaign.workitem:marketing_campaign.view_marketing_campaign_workitem_search
-#: field:marketing.campaign.workitem,state:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_campaign_analysis_state
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_segment_state
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_state
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_workitem_state
+#: model:ir.ui.view,arch_db:marketing_campaign.view_campaign_analysis_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_segment_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_workitem_search
 msgid "Status"
 msgstr "Төлөв"
 
 #. module: marketing_campaign
-#: view:marketing.campaign.segment:marketing_campaign.view_marketing_campaign_segment_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_segment_search
 msgid "Sync mode: all records"
 msgstr "Ижилтгэх горим: бүх бичлэгүүд"
 
 #. module: marketing_campaign
-#: view:marketing.campaign.segment:marketing_campaign.view_marketing_campaign_segment_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_segment_search
 msgid "Sync mode: only records created after last sync"
 msgstr "Ижилтгэх горим: Зөвхөн сүүлийн ижилтгэлээс хойш үүссэн бичлэгүүдийн хувьд"
 
 #. module: marketing_campaign
-#: view:marketing.campaign.segment:marketing_campaign.view_marketing_campaign_segment_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_segment_search
 msgid "Sync mode: only records updated after last sync"
 msgstr "Ижилтгэх горим: хамгийн сүүлчийн ижилтгэлээс хойшхи бичлэгүүд л шинэчлэгдэнэ"
 
 #. module: marketing_campaign
-#: field:marketing.campaign.segment,sync_mode:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_segment_sync_mode
 msgid "Synchronization mode"
 msgstr "Ижилтгэх Горим"
 
 #. module: marketing_campaign
-#: view:marketing.campaign.segment:marketing_campaign.view_marketing_campaign_segment_form
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_segment_form
 msgid "Synchronize Manually"
 msgstr "Гараар Ижилтгэх"
 
 #. module: marketing_campaign
-#: help:marketing.campaign,mode:0
+#: model:ir.model.fields,help:marketing_campaign.field_marketing_campaign_mode
 msgid ""
 "Test - It creates and process all the activities directly (without waiting for the delay on transitions) but does not send emails or produce reports.\n"
 "Test in Realtime - It creates and processes all the activities directly but does not send emails or produce reports.\n"
@@ -952,7 +979,7 @@ msgid "Test Directly"
 msgstr "Шууд Тестлэх"
 
 #. module: marketing_campaign
-#: view:marketing.campaign:marketing_campaign.view_marketing_campaign_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_search
 msgid "Test Mode"
 msgstr "Тестийн горим"
 
@@ -967,18 +994,18 @@ msgid "The To/From Activity of transition must be of the same Campaign "
 msgstr "Хэнээс/Хэнд шилжилтийн үйл ажиллагаа нь ижил Аян дотор байх ёстой. "
 
 #. module: marketing_campaign
-#: help:marketing.campaign.activity,server_action_id:0
+#: model:ir.model.fields,help:marketing_campaign.field_marketing_campaign_activity_server_action_id
 msgid "The action to perform when this activity is activated"
 msgstr "Үйл ажиллагаа идэвхжихэд хийгдэх үйлдэл"
 
 #. module: marketing_campaign
-#: code:addons/marketing_campaign/marketing_campaign.py:133
+#: code:addons/marketing_campaign/marketing_campaign.py:114
 #, python-format
 msgid "The campaign cannot be marked as done before all segments are closed."
 msgstr "Бүх сегментүүдийг хаахаас өмнө аянг хийгдсэнээр тэмдэглэх боломжгүй."
 
 #. module: marketing_campaign
-#: code:addons/marketing_campaign/marketing_campaign.py:123
+#: code:addons/marketing_campaign/marketing_campaign.py:104
 #, python-format
 msgid ""
 "The campaign cannot be started. It does not have any starting activity. "
@@ -986,24 +1013,24 @@ msgid ""
 msgstr "Аянг эхлүүлэх боломжгүй. Энэ нь эхлэлийн ямар ч үйл ажиллагаагүй байна. Аяны үйл явдлуудын нэгийг эхлэлийн цэг болгон тэмдэглэнэ үү."
 
 #. module: marketing_campaign
-#: code:addons/marketing_campaign/marketing_campaign.py:111
+#: code:addons/marketing_campaign/marketing_campaign.py:92
 #, python-format
 msgid "The campaign cannot be started. There are no activities in it."
 msgstr "Аян эхлэх боломжгүй. Дотор нь ямар ч үйл ажиллагаа алга."
 
 #. module: marketing_campaign
-#: code:addons/marketing_campaign/marketing_campaign.py:800
+#: code:addons/marketing_campaign/marketing_campaign.py:777
 #, python-format
 msgid "The current step for this item has no email or report to preview."
 msgstr "Энэ зүйл дахь идэвхтэй алхам нь урьдчилан харах имэйл эсвэл тайлан байхгүй байна."
 
 #. module: marketing_campaign
-#: help:marketing.campaign.activity,email_template_id:0
+#: model:ir.model.fields,help:marketing_campaign.field_marketing_campaign_activity_email_template_id
 msgid "The email to send when this activity is activated"
 msgstr "Энэ үйл ажиллагаа идэвхжихэд илгээх эмэйл."
 
 #. module: marketing_campaign
-#: help:marketing.campaign,partner_field_id:0
+#: model:ir.model.fields,help:marketing_campaign.field_marketing_campaign_partner_field_id
 msgid ""
 "The generated workitems will be linked to the partner related to the record."
 " If the record is the partner itself leave this field empty. This is useful "
@@ -1017,12 +1044,12 @@ msgid "The interval must be positive or zero"
 msgstr "Интервал нь эерэг юмуу тэг байх ёстой"
 
 #. module: marketing_campaign
-#: help:marketing.campaign.activity,report_id:0
+#: model:ir.model.fields,help:marketing_campaign.field_marketing_campaign_activity_report_id
 msgid "The report to generate when this activity is activated"
 msgstr "Энэ үйл ажиллагаа идэвхжихэд үүсэх тайлан"
 
 #. module: marketing_campaign
-#: help:marketing.campaign.activity,type:0
+#: model:ir.model.fields,help:marketing_campaign.field_marketing_campaign_activity_type
 msgid ""
 "The type of action to execute when an item enters this activity, such as:\n"
 "   - Email: send an email using a predefined email template\n"
@@ -1032,14 +1059,9 @@ msgid ""
 msgstr "Ямарваа зүйл энэ үйл ажиллагаанд орж ирэхэд хийгдэх үйлдлийн төрөл, тухайлбал:\n   - Эмэйл: Урьдчилан тодорхойлсон үлгэр ашиглан эмэйл илгээгдэнэ\n   - Тайлан: нөөц дээр тодорхойлогдсон тайлан хэвлэж түүнийгээ тодорхой директорт хадгалдаг\n   - Өөриймшүүлсэн Үйлдэл: урьдчилан тодорхойлсон үйлдлийг хэрэгжүүлнэ, ж: нөөцийн бичлэгүүдийг засварлах\n  "
 
 #. module: marketing_campaign
-#: help:marketing.campaign.activity,start:0
+#: model:ir.model.fields,help:marketing_campaign.field_marketing_campaign_activity_start
 msgid "This activity is launched when the campaign starts."
 msgstr "Энэ үйл ажиллагаа нь аян эхлэхэд дуудагдаж эхлэнэ."
-
-#. module: marketing_campaign
-#: help:marketing.campaign.activity,report_directory_id:0
-msgid "This folder is used to store the generated reports"
-msgstr "Энэ хавтас нь үүсгэсэн тайлангуудыг хадгалахад хэрэглэгддэг"
 
 #. module: marketing_campaign
 #: selection:marketing.campaign.transition,trigger:0
@@ -1047,35 +1069,35 @@ msgid "Time"
 msgstr "Цаг"
 
 #. module: marketing_campaign
-#: view:campaign.analysis:marketing_campaign.view_campaign_analysis_search
 #: selection:campaign.analysis,state:0
-#: view:marketing.campaign.workitem:marketing_campaign.view_marketing_campaign_workitem_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_campaign_analysis_search
+#: model:ir.ui.view,arch_db:marketing_campaign.view_marketing_campaign_workitem_search
 #: selection:marketing.campaign.workitem,state:0
 msgid "To Do"
 msgstr "Хийх"
 
 #. module: marketing_campaign
-#: field:marketing.campaign.transition,trigger:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_transition_trigger
 msgid "Trigger"
-msgstr "Өдөөгч"
+msgstr "Гол"
 
 #. module: marketing_campaign
-#: field:marketing.campaign.activity,type:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_activity_type
 msgid "Type"
 msgstr "Төрөл"
 
 #. module: marketing_campaign
-#: field:marketing.campaign,unique_field_id:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_unique_field_id
 msgid "Unique Field"
 msgstr "Үл давхцах талбар"
 
 #. module: marketing_campaign
-#: field:marketing.campaign.activity,variable_cost:0
+#: model:ir.model.fields,field_description:marketing_campaign.field_marketing_campaign_activity_variable_cost
 msgid "Variable Cost"
 msgstr "Хувьсах өртөг"
 
 #. module: marketing_campaign
-#: model:email.template,subject:marketing_campaign.email_template_1
+#: model:mail.template,subject:marketing_campaign.email_template_1
 msgid "Welcome to the Odoo Partner Channel!"
 msgstr "Odoo Түншүүдийн сувагт тавтай морилно уу!"
 
@@ -1087,12 +1109,7 @@ msgstr "Гар Баталгаагаар"
 #. module: marketing_campaign
 #: model:ir.actions.act_window,name:marketing_campaign.act_marketing_campaing_followup
 msgid "Workitems"
-msgstr "Ажлууд"
-
-#. module: marketing_campaign
-#: field:campaign.analysis,year:0
-msgid "Year"
-msgstr "Жил"
+msgstr "Ажлын элементүүд"
 
 #. module: marketing_campaign
 #: selection:marketing.campaign.transition,interval_type:0
@@ -1100,7 +1117,6 @@ msgid "Year(s)"
 msgstr "Жил(үүд)"
 
 #. module: marketing_campaign
-#: code:addons/marketing_campaign/marketing_campaign.py:189
-#, python-format
-msgid "You cannot duplicate a campaign, Not supported yet."
-msgstr "Та аянг хувилах боломжгүй, одоогоор хувилах үйлдэл дэмжигдээгүй байгаа."
+#: model:ir.model,name:marketing_campaign.model_ir_actions_report_xml
+msgid "ir.actions.report.xml"
+msgstr "ir.actions.report.xml"

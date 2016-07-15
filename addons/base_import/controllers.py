@@ -1,11 +1,15 @@
 # -*- coding: utf-8 -*-
+<<<<<<< HEAD
 import cgi
 import simplejson
+=======
+import json
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 from openerp.http import Controller, route
 
 class ImportController(Controller):
-    @route('/base_import/set_file')
+    @route('/base_import/set_file', methods=['POST'])
     def set_file(self, req, file, import_id, jsonp='callback'):
         import_id = int(import_id)
 
@@ -16,4 +20,8 @@ class ImportController(Controller):
         }, req.context)
 
         return 'window.top.%s(%s)' % (
+<<<<<<< HEAD
             cgi.escape(jsonp), simplejson.dumps({'result': written}))
+=======
+            jsonp, json.dumps({'result': written}))
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0

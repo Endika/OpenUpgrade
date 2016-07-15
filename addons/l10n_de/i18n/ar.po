@@ -1,8 +1,9 @@
-# Translation of OpenERP Server.
+# Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * l10n_de
 # 
 # Translators:
+<<<<<<< HEAD
 # Fahad Alqahtani <fahad@cloudland.sa>, 2015
 # hoxhe aits <hoxhe0@gmail.com>, 2015
 msgid ""
@@ -13,6 +14,17 @@ msgstr ""
 "PO-Revision-Date: 2015-11-05 18:58+0000\n"
 "Last-Translator: Fahad Alqahtani <fahad@cloudland.sa>\n"
 "Language-Team: Arabic (http://www.transifex.com/odoo/odoo-8/language/ar/)\n"
+=======
+# hamza tayseer atieh <hamza.atieh@minervadata.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo 9.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-18 08:19+0000\n"
+"PO-Revision-Date: 2015-11-03 09:58+0000\n"
+"Last-Translator: hamza tayseer atieh <hamza.atieh@minervadata.com>\n"
+"Language-Team: Arabic (http://www.transifex.com/odoo/odoo-9/language/ar/)\n"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -20,6 +32,7 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 #. module: l10n_de
+<<<<<<< HEAD
 #: model:account.fiscal.position.template,name:l10n_de.fiscal_position_non_eu_sale_skr03
 #: model:account.fiscal.position.template,name:l10n_de.fiscal_position_non_eu_sale_skr04
 msgid "Kunde Ausland"
@@ -66,3 +79,13 @@ msgstr "Lieferant EU (ohne Ust-ID)"
 #: model:account.fiscal.position.template,name:l10n_de.fiscal_position_eu_vat_id_sale_skr04
 msgid "Kunde EU Unternehmen (mit USt-ID)"
 msgstr "Kunde EU Unternehmen (mit USt-ID)"
+=======
+#: model:ir.ui.menu,name:l10n_de.account_reports_de_statements_menu
+msgid "German Statements"
+msgstr "كشوفات المانية"
+
+#. module: l10n_de
+#: model:account.account.type,name:l10n_de.account_type_other
+msgid "Jahresabschlusskonten u. Statistik"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0

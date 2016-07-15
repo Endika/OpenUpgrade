@@ -1,17 +1,24 @@
-# Translation of OpenERP Server.
+# Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * l10n_pe
 # 
 # Translators:
-# hoxhe aits <hoxhe0@gmail.com>, 2015
+# Sadig Adam <sadig41@gmail.com>, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 8.0\n"
+"Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2012-11-24 02:53+0000\n"
 "PO-Revision-Date: 2015-11-04 08:19+0000\n"
 "Last-Translator: hoxhe aits <hoxhe0@gmail.com>\n"
 "Language-Team: Arabic (http://www.transifex.com/odoo/odoo-8/language/ar/)\n"
+=======
+"POT-Creation-Date: 2015-09-07 14:55+0000\n"
+"PO-Revision-Date: 2015-11-04 08:19+0000\n"
+"Last-Translator: Sadig Adam <sadig41@gmail.com>\n"
+"Language-Team: Arabic (http://www.transifex.com/odoo/odoo-9/language/ar/)\n"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -19,6 +26,7 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 #. module: l10n_pe
+<<<<<<< HEAD
 #: model:account.account.type,name:l10n_pe.account_account_type_EGP_FU_070
 msgid "Gastos Financieros"
 msgstr "مصاريف مالية"
@@ -152,6 +160,11 @@ msgstr "النفقات المالية لحماية الطبيعة"
 #: model:account.account.type,name:l10n_pe.account_account_type_EGP_FU_090
 msgid "Otros Gastos"
 msgstr "مصاريف اخرى"
+=======
+#: model:account.account.type,name:l10n_pe.account_account_type_EGP_NA_080
+msgid "(+/-) Variación de Envases y Embalajes"
+msgstr "(+/-) التغير في الحاويات والتغليف"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_pe
 #: model:account.account.type,name:l10n_pe.account_account_type_EGP_NA_060
@@ -159,14 +172,21 @@ msgid "(+/-) Variación de Materias Primas"
 msgstr "(+/-) التغير في السلع"
 
 #. module: l10n_pe
+<<<<<<< HEAD
 #: model:account.account.type,name:l10n_pe.account_account_type_BG_PTN_20
 msgid "Capital Adicional"
 msgstr "رأس المال الإضافي"
+=======
+#: model:account.account.type,name:l10n_pe.account_account_type_EGP_NA_020
+msgid "(+/-) Variación de Mercaderías"
+msgstr "(+/-) التغير من السلع"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_pe
 #: model:account.account.type,name:l10n_pe.account_account_type_EGP_NA_070
 msgid "(+/-)Variación de Materiales Auxiliares, Suministros y Repuestos"
 msgstr "(+/-) تباين مساعدة المواد، اللوازم وقطع غيار"
+<<<<<<< HEAD
 
 #. module: l10n_pe
 #: model:account.account.type,name:l10n_pe.account_account_type_BG_ACC_60
@@ -227,6 +247,13 @@ msgstr "النفقات المدفوعة مسبقا"
 #: model:account.account.type,name:l10n_pe.account_account_type_EGP_FU_140
 msgid "Gastos Extraordinarios"
 msgstr "نفقات غير عادية"
+=======
+
+#. module: l10n_pe
+#: model:account.account.type,name:l10n_pe.account_account_type_EGP_NA_050
+msgid "Compras de Envases y Emabalajes"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_pe
 #: model:account.account.type,name:l10n_pe.account_account_type_EGP_NA_040
@@ -234,6 +261,7 @@ msgid "Compras de Materiales Auxiliares, Suministros y Repuestos"
 msgstr ""
 
 #. module: l10n_pe
+<<<<<<< HEAD
 #: model:account.account.type,name:l10n_pe.account_account_type_EGP_FU_150
 msgid "Interés Minoritario"
 msgstr "مصلحة الأقلية"
@@ -327,6 +355,21 @@ msgstr "أسهم"
 #: model:account.account.type,name:l10n_pe.account_account_type_EGP_FU_055
 msgid "Ganancias (Pérdidas) por Venta de Activos"
 msgstr "أرباح (خسائر) في بيع الأصول"
+=======
+#: model:account.account.type,name:l10n_pe.account_account_type_ORD
+msgid "Cuentas de Orden"
+msgstr "الذمم المدينة"
+
+#. module: l10n_pe
+#: model:account.account.type,name:l10n_pe.account_account_type_EGP_NA_150
+msgid "Gastos Financieros por Naturaleza"
+msgstr "النفقات المالية لحماية الطبيعة"
+
+#. module: l10n_pe
+#: model:account.account.type,name:l10n_pe.account_account_type_EGP_NA_100
+msgid "Gastos de Personal, Directores y Gerentes"
+msgstr "تكاليف الموظفين وأعضاء مجلس الإدارة والمديرين"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_pe
 #: model:account.account.type,name:l10n_pe.account_account_type_EGP_NA_090
@@ -334,6 +377,7 @@ msgid "Gastos por Servicios Prestados por Terceros"
 msgstr ""
 
 #. module: l10n_pe
+<<<<<<< HEAD
 #: model:account.account.type,name:l10n_pe.account_account_type_BG_PTN_60
 msgid "Otras Reservas"
 msgstr "الاحتياطيات الأخرى"
@@ -357,6 +401,11 @@ msgstr "مصروفات البيع"
 #: model:account.account.type,name:l10n_pe.account_account_type_BG_ACC_75
 msgid "Otros Activos Corrientes"
 msgstr "الموجودات المتداولة الأخرى"
+=======
+#: model:account.account.type,name:l10n_pe.account_account_type_EGP_NA_110
+msgid "Gastos por Tributos"
+msgstr "مصاريف الضرائب"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_pe
 #: model:account.account.type,name:l10n_pe.account_account_type_BG_ACN_70
@@ -364,6 +413,7 @@ msgid "Impuesto a la Renta y Participaciones Diferidos Activo"
 msgstr ""
 
 #. module: l10n_pe
+<<<<<<< HEAD
 #: model:account.account.type,name:l10n_pe.account_account_type_BG_PAC_20
 msgid "Cuentas por Pagar Comerciales"
 msgstr "دائنين تجاريين"
@@ -377,6 +427,16 @@ msgstr "صافي المبيعات (الإيرادات التشغيلية)"
 #: model:account.account.type,name:l10n_pe.account_account_type_BG_PAN_10
 msgid "Deudas a Largo Plazo"
 msgstr "الديون على المدى الطويل"
+=======
+#: model:account.account.type,name:l10n_pe.account_account_type_EGP_FU_150
+msgid "Interés Minoritario"
+msgstr "مصلحة الأقلية"
+
+#. module: l10n_pe
+#: model:ir.actions.client,name:l10n_pe.action_client_l10n_pe_menu
+msgid "Open Account Dashboard Menu"
+msgstr "قائمة لوحة تحكم الحساب المفتوح"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_pe
 #: model:account.account.type,name:l10n_pe.account_account_type_EGP_NA_130
@@ -384,6 +444,7 @@ msgid "Pérdida por Medición de Activos No Financieros a Valor Razonable"
 msgstr ""
 
 #. module: l10n_pe
+<<<<<<< HEAD
 #: model:account.account.type,name:l10n_pe.account_account_type_view
 msgid "Vista"
 msgstr "رأي"
@@ -392,3 +453,13 @@ msgstr "رأي"
 #: model:account.account.type,name:l10n_pe.account_account_type_EGP_NA_080
 msgid "(+/-) Variación de Envases y Embalajes"
 msgstr "(+/-) التغير في الحاويات والتغليف"
+=======
+#: model:account.account.type,name:l10n_pe.account_account_type_BG_PTN_70
+msgid "Resultados Acumulados"
+msgstr "النتائج المتراكمة"
+
+#. module: l10n_pe
+#: model:account.account.type,name:l10n_pe.account_account_type_EGP_NA_140
+msgid "Valuación y Deterioro de Activos y Provisiones"
+msgstr "التقييم وانخفاض قيمة الأصول والأحكام"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0

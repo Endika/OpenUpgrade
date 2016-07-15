@@ -5,12 +5,19 @@
 # Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 8.0\n"
+"Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2015-01-21 14:08+0000\n"
 "PO-Revision-Date: 2015-12-02 23:38+0000\n"
 "Last-Translator: Wahyu Setiawan <wahyusetiaaa@gmail.com>\n"
 "Language-Team: Indonesian (http://www.transifex.com/odoo/odoo-8/language/id/)\n"
+=======
+"POT-Creation-Date: 2015-09-07 14:41+0000\n"
+"PO-Revision-Date: 2015-09-08 09:55+0000\n"
+"Last-Translator: Martin Trigaux\n"
+"Language-Team: Indonesian (http://www.transifex.com/odoo/odoo-9/language/id/)\n"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -18,6 +25,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. module: website_crm
+<<<<<<< HEAD
 #: view:website:website_crm.contactus_thanks
 msgid "&times;"
 msgstr "&times;"
@@ -30,10 +38,19 @@ msgstr "Bidang kustom:"
 
 #. module: website_crm
 #: view:website:website.contactus
+=======
+#: model:ir.ui.view,arch_db:website_crm.contactus_thanks
+msgid "&amp;times;"
+msgstr ""
+
+#. module: website_crm
+#: model:ir.ui.view,arch_db:website_crm.contactus_form
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Email"
 msgstr "e-mail"
 
 #. module: website_crm
+<<<<<<< HEAD
 #: code:addons/website_crm/controllers/main.py:94
 #, python-format
 msgid "Environ Fields: "
@@ -43,29 +60,39 @@ msgstr "Environ bidang:"
 #: view:website:website_crm.contactus_thanks
 msgid "If you have an emergency, do not hesitate to contact us by phone:"
 msgstr "Jika Anda memiliki keadaan darurat, jangan ragu untuk menghubungi kami melalui telepon:"
+=======
+#: model:ir.ui.view,arch_db:website_crm.contactus_thanks
+msgid "If you have an emergency, do not hesitate to contact us by phone:"
+msgstr ""
 
 #. module: website_crm
-#: view:website:website.contactus
+#: model:ir.model,name:website_crm.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
+
+#. module: website_crm
+#: model:ir.ui.view,arch_db:website_crm.contactus_form
 msgid "Phone Number"
 msgstr "Nomer Telepon"
 
 #. module: website_crm
-#: view:website:website.contactus
+#: model:ir.ui.view,arch_db:website_crm.contactus_form
 msgid "Send"
 msgstr "Kirim"
 
 #. module: website_crm
-#: view:website:website.contactus
+#: model:ir.ui.view,arch_db:website_crm.contactus_form
 msgid "Subject"
 msgstr "Subjek"
 
 #. module: website_crm
-#: view:website:website_crm.contactus_thanks
+#: model:ir.ui.view,arch_db:website_crm.contactus_thanks
 msgid "Thanks!"
 msgstr "Terima kasih"
 
 #. module: website_crm
-#: view:website:website_crm.contactus_thanks
+#: model:ir.ui.view,arch_db:website_crm.contactus_thanks
 msgid "We will get back to you shortly."
 msgstr "Kami akan kembali kepada Anda segera."
 
@@ -75,26 +102,26 @@ msgid "Website Contact Form"
 msgstr "Formulir kontak situs"
 
 #. module: website_crm
-#: view:website:website.contactus
+#: model:ir.ui.view,arch_db:website_crm.contactus_form
 msgid "Your Company"
 msgstr "Perusahaan Anda"
 
 #. module: website_crm
-#: view:website:website.contactus
+#: model:ir.ui.view,arch_db:website_crm.contactus_form
 msgid "Your Name"
 msgstr "Nama Anda"
 
 #. module: website_crm
-#: view:website:website.contactus
+#: model:ir.ui.view,arch_db:website_crm.contactus_form
 msgid "Your Question"
 msgstr "Pertanyaan Anda"
 
 #. module: website_crm
-#: view:website:website_crm.contactus_thanks
+#: model:ir.ui.view,arch_db:website_crm.contactus_thanks
 msgid "Your message has been sent successfully."
 msgstr "Pesan Anda telah dikirim berhasil."
 
 #. module: website_crm
-#: view:website:website.contactus
+#: model:ir.ui.view,arch_db:website_crm.contactus_form
 msgid "e.g. (+32).81.81.37.00"
 msgstr "misalnya (+ 32).81.81.37.00"

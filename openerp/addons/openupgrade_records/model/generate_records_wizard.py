@@ -1,9 +1,14 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
+<<<<<<< HEAD
 #    OpenERP, Open Source Management Solution
 #    This module Copyright (C) 2012-2014 OpenUpgrade community
 #    https://launchpad.net/~openupgrade-committers
+=======
+#    Copyright (C) 2012-2015 Odoo Community Association (OCA)
+#    (<http://odoo-community.org>)
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 #
 #    Contributors:
 #    Therp BV <http://therp.nl>
@@ -26,12 +31,20 @@
 try:
     from openerp.osv.orm import TransientModel, except_orm
     from openerp.osv import fields
+<<<<<<< HEAD
     from openerp.openupgrade import openupgrade_tools
+=======
+    from openupgradelib import openupgrade_tools
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
     from openerp import pooler
 except ImportError:
     from osv.osv import osv_memory as TransientModel, except_osv as except_orm
     from osv import fields
+<<<<<<< HEAD
     from openupgrade import openupgrade_tools
+=======
+    from openupgradelib import openupgrade_tools
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
     import pooler
 
 
@@ -46,6 +59,30 @@ class generate_records_wizard(TransientModel):
         'state': lambda *a: 'init',
         }
 
+<<<<<<< HEAD
+=======
+    def quirk_payment_term_lines(self, cr, uid, context=None):
+        """ Installing the account module again adds another 'balance'
+        line to all standard payment terms in the module's data. This
+        violates a constraint that there can only be one balance line.
+        Remove these lines upon reinstallation """
+        module_obj = self.pool.get('ir.module.module')
+        if module_obj.search(
+                cr, uid, [('state', '=', 'to install'),
+                          ('name', '=', 'account')]):
+            term_ids = [
+                self.pool['ir.model.data'].xmlid_to_res_id(
+                    cr, uid, xmlid) for xmlid in
+                ['account.account_payment_term_15days',
+                 'account.account_payment_term_net']]
+            if term_ids:
+                cr.execute(
+                    """
+                    DELETE FROM account_payment_term_line
+                    WHERE payment_id in %s AND value = 'balance'
+                    """, (tuple(term_ids),))
+
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
     def generate(self, cr, uid, ids, context=None):
         """
         Main wizard step. Make sure that all modules are up-to-date,
@@ -85,6 +122,10 @@ class generate_records_wizard(TransientModel):
             cr, uid, [('state', '=', 'installed')])
         module_obj.write(
             cr, uid, module_ids, {'state': 'to install'})
+<<<<<<< HEAD
+=======
+        self.quirk_payment_term_lines(cr, uid, context=context)
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
         cr.commit()
         _db, pool = pooler.restart_pool(cr.dbname, update_module=True)
         self.write(cr, uid, ids, {'state': 'ready'})

@@ -1,16 +1,21 @@
-# Translation of OpenERP Server.
+# Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * l10n_fr
 # 
 # Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 8.0\n"
+"Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2012-11-24 02:53+0000\n"
 "PO-Revision-Date: 2016-01-28 22:50+0000\n"
+=======
+"POT-Creation-Date: 2015-10-09 09:26+0000\n"
+"PO-Revision-Date: 2015-10-10 09:47+0000\n"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 "Last-Translator: Martin Trigaux\n"
-"Language-Team: Slovak (http://www.transifex.com/odoo/odoo-8/language/sk/)\n"
+"Language-Team: Slovak (http://www.transifex.com/odoo/odoo-9/language/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -18,6 +23,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #. module: l10n_fr
+<<<<<<< HEAD
 #: constraint:res.company:0
 msgid "Error! You can not create recursive companies."
 msgstr "Chyba! Nemôžte vytvárať rekurzívne spoločnosti."
@@ -87,6 +93,10 @@ msgstr ""
 msgid ""
 "French VAT exemption according to articles 262 ter I (for products) and/or "
 "283-2 (for services) of \"CGI\""
+=======
+#: model:ir.model.fields,field_description:l10n_fr.field_res_company_ape
+msgid "APE"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgstr ""
 
 #. module: l10n_fr
@@ -95,24 +105,26 @@ msgid "Companies"
 msgstr "Spoločnosti"
 
 #. module: l10n_fr
-#: sql_constraint:l10n.fr.report:0
-msgid "The code report must be unique !"
+#: model:ir.ui.menu,name:l10n_fr.account_reports_fr_statements_menu
+msgid "French Statements"
 msgstr ""
 
 #. module: l10n_fr
+<<<<<<< HEAD
 #: field:account.bilan.report,fiscalyear_id:0
 #: field:account.cdr.report,fiscalyear_id:0
 msgid "Fiscal Year"
 msgstr "Fiškálny rok"
-
-#. module: l10n_fr
-#: model:ir.model,name:l10n_fr.model_l10n_fr_report
-msgid "Report for l10n_fr"
+=======
+#: model:ir.actions.client,name:l10n_fr.action_client_l10n_fr_menu
+msgid "Open Account Dashboard Menu"
 msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: l10n_fr
-#: field:res.company,siret:0
+#: model:ir.model.fields,field_description:l10n_fr.field_res_company_siret
 msgid "SIRET"
+<<<<<<< HEAD
 msgstr "SIRET"
 
 #. module: l10n_fr
@@ -150,3 +162,6 @@ msgstr "alebo"
 #: field:res.company,ape:0
 msgid "APE"
 msgstr "APE"
+=======
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0

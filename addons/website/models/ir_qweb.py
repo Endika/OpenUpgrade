@@ -1,43 +1,11 @@
 # -*- coding: utf-8 -*-
-"""
-Website-context rendering needs to add some metadata to rendered fields,
-as well as render a few fields differently.
-
-Also, adds methods to convert values back to openerp models.
-"""
-
-import cStringIO
-import datetime
-import itertools
-import logging
-import os
-import urllib2
-import urlparse
-import re
-
-import pytz
-import werkzeug.urls
-import werkzeug.utils
-from dateutil import parser
-from lxml import etree, html
-from PIL import Image as I
-import openerp.modules
-
-import openerp
-from openerp.osv import orm, fields
-from openerp.tools import ustr, DEFAULT_SERVER_DATE_FORMAT, DEFAULT_SERVER_DATETIME_FORMAT
-from openerp.tools import html_escape as escape
 from openerp.addons.web.http import request
-from openerp.addons.base.ir import ir_qweb
+from openerp.osv import orm
 
-REMOTE_CONNECTION_TIMEOUT = 2.5
-
-logger = logging.getLogger(__name__)
 
 class QWeb(orm.AbstractModel):
     """ QWeb object for rendering stuff in the website context
     """
-    _name = 'website.qweb'
     _inherit = 'ir.qweb'
 
     URL_ATTRS = {
@@ -45,6 +13,7 @@ class QWeb(orm.AbstractModel):
         'a': 'href',
     }
 
+<<<<<<< HEAD
     def add_template(self, qcontext, name, node):
         # preprocessing for multilang static urls
         if request.website:
@@ -409,124 +378,39 @@ class Duration(orm.AbstractModel):
         # non-localized value
         return float(value)
 
+=======
+    CDN_TRIGGERS = {
+        'link':    'href',
+        'script':  'src',
+        'img':     'src',
+    }
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
-class RelativeDatetime(orm.AbstractModel):
-    _name = 'website.qweb.field.relative'
-    _inherit = [
-        'ir.qweb.field.relative',
-        'website.qweb.field.datetime',
+    PRESERVE_WHITESPACE = [
+        'pre',
+        'textarea',
+        'script',
+        'style',
     ]
 
-    # get formatting from ir.qweb.field.relative but edition/save from datetime
+    def render_attribute(self, element, name, value, qwebcontext):
+        context = qwebcontext.context or {}
+        if not context.get('rendering_bundle'):
+            if name == self.URL_ATTRS.get(element.tag) and qwebcontext.get('url_for'):
+                value = qwebcontext.get('url_for')(value)
+            elif request and request.website and request.website.cdn_activated and (name == self.URL_ATTRS.get(element.tag) or name == self.CDN_TRIGGERS.get(element.tag)):
+                value = request.website.get_cdn_url(value)
+        return super(QWeb, self).render_attribute(element, name, value, qwebcontext)
 
+    def render_text(self, text, element, qwebcontext):
+        compress = request and not request.debug and request.website and request.website.compress_html
+        if compress and element.tag not in self.PRESERVE_WHITESPACE:
+            text = self.re_remove_spaces.sub(' ', text)
+        return super(QWeb, self).render_text(text, element, qwebcontext)
 
-class Contact(orm.AbstractModel):
-    _name = 'website.qweb.field.contact'
-    _inherit = ['ir.qweb.field.contact', 'website.qweb.field.many2one']
-
-    def from_html(self, cr, uid, model, field, element, context=None):
-        return None
-
-class QwebView(orm.AbstractModel):
-    _name = 'website.qweb.field.qweb'
-    _inherit = ['ir.qweb.field.qweb']
-
-
-def html_to_text(element):
-    """ Converts HTML content with HTML-specified line breaks (br, p, div, ...)
-    in roughly equivalent textual content.
-
-    Used to replace and fixup the roundtripping of text and m2o: when using
-    libxml 2.8.0 (but not 2.9.1) and parsing HTML with lxml.html.fromstring
-    whitespace text nodes (text nodes composed *solely* of whitespace) are
-    stripped out with no recourse, and fundamentally relying on newlines
-    being in the text (e.g. inserted during user edition) is probably poor form
-    anyway.
-
-    -> this utility function collapses whitespace sequences and replaces
-       nodes by roughly corresponding linebreaks
-       * p are pre-and post-fixed by 2 newlines
-       * br are replaced by a single newline
-       * block-level elements not already mentioned are pre- and post-fixed by
-         a single newline
-
-    ought be somewhat similar (but much less high-tech) to aaronsw's html2text.
-    the latter produces full-blown markdown, our text -> html converter only
-    replaces newlines by <br> elements at this point so we're reverting that,
-    and a few more newline-ish elements in case the user tried to add
-    newlines/paragraphs into the text field
-
-    :param element: lxml.html content
-    :returns: corresponding pure-text output
-    """
-
-    # output is a list of str | int. Integers are padding requests (in minimum
-    # number of newlines). When multiple padding requests, fold them into the
-    # biggest one
-    output = []
-    _wrap(element, output)
-
-    # remove any leading or tailing whitespace, replace sequences of
-    # (whitespace)\n(whitespace) by a single newline, where (whitespace) is a
-    # non-newline whitespace in this case
-    return re.sub(
-        r'[ \t\r\f]*\n[ \t\r\f]*',
-        '\n',
-        ''.join(_realize_padding(output)).strip())
-
-_PADDED_BLOCK = set('p h1 h2 h3 h4 h5 h6'.split())
-# https://developer.mozilla.org/en-US/docs/HTML/Block-level_elements minus p
-_MISC_BLOCK = set((
-    'address article aside audio blockquote canvas dd dl div figcaption figure'
-    ' footer form header hgroup hr ol output pre section tfoot ul video'
-).split())
-
-def _collapse_whitespace(text):
-    """ Collapses sequences of whitespace characters in ``text`` to a single
-    space
-    """
-    return re.sub('\s+', ' ', text)
-def _realize_padding(it):
-    """ Fold and convert padding requests: integers in the output sequence are
-    requests for at least n newlines of padding. Runs thereof can be collapsed
-    into the largest requests and converted to newlines.
-    """
-    padding = None
-    for item in it:
-        if isinstance(item, int):
-            padding = max(padding, item)
-            continue
-
-        if padding:
-            yield '\n' * padding
-            padding = None
-
-        yield item
-    # leftover padding irrelevant as the output will be stripped
-
-def _wrap(element, output, wrapper=u''):
-    """ Recursively extracts text from ``element`` (via _element_to_text), and
-    wraps it all in ``wrapper``. Extracted text is added to ``output``
-
-    :type wrapper: basestring | int
-    """
-    output.append(wrapper)
-    if element.text:
-        output.append(_collapse_whitespace(element.text))
-    for child in element:
-        _element_to_text(child, output)
-    output.append(wrapper)
-
-def _element_to_text(e, output):
-    if e.tag == 'br':
-        output.append(u'\n')
-    elif e.tag in _PADDED_BLOCK:
-        _wrap(e, output, 2)
-    elif e.tag in _MISC_BLOCK:
-        _wrap(e, output, 1)
-    else:
-        # inline
-        _wrap(e, output)
-
-    if e.tail:
-        output.append(_collapse_whitespace(e.tail))
+    def render_tail(self, tail, element, qwebcontext):
+        compress = request and not request.debug and request.website and request.website.compress_html
+        if compress and element.getparent().tag not in self.PRESERVE_WHITESPACE:
+            # No need to recurse because those tags children are not html5 parser friendly
+            tail = self.re_remove_spaces.sub(' ', tail.rstrip())
+        return super(QWeb, self).render_tail(tail, element, qwebcontext)

@@ -58,10 +58,10 @@
     !assert { model: ir.ui.menu, id: test_menu_action, string: menu item "action" is properly configured  }:
         - name == 'Test Menu Action'
         - parent_id.name == 'Test Menu Sub'
-        - action.name == 'Local Modules'
+        - action.name == 'Apps'
 -
     !assert { model: ir.ui.menu, id: test_menu_action_2, string: menu item "action_2" is properly configured  }:
         - name == 'Test Menu Action 2'
         - sequence == 93
-        - parent_id.name == 'Modules'
-        - action.name == 'Local Modules'
+        - parent_id.name == 'Apps'
+        - action.name == 'Apps'

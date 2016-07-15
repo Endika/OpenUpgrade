@@ -3,16 +3,26 @@
 # * marketing
 # 
 # Translators:
+<<<<<<< HEAD
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014
+=======
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 # Goutoudis Kostas <goutoudis@gmail.com>, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 8.0\n"
+"Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2015-01-21 14:08+0000\n"
 "PO-Revision-Date: 2015-12-17 11:14+0000\n"
 "Last-Translator: Goutoudis Kostas <goutoudis@gmail.com>\n"
 "Language-Team: Greek (http://www.transifex.com/odoo/odoo-8/language/el/)\n"
+=======
+"POT-Creation-Date: 2015-09-07 14:40+0000\n"
+"PO-Revision-Date: 2015-11-02 21:25+0000\n"
+"Last-Translator: Goutoudis Kostas <goutoudis@gmail.com>\n"
+"Language-Team: Greek (http://www.transifex.com/odoo/odoo-9/language/el/)\n"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -20,52 +30,74 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: marketing
-#: view:marketing.config.settings:marketing.view_marketing_configuration
+#: model:ir.ui.view,arch_db:marketing.view_marketing_configuration
 msgid "Apply"
 msgstr "Εφαρμογή"
 
 #. module: marketing
-#: view:marketing.config.settings:marketing.view_marketing_configuration
+#: model:ir.ui.view,arch_db:marketing.view_marketing_configuration
 msgid "Cancel"
-msgstr "Ακύρωση"
+msgstr "Ακύρωση"
 
 #. module: marketing
 #: model:ir.actions.act_window,name:marketing.action_marketing_configuration
-#: view:marketing.config.settings:marketing.view_marketing_configuration
 msgid "Configure Marketing"
+<<<<<<< HEAD
 msgstr "Ρυθμίσεις Marketing"
+=======
+msgstr "Ρυθμίσεις Μάρκετινγκ"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: marketing
-#: field:marketing.config.settings,create_uid:0
+#: model:ir.model.fields,field_description:marketing.field_marketing_config_settings_create_uid
 msgid "Created by"
 msgstr "Δημιουργήθηκε από"
 
 #. module: marketing
-#: field:marketing.config.settings,create_date:0
+#: model:ir.model.fields,field_description:marketing.field_marketing_config_settings_create_date
 msgid "Created on"
 msgstr "Δημιουργήθηκε στις"
 
 #. module: marketing
-#: field:marketing.config.settings,id:0
+#: model:ir.model.fields,field_description:marketing.field_marketing_config_settings_display_name
+msgid "Display Name"
+msgstr "Όνομα εμφάνισης"
+
+#. module: marketing
+#: model:ir.model.fields,field_description:marketing.field_marketing_config_settings_id
 msgid "ID"
-msgstr "Κωδικός"
+msgstr "ID"
 
 #. module: marketing
-#: field:marketing.config.settings,write_uid:0
+#: model:ir.model.fields,field_description:marketing.field_marketing_config_settings___last_update
+msgid "Last Modified on"
+msgstr "Τελευταία αλλαγή στις"
+
+#. module: marketing
+#: model:ir.model.fields,field_description:marketing.field_marketing_config_settings_write_uid
 msgid "Last Updated by"
+<<<<<<< HEAD
 msgstr "Τελευταία Ενημέρωση από"
+=======
+msgstr "Τελευταία ενημέρωση από"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: marketing
-#: field:marketing.config.settings,write_date:0
+#: model:ir.model.fields,field_description:marketing.field_marketing_config_settings_write_date
 msgid "Last Updated on"
+<<<<<<< HEAD
 msgstr "Τελευταία Ενημέρωση στις"
+=======
+msgstr "Τελευταία ενημέρωση στις"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: marketing
-#: model:res.groups,name:marketing.group_marketing_manager
+#: model:res.groups,name:marketing.group_lead_automation_manager
 msgid "Manager"
 msgstr "Διευθυντής"
 
 #. module: marketing
+<<<<<<< HEAD
 #: model:ir.ui.menu,name:marketing.menu_marketing_configuration
 msgid "Marketing"
 msgstr "Marketing"
@@ -95,22 +127,25 @@ msgstr "Προσφέρει ένα τρόπο για να αποστέλλετε 
 
 #. module: marketing
 #: help:marketing.config.settings,module_marketing_campaign:0
+=======
+#: model:ir.model.fields,field_description:marketing.field_marketing_config_settings_module_marketing_campaign
+msgid "Marketing campaigns"
+msgstr "Εκστρατείες μάρκετινγκ"
+
+#. module: marketing
+#: model:ir.model.fields,help:marketing.field_marketing_config_settings_module_marketing_campaign
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid ""
 "Provides leads automation through marketing campaigns. Campaigns can in fact be defined on any resource, not just CRM leads.\n"
 "-This installs the module marketing_campaign."
 msgstr "Προσφέρει αυτοματοποιημένα πιθανές ευκαιρίες μέσω των εκστρατειών Marketing. Οι εκστρατείες μπορούν να καθοριστούν με βάση οποιονδήποτε πόρο, όχι μόνο πιθανές ευκαιρίες από το CRM.\n-Εγκαθιστά την εφαρμογή marketing_campaign."
 
 #. module: marketing
-#: view:marketing.config.settings:marketing.view_marketing_configuration
-msgid "Settings"
-msgstr "Ρυθμίσεις"
-
-#. module: marketing
-#: model:res.groups,name:marketing.group_marketing_user
+#: model:res.groups,name:marketing.group_lead_automation_user
 msgid "User"
 msgstr "Χρήστης"
 
 #. module: marketing
-#: view:marketing.config.settings:marketing.view_marketing_configuration
-msgid "or"
-msgstr "ή"
+#: model:ir.model,name:marketing.model_marketing_config_settings
+msgid "marketing.config.settings"
+msgstr "marketing.config.settings"

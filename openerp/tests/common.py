@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-The module :mod:`openerp.tests.common` provides unittest2 test cases and a few
+The module :mod:`openerp.tests.common` provides unittest test cases and a few
 helpers and classes to write tests.
 
 """
 import errno
 import glob
+import importlib
 import json
 import logging
 import os
@@ -14,11 +15,12 @@ import subprocess
 import threading
 import time
 import itertools
-import unittest2
+import unittest
 import urllib2
 import xmlrpclib
 from contextlib import contextmanager
 from datetime import datetime, timedelta
+from pprint import pformat
 
 import werkzeug
 
@@ -77,7 +79,7 @@ def post_install(flag):
         return obj
     return decorator
 
-class BaseCase(unittest2.TestCase):
+class BaseCase(unittest.TestCase):
     """
     Subclass of TestCase for common OpenERP-specific code.
     
@@ -147,6 +149,7 @@ class TransactionCase(BaseCase):
         @self.addCleanup
         def reset():
             # rollback and close the cursor, and reset the environments
+            self.registry.clear_caches()
             self.env.reset()
             self.cr.rollback()
             self.cr.close()
@@ -180,6 +183,7 @@ class SingleTransactionCase(BaseCase):
     @classmethod
     def tearDownClass(cls):
         # rollback and close the cursor, and reset the environments
+        cls.registry.clear_caches()
         cls.env.reset()
         cls.cr.rollback()
         cls.cr.close()
@@ -261,14 +265,32 @@ class HttpCase(TransactionCase):
 
     def url_open(self, url, data=None, timeout=10):
         if url.startswith('/'):
-            url = "http://localhost:%s%s" % (PORT, url)
+            url = "http://%s:%s%s" % (HOST, PORT, url)
         return self.opener.open(url, data, timeout)
 
     def authenticate(self, user, password):
-        if user is not None:
-            url = '/login?%s' % werkzeug.urls.url_encode({'db': get_db_name(),'login': user, 'key': password})
-            auth = self.url_open(url)
-            assert auth.getcode() < 400, "Auth failure %d" % auth.getcode()
+        # stay non-authenticated
+        if user is None:
+            return
+
+        db = get_db_name()
+        Users = self.registry['res.users']
+        uid = Users.authenticate(db, user, password, None)
+
+        # self.session.authenticate(db, user, password, uid=uid)
+        # OpenERPSession.authenticate accesses the current request, which we
+        # don't have, so reimplement it manually...
+        session = self.session
+
+        session.db = db
+        session.uid = uid
+        session.login = user
+        session.password = password
+        session.context = Users.context_get(self.cr, uid) or {}
+        session.context['uid'] = uid
+        session._fix_lang(session.context)
+
+        openerp.http.root.session_store.save(session)
 
     def phantom_poll(self, phantom, timeout):
         """ Phantomjs Test protocol.
@@ -308,35 +330,47 @@ class HttpCase(TransactionCase):
                 buf.append(s)
 
             # process lines
-            if '\n' in buf:
-                line, buf = buf.split('\n', 1)
+            if '\n' in buf and (not buf.startswith('<phantomLog>') or '</phantomLog>' in buf):
+                if buf.startswith('<phantomLog>'):
+                    line = buf[12:buf.index('</phantomLog>')]
+                    buf = bytearray()
+                else:
+                    line, buf = buf.split('\n', 1)
                 line = str(line)
 
-                # relay everything from console.log, even 'ok' or 'error...' lines
-                _logger.info("phantomjs: %s", line)
+                lline = line.lower()
+                if lline.startswith(("error", "server application error")):
+                    try:
+                        # when errors occur the execution stack may be sent as a JSON
+                        prefix = lline.index('error') + 6
+                        _logger.error("phantomjs: %s", pformat(json.loads(line[prefix:])))
+                    except ValueError:
+                        line_ = line.split('\n\n')
+                        _logger.error("phantomjs: %s", line_[0])
+                        # The second part of the log is for debugging
+                        if len(line_) > 1:
+                            _logger.info("phantomjs: \n%s", line.split('\n\n', 1)[1])
+                        pass
+                    break
+                elif lline.startswith("warning"):
+                    _logger.warn("phantomjs: %s", line)
+                else:
+                    _logger.info("phantomjs: %s", line)
 
                 if line == "ok":
                     break
-                if line.startswith("error"):
-                    line_ = line[6:]
-                    # when error occurs the execution stack may be sent as as JSON
-                    try:
-                        line_ = json.loads(line_)
-                    except ValueError: 
-                        pass
-                    self.fail(line_ or "phantomjs test failed")
 
     def phantom_run(self, cmd, timeout):
         _logger.info('phantom_run executing %s', ' '.join(cmd))
 
-        ls_glob = os.path.expanduser('~/.qws/share/data/Ofi Labs/PhantomJS/http_localhost_%s.*'%PORT)
+        ls_glob = os.path.expanduser('~/.qws/share/data/Ofi Labs/PhantomJS/http_%s_%s.*' % (HOST, PORT))
         for i in glob.glob(ls_glob):
             _logger.info('phantomjs unlink localstorage %s', i)
             os.unlink(i)
         try:
             phantom = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=None)
         except OSError:
-            raise unittest2.SkipTest("PhantomJS not found")
+            raise unittest.SkipTest("PhantomJS not found")
         try:
             self.phantom_poll(phantom, timeout)
         finally:
@@ -385,14 +419,27 @@ class HttpCase(TransactionCase):
             'code': code,
             'ready': ready,
             'timeout' : timeout,
-            'login' : login,
             'session_id': self.session_id,
         }
         options.update(kw)
-        options.setdefault('password', options.get('login'))
+
+        self.authenticate(login, login)
+
         phantomtest = os.path.join(os.path.dirname(__file__), 'phantomtest.js')
         cmd = ['phantomjs', phantomtest, json.dumps(options)]
         self.phantom_run(cmd, timeout)
 
+def can_import(module):
+    """ Checks if <module> can be imported, returns ``True`` if it can be,
+    ``False`` otherwise.
 
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
+    To use with ``unittest.skipUnless`` for tests conditional on *optional*
+    dependencies, which may or may be present but must still be tested if
+    possible.
+    """
+    try:
+        importlib.import_module(module)
+    except ImportError:
+        return False
+    else:
+        return True

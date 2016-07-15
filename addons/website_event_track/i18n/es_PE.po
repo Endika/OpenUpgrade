@@ -5,12 +5,21 @@
 # Translators:
 msgid ""
 msgstr ""
+<<<<<<< HEAD
 "Project-Id-Version: Odoo 8.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-21 14:08+0000\n"
 "PO-Revision-Date: 2015-05-18 11:39+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: Spanish (Peru) (http://www.transifex.com/odoo/odoo-8/language/es_PE/)\n"
+=======
+"Project-Id-Version: Odoo 9.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-18 08:12+0000\n"
+"PO-Revision-Date: 2015-10-09 19:46+0000\n"
+"Last-Translator: Martin Trigaux\n"
+"Language-Team: Spanish (Peru) (http://www.transifex.com/odoo/odoo-9/language/es_PE/)\n"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -18,6 +27,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:website:website_event_track.event_track_proposal
 msgid ""
 ". These are 30 minutes talks on many\n"
@@ -41,6 +51,53 @@ msgid ""
 "                  a talk, a round table, a meeting, etc.\n"
 "              </p>\n"
 "            "
+=======
+#: model:ir.model.fields,field_description:website_event_track.field_event_event_count_sponsor
+msgid "# Sponsors"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.ui.view,arch_db:website_event_track.track_view
+msgid "<b>Date</b><br/>"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.ui.view,arch_db:website_event_track.track_view
+msgid ""
+"<br/>\n"
+"                            <b>Duration</b><br/>"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.ui.view,arch_db:website_event_track.track_view
+msgid ""
+"<br/>\n"
+"                            <b>Location</b><br/>"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.ui.view,arch_db:website_event_track.agenda
+msgid "<span id=\"search_number\">0</span> Found"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.ui.view,arch_db:website_event_track.event_track_proposal
+msgid ""
+"<strong>Lightning Talks</strong>. These are 30 minutes talks on many\n"
+"                                    different topics. Most topics are accepted in lightning talks."
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.ui.view,arch_db:website_event_track.event_track_social
+msgid "<strong>Participate on Twitter</strong>"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.ui.view,arch_db:website_event_track.event_track_proposal
+msgid ""
+"<strong>Regular Talks</strong>. These are standard talks with slides,\n"
+"                                    alocated in slots of 60 minutes."
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgstr ""
 
 #. module: website_event_track
@@ -51,11 +108,24 @@ msgid ""
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: field:event.event,allowed_track_tag_ids:0
 msgid "Accepted Tags"
 msgstr ""
 
 #. module: website_event_track
+=======
+#: model:ir.ui.view,arch_db:website_event_track.track_view
+msgid "About The Author"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_message_needaction
+msgid "Action Needed"
+msgstr "Se Necesita Acción"
+
+#. module: website_event_track
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 #: model:event.track,name:website_event_track.event_track19
 msgid "Advanced lead management with Odoo: tips and tricks from the fields"
 msgstr ""
@@ -66,36 +136,61 @@ msgid "Advanced reporting with Google Spreadsheets integration."
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: code:addons/website_event_track/models/event.py:168
+=======
+#: code:addons/website_event_track/models/event.py:182
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 #, python-format
 msgid "Agenda"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:website:website_event_track.tracks
+=======
+#: model:ir.ui.view,arch_db:website_event_track.tracks_filter
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "All Tags"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:website:website_event_track.event_track_proposal
+=======
+#: model:ir.ui.view,arch_db:website_event_track.event_track_proposal
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid ""
 "Allow video and audio recording of their\n"
 "                                    presentation, for publishing on our website."
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: model:event.track.stage,name:website_event_track.event_track_stage4
+=======
+#: selection:event.track,state:0
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Announced"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:website:website_event_track.event_track_proposal
+=======
+#: model:ir.ui.view,arch_db:website_event_track.event_track_proposal
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Application"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: field:event.track,website_published:0
 msgid "Available in the website"
+=======
+#: model:ir.model.fields,field_description:website_event_track.field_event_event_allowed_track_tag_ids
+msgid "Available Track Tags"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgstr ""
 
 #. module: website_event_track
@@ -104,16 +199,21 @@ msgid "Bronze"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: model:event.track.tag,name:website_event_track.event_track_tag2
 msgid "Business"
 msgstr ""
 
 #. module: website_event_track
 #: view:website:website_event_track.event_track_proposal
+=======
+#: model:ir.ui.view,arch_db:website_event_track.event_track_proposal
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Call for Proposals"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: field:event.track,color:0
 msgid "Color Index"
 msgstr ""
@@ -130,38 +230,86 @@ msgstr ""
 
 #. module: website_event_track
 #: model:event.track.stage,name:website_event_track.event_track_stage2
+=======
+#: selection:event.track,state:0
+msgid "Cancelled"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.actions.act_window,help:website_event_track.action_event_track
+#: model:ir.actions.act_window,help:website_event_track.action_event_track_from_event
+msgid "Click to add a track."
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_color
+msgid "Color Index"
+msgstr ""
+
+#. module: website_event_track
+#: selection:event.track,state:0
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Confirmed"
 msgstr "Confirmado"
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: field:event.sponsor,create_uid:0 field:event.sponsor.type,create_uid:0
 #: field:event.tag,create_uid:0 field:event.track,create_uid:0
 #: field:event.track.location,create_uid:0
 #: field:event.track.stage,create_uid:0 field:event.track.tag,create_uid:0
+=======
+#: model:ir.model.fields,field_description:website_event_track.field_event_sponsor_create_uid
+#: model:ir.model.fields,field_description:website_event_track.field_event_sponsor_type_create_uid
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_create_uid
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_location_create_uid
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_tag_create_uid
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Created by"
 msgstr "Creado por"
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: field:event.sponsor,create_date:0 field:event.sponsor.type,create_date:0
 #: field:event.tag,create_date:0 field:event.track,create_date:0
 #: field:event.track.location,create_date:0
 #: field:event.track.stage,create_date:0 field:event.track.tag,create_date:0
+=======
+#: model:ir.model.fields,field_description:website_event_track.field_event_sponsor_create_date
+#: model:ir.model.fields,field_description:website_event_track.field_event_sponsor_type_create_date
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_create_date
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_location_create_date
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_tag_create_date
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Created on"
 msgstr "Creado en"
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:event.track:website_event_track.view_event_track_search
 #: view:website:website_event_track.track_view
+=======
+#: model:ir.ui.view,arch_db:website_event_track.view_event_track_search
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Date"
 msgstr "Fecha"
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: help:event.track,message_last_post:0
 msgid "Date of the last message posted on the record."
 msgstr "Fecha del ultimo mensaje actualizado en el registro"
 
 #. module: website_event_track
 #: view:event.track:website_event_track.view_event_track_kanban
+=======
+#: model:ir.model.fields,help:website_event_track.field_event_track_message_last_post
+msgid "Date of the last message posted on the record."
+msgstr "Fecha del ultimo mensaje actualizado en el registro."
+
+#. module: website_event_track
+#: model:ir.ui.view,arch_db:website_event_track.view_event_track_kanban
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Delete"
 msgstr ""
 
@@ -183,56 +331,105 @@ msgid "Discover Odoo Point-of-Sale: Your shop ready to use in 30 minutes."
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:website:website_event_track.track_view
+=======
+#: model:ir.model.fields,field_description:website_event_track.field_event_sponsor_display_name
+#: model:ir.model.fields,field_description:website_event_track.field_event_sponsor_type_display_name
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_display_name
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_location_display_name
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_tag_display_name
+msgid "Display Name"
+msgstr "Nombre a Mostrar"
+
+#. module: website_event_track
+#: model:ir.ui.view,arch_db:website_event_track.track_view
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Documents"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: field:event.track,duration:0 view:website:website_event_track.track_view
+=======
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_duration
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Duration"
 msgstr "Duración"
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:event.track:website_event_track.view_event_track_kanban
+=======
+#: model:ir.ui.view,arch_db:website_event_track.view_event_track_kanban
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Edit Track"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: field:event.sponsor,event_id:0
 #: view:event.track:website_event_track.view_event_track_search
 #: field:event.track,event_id:0
 #: model:ir.model,name:website_event_track.model_event_event
+=======
+#: model:ir.model,name:website_event_track.model_event_event
+#: model:ir.model.fields,field_description:website_event_track.field_event_sponsor_event_id
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_event_id
+#: model:ir.ui.view,arch_db:website_event_track.view_event_track_search
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Event"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: field:event.event,blog_id:0
+=======
+#: model:ir.model.fields,field_description:website_event_track.field_event_event_blog_id
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Event Blog"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:event.track.location:website_event_track.view_event_location_form
 #: view:event.track.location:website_event_track.view_event_location_tree
+=======
+#: model:ir.ui.view,arch_db:website_event_track.view_event_location_form
+#: model:ir.ui.view,arch_db:website_event_track.view_event_location_tree
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Event Location"
 msgstr ""
 
 #. module: website_event_track
 #: model:ir.actions.act_window,name:website_event_track.action_event_track_location
+<<<<<<< HEAD
 #: model:ir.ui.menu,name:website_event_track.menu_event_track_location
+=======
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Event Locations"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:event.sponsor.type:website_event_track.view_event_sponsor_type_tree
+=======
+#: model:ir.ui.view,arch_db:website_event_track.view_event_sponsor_type_tree
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Event Sponsor Type"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:event.sponsor.type:website_event_track.view_event_sponsor_type_form
+=======
+#: model:ir.ui.view,arch_db:website_event_track.view_event_sponsor_type_form
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Event Sponsor Types"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:event.track.stage:website_event_track.view_event_track_stage_form
 #: view:event.track.stage:website_event_track.view_event_track_stage_tree
 msgid "Event Stage"
@@ -265,49 +462,86 @@ msgstr ""
 #. module: website_event_track
 #: view:event.track:website_event_track.view_event_track_form
 #: view:event.track:website_event_track.view_event_track_tree
+=======
+#: model:ir.ui.view,arch_db:website_event_track.view_event_sponsor_search
+msgid "Event Sponsors"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.model,name:website_event_track.model_event_track
+#: model:ir.ui.view,arch_db:website_event_track.view_event_track_form
+#: model:ir.ui.view,arch_db:website_event_track.view_event_track_tree
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Event Track"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:event.track.tag:website_event_track.view_event_track_tag_form
 #: view:event.track.tag:website_event_track.view_event_track_tag_tree
 #: field:event.track.tag,name:0
+=======
+#: model:ir.ui.view,arch_db:website_event_track.view_event_track_tag_form
+#: model:ir.ui.view,arch_db:website_event_track.view_event_track_tag_tree
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Event Track Tag"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:event.track:website_event_track.view_event_track_calendar
 #: view:event.track:website_event_track.view_event_track_search
 #: model:ir.actions.act_window,name:website_event_track.act_event_list_tracks
 #: model:ir.actions.act_window,name:website_event_track.action_event_track
 #: model:ir.model,name:website_event_track.model_event_track
 #: model:ir.ui.menu,name:website_event_track.menu_event_track
+=======
+#: model:ir.actions.act_window,name:website_event_track.action_event_sponsor_from_event
+#: model:ir.actions.act_window,name:website_event_track.action_event_track
+#: model:ir.actions.act_window,name:website_event_track.action_event_track_from_event
+#: model:ir.ui.menu,name:website_event_track.menu_event_track
+#: model:ir.ui.view,arch_db:website_event_track.view_event_track_calendar
+#: model:ir.ui.view,arch_db:website_event_track.view_event_track_search
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Event Tracks"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: model:event.track.tag,name:website_event_track.event_tag2
 msgid "Exhibition"
 msgstr ""
 
 #. module: website_event_track
 #: view:website:website_event_track.event_track_proposal
+=======
+#: model:ir.ui.view,arch_db:website_event_track.event_track_proposal
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Fill this form to propose your talk."
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:website:website_event_track.agenda
+=======
+#: model:ir.ui.view,arch_db:website_event_track.agenda
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Filter Tracks..."
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:website:website_event_track.track_view
+=======
+#: model:ir.ui.view,arch_db:website_event_track.event_track_social
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid ""
 "Find out what people see and say about this event, \n"
 "                        and join the conversation."
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: field:event.track,message_follower_ids:0
 msgid "Followers"
 msgstr ""
@@ -315,6 +549,20 @@ msgstr ""
 #. module: website_event_track
 #: view:website:website_event_track.agenda
 msgid "Found"
+=======
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: website_event_track
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_message_partner_ids
+msgid "Followers (Partners)"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgstr ""
 
 #. module: website_event_track
@@ -323,17 +571,26 @@ msgid "Gold"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:event.track:website_event_track.view_event_track_search
+=======
+#: model:ir.ui.view,arch_db:website_event_track.view_event_track_search
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Group By"
 msgstr "Agrupado por"
 
 #. module: website_event_track
 #: selection:event.track,priority:0
+<<<<<<< HEAD
 msgid "High (**)"
+=======
+msgid "High"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgstr ""
 
 #. module: website_event_track
 #: selection:event.track,priority:0
+<<<<<<< HEAD
 msgid "Highest (***)"
 msgstr ""
 
@@ -342,6 +599,9 @@ msgstr ""
 msgid ""
 "Holds the Chatter summary (number of messages, ...). This summary is "
 "directly in html format in order to be inserted in kanban views."
+=======
+msgid "Highest"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgstr ""
 
 #. module: website_event_track
@@ -363,7 +623,11 @@ msgstr ""
 
 #. module: website_event_track
 #: model:event.track,name:website_event_track.event_track3
+<<<<<<< HEAD
 msgid "How to develop real time apps, the live chat module explained."
+=======
+msgid "How to develop real time apps, the website live chat module explained."
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgstr ""
 
 #. module: website_event_track
@@ -379,26 +643,63 @@ msgid ""
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: field:event.sponsor,id:0 field:event.sponsor.type,id:0 field:event.tag,id:0
 #: field:event.track,id:0 field:event.track.location,id:0
 #: field:event.track.stage,id:0 field:event.track.tag,id:0
+=======
+#: model:ir.model.fields,field_description:website_event_track.field_event_sponsor_id
+#: model:ir.model.fields,field_description:website_event_track.field_event_sponsor_type_id
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_id
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_location_id
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_tag_id
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "ID"
 msgstr "ID"
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: help:event.track,message_unread:0
+=======
+#: model:ir.model.fields,help:website_event_track.field_event_track_message_unread
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "If checked new messages require your attention."
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:website:website_event_track.event_track_proposal
+=======
+#: model:ir.model.fields,help:website_event_track.field_event_track_message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_image
+msgid "Image"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.ui.view,arch_db:website_event_track.view_event_track_search
+msgid "Important Messages"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.ui.view,arch_db:website_event_track.event_track_proposal
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Introduction"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: field:event.track,message_is_follower:0
 msgid "Is a Follower"
 msgstr "Es un Seguidor"
+=======
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_message_is_follower
+msgid "Is Follower"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: website_event_track
 #: model:event.track,name:website_event_track.event_track23
@@ -406,27 +707,57 @@ msgid "Key Success factors selling Odoo."
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: field:event.track,message_last_post:0
+=======
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_message_last_post
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Last Message Date"
 msgstr "Fecha del último mensaje"
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: field:event.sponsor,write_uid:0 field:event.sponsor.type,write_uid:0
 #: field:event.tag,write_uid:0 field:event.track,write_uid:0
 #: field:event.track.location,write_uid:0 field:event.track.stage,write_uid:0
 #: field:event.track.tag,write_uid:0
+=======
+#: model:ir.model.fields,field_description:website_event_track.field_event_sponsor___last_update
+#: model:ir.model.fields,field_description:website_event_track.field_event_sponsor_type___last_update
+#: model:ir.model.fields,field_description:website_event_track.field_event_track___last_update
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_location___last_update
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_tag___last_update
+msgid "Last Modified on"
+msgstr "Ultima Modificación en"
+
+#. module: website_event_track
+#: model:ir.model.fields,field_description:website_event_track.field_event_sponsor_type_write_uid
+#: model:ir.model.fields,field_description:website_event_track.field_event_sponsor_write_uid
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_location_write_uid
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_tag_write_uid
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_write_uid
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Last Updated by"
 msgstr "Actualizado última vez por"
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: field:event.sponsor,write_date:0 field:event.sponsor.type,write_date:0
 #: field:event.tag,write_date:0 field:event.track,write_date:0
 #: field:event.track.location,write_date:0
 #: field:event.track.stage,write_date:0 field:event.track.tag,write_date:0
+=======
+#: model:ir.model.fields,field_description:website_event_track.field_event_sponsor_type_write_date
+#: model:ir.model.fields,field_description:website_event_track.field_event_sponsor_write_date
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_location_write_date
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_tag_write_date
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_write_date
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Last Updated on"
 msgstr "Ultima Actualización"
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: model:event.track.tag,name:website_event_track.event_track_tag3
 #: view:website:website_event_track.event_track_proposal
 msgid "Lightning Talks"
@@ -444,13 +775,25 @@ msgstr "Lugar"
 
 #. module: website_event_track
 #: field:event.sponsor,image_medium:0
+=======
+#: model:ir.ui.menu,name:website_event_track.menu_event_track_location
+msgid "Locations"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.model.fields,field_description:website_event_track.field_event_sponsor_image_medium
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Logo"
 msgstr ""
 
 #. module: website_event_track
 #: selection:event.track,priority:0
 msgid "Low"
+<<<<<<< HEAD
 msgstr ""
+=======
+msgstr "Bajo"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: website_event_track
 #: model:event.track,name:website_event_track.event_track31
@@ -458,6 +801,15 @@ msgid "Lunch"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
+=======
+#: code:addons/website_event_track/models/event.py:81
+#, python-format
+msgid "Mail"
+msgstr ""
+
+#. module: website_event_track
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 #: model:event.track,name:website_event_track.event_track22
 msgid "Manage your KPIs (recomended to openERP partners)."
 msgstr ""
@@ -469,7 +821,19 @@ msgstr ""
 
 #. module: website_event_track
 #: selection:event.track,priority:0
+<<<<<<< HEAD
 msgid "Medium (*)"
+=======
+msgid "Medium"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.model.fields,help:website_event_track.field_event_sponsor_image_medium
+msgid ""
+"Medium-sized image of this contact. It is automatically resized as a "
+"128x128px image, with aspect ratio preserved. Use this field in form views "
+"or some kanban views."
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgstr ""
 
 #. module: website_event_track
@@ -483,16 +847,26 @@ msgid "Merge proposals review, code sprint (entire day)."
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: field:event.track,message_ids:0
 msgid "Messages"
 msgstr ""
 
 #. module: website_event_track
 #: help:event.track,message_ids:0
+=======
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: website_event_track
+#: model:ir.model.fields,help:website_event_track.field_event_track_message_ids
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Messages and communication history"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: model:event.track,name:website_event_track.event_track30
 msgid "Morning break"
 msgstr ""
@@ -500,6 +874,15 @@ msgstr ""
 #. module: website_event_track
 #: field:event.event,show_tracks:0
 msgid "Multiple Tracks"
+=======
+#: model:ir.ui.view,arch_db:website_event_track.view_event_track_kanban
+msgid "More"
+msgstr ""
+
+#. module: website_event_track
+#: model:event.track,name:website_event_track.event_track30
+msgid "Morning break"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgstr ""
 
 #. module: website_event_track
@@ -513,18 +896,61 @@ msgid "New Paypal modules (portal, handling, installments)."
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: code:addons/website_event_track/models/event.py:170
 #: field:event.event,show_blog:0
+=======
+#: model:mail.message.subtype,name:website_event_track.mt_event_track
+msgid "New Track"
+msgstr ""
+
+#. module: website_event_track
+#: model:mail.message.subtype,description:website_event_track.mt_event_track
+msgid "New Track Created"
+msgstr ""
+
+#. module: website_event_track
+#: code:addons/website_event_track/models/event.py:79
+#, python-format
+msgid "New Track Proposal"
+msgstr ""
+
+#. module: website_event_track
+#: code:addons/website_event_track/models/event.py:184
+#: model:ir.model.fields,field_description:website_event_track.field_event_event_show_blog
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 #, python-format
 msgid "News"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:website:website_event_track.tracks
+=======
+#: model:ir.ui.view,arch_db:website_event_track.tracks
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "No tracks found!"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
+=======
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.model.fields,help:website_event_track.field_event_track_message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.model.fields,help:website_event_track.field_event_track_message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: website_event_track
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 #: model:event.track,name:website_event_track.event_track15
 msgid "Odoo Mobile for Notes, Meetings and Messages."
 msgstr ""
@@ -545,21 +971,56 @@ msgid "Odoo in 2014"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:website:website_event.layout
+=======
+#: model:ir.ui.view,arch_db:website_event_track.event_sponsor
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Our Sponsors"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:website:website_event_track.track_view
 msgid "Participate on Twitter"
 msgstr ""
 
 #. module: website_event_track
 #: view:website:website_event_track.track_view
+=======
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_partner_biography
+msgid "Partner Biography"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_partner_email
+msgid "Partner Email"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_partner_name
+msgid "Partner Name"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_partner_phone
+msgid "Partner Phone"
+msgstr ""
+
+#. module: website_event_track
+#: code:addons/website_event_track/models/event.py:82
+#, python-format
+msgid "Phone"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.ui.view,arch_db:website_event_track.track_view
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Practical Info"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: field:event.track,priority:0
 msgid "Priority"
 msgstr "Prioridad"
@@ -571,16 +1032,49 @@ msgstr ""
 
 #. module: website_event_track
 #: view:website:website_event_track.event_track_proposal
+=======
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_priority
+msgid "Priority"
+msgstr ""
+
+#. module: website_event_track
+#: selection:event.track,state:0
+msgid "Proposal"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.ui.view,arch_db:website_event_track.event_track_proposal
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Proposals are closed!"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: model:event.track.stage,name:website_event_track.event_track_stage3
+=======
+#: code:addons/website_event_track/models/event.py:80
+#, python-format
+msgid "Proposed By"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_partner_id
+#: model:ir.ui.view,arch_db:website_event_track.track_view
+msgid "Proposed by"
+msgstr ""
+
+#. module: website_event_track
+#: selection:event.track,state:0
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Published"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:website:website_event_track.track_view
+=======
+#: model:ir.ui.view,arch_db:website_event_track.track_view
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid ""
 "Put here the list of documents, like slides of\n"
 "                            the presentations. Remove the above t-if when\n"
@@ -598,6 +1092,7 @@ msgid "Recruiting high skilled talents with Odoo HR apps"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:website:website_event_track.event_track_proposal
 msgid "Regular Talks"
 msgstr ""
@@ -618,6 +1113,34 @@ msgstr ""
 #: field:event.track.stage,sequence:0
 msgid "Sequence"
 msgstr "Secuencia"
+=======
+#: selection:event.track,state:0
+msgid "Refused"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_user_id
+#: model:ir.ui.view,arch_db:website_event_track.view_event_track_search
+msgid "Responsible"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_location_id_8532
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_location_name
+msgid "Room"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.model.fields,field_description:website_event_track.field_event_sponsor_sequence
+#: model:ir.model.fields,field_description:website_event_track.field_event_sponsor_type_sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.model.fields,field_description:website_event_track.field_event_event_show_tracks
+msgid "Show Tracks on Website"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
 #. module: website_event_track
 #: model:event.sponsor.type,name:website_event_track.event_sponsor_type2
@@ -625,22 +1148,46 @@ msgid "Silver"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:website:website_event_track.track_view
+=======
+#: model:ir.ui.view,arch_db:website_event_track.event_track_social
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Social Stream"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:website:website_event_track.event_track_proposal
+=======
+#: model:ir.ui.view,arch_db:website_event_track.event_track_proposal
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Speaker Biography"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: field:event.track,speaker_ids:0
+=======
+#: code:addons/website_event_track/models/event.py:136
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_speaker_ids
+#, python-format
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Speakers"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: field:event.sponsor.type,name:0
+=======
+#: code:addons/website_event_track/models/event.py:84
+#, python-format
+msgid "Speakers Biography"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.model.fields,field_description:website_event_track.field_event_sponsor_type_name
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Sponsor Type"
 msgstr ""
 
@@ -651,26 +1198,39 @@ msgid "Sponsor Types"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: field:event.sponsor,url:0
+=======
+#: model:ir.model.fields,field_description:website_event_track.field_event_sponsor_url
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Sponsor Website"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: field:event.sponsor,partner_id:0
+=======
+#: model:ir.model.fields,field_description:website_event_track.field_event_sponsor_partner_id
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Sponsor/Customer"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:event.event:website_event_track.view_event_form
 msgid "Sponsoring"
 msgstr ""
 
 #. module: website_event_track
 #: field:event.sponsor,sponsor_type_id:0
+=======
+#: model:ir.model.fields,field_description:website_event_track.field_event_sponsor_sponsor_type_id
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Sponsoring Type"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:event.event:website_event_track.view_event_form
 #: field:event.event,sponsor_ids:0
 msgid "Sponsorships"
@@ -684,15 +1244,35 @@ msgstr ""
 
 #. module: website_event_track
 #: view:website:website_event_track.event_track_proposal
+=======
+#: model:ir.model.fields,field_description:website_event_track.field_event_event_sponsor_ids
+#: model:ir.ui.view,arch_db:website_event_track.view_event_form
+msgid "Sponsors"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_state
+#: model:ir.ui.view,arch_db:website_event_track.view_event_track_search
+msgid "Status"
+msgstr "Estado"
+
+#. module: website_event_track
+#: model:ir.ui.view,arch_db:website_event_track.event_track_proposal
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Submission Agreement"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:website:website_event_track.event_track_proposal
+=======
+#: model:ir.ui.view,arch_db:website_event_track.event_track_proposal
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Submit Proposal"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: field:event.track,message_summary:0
 msgid "Summary"
 msgstr ""
@@ -710,43 +1290,84 @@ msgstr ""
 
 #. module: website_event_track
 #: view:website:website_event_track.event_track_proposal
+=======
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_tag_name
+msgid "Tag"
+msgstr ""
+
+#. module: website_event_track
+#: sql_constraint:event.track.tag:0
+msgid "Tag name already exists !"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_tag_ids
+#: model:ir.ui.view,arch_db:website_event_track.event_track_proposal
+msgid "Tags"
+msgstr ""
+
+#. module: website_event_track
+#: code:addons/website_event_track/models/event.py:85
+#: model:ir.ui.view,arch_db:website_event_track.event_track_proposal
+#, python-format
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Talk Introduction"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: code:addons/website_event_track/models/event.py:172
+=======
+#: code:addons/website_event_track/models/event.py:186
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 #, python-format
 msgid "Talk Proposals"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:website:website_event_track.event_track_proposal
+=======
+#: model:ir.ui.view,arch_db:website_event_track.event_track_proposal
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Talk Title"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: code:addons/website_event_track/models/event.py:167
+=======
+#: code:addons/website_event_track/models/event.py:181
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 #, python-format
 msgid "Talks"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: field:event.event,show_track_proposal:0
 msgid "Talks Proposals"
 msgstr ""
 
 #. module: website_event_track
 #: view:website:website_event_track.event_track_proposal
+=======
+#: model:ir.ui.view,arch_db:website_event_track.event_track_proposal
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Talks Types"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: model:event.track.tag,name:website_event_track.event_track_tag1
 msgid "Technical"
 msgstr ""
 
 #. module: website_event_track
 #: view:website:website_event_track.event_track_proposal_success
+=======
+#: model:ir.ui.view,arch_db:website_event_track.event_track_proposal_success
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Thank you for your proposal."
 msgstr ""
 
@@ -756,6 +1377,14 @@ msgid "The Art of Making an Odoo Demo."
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
+=======
+#: model:ir.model.fields,help:website_event_track.field_event_track_website_url
+msgid "The full URL to access the document through the website."
+msgstr ""
+
+#. module: website_event_track
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 #: model:event.track,name:website_event_track.event_track29
 msgid "The new marketing strategy."
 msgstr ""
@@ -767,33 +1396,61 @@ msgid ""
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:website:website_event_track.event_track_proposal
+=======
+#: model:ir.ui.view,arch_db:website_event_track.event_track_proposal
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "This event does not accept proposals."
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:website:website_event_track.event_track_proposal
+=======
+#: model:ir.ui.view,arch_db:website_event_track.event_track_proposal
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid ""
 "Timely release of presentation material (slides),\n"
 "                                    for publishing on our website."
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:event.track:website_event_track.view_event_track_form
+=======
+#: code:addons/website_event_track/models/event.py:83
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_name
+#, python-format
+msgid "Title"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.ui.view,arch_db:website_event_track.view_event_track_form
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Track"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: field:event.track,date:0
+=======
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_date
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Track Date"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: field:event.track,description:0
+=======
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_description
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Track Description"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: field:event.track.location,name:0
 msgid "Track Rooms"
 msgstr ""
@@ -801,15 +1458,29 @@ msgstr ""
 #. module: website_event_track
 #: field:event.track.stage,name:0
 msgid "Track Stage"
+=======
+#: model:ir.model,name:website_event_track.model_event_track_location
+msgid "Track Location"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.model,name:website_event_track.model_event_track_tag
+msgid "Track Tag"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgstr ""
 
 #. module: website_event_track
 #: model:ir.actions.act_window,name:website_event_track.action_event_track_tag
+<<<<<<< HEAD
+=======
+#: model:ir.model.fields,field_description:website_event_track.field_event_event_tracks_tag_ids
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 #: model:ir.ui.menu,name:website_event_track.menu_event_track_tag
 msgid "Track Tags"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: field:event.track,name:0
 msgid "Track Title"
 msgstr ""
@@ -828,21 +1499,78 @@ msgstr ""
 
 #. module: website_event_track
 #: view:website:website_event_track.track_view
+=======
+#: model:ir.model.fields,field_description:website_event_track.field_event_event_count_tracks
+#: model:ir.model.fields,field_description:website_event_track.field_event_event_track_ids
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_tag_track_ids
+#: model:ir.ui.view,arch_db:website_event_track.view_event_track_graph
+msgid "Tracks"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.model.fields,field_description:website_event_track.field_event_event_show_track_proposal
+msgid "Tracks Proposals"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.actions.act_window,help:website_event_track.action_event_track_from_event
+msgid ""
+"Tracks define the agenda of your event. These can be a talk, a round table, "
+"a meeting, etc."
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.actions.act_window,help:website_event_track.action_event_track
+msgid ""
+"Tracks define the agenda of your event. These can bea talk, a round table, a"
+" meeting, etc."
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_message_unread
+msgid "Unread Messages"
+msgstr "Mensajes no leidos"
+
+#. module: website_event_track
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.ui.view,arch_db:website_event_track.event_track_social
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Use this tag:"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:event.track:website_event_track.view_event_track_kanban
+=======
+#: model:ir.ui.view,arch_db:website_event_track.view_event_track_kanban
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "View Track"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:website:website_event_track.event_track_proposal
+=======
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_website_published
+msgid "Visible in Website"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.ui.view,arch_db:website_event_track.event_track_proposal
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "We require speakers to accept an agreement in which they commit to:"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:website:website_event_track.event_track_proposal
+=======
+#: model:ir.ui.view,arch_db:website_event_track.event_track_proposal
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid ""
 "We will accept a broad range of\n"
 "                                presentations, from reports on academic and\n"
@@ -854,11 +1582,16 @@ msgid ""
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:website:website_event_track.event_track_proposal_success
+=======
+#: model:ir.ui.view,arch_db:website_event_track.event_track_proposal_success
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "We will evaluate your proposition and get back to you shortly."
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: model:event.track.tag,name:website_event_track.event_tag1
 msgid "Webinar"
 msgstr ""
@@ -870,45 +1603,83 @@ msgstr ""
 
 #. module: website_event_track
 #: help:event.track,website_message_ids:0
+=======
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_website_url
+msgid "Website URL"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.model.fields,help:website_event_track.field_event_track_website_message_ids
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Website communication history"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: field:event.track,website_meta_description:0
+=======
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_website_meta_description
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Website meta description"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: field:event.track,website_meta_keywords:0
+=======
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_website_meta_keywords
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Website meta keywords"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: field:event.track,website_meta_title:0
+=======
+#: model:ir.model.fields,field_description:website_event_track.field_event_track_website_meta_title
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Website meta title"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: field:event.track,website_url:0
 msgid "Website url"
 msgstr ""
 
 #. module: website_event_track
 #: view:website:website_event_track.event_track_proposal
+=======
+#: model:ir.ui.view,arch_db:website_event_track.event_track_proposal
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Your Email"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:website:website_event_track.event_track_proposal
+=======
+#: model:ir.ui.view,arch_db:website_event_track.event_track_proposal
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Your Name"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:website:website_event_track.event_track_proposal
+=======
+#: model:ir.ui.view,arch_db:website_event_track.event_track_proposal
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "Your Phone"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:website:website_event_track.tracks
 msgid "col-md-3 css_no_print"
 msgstr ""
@@ -916,15 +1687,39 @@ msgstr ""
 #. module: website_event_track
 #: view:event.track:website_event_track.view_event_track_form
 #: view:event.track:website_event_track.view_event_track_kanban
+=======
+#: model:ir.ui.view,arch_db:website_event_track.view_event_track_form
+msgid "e.g. Inspiring Business Talk"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.model,name:website_event_track.model_event_sponsor
+msgid "event.sponsor"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.model,name:website_event_track.model_event_sponsor_type
+msgid "event.sponsor.type"
+msgstr ""
+
+#. module: website_event_track
+#: model:ir.ui.view,arch_db:website_event_track.view_event_track_form
+#: model:ir.ui.view,arch_db:website_event_track.view_event_track_kanban
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "hours"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:website:website_event_track.tracks
+=======
+#: model:ir.ui.view,arch_db:website_event_track.tracks
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 msgid "not published"
 msgstr ""
 
 #. module: website_event_track
+<<<<<<< HEAD
 #: view:website:website_event_track.agenda
 msgid "talks"
 msgstr ""
@@ -933,3 +1728,8 @@ msgstr ""
 #: field:event.track,image:0
 msgid "unknown"
 msgstr "desconocido"
+=======
+#: model:ir.ui.view,arch_db:website_event_track.agenda
+msgid "talks"
+msgstr ""
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0

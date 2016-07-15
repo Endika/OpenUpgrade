@@ -18,7 +18,11 @@ and then used in your scripts as
 General methods
 ---------------
 
+<<<<<<< HEAD
 .. automodule:: openupgrade
+=======
+.. automodule:: openupgradelib.openupgrade
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
    :members:
 
 Methods for OpenUpgrade 7.0
@@ -28,7 +32,11 @@ The following specific methods for 7.0 are available. These have been
 developed to cover specific needs as per data model changes in that
 release.
 
+<<<<<<< HEAD
 .. automodule:: openupgrade_70
+=======
+.. automodule:: openupgradelib.openupgrade_70
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
    :members:
 
 Methods for OpenUpgrade 8.0
@@ -38,6 +46,10 @@ The following specific methods for 8.0 are available. These have been
 developed to cover specific needs as per data model changes in that
 release.
 
+<<<<<<< HEAD
 .. automodule:: openupgrade_80
+=======
+.. automodule:: openupgradelib.openupgrade_80
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
    :members:
 

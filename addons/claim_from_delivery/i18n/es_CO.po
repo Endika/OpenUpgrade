@@ -3,14 +3,15 @@
 # * claim_from_delivery
 # 
 # Translators:
+# Mateo Tibaquirá <nestormateo@gmail.com>, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 8.0\n"
+"Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-21 14:07+0000\n"
-"PO-Revision-Date: 2015-05-18 11:27+0000\n"
-"Last-Translator: <>\n"
-"Language-Team: Spanish (Colombia) (http://www.transifex.com/odoo/odoo-8/language/es_CO/)\n"
+"POT-Creation-Date: 2015-09-07 14:40+0000\n"
+"PO-Revision-Date: 2015-10-23 20:49+0000\n"
+"Last-Translator: Mateo Tibaquirá <nestormateo@gmail.com>\n"
+"Language-Team: Spanish (Colombia) (http://www.transifex.com/odoo/odoo-9/language/es_CO/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -23,8 +24,8 @@ msgid "Claim From Delivery"
 msgstr "Reclamo Desde Envío"
 
 #. module: claim_from_delivery
-#: view:stock.picking:claim_from_delivery.crm_claim_from_delivery
-#: field:stock.picking,claim_count_out:0
+#: model:ir.model.fields,field_description:claim_from_delivery.field_stock_picking_claim_count_out
+#: model:ir.ui.view,arch_db:claim_from_delivery.crm_claim_from_delivery
 msgid "Claims"
 msgstr "Reclamos"
 
@@ -35,5 +36,10 @@ msgstr "Orden de Entrega"
 
 #. module: claim_from_delivery
 #: model:ir.model,name:claim_from_delivery.model_stock_picking
+<<<<<<< HEAD
 msgid "Picking List"
 msgstr "Lista de Notas de Entrega"
+=======
+msgid "Transfer"
+msgstr "Transferir"
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0

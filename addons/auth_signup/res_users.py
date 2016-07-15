@@ -1,23 +1,5 @@
 # -*- coding: utf-8 -*-
-##############################################################################
-#
-#    OpenERP, Open Source Management Solution
-#    Copyright (C) 2012-today OpenERP SA (<http://www.openerp.com>)
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as
-#    published by the Free Software Foundation, either version 3 of the
-#    License, or (at your option) any later version
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>
-#
-##############################################################################
+# Part of Odoo. See LICENSE file for full copyright and licensing details.
 from datetime import datetime, timedelta
 import random
 from urlparse import urljoin
@@ -28,6 +10,7 @@ from openerp.osv import osv, fields
 from openerp.tools.misc import DEFAULT_SERVER_DATETIME_FORMAT, ustr
 from ast import literal_eval
 from openerp.tools.translate import _
+from openerp.exceptions import UserError
 
 class SignupError(Exception):
     pass
@@ -80,7 +63,10 @@ class res_partner(osv.Model):
                 continue        # no signup token, no user, thus no signup url!
 
             fragment = dict()
-            if action:
+            base = '/web#'
+            if action == '/mail/view':
+                base = '/mail/view?'
+            elif action:
                 fragment['action'] = action
             if view_type:
                 fragment['view_type'] = view_type
@@ -89,10 +75,10 @@ class res_partner(osv.Model):
             if model:
                 fragment['model'] = model
             if res_id:
-                fragment['id'] = res_id
+                fragment['res_id'] = res_id
 
             if fragment:
-                query['redirect'] = '/web#' + werkzeug.url_encode(fragment)
+                query['redirect'] = base + werkzeug.url_encode(fragment)
 
             res[partner.id] = urljoin(base_url, "/web/%s?%s" % (route, werkzeug.url_encode(query)))
 
@@ -165,7 +151,11 @@ class res_partner(osv.Model):
         if partner.user_ids:
             res['login'] = partner.user_ids[0].login
         else:
+<<<<<<< HEAD
             res['login'] = res['email'] = partner.email or ''
+=======
+            res['email'] = res['login'] = partner.email or ''
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
         return res
 
 class res_users(osv.Model):
@@ -179,7 +169,7 @@ class res_users(osv.Model):
 
     _columns = {
         'state': fields.function(_get_state, string='Status', type='selection',
-                    selection=[('new', 'Never Connected'), ('active', 'Activated')]),
+                    selection=[('new', 'Never Connected'), ('active', 'Connected')]),
     }
 
     def signup(self, cr, uid, values, token=None, context=None):
@@ -270,15 +260,20 @@ class res_users(osv.Model):
     def action_reset_password(self, cr, uid, ids, context=None):
         """ create signup token for each user, and send their signup url by email """
         # prepare reset password signup
+        create_mode = bool(context.get('create_user'))
         res_partner = self.pool.get('res.partner')
         partner_ids = [user.partner_id.id for user in self.browse(cr, uid, ids, context)]
-        res_partner.signup_prepare(cr, uid, partner_ids, signup_type="reset", expiration=now(days=+1), context=context)
+
+        # no time limit for initial invitation, only for reset password
+        expiration = False if create_mode else now(days=+1)
+
+        res_partner.signup_prepare(cr, uid, partner_ids, signup_type="reset", expiration=expiration, context=context)
 
         context = dict(context or {})
 
         # send email to users with their signup url
         template = False
-        if context.get('create_user'):
+        if create_mode:
             try:
                 # get_object() raises ValueError if record does not exist
                 template = self.pool.get('ir.model.data').get_object(cr, uid, 'auth_signup', 'set_password_email')
@@ -286,13 +281,18 @@ class res_users(osv.Model):
                 pass
         if not bool(template):
             template = self.pool.get('ir.model.data').get_object(cr, uid, 'auth_signup', 'reset_password_email')
-        assert template._name == 'email.template'
+        assert template._name == 'mail.template'
 
         for user in self.browse(cr, uid, ids, context):
             if not user.email:
+<<<<<<< HEAD
                 raise osv.except_osv(_("Cannot send email: user has no email address."), user.name)
             context['lang'] = user.lang  # translate in targeted user language
             self.pool.get('email.template').send_mail(cr, uid, template.id, user.id, force_send=True, raise_exception=True, context=context)
+=======
+                raise UserError(_("Cannot send email: user %s has no email address.") % user.name)
+            self.pool.get('mail.template').send_mail(cr, uid, template.id, user.id, force_send=True, raise_exception=True, context=context)
+>>>>>>> df6128781645b0295db7169bbb27b434a1ea4bb0
 
     def create(self, cr, uid, values, context=None):
         if context is None:
