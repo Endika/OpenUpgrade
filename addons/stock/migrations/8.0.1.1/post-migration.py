@@ -158,6 +158,8 @@ def migrate_stock_location(cr, registry):
             vals['picking_type_id'] = warehouse.out_type_id.id
         else:
             vals['picking_type_id'] = warehouse.int_type_id.id
+        if warehouse and warehouse[0].company_id:
+            vals['company_id'] = warehouse[0].company_id.id
         path_obj.create(cr, uid, vals)
 
 
@@ -510,6 +512,9 @@ def _migrate_stock_warehouse(cr, registry, res_id):
                     "xml_id %s now points to res_id %d, no longer to %d.",
                     xml_id, res_id, old_res_id
                 )
+        # Avoid the xml id and the associated resource being dropped by the
+        # orm by manually making a hit on it:
+        model_data_obj._update_dummy('stock.picking.type', 'stock', xml_id)
 
     with api.Environment.manage():
         env = api.Environment(cr, SUPERUSER_ID, {})
